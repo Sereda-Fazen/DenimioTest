@@ -12,7 +12,6 @@ class Login
     public static $submit = '[name="send"] > span > span';
     public static $logout = 'li.dropit-trigger > a';
 
-    public static $msgWelcome = 'div.welcome-msg';
     public static $msg = 'div.col-main > p';
 
     protected $tester;
@@ -32,10 +31,11 @@ class Login
         $I->fillField(self::$email, $name);
         $I->fillField(self::$pass, $password);
         $I->click(self::$submit);
-        $I->see('From your My Account Dashboard you have the ability to view',self::$msgWelcome);
+
 
         return $this;
     }
+
     public function logout()
     {
         $I = $this->tester;

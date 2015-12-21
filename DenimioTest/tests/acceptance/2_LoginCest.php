@@ -1,12 +1,13 @@
 <?php
-
+use Step\Acceptance;
 class LoginCest
 {
-        function loginSuccess(AcceptanceTester $I, \Page\Login $loginPage) {
-            $loginPage->login('fazen7@mail.ru', '1234567');
+        function loginSuccess(Step\Acceptance\LoginSteps $I, \Page\Login $loginPage) {
+            $loginPage->login('dev.denimio@yahoo.com', '123456');
+            $I->see('From your My Account Dashboard you have the ability to view','div.welcome-msg');
             $loginPage->logout();
         }
-/*
+
         function loginEmptyFields(AcceptanceTester $I, \Page\Login $loginPage) {
             $loginPage->login('', '');
             $I->see( 'This is a required field.','#advice-required-entry-pass');
@@ -37,7 +38,7 @@ class LoginCest
             $I->comment('Expected result: Please enter a valid email address.');
         }
 
-*/
+
 
 
 
