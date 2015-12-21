@@ -9,20 +9,6 @@ modules:
         WebDriver:
             url: 'http://staging:prospect@dev8.denimio.com'
 
-            #host: 'hub.browserstack.com'
-            #port: 80
-            browser: chrome
-            window_size: 1280x680
-            restart: false
-
-
-            capabilities:
-             browserstack.user: 'alex3245'
-             browserstack.key: 'X3sPutbDeqPs7zqciEFT'
-             browserstack.debug: 'true'
-             #applicationCacheEnabled: false
-             unexpectedAlertBehaviour: 'accept'
-             pageLoadStrategy: 'eager'
-             platform: 'XP'
+          
 
 
