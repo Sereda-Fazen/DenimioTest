@@ -7,14 +7,14 @@ modules:
 
     config:
         WebDriver:
-            url: 'https://cadencewatch.com'
+            url: 'https://staring:prospect@dev8.denimio.com/'
 
             #host: 'hub.browserstack.com'
             #port: 80
             browser: chrome
             window_size: 1280x680
             restart: false
-            clear_cookies: false
+
 
             capabilities:
              browserstack.user: 'alex3245'
@@ -24,69 +24,5 @@ modules:
              unexpectedAlertBehaviour: 'accept'
              pageLoadStrategy: 'eager'
              platform: 'XP'
-
-
-env:
-    production:
-
-    INST_8148:
-        modules:
-            config:
-                WebDriver:
-                  url: 'https://dev1.cadencewatch.com:8148'
-                  host: 'hub.browserstack.com'
-                  port: 80
-                  browser: chrome
-                  window_size: 1280x3000
-                  restart: false
-
-                  capabilities:
-                   browserstack.user: 'alex3245'
-                   browserstack.key: 'X3sPutbDeqPs7zqciEFT'
-                   browserstack.debug: 'true'
-                   #applicationCacheEnabled: false
-                   unexpectedAlertBehaviour: 'accept'
-                   pageLoadStrategy: 'eager'
-                   platform: 'XP'
-
-    INST_8134:
-        modules:
-            config:
-                WebDriver:
-                  url: 'https://dev1.cadencewatch.com:8134'
-                  #host: 'hub.browserstack.com'
-                  #port: 80
-                  browser: firefox
-                  window_size: 1280x3000
-                  restart: false
-
-                  capabilities:
-                   browserstack.user: 'alex3245'
-                   browserstack.key: 'X3sPutbDeqPs7zqciEFT'
-                   browserstack.debug: 'true'
-                   #applicationCacheEnabled: false
-                   unexpectedAlertBehaviour: 'accept'
-                   pageLoadStrategy: 'eager'
-                   platform: 'WINDOWS'
-
-    INST_8147:
-        modules:
-            config:
-                WebDriver:
-                  url: 'https://vanya:43terminal59Pass@dev1.cadencewatch.com:8147'
-                  #host: 'hub.browserstack.com'
-                  #port: 80
-                  browser: chrome
-                  window_size: 1280x3000
-                  restart: false
-
-                  capabilities:
-                   browserstack.user: 'alex3245'
-                   browserstack.key: 'X3sPutbDeqPs7zqciEFT'
-                   browserstack.debug: 'true'
-                   #applicationCacheEnabled: false
-                   unexpectedAlertBehaviour: 'accept'
-                   pageLoadStrategy: 'eager'
-                   platform: 'MAC'
 
 

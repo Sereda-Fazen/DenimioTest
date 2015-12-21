@@ -3,12 +3,17 @@ namespace Page;
 
 class Login
 {
-    public static $URL = 'customer/account/login/';
+
+    public static $URL = '/';
+    public static $clickLogIn = 'a.login_click';
 
     public static $email = '#email';
     public static $pass = '#pass';
     public static $submit = '[name="send"] > span > span';
-    public static $logout = 'ul.links > li.last > a';
+    public static $logout = 'li.dropit-trigger > a';
+
+    public static $msgWelcome = 'div.welcome-msg';
+    public static $msg = 'div.col-main > p';
 
     protected $tester;
 
@@ -21,10 +26,13 @@ class Login
     {
         $I = $this->tester;
 
+
         $I->amOnPage(self::$URL);
+        $I->click(self::$clickLogIn);
         $I->fillField(self::$email, $name);
         $I->fillField(self::$pass, $password);
         $I->click(self::$submit);
+        $I->see('From your My Account Dashboard you have the ability to view',self::$msgWelcome);
 
         return $this;
     }
@@ -32,6 +40,7 @@ class Login
     {
         $I = $this->tester;
         $I->click(self::$logout);
+        $I->see('You have logged out and will be redirected to our homepage in 5 seconds.',self::$msg);
 
     }
 

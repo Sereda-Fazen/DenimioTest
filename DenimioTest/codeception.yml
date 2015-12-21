@@ -9,13 +9,7 @@ settings:
     bootstrap: _bootstrap.php
     colors: false
     memory_limit: 1024M
-extensions:
-    enabled:
-        - Codeception\Extension\RunFailed
-        - Codeception\Extension\Recorder
-    config:
-        Codeception\Extension\Recorder:
-            delete_successful: false
+
 
 modules:
     config:
