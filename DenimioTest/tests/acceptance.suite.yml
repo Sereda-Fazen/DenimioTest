@@ -9,8 +9,10 @@ modules:
         WebDriver:
             url: 'http://staging:prospect@dev8.denimio.com'
             browser: chrome
-            window_size: 1280x680
+            window_size: 1980x780
             restart: false
+            wait: 1
+
 
 
 

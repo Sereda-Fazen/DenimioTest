@@ -1,14 +1,24 @@
 <?php
 use Step\Acceptance;
 
-class CheckoutGuestCest
+class CheckoutCest
 {
 
-        function addToCartPage(AcceptanceTester $I, \Page\CheckoutGuest $guestPage) {
-            $guestPage->checkoutAddToCart();
-            $I->comment('Expected result: Product was added to your shopping cart.');
+        function addToCartPage(Step\Acceptance\Steps $I, \Page\Checkout $guestPage) {
+            $I->processAddToCart();
+            $I->comment('Expected result: Navigate to category of product');
+            $I->addToCart();
+            $I->comment('Expected result: Navigate to checkout');
+            $I->selectSize();
+            $I->comment('Expected result: Navigate to');
+            $I->processCheckout();
+            $I->comment('Expected result: Navigate to');
+            $I->paymentMethod();
+            $I->comment('Expected result: Navigate to');
+            $I->finishProcessCheckout();
+          //  $I->comment('Expected result: Navigate to');
         }
-
+/*
         function checkoutChooseGuest(AcceptanceTester  $I, \Page\CheckoutGuest $guestPage) {
             $guestPage->checkoutChooseGuest();
             $I->comment('Expected result: Go to the Billing Information');
@@ -29,7 +39,7 @@ class CheckoutGuestCest
             $guestPage->paymentInformation('GIFT-ADFA-12NF02');
             $I->comment('Expected result: Your order’s grand total is zero now. No need to add any more Gift code');
         }
-
+*/
 
 
 
