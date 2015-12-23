@@ -34,7 +34,6 @@ class Steps extends \AcceptanceTester
             $I->see('PROCEED TO CHECKOUT','button.button.btn-proceed-checkout.btn-checkout > span');
             $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
 
-
         }
 
     public function processCheckout(){
@@ -59,6 +58,7 @@ class Steps extends \AcceptanceTester
 
     public function paymentMethod(){
             $I = $this;
+            $I->scrollUp(200);
             $I->wait(3);
             $I->click('#p_method_paygent_cc');
             // Cards
