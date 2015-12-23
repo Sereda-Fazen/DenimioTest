@@ -22,19 +22,18 @@ class Steps extends \AcceptanceTester
             $I->see('Description','ul.product-tabs');
         }
 
-        public function selectSize(){
-            $I = $this;
-            $I->scrollDown(200);
-            $I->click('select.required-entry');
-            $I->click('//*[@id="attribute144"]/option[2]');
-            $I->click('button.button.btn-cart > span');
-            $I->waitForElementVisible('//*[@class="wrapper_box"]');
-            $I->scrollDown(300);
-            $I->click('//*[@id="shopping_cart"]');
-            $I->see('PROCEED TO CHECKOUT','button.button.btn-proceed-checkout.btn-checkout > span');
-            $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
-
-        }
+    public function selectSize(){
+        $I = $this;
+        $I->scrollDown(200);
+        $I->click('select.required-entry');
+        $I->click('//*[@id="attribute144"]/option[2]');
+        $I->click('button.button.btn-cart > span');
+        $I->waitForElementVisible('//*[@class="wrapper_box"]');
+        $I->scrollDown(300);
+        $I->click('//*[@id="shopping_cart"]');
+        $I->see('PROCEED TO CHECKOUT','button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+    }
 
     public function processCheckout(){
 
