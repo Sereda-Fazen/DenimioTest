@@ -9,7 +9,7 @@ modules:
         WebDriver:
             url: 'http://staging:prospect@dev8.denimio.com'
             browser: firefox
-            window_size: 1980x780
+            #window_size: 1980x780
             restart: false
             #wait: 1
 
