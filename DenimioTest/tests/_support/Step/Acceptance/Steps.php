@@ -52,6 +52,7 @@ class Steps extends \AcceptanceTester
             $I->click('//*[@id="billing:country_id"]/option[231]');
             $I->fillField($billing.'region', 'Kharkov');
             $I->fillField($billing.'telephone', '80934568798');
+            $I->wait(3);
 
 
     }
@@ -88,7 +89,8 @@ class Steps extends \AcceptanceTester
             $I->click('#edit_shipping_document_confirmation');
             $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
             $I->click('#onestepcheckout-button-place-order');
-            $I->see('Network Error','li.error-msg');
+            $I->waitForElementVisible('li.error-msg');
+            $I->see('Network Error, E02004','li.error-msg');
 
     }
 
