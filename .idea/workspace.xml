@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DenimioTest/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/DenimioTest/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DenimioTest/tests/_support/Step/Acceptance/Steps.php" afterPath="$PROJECT_DIR$/DenimioTest/tests/_support/Step/Acceptance/Steps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DenimioTest.iws" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28716215">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.43074325">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,11 +94,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DenimioTest/tests/_bootstrap.php" />
-        <option value="$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml" />
         <option value="$PROJECT_DIR$/DenimioTest/codeception.yml" />
         <option value="$PROJECT_DIR$/DenimioTest/tests/acceptance/LoginCest.php" />
         <option value="$PROJECT_DIR$/DenimioTest/tests/acceptance/CheckoutCest.php" />
         <option value="$PROJECT_DIR$/DenimioTest/tests/_support/Step/Acceptance/Steps.php" />
+        <option value="$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml" />
       </list>
     </option>
   </component>
@@ -310,7 +309,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450864146507</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fin1">
+      <created>1450864813074</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1450864813074</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -353,7 +358,8 @@
     <MESSAGE value="11" />
     <MESSAGE value="12" />
     <MESSAGE value="fin" />
-    <option name="LAST_COMMIT_MESSAGE" value="fin" />
+    <MESSAGE value="fin1" />
+    <option name="LAST_COMMIT_MESSAGE" value="fin1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -426,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DenimioTest/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28716215">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.43074325">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
