@@ -1,5 +1,8 @@
 <?php
 use Step\Acceptance;
+/**
+ * @group account
+ */
 class LoginCest
 {
         function loginSuccess(Step\Acceptance\Steps $I, \Page\Login $loginPage) {

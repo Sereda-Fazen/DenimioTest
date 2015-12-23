@@ -1,6 +1,8 @@
 <?php
 use Step\Acceptance;
-
+/**
+ * @group checkout
+ */
 class CheckoutCest
 {
 
