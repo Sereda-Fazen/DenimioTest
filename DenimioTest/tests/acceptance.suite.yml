@@ -14,6 +14,26 @@ modules:
             clear_cookies: false
             #wait: 1
 
+            # run in browserstack
+
+            host: 'hub.browserstack.com'
+            port: 80
+            browser: chrome
+            window_size: 1980x1680
+            restart: false
+            #wait: 1
+            #clear_cookies: false
+
+            capabilities:
+             browserstack.user: 'alex3357'
+             browserstack.key: 't73oeyZX8FDMPgnGFUCh'
+             browserstack.debug: 'true'
+             #applicationCacheEnabled: false
+             unexpectedAlertBehaviour: 'accept'
+             pageLoadStrategy: 'eager'
+             #platform: 'XP'
+
+
 
 
 
