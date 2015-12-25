@@ -16,22 +16,21 @@ modules:
 
             # run in browserstack
 
+
             host: 'hub.browserstack.com'
             port: 80
             browser: chrome
-            window_size: 1980x1680
+            window_size: 1280x3000
             restart: false
-            #wait: 1
-            #clear_cookies: false
 
             capabilities:
-             browserstack.user: 'alex3357'
-             browserstack.key: 't73oeyZX8FDMPgnGFUCh'
+             browserstack.user: 'alex3245'
+             browserstack.key: 'X3sPutbDeqPs7zqciEFT'
              browserstack.debug: 'true'
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
              pageLoadStrategy: 'eager'
-             #platform: 'XP'
+             platform: 'WINDOWS'
 
 
 
