@@ -25,7 +25,6 @@ class Login
     {
         $I = $this->tester;
 
-
         $I->amOnPage(self::$URL);
         $I->click(self::$clickLogIn);
         $I->fillField(self::$email, $name);
