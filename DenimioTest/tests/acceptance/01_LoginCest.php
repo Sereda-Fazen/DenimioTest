@@ -18,7 +18,7 @@ class LoginCest
         }
 
         function loginEmptyPass(AcceptanceTester $I, \Page\Login $loginPage) {
-            $loginPage->login('sa@itsvit.org', '');
+            $loginPage->login('test@test.org', '');
             $I->see( 'This is a required field.','#advice-required-entry-pass');
             $I->comment('Expected result: This is a required field pass.');
         }
@@ -30,13 +30,13 @@ class LoginCest
         }
 
         function loginInvalidEmail(AcceptanceTester $I, \Page\Login $loginPage) {
-            $loginPage->login('testmail.ru', '123456');
+            $loginPage->login('testemail.com', '123456');
             $I->see('Please enter a valid email address. For example johndoe@domain.com.', '#advice-validate-email-email');
             $I->comment('Expected result: Please enter a valid email address.');
         }
 
         function loginWrongEmail(AcceptanceTester $I, \Page\Login $loginPage) {
-            $loginPage->login('test@test.ru', '123456');
+            $loginPage->login('test@test.com', '123456');
             $I->see('Invalid login or password.', 'li.error-msg');
             $I->comment('Expected result: Please enter a valid email address.');
         }
