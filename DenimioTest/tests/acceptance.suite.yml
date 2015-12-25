@@ -31,7 +31,7 @@ modules:
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
              pageLoadStrategy: 'eager'
-             os_version: Windows: 7
+             #os_version: Windows: 7
 
 
 
