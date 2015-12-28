@@ -6,7 +6,7 @@ use Step\Acceptance;
  */
 class CheckoutCest
 {
-/*
+    /*
         function addToCartPage(Step\Acceptance\Steps $I, \Page\Checkout $guestPage) {
             $I->processAddToCart();
             $I->comment('Expected result: Navigate to category of product');
@@ -21,6 +21,7 @@ class CheckoutCest
             $I->finishProcessCheckout();
           //  $I->comment('Expected result: Navigate to');
         }
+
 */
 
        function addToCartPage(Step\Acceptance\Steps $I)

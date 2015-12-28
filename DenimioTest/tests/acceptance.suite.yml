@@ -11,7 +11,7 @@ modules:
             browser: chrome
             window_size: 1980x780
             restart: false
-            #clear_cookies: false
+            clear_cookies: false
             #wait: 1
 
             # run in browserstack
