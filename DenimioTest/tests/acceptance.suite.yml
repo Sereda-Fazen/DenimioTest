@@ -31,7 +31,8 @@ modules:
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
              pageLoadStrategy: 'eager'
-             platform: 'XP'
+             #platform: 'MAC'
+             os: OS X
 
 
 
