@@ -22,7 +22,7 @@ modules:
             window_size: 1980x1680
             restart: false
             #wait: 1
-            #clear_cookies: false
+            clear_cookies: false
 
             capabilities:
              browserstack.user: 'alex3357'
@@ -31,8 +31,9 @@ modules:
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
              pageLoadStrategy: 'eager'
-             #platform: 'MAC'
-             os: OS X
+             os: 'WINDOWS'
+             os_version: 7
+
 
 
 
