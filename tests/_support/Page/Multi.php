@@ -1,7 +1,7 @@
 <?php
 namespace Page;
 
-class Currency
+class Multi
 {
 
     public static $URL = '/';

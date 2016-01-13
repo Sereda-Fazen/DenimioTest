@@ -2,10 +2,10 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/codeception.yml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tests/_support/Page/Currency.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/_support/Page/Multi.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/Steps.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/acceptance.suite.yml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tests/acceptance/03_CurrencyCest.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/acceptance/03_MultiCest.php" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
