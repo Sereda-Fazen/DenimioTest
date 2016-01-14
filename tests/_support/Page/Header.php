@@ -26,7 +26,7 @@ class Header
         $this->tester = $I;
     }
 
-    public function currency()
+    public function home()
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL);

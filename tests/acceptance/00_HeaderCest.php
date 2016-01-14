@@ -12,7 +12,7 @@ class HeaderCest
 
         function currencyCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
         {
-            $homePage->currency();
+            $homePage->home();
             $I->getCurrency();
         }
 
@@ -24,7 +24,7 @@ class HeaderCest
 
         function languageCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
         {
-            $homePage->currency();
+            $homePage->home();
             $I->getLanguage();
         }
 
@@ -36,7 +36,7 @@ class HeaderCest
 
         function logInCheckLinksOnHeader(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
         {
-           $homePage->currency();
+           $homePage->home();
            $I->getHeaderLinks();
 
         }
@@ -50,13 +50,13 @@ class HeaderCest
 
         function searchIsNotResult(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
         {
-            $homePage->currency();
+            $homePage->home();
             $I->getWrongSearch();
         }
 
         function searchCategory(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
         {
-            $homePage->currency();
+            $homePage->home();
             $I->getSearchOnCategory();
         }
 
