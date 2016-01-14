@@ -1,7 +1,7 @@
 <?php
 use Step\Acceptance;
 /**
- * @group 3_account
+ * @group 1_account
  */
 class LoginCest
 {

@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group 2_mainMenu
+ * @group 3_mainMenu
  */
 class MainMenuCest
 {

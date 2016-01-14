@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group 1_header
+ * @group 2_header
  */
 class HeaderCest
 {
