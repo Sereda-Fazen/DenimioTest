@@ -1,6 +1,9 @@
 <?php
 use Step\Acceptance;
 
+/**
+ * @group mainMenu
+ */
 class MainMenuCest
 {
 

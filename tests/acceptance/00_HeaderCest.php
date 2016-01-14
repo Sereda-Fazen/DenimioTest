@@ -1,6 +1,9 @@
 <?php
 use Step\Acceptance;
 
+/**
+ * @group header
+ */
 class HeaderCest
 {
 
