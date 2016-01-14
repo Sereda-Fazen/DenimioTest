@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group checkout
+ * @group 4_checkout
  */
 class CheckoutCest
 {
