@@ -22,7 +22,7 @@ modules:
             window_size: 1980x1680
             restart: false
             #wait: 1
-            clear_cookies: false
+            #clear_cookies: false
 
             capabilities:
              browserstack.user: 'alex3451'

@@ -1,7 +1,7 @@
 <?php
 namespace Step\Acceptance;
 
-class CurrencySteps extends \AcceptanceTester
+class HeaderSteps extends \AcceptanceTester
 {
 
     public function getCurrency()
@@ -107,11 +107,42 @@ class CurrencySteps extends \AcceptanceTester
                     echo $I->see('связаться с нами', $seeLanguage);
                     break;
 
-
             }
 
         }
+        $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
+        $I->click('//*[@class="sub-lang"]/li[1]');
 
+
+    }
+
+    public function getHeaderLinks(){
+        $I = $this;
+        $links = count($I->grabMultiple('//*[@id="menu_link"]/li'));
+        for ($menu = 1; $menu <= $links; $menu++){
+            $I->moveMouseOver('a.login_click > i.fa.fa-caret-down');
+            $I->click('//*[@id="menu_link"]/li['.$menu.']/a');
+
+        }
+        $I->click('a.logo > img');
+    }
+
+    public function getWrongSearch(){
+        $I = $this;
+        $I->fillField('#search','wrong');
+        $I->click('i.fa.fa-search');
+        $I->see('Your search returns no results.','p.note-msg');
+    }
+    public function getSearchOnCategory(){
+        $I = $this;
+        $I->fillField('#search','jeans');
+        $cat =  count($I->grabMultiple('//*[@id = "cat"]/option'));
+        for ($c = 2; $c <= $cat; $c++) {
+            $I->click('#cat');
+            $I->click('//*[@id = "cat"]/option['.$c.']');
+            $I->click('i.fa.fa-search');
+            $I->seeElement('span.value');
+        }
 
     }
 }
