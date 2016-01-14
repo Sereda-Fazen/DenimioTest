@@ -4,71 +4,41 @@ use Step\Acceptance;
 class MainMenuCest
 {
 
-        /**
-         * Check MultiCurrency
-         * @param Acceptance\HeaderSteps $I
-         * @param \Page\Header $homePage
-         */
+    /**
+     * Check Main Menu
+     * @param \Page\MainMenu $homePage
+     */
 
-        function currencyCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
+        function checkMainMenuLinks(\Page\MainMenu $homePage)
         {
-            $homePage->currency();
-            $I->getCurrency();
+            $homePage->home();
+            $homePage->getMainMenu();
         }
 
-        /**
-         * Check MultiLanguage
-         * @param Acceptance\HeaderSteps $I
-         * @param \Page\Header $homePage
-         */
+    /**
+     * Check Links For Tops
+     * @param Acceptance\HeaderSteps $I
+     * @param \Page\MainMenu $homePage
+     */
 
-        function languageCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
-        {
-            $homePage->currency();
-            $I->getLanguage();
-        }
+    function checkTopSubcategoryTops(\Step\Acceptance\HeaderSteps $I,\Page\MainMenu $homePage)
+    {
+        $homePage->home();
+        $I->getSubcategory();
+    }
 
-        /**
-         * Check Header menu - Log In
-         * @param Acceptance\HeaderSteps $I
-         * @param \Page\Header $homePage
-         */
+    /**
+     * Check Links For Bottoms
+     * @param Acceptance\HeaderSteps $I
+     * @param \Page\MainMenu $homePage
+     */
 
-        function logInCheckLinksOnHeader(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
-        {
-           $homePage->currency();
-           $I->getHeaderLinks();
+    function checkTopSubcategoryBottoms(\Step\Acceptance\HeaderSteps $I,\Page\MainMenu $homePage)
+    {
+        $homePage->home();
+        $I->getSubcategory2();
+    }
 
-        }
-
-
-        /**
-         * Check Search
-         * @param Acceptance\HeaderSteps $I
-         * @param \Page\Header $homePage
-         */
-
-        function searchIsNotResult(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
-        {
-            $homePage->currency();
-            $I->getWrongSearch();
-        }
-
-        function searchCategory(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
-        {
-            $homePage->currency();
-            $I->getSearchOnCategory();
-        }
-
-        /**
-         * Check Empty Cart
-         * @param \Page\Header $homePage
-         */
-
-        function checkEmptyCart(\Page\Header $homePage)
-        {
-            $homePage->emptyCart();
-        }
 
 
 

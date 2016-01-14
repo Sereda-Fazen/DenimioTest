@@ -145,4 +145,30 @@ class HeaderSteps extends \AcceptanceTester
         }
 
     }
+
+    public function getSubcategory(){
+            $I = $this;
+
+            $sub =  count($I->grabMultiple('//*[@id="block112"]/div[1]/div/a'));
+            for ($s = 1; $s <= $sub; $s++) {
+                $I->moveMouseOver('//*[@class="parentMenu"]');
+                $I->waitForElementVisible('//*[@class="itemMenu level1"]');
+                $I->click('//*[@class="itemMenu level1"]/a['.$s.']');
+                $I->seeElement('div.breadcrumbs > ul > li:nth-of-type(2) > a');
+            }
+    }
+    public function getSubcategory2()
+    {
+        $I = $this;
+        $sub2 = count($I->grabMultiple('//*[@id="block113"]/div[1]/div/a'));
+        for ($b = 1; $b < $sub2; $b++) {
+            $I->moveMouseOver('//*[@id="pt_menu13"]/div[1]/a/span');
+            $I->waitForElementVisible('//*[@id="block113"]/div[1]/div/a[1]');
+            $I->click('//*[@id="block113"]/div[1]/div/a[' . $b . ']');
+            $I->seeElement('div.breadcrumbs > ul > li:nth-of-type(2) > a');
+        }
+    }
+
+
+
 }

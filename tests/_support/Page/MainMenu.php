@@ -1,19 +1,16 @@
 <?php
 namespace Page;
 
-class Header
+class MainMenu
 {
 
     public static $URL = '/';
-    public static $moveOnCurrency = 'li.currency-trigger > a';
-
-    /**
-     * Empty Cart
-     */
-
-    public static $emptyCart = 'div.block-cart.mini_cart_ajax > div.block-cart';
-    public static $showForm = 'p.empty';
-
+    public static $top = '//*[@class="pt_custommenu"]/div[1]';
+    public static $bottoms = '//*[@class="pt_custommenu"]/div[2]';
+    public static $accessories = '//*[@class="pt_custommenu"]/div[3]';
+    public static $newArrivals = '//*[@class="pt_custommenu"]/div[4]';
+    public static $brands = '//*[@id="pt_menu_link"]/div/ul/li[1]/a/span';
+    public static $calendar = 'div.parentMenu > ul > li:nth-of-type(2) > a > span';
 
 
     public static $GRBOnCart = 'a > span > span.price';
@@ -26,19 +23,27 @@ class Header
         $this->tester = $I;
     }
 
-    public function currency()
+    public function home()
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL);
 
         return $this;
     }
-    public function emptyCart(){
+    public function getMainMenu(){
         $I = $this->tester;
-        $I->amOnPage(self::$URL);
-        $I->moveMouseOver(self::$emptyCart);
-        $I->waitForElementVisible(self::$showForm, 3);
-        $I->see('You have no items in your shopping cart.',self::$showForm);
+        $I->click(self::$top);
+        $I->seeElement('div.col-main');
+        $I->click(self::$bottoms);
+        $I->seeElement('div.col-main');
+        $I->click(self::$accessories);
+        $I->seeElement('div.col-main');
+        $I->click(self::$newArrivals);
+        $I->seeElement('div.col-main');
+        $I->click(self::$brands);
+        $I->seeElement('//*[@class="product-image"]');
+        $I->click(self::$calendar);
+        $I->seeElement('span.fc-header-title > h2');
         return $this;
     }
 
