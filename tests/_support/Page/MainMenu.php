@@ -15,6 +15,25 @@ class MainMenu
 
     public static $GRBOnCart = 'a > span > span.price';
 
+
+    /**
+     * Random Products
+     */
+
+    public static $prev = '//*[@class="bx-prev"]';
+    public static $next = '//*[@class="bx-next"]';
+
+    /**
+     * Blog
+     */
+
+    public static $fromBlog = '//*[@class="block blog-recent-posts"]/div/h3';
+    public static $more = '//span[@class="more-link"]/a';
+    public static $seeBlog = '//*[@class="blog-home"]';
+    public static $titleArticle = '//h4/a';
+    public static $seeArticle = '//*[@class="col-main"]';
+
+
     protected $tester;
 
     
@@ -44,6 +63,35 @@ class MainMenu
         $I->seeElement('//*[@class="product-image"]');
         $I->click(self::$calendar);
         $I->seeElement('span.fc-header-title > h2');
+        return $this;
+    }
+
+    public function getRandom(){
+        $I = $this->tester;
+        $I->amOnPage(self::$URL);
+        $I->scrollDown(1000);
+        $I->moveMouseOver(self::$next);
+        $I->click(self::$next);
+        $I->wait(4);
+        $I->moveMouseOver(self::$prev);
+        $I->click(self::$prev);
+        $I->wait(4);
+
+        return $this;
+    }
+
+    public function getBlog(){
+        $I = $this->tester;
+        $I->amOnPage(self::$URL);
+        $I->scrollDown(2000);
+        $I->waitForElementVisible(self::$fromBlog);
+        $I->click(self::$more);
+        $I->seeElement(self::$seeBlog);
+        $I->moveBack();
+        $I->click(self::$titleArticle);
+        $I->seeElement(self::$seeArticle);
+        $I->moveBack();
+
         return $this;
     }
 

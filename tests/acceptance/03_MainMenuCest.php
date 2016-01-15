@@ -47,9 +47,24 @@ class MainMenuCest
      * @param Acceptance\HomeSteps $I
      * @param \Page\Header $homePage
      */
-    function getCheckFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+    function checkFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
         $I->getCheckFeaturedBrands();
     }
+
+    /**
+     * Random Products
+     * @param \Page\MainMenu $homePage
+     */
+
+
+    function footerSubscribe(\Page\MainMenu $homePage){
+        $homePage->home();
+        $homePage->getRandom();
+    }
+
+
+
+
 
 
 
