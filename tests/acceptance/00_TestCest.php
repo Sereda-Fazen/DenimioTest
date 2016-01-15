@@ -6,10 +6,10 @@ class TestCest
 
 
 
-    function footerSubscribe(\Page\MainMenu $homePage)
+    function footerSubscribe(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
-        $homePage->home();
-        $homePage->getBlog();
+        $I->getFooterGetCloser();
+        $I->getSecondOpen();
 
     }
 

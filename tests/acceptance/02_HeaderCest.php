@@ -13,7 +13,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function currencyCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getCurrency();
         }
@@ -24,7 +24,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function languageCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getLanguage();
         }
@@ -35,7 +35,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function logInCheckLinksOnHeader(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        function headerLogInCheckLinksOnHeader(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
            $homePage->home();
            $I->getHeaderLinks();
 
@@ -47,12 +47,12 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function searchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        function headerSearchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
             $homePage->home();
             $I->getWrongSearch();
         }
 
-        function searchCategory(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerSearchCategory(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getSearchOnCategory();
         }
@@ -62,7 +62,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function checkEmptyCart(\Page\Header $homePage){
+        function headerCheckEmptyCart(\Page\Header $homePage){
             $homePage->emptyCart();
         }
 
