@@ -9,33 +9,33 @@ class HeaderCest
 
         /**
          * Check MultiCurrency
-         * @param Acceptance\HeaderSteps $I
+         * @param Acceptance\HomeSteps $I
          * @param \Page\Header $homePage
          */
 
-        function currencyCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
+        function currencyCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getCurrency();
         }
 
         /**
          * Check MultiLanguage
-         * @param Acceptance\HeaderSteps $I
+         * @param Acceptance\HomeSteps $I
          * @param \Page\Header $homePage
          */
 
-        function languageCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
+        function languageCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getLanguage();
         }
 
         /**
          * Check Header menu - Log In
-         * @param Acceptance\HeaderSteps $I
+         * @param Acceptance\HomeSteps $I
          * @param \Page\Header $homePage
          */
 
-        function logInCheckLinksOnHeader(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage){
+        function logInCheckLinksOnHeader(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
            $homePage->home();
            $I->getHeaderLinks();
 
@@ -43,16 +43,16 @@ class HeaderCest
 
         /**
          * Check Search
-         * @param Acceptance\HeaderSteps $I
+         * @param Acceptance\HomeSteps $I
          * @param \Page\Header $homePage
          */
 
-        function searchIsNotResult(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage){
+        function searchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
             $homePage->home();
             $I->getWrongSearch();
         }
 
-        function searchCategory(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
+        function searchCategory(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getSearchOnCategory();
         }
@@ -66,6 +66,7 @@ class HeaderCest
             $homePage->emptyCart();
         }
 
+
         /**
          * Footer Links
          * @param \Page\Header $homePage
@@ -75,11 +76,11 @@ class HeaderCest
             $homePage->accountLinksFooter();
         }
 
-        function footerLinksInformation(Step\Acceptance\HeaderSteps $I){
+        function footerLinksInformation(Step\Acceptance\HomeSteps $I){
             $I->getInformationLinksFooter();
         }
 
-        function footerGetClosers(Step\Acceptance\HeaderSteps $I){
+        function footerGetClosers(Step\Acceptance\HomeSteps $I){
             $I->getFooterGetCloser();
             $I->getSecondOpen();
         }

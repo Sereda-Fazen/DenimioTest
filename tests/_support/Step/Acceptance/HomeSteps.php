@@ -1,7 +1,7 @@
 <?php
 namespace Step\Acceptance;
 
-class HeaderSteps extends \AcceptanceTester
+class HomeSteps extends \AcceptanceTester
 {
 
     public function getCurrency()

@@ -20,11 +20,11 @@ class MainMenuCest
 
     /**
      * Check Links For Tops
-     * @param Acceptance\HeaderSteps $I
+     * @param Acceptance\HomeSteps $I
      * @param \Page\MainMenu $homePage
      */
 
-    function checkTopSubcategoryTops(\Step\Acceptance\HeaderSteps $I,\Page\MainMenu $homePage)
+    function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
         $I->getSubcategory();
@@ -32,14 +32,23 @@ class MainMenuCest
 
     /**
      * Check Links For Bottoms
-     * @param Acceptance\HeaderSteps $I
+     * @param Acceptance\HomeSteps $I
      * @param \Page\MainMenu $homePage
      */
 
-    function checkTopSubcategoryBottoms(\Step\Acceptance\HeaderSteps $I,\Page\MainMenu $homePage)
+    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
         $I->getSubcategory2();
+    }
+
+    /**
+     * Content (FEATURED BRANDS)
+     * @param Acceptance\HomeSteps $I
+     * @param \Page\Header $homePage
+     */
+    function checkContentLinks(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        $I->getCheckLinksOfContent();
     }
 
 
