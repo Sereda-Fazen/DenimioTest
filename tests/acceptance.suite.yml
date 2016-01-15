@@ -9,15 +9,15 @@ modules:
         WebDriver:
             url: 'http://staging:prospect@dev8.denimio.com'
             browser: chrome
-            window_size: 1980x780
+            window_size: 1980x1780
             restart: false
             clear_cookies: false
             #wait: 1
 
             # run in browserstack
 
-            host: 'hub.browserstack.com'
-            port: 80
+            #host: 'hub.browserstack.com'
+            #port: 80
             browser: chrome
             window_size: 1920x1080
             restart: false

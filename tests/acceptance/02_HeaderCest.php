@@ -13,8 +13,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function currencyCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
-        {
+        function currencyCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getCurrency();
         }
@@ -25,8 +24,7 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function languageCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
-        {
+        function languageCheck(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getLanguage();
         }
@@ -37,13 +35,11 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function logInCheckLinksOnHeader(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
-        {
+        function logInCheckLinksOnHeader(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage){
            $homePage->home();
            $I->getHeaderLinks();
 
         }
-
 
         /**
          * Check Search
@@ -51,14 +47,12 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function searchIsNotResult(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage)
-        {
+        function searchIsNotResult(Step\Acceptance\HeaderSteps $I,\Page\Header $homePage){
             $homePage->home();
             $I->getWrongSearch();
         }
 
-        function searchCategory(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage)
-        {
+        function searchCategory(Step\Acceptance\HeaderSteps $I, \Page\Header $homePage){
             $homePage->home();
             $I->getSearchOnCategory();
         }
@@ -68,10 +62,41 @@ class HeaderCest
          * @param \Page\Header $homePage
          */
 
-        function checkEmptyCart(\Page\Header $homePage)
-        {
+        function checkEmptyCart(\Page\Header $homePage){
             $homePage->emptyCart();
         }
+
+        /**
+         * Footer Links
+         * @param \Page\Header $homePage
+         */
+
+        function footerLinksAccount(\Page\Header $homePage){
+            $homePage->accountLinksFooter();
+        }
+
+        function footerLinksInformation(Step\Acceptance\HeaderSteps $I){
+            $I->getInformationLinksFooter();
+        }
+
+        function footerGetClosers(Step\Acceptance\HeaderSteps $I){
+            $I->getFooterGetCloser();
+            $I->getSecondOpen();
+        }
+
+        function footerSubscribe(\Page\Header $homePage)
+        {
+            $homePage->subscribeEmptyField();
+            $homePage->subscribeInvalidEmail('123qwerty');
+            $homePage->subscribeIsNotEmail('dev.denimio@yahoo.com');
+            $homePage->subscribeSuccess('johndoe@domain.com');
+        }
+
+
+
+
+
+
 
 
 

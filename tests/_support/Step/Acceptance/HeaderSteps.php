@@ -169,6 +169,38 @@ class HeaderSteps extends \AcceptanceTester
         }
     }
 
+    public function getInformationLinksFooter(){
+        $I = $this;
+        $I->amOnPage('/customer/account/login/');
+        $info = count($I->grabMultiple('//*[@class="footer-static-content row-fluid"]/ul/li/a'));
+        for($i = 1; $i <= $info; $i++) {
+            $I->scrollDown(1000);
+            $I->moveMouseOver('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
+            $I->click('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
+        }
+    }
+
+    public function getFooterGetCloser(){
+        $I = $this;
+        $I->amOnPage('/customer/account/login/');
+        $social = count($I->grabMultiple('//*[@class="footer-static-content row-fluid footer-socials"]/a'));
+        for ($soc = 1; $soc <=$social; $soc++) {
+            $I->click('//*[@class="footer-static-content row-fluid footer-socials"]/a[' . $soc . ']');
+            $I->wait(3);
+        }
+    }
+
+    public function getSecondOpen() {
+        $I = $this;
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+        });
+    }
+
+
+
 
 
 }
