@@ -199,6 +199,67 @@ class HomeSteps extends \AcceptanceTester
         });
     }
 
+    public function getCheckFeaturedBrands()
+    {
+        $I = $this;
+        $I->amOnPage('/');
+
+        $featured = count($I->grabMultiple('//*[@id="featured-brands"]/div[1]/div'));
+        for ($f = 1; $f <= $featured; $f++) {
+            $I->moveMouseOver('//*[@id="featured-brands"]/div[1]/div['.$f.']');
+            $I->wait(1);
+            $I->see('SHOP ALL' ,'//*[@class="brand-overlay"]/span');
+        }
+
+        $featured2 = count($I->grabMultiple('//div[2][@class="row"]/div'));
+        for ($fb = 1; $fb <= $featured2; $fb++) {
+            $I->moveMouseOver('//div[2][@class="row"]/div['.$fb.']');
+            $I->wait(1);
+            $I->see('SHOP ALL' ,'//*[@class="brand-overlay"]/span');
+        }
+
+        $I->moveMouseOver('//*[@id="featured-brands"]/div[1]/div[1]');
+        $I->click('//*[@class="brand-overlay"]/span');
+        $I->see('Brands' ,'//li[@class="brand"]');
+        $I->click('//li[@class="home"]');
+
+
+        $cat = count($I->grabMultiple('//*[@id="featured-brands"]/div[1]/div[1]/div/div/ul/li'));
+        for ($c = 1; $c <= $cat; $c++) {
+            $I->click('//*[@id="featured-brands"]/div[1]/div[1]/div/div/ul/li['.$c.']/a');
+
+                switch ($c) {
+
+                    case 1:
+                        echo $I->see('New Arrivals', 'ul > li:nth-of-type(2) > strong');
+                        $I->moveBack();
+                        break;
+
+                    case 2:
+                        echo $I->see('Tops','ul > li:nth-of-type(2) > strong');
+                        $I->moveBack();
+                        break;
+
+                    case 3:
+                        echo $I->see('Bottoms', 'ul > li:nth-of-type(2) > strong');
+                        $I->moveBack();
+                        break;
+
+                    case 4:
+                        echo $I->see('Accessories','ul > li:nth-of-type(2) > strong');
+                        $I->moveBack();
+                        break;
+                }
+
+        }
+
+
+    }
+
+
+
+
+
 
 
 

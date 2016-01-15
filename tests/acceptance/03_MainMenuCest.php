@@ -47,8 +47,8 @@ class MainMenuCest
      * @param Acceptance\HomeSteps $I
      * @param \Page\Header $homePage
      */
-    function checkContentLinks(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
-        $I->getCheckLinksOfContent();
+    function getCheckFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        $I->getCheckFeaturedBrands();
     }
 
 
