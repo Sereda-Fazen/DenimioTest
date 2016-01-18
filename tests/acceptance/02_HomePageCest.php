@@ -82,7 +82,7 @@ class HomePageCest
 
         function footerGetClosers(Step\Acceptance\HomeSteps $I){
             $I->getFooterGetCloser();
-            $I->getSecondOpen();
+            //$I->getSecondOpen();
         }
 
         function footerSubscribe(\Page\HomePage $homePage)

@@ -206,7 +206,11 @@ class HomeSteps extends \AcceptanceTester
         $social = count($I->grabMultiple('//*[@class="footer-static-content row-fluid footer-socials"]/a'));
         for ($soc = 1; $soc <=$social; $soc++) {
             $I->click('//*[@class="footer-static-content row-fluid footer-socials"]/a[' . $soc . ']');
-
+            $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+                $handles = $webdriver->getWindowHandles();
+                $last_window = end($handles);
+                $webdriver->switchTo()->window($last_window);
+            });
         }
     }
 
@@ -251,22 +255,30 @@ class HomeSteps extends \AcceptanceTester
                 switch ($c) {
 
                     case 1:
-                        echo $I->see('New Arrivals', 'ul > li:nth-of-type(2) > strong');
+                        echo
+                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                        $I->see('New Arrivals', 'ul > li:nth-of-type(2) > strong');
                         $I->moveBack();
                         break;
 
                     case 2:
-                        echo $I->see('Tops','ul > li:nth-of-type(2) > strong');
+                        echo
+                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                        $I->see('Tops','ul > li:nth-of-type(2) > strong');
                         $I->moveBack();
                         break;
 
                     case 3:
-                        echo $I->see('Bottoms', 'ul > li:nth-of-type(2) > strong');
+                        echo
+                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                        $I->see('Bottoms', 'ul > li:nth-of-type(2) > strong');
                         $I->moveBack();
                         break;
 
                     case 4:
-                        echo $I->see('Accessories','ul > li:nth-of-type(2) > strong');
+                        echo
+                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                        $I->see('Accessories','ul > li:nth-of-type(2) > strong');
                         $I->moveBack();
                         break;
                 }
