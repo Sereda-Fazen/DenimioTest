@@ -4,7 +4,7 @@ use Step\Acceptance;
 /**
  * @group 2_header
  */
-class HeaderCest
+class HomePageCest
 {
 
         /**
