@@ -45,9 +45,9 @@ class MainMenuCest
     /**
      * Content (FEATURED BRANDS)
      * @param Acceptance\HomeSteps $I
-     * @param \Page\Header $homePage
+     * @param \Page\HomePage $homePage
      */
-    function checkFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+    function checkFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
         $I->getCheckFeaturedBrands();
     }
 

@@ -17,43 +17,63 @@ class HomeSteps extends \AcceptanceTester
             switch ($c) {
 
                 case 1:
-                    echo $I->see('£', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('£', $seeCurr);
                     break;
 
                 case 2:
-                    echo $I->see('CN¥', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('CN¥', $seeCurr);
                     break;
 
                 case 3:
-                    echo $I->see('€', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('€', $seeCurr);
                     break;
 
                 case 4:
-                    echo $I->see('Rp', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Rp', $seeCurr);
                     break;
 
                 case 5:
-                    echo $I->see('¥', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('¥', $seeCurr);
                     break;
 
                 case 6:
-                    echo $I->see('RM', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('RM', $seeCurr);
                     break;
 
                 case 7:
-                    echo $I->see('RUB', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('RUB', $seeCurr);
                     break;
 
                 case 8:
-                    echo $I->see('₩', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('₩', $seeCurr);
                     break;
 
                 case 9:
-                    echo $I->see('฿', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('฿', $seeCurr);
                     break;
 
                 case 10:
-                    echo $I->see('$', $seeCurr);
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('$', $seeCurr);
                     break;
 
             }
