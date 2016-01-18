@@ -1,7 +1,7 @@
 <?php
 namespace Page;
 
-class Header
+class HomePage
 {
 
     public static $URL = '/';

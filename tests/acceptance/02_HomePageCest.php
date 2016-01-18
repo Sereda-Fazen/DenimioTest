@@ -10,10 +10,10 @@ class HomePageCest
         /**
          * Check MultiCurrency
          * @param Acceptance\HomeSteps $I
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
             $I->getCurrency();
         }
@@ -21,10 +21,10 @@ class HomePageCest
         /**
          * Check MultiLanguage
          * @param Acceptance\HomeSteps $I
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
             $I->getLanguage();
         }
@@ -32,10 +32,10 @@ class HomePageCest
         /**
          * Check Header menu - Log In
          * @param Acceptance\HomeSteps $I
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function headerLogInCheckLinksOnHeader(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        function headerLogInCheckLinksOnHeader(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
            $homePage->home();
            $I->getHeaderLinks();
 
@@ -44,35 +44,35 @@ class HomePageCest
         /**
          * Check Search
          * @param Acceptance\HomeSteps $I
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function headerSearchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\Header $homePage){
+        function headerSearchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
             $homePage->home();
             $I->getWrongSearch();
         }
 
-        function headerSearchCategory(Step\Acceptance\HomeSteps $I, \Page\Header $homePage){
+        function headerSearchCategory(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
             $I->getSearchOnCategory();
         }
 
         /**
          * Check Empty Cart
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function headerCheckEmptyCart(\Page\Header $homePage){
+        function headerCheckEmptyCart(\Page\HomePage $homePage){
             $homePage->emptyCart();
         }
 
 
         /**
          * Footer Links
-         * @param \Page\Header $homePage
+         * @param \Page\HomePage $homePage
          */
 
-        function footerLinksAccount(\Page\Header $homePage){
+        function footerLinksAccount(\Page\HomePage $homePage){
             $homePage->accountLinksFooter();
         }
 
@@ -85,7 +85,7 @@ class HomePageCest
             $I->getSecondOpen();
         }
 
-        function footerSubscribe(\Page\Header $homePage)
+        function footerSubscribe(\Page\HomePage $homePage)
         {
             $homePage->subscribeEmptyField();
             $homePage->subscribeInvalidEmail('123qwerty');
