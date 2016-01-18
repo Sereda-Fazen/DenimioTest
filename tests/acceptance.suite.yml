@@ -8,7 +8,7 @@ modules:
     config:
         WebDriver:
             url: 'http://staging:prospect@dev8.denimio.com'
-            browser: firefox
+            browser: chrome
             window_size: 1980x1780
             restart: false
             clear_cookies: false
