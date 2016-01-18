@@ -186,7 +186,7 @@ class HomeSteps extends \AcceptanceTester
         $social = count($I->grabMultiple('//*[@class="footer-static-content row-fluid footer-socials"]/a'));
         for ($soc = 1; $soc <=$social; $soc++) {
             $I->click('//*[@class="footer-static-content row-fluid footer-socials"]/a[' . $soc . ']');
-            $I->wait(4);
+
         }
     }
 
