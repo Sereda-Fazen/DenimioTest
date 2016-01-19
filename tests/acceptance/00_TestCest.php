@@ -7,7 +7,7 @@ class TestCest
 
 
     function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
-        $homePage->footerSocialFacebook();
+        $I->getFooterGetCloser();
         $I->getSecondOpen();
 
 

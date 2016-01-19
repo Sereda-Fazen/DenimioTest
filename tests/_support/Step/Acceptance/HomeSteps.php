@@ -204,13 +204,9 @@ class HomeSteps extends \AcceptanceTester
         $I = $this;
         $I->amOnPage('/customer/account/login/');
         $social = count($I->grabMultiple('//*[@class="footer-static-content row-fluid footer-socials"]/a'));
-        for ($soc = 1; $soc <=$social; $soc++) {
+        for ($soc = 1; $soc <=3; $soc++) {
             $I->click('//*[@class="footer-static-content row-fluid footer-socials"]/a[' . $soc . ']');
-            $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
-                $handles = $webdriver->getWindowHandles();
-                $last_window = end($handles);
-                $webdriver->switchTo()->window($last_window);
-            });
+
         }
     }
 
