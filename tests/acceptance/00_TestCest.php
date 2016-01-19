@@ -6,9 +6,17 @@ class TestCest
 
 
 
-    function footerSubscribe(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
-    {
-        $I->getFooterGetCloser();
+    function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
+        $homePage->footerSocialFacebook();
+        $I->getSecondOpen();
+
+        $homePage->footerSocialTwitter();
+        $I->getSecondOpen();
+
+        $homePage->footerSocialPinterest();
+        $I->getSecondOpen();
+
+        $homePage->footerSocialInstagram();
         $I->getSecondOpen();
 
     }
