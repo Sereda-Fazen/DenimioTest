@@ -32,6 +32,18 @@ class HomePage
     public static $error = 'li.error-msg';
     public static $success = 'li.success-msg';
 
+    // footer get closer
+
+    public static $facebook = 'em.fa.fa-facebook.fa-inverse';
+    public static $instagram = 'em.fa.fa-instagram.fa-inverse';
+    public static $twitter = 'em.fa.fa-twitter.fa-inverse';
+    public static $pinterest = 'em.fa.fa-pinterest.fa-inverse';
+
+    //see social
+    public static $seeTwitter =  'a.ProfileHeaderCard-nameLink.u-textInheritColor.js-nav';
+    public static $seePinterest = 'div.nameInner';
+    public static $seeInstagram = 'h1';
+
 
     protected $tester;
 
@@ -100,5 +112,37 @@ class HomePage
         $I->click(self::$signUp);
         $I->see('Thank you for your subscription.', self::$success);
     }
+
+    public function footerSocialFacebook ()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$facebook);
+        $I->wait(3);
+    }
+    public function footerSocialTwitter ()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$twitter);
+        $I->see('Denimio', self::$seeTwitter,10);
+    }
+    public function footerSocialPinterest ()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$pinterest);
+        $I->see('Denimio.com', self::$seePinterest,10);
+    }
+    public function footerSocialInstagram ()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$instagram);
+        $I->see('denimio_shop', self::$seeInstagram,10);
+    }
+
+
+
 
 }
