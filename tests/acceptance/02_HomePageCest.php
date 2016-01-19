@@ -73,7 +73,7 @@ class HomePageCest
          */
 
         function footerLinksAccount(\Page\HomePage $homePage){
-            $homePage->accountLinksFooter();
+            $homePage->footerLinksAccount();
         }
 
         function footerLinksInformation(Step\Acceptance\HomeSteps $I){

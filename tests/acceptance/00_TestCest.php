@@ -1,18 +1,13 @@
 <?php
-use Step\Acceptance;
+use \Step\Acceptance;
 
-class TestCest
-{
+class TestCest {
 
-
-
-    function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
-        $I->getFooterGetCloser();
-        $I->getSecondOpen();
-
-
-
+    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getCurrency();
     }
+
 
 
 }

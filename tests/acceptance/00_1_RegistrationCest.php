@@ -1,6 +1,6 @@
 <?php
 /**
- * @group account
+ * @group 1_account
  */
 class RegistrationCest
 {
