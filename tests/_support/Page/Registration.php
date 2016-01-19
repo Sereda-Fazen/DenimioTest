@@ -1,47 +1,40 @@
 <?php
 namespace Page;
 
-class Login
+class Registration
 {
-
-    public static $URL = '/';
-    public static $clickLogIn = 'a.login_click';
-
-    public static $email = '#email';
-    public static $pass = '#pass';
-    public static $submit = '[name="send"] > span > span';
+    public static $URL = '/customer/account/login/';
+    public static $createAccount = 'div.new-users > div.buttons-set > button.button > span > span';
+    public static $firsName = '#firstname';
+    public static $lastName = '#lastname';
+    public static $email = '#email_address';
+    public static $pass = '#password';
+    public static $confirmation = '#confirmation';
+    public static $submit = 'Submit';
     public static $logout = 'li.dropit-trigger > a';
-
-    public static $msg = 'div.col-main > p';
-
     protected $tester;
-
     public function __construct(\AcceptanceTester $I)
     {
         $this->tester = $I;
     }
-
-    public function login($name, $password)
+    public function register($fName,$lName,$email, $pass1, $pass2)
     {
         $I = $this->tester;
-
         $I->amOnPage(self::$URL);
-        $I->click(self::$clickLogIn);
-        $I->fillField(self::$email, $name);
-        $I->fillField(self::$pass, $password);
+
+        $I->click(self::$createAccount);
+        $I->fillField(self::$firsName, $fName);
+        $I->fillField(self::$lastName, $lName);
+        $I->fillField(self::$email, $email);
+        $I->fillField(self::$pass, $pass1);
+        $I->fillField(self::$confirmation, $pass2);
+
         $I->click(self::$submit);
-
-
         return $this;
     }
-
     public function logout()
     {
         $I = $this->tester;
         $I->click(self::$logout);
-        $I->see('You have logged out and will be redirected to our homepage in 5 seconds.',self::$msg);
-
     }
-
-
 }
