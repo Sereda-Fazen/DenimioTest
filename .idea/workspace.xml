@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/acceptance/01_1_ForgotPassCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/01_2_ForgotPassCest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/acceptance/01_LoginCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/01_1_LoginCest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DenimioTest.iws" />
@@ -26,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="02_HomePageCest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="02_HomePageCest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6666667">
+            <state vertical-scroll-proportion="0.13308688">
               <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding />
             </state>
@@ -86,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01_2_ForgotPassCest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="01_2_ForgotPassCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/01_2_ForgotPassCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5323475">
+            <state vertical-scroll-proportion="-10.666667">
               <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding />
             </state>
@@ -169,12 +167,12 @@
         <option value="$PROJECT_DIR$/tests/_support/Page/ForgotPass.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/ForgotPassSteps.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/Registration.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/HomePage.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/HomeSteps.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_1_RegistrationCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/01_1_ForgotPassCest.php" />
+        <option value="$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php" />
       </list>
     </option>
   </component>
@@ -402,12 +400,6 @@
       <created>1450686737095</created>
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
-    </task>
-    <task id="LOCAL-00007" summary="9">
-      <created>1450862046711</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1450862046711</updated>
     </task>
     <task id="LOCAL-00008" summary="10">
       <created>1450862353420</created>
@@ -697,7 +689,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453221956802</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="registr3">
+      <created>1453222075490</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1453222075500</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -746,7 +744,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mainMenu2" />
     <MESSAGE value="mainMenu3" />
     <MESSAGE value="mainMenu4" />
     <MESSAGE value="mainMenu5" />
@@ -771,7 +768,8 @@
     <MESSAGE value="registr" />
     <MESSAGE value="registr1" />
     <MESSAGE value="registr2" />
-    <option name="LAST_COMMIT_MESSAGE" value="registr2" />
+    <MESSAGE value="registr3" />
+    <option name="LAST_COMMIT_MESSAGE" value="registr3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1120,14 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/01_1_LoginCest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3333334">
@@ -1154,8 +1144,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/01_2_ForgotPassCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5323475">
+        <state vertical-scroll-proportion="-10.666667">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13308688">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>
