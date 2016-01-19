@@ -222,6 +222,34 @@ class HomeSteps extends \AcceptanceTester
                     echo $I->see('связаться с нами', $seeLanguage);
                     break;
 
+                case 9:
+                    echo $I->see('Contact Support', $seeLanguage);
+                    break;
+
+                case 10:
+                    echo $I->see('Contact Support', $seeLanguage);
+                    break;
+
+                case 11:
+                    echo $I->see('Contact Support', $seeLanguage);
+                    break;
+
+                case 12:
+                    echo $I->see('Suporte:', $seeLanguage);
+                    break;
+
+                case 13:
+                    echo $I->see('Contact Support', $seeLanguage);
+                    break;
+
+                case 14:
+                    echo $I->see('Contact Support', $seeLanguage);
+                    break;
+
+
+
+
+
             }
 
         }
