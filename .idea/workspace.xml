@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -78,8 +79,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5684713">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5955414">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -400,12 +401,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00020" summary="mac">
-      <created>1451290074666</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1451290074666</updated>
-    </task>
     <task id="LOCAL-00021" summary="mac1">
       <created>1451291901980</created>
       <option name="number" value="00021" />
@@ -694,7 +689,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453301636577</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="home14">
+      <created>1453303143121</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1453303143121</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -743,7 +744,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="content7" />
     <MESSAGE value="content8" />
     <MESSAGE value="content9" />
     <MESSAGE value="content10" />
@@ -768,7 +768,8 @@
     <MESSAGE value="home11" />
     <MESSAGE value="home12" />
     <MESSAGE value="home13" />
-    <option name="LAST_COMMIT_MESSAGE" value="home13" />
+    <MESSAGE value="home14" />
+    <option name="LAST_COMMIT_MESSAGE" value="home14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1154,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5684713">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5955414">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
