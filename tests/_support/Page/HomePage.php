@@ -73,6 +73,7 @@ class HomePage
         $I->amOnPage(self::$URL2);
         $I->click(self::$clickSignUp);
         $I->see('THIS IS A REQUIRED FIELD.',self::$emptyField);
+        $I->wait(2);
 
     }
 
@@ -82,6 +83,7 @@ class HomePage
         $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('PLEASE ENTER A VALID EMAIL ADDRESS. FOR EXAMPLE JOHNDOE@DOMAIN.COM.',self::$invalidField);
+        $I->wait(2);
     }
 
     public function subscribeIsNotEmail ($email)
@@ -90,6 +92,7 @@ class HomePage
         $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('There was a problem with the subscription:',self::$error);
+        $I->wait(2);
     }
 
     public function subscribeSuccess ($email)
@@ -98,6 +101,7 @@ class HomePage
         $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('Thank you for your subscription.',self::$success);
+        $I->wait(2);
     }
 
 
