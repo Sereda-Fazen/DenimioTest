@@ -235,20 +235,16 @@ class HomeSteps extends \AcceptanceTester
                     break;
 
                 case 12:
-                    echo $I->see('Suporte:', $seeLanguage);
+                    echo $I->see('Entrar', $seeLanguage);
                     break;
 
                 case 13:
-                    echo $I->see('Inicio De Sesiónt', $seeLanguage);
+                    echo $I->see('Inicio De Sesión', $seeLanguage);
                     break;
 
                 case 14:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Log In', $seeLanguage);
                     break;
-
-
-
-
 
             }
 
