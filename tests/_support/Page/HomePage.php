@@ -67,6 +67,9 @@ class HomePage
         return $this;
     }
 
+
+
+
     public function subscribeEmptyField()
     {
         $I = $this->tester;
@@ -103,6 +106,78 @@ class HomePage
         $I->see('Thank you for your subscription.',self::$success);
         $I->wait(2);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * Footer
+     */
+
+    public static $facebook = '//em[@class="fa fa-facebook fa-stack-1x fa-inverse"]';
+    public static $instagram = '//em[@class="fa fa-instagram fa-stack-1x fa-inverse"]';
+    public static $twitter = '//em[@class="fa fa-twitter fa-stack-1x fa-inverse"]';
+    public static $pinterest = '//em[@class="fa fa-pinterest fa-stack-1x fa-inverse"]';
+
+    public static $denimioTwitter = 'Denimio';
+    public static $denimioPinterest = 'Denimio.com';
+    public static $denimioInstagram = 'denimio_shop';
+
+
+
+    public function homeFooterFacebook()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$facebook);
+       // $I->waitForText(self::$cadenceWatch, 4);
+    }
+    public function homeFooterInstagram()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$instagram);
+
+    }
+    public function homeFooterTwiter()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$twitter);
+    }
+    public function homeFooterPinterest()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL2);
+        $I->click(self::$pinterest);
+
+    }
+    public function assertCheckTwitter()
+    {
+        $I = $this->tester;
+        $I->waitForElement('//img[@class="ProfileAvatar-image "]');
+    }
+    public function assertCheckPinterest()
+    {
+        $I = $this->tester;
+        $I->waitForText(self::$denimioPinterest, 4);
+    }
+    public function assertCheckInstagram()
+    {
+        $I = $this->tester;
+        $I->waitForText(self::$denimioInstagram, 4);
+    }
+
+
 
 
 

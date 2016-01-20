@@ -319,15 +319,6 @@ class HomeSteps extends \AcceptanceTester
         }
     }
 
-    public function getFooterGetCloser(){
-        $I = $this;
-        $I->amOnPage('/customer/account/login/');
-        $social = count($I->grabMultiple('//*[@class="footer-static-content row-fluid footer-socials"]/a'));
-        for ($soc = 1; $soc <=3; $soc++) {
-            $I->click('//*[@class="footer-static-content row-fluid footer-socials"]/a[' . $soc . ']');
-
-        }
-    }
 
     public function getSecondOpen() {
         $I = $this;
@@ -335,6 +326,8 @@ class HomeSteps extends \AcceptanceTester
             $handles = $webdriver->getWindowHandles();
             $last_window = end($handles);
             $webdriver->switchTo()->window($last_window);
+
+
         });
     }
 
