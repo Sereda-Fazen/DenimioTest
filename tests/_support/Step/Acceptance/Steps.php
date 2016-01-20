@@ -16,9 +16,9 @@ class Steps extends \AcceptanceTester
         }
         public function addToCart(){
             $I = $this;
-            $I->moveMouseOver('div.category-products > ul:nth-of-type(1) > li:nth-of-type(2) > div.item-inner');
-            $I->waitForElementVisible('div.category-products > ul:nth-of-type(1) > li:nth-of-type(2) > div.item-inner > div.images-content > div.actions > div.actions-inner > button.button.btn-cart > span');
-            $I->click('div.category-products > ul:nth-of-type(1) > li:nth-of-type(2) > div.item-inner > div.images-content > div.actions > div.actions-inner > button.button.btn-cart > span');
+            $I->moveMouseOver('//*[@class="add-to-links"]');
+            $I->waitForElementVisible('//*[@class="button btn-cart"]');
+            $I->click('//*[@class="button btn-cart"]');
             $I->see('Description','ul.product-tabs');
         }
 
