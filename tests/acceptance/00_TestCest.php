@@ -8,7 +8,6 @@ class TestCest {
         $homePage->homeFooterFacebook();
         $I->getSecondOpen();
 
-
         $homePage->homeFooterTwiter();
         $I->getSecondOpen();
         $homePage->assertCheckTwitter();

@@ -79,20 +79,26 @@ class HomePageCest
         function footerLinksInformation(Step\Acceptance\HomeSteps $I){
             $I->getInformationLinksFooter();
         }
-/*
-        function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
-            $homePage->footerSocialFacebook();
+
+        function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage)
+        {
+
+            $homePage->homeFooterFacebook();
             $I->getSecondOpen();
 
-            $homePage->footerSocialTwitter();
+            $homePage->homeFooterTwiter();
             $I->getSecondOpen();
+            $homePage->assertCheckTwitter();
 
-            $homePage->footerSocialPinterest();
+            $homePage->homeFooterPinterest();
             $I->getSecondOpen();
+            $homePage->assertCheckPinterest();
 
-            $homePage->footerSocialInstagram();
+            $homePage->homeFooterInstagram();
             $I->getSecondOpen();
-*/
+            $homePage->assertCheckInstagram();
+        }
+
 
 
         function footerSubscribe(\Page\HomePage $homePage)
