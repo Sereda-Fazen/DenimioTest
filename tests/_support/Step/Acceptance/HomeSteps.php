@@ -9,7 +9,7 @@ class HomeSteps extends \AcceptanceTester
         $I = $this;
         $seeCurr = 'span > span.price';
         $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
-        for ($c = 1; $c < $countCurrency; $c++) {
+        for ($c = 1; $c <= $countCurrency; $c++) {
             $I->moveMouseOver('li.currency-trigger > a');
             $I->click('//ul[@class="sub-currency"]/li[' . $c . ']/a');
             $I->grabTextFrom('//ul[@class="sub-currency"]/li[' . $c . ']/a');
@@ -181,7 +181,7 @@ class HomeSteps extends \AcceptanceTester
     public function getLanguage()
     {
         $I = $this;
-        $seeLanguage = 'div.header-static';
+        $seeLanguage = 'a.login_click';
         $countLanguage = count($I->grabMultiple('//*[@class="sub-lang"]/li'));
         for ($l = 1; $l <= $countLanguage; $l++) {
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
@@ -191,47 +191,47 @@ class HomeSteps extends \AcceptanceTester
             switch ($l) {
 
                 case 1:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Log In', $seeLanguage);
                     break;
 
                 case 2:
-                    echo $I->see('Hubungi Kami', $seeLanguage);
+                    echo $I->see('Log In', $seeLanguage);
                     break;
 
                 case 3:
-                    echo $I->see('ติดต่อเรา', $seeLanguage);
+                    echo $I->see('เข้าสู่ระบบ', $seeLanguage);
                     break;
 
                 case 4:
-                    echo $I->see('お問合せ先', $seeLanguage);
+                    echo $I->see('ログイン', $seeLanguage);
                     break;
 
                 case 5:
-                    echo $I->see('微信:denimio, QQ:3144423713', $seeLanguage);
+                    echo $I->see('登录', $seeLanguage);
                     break;
 
                 case 6:
-                    echo $I->see('문의', $seeLanguage);
+                    echo $I->see('로그인', $seeLanguage);
                     break;
 
                 case 7:
-                    echo $I->see('Hubungi Kami', $seeLanguage);
+                    echo $I->see('Log Masuk', $seeLanguage);
                     break;
 
                 case 8:
-                    echo $I->see('связаться с нами', $seeLanguage);
+                    echo $I->see('Войти', $seeLanguage);
                     break;
 
                 case 9:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Connexion', $seeLanguage);
                     break;
 
                 case 10:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Anmelden', $seeLanguage);
                     break;
 
                 case 11:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Accedi', $seeLanguage);
                     break;
 
                 case 12:
@@ -239,7 +239,7 @@ class HomeSteps extends \AcceptanceTester
                     break;
 
                 case 13:
-                    echo $I->see('Contact Support', $seeLanguage);
+                    echo $I->see('Inicio De Sesiónt', $seeLanguage);
                     break;
 
                 case 14:

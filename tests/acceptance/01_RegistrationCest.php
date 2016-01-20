@@ -19,11 +19,13 @@ class RegistrationCest
         $I->see('Please enter a valid email address. For example johndoe@domain.com.','#advice-validate-email-email_address');
         $I->comment('Expected result: Please enter a valid email address');
     }
+
     function registerInvalidEmail(AcceptanceTester $I, \Page\Registration $registerPage) {
         $registerPage->register('alex', 'sereda','dasas@sd.rty','123456','123456');
         $I->see('There is already an account with this email address.','li.error-msg');
         $I->comment('Expected result: "Email" is not a valid hostname.');
     }
+
     function registerNotMatchPass(AcceptanceTester $I, \Page\Registration $registerPage) {
         $registerPage->register('alex', 'sereda','fazen7@mail.org','123456','12345');
         $I->see('Please make sure your passwords match.', '#advice-validate-cpassword-confirmation');

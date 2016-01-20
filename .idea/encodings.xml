@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/tests/_support/Page/HomePage.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/Steps.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/acceptance.suite.yml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tests/acceptance/02_HomePageCest.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/acceptance/04_HomePageCest.php" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
