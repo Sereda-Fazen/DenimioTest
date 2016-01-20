@@ -9,8 +9,8 @@ class MainMenu
     public static $bottoms = '//*[@class="pt_custommenu"]/div[2]';
     public static $accessories = '//*[@class="pt_custommenu"]/div[3]';
     public static $newArrivals = '//*[@class="pt_custommenu"]/div[4]';
-    public static $brands = '//*[@id="pt_menu_link"]/div/ul/li[1]/a/span';
-    public static $calendar = 'div.parentMenu > ul > li:nth-of-type(2) > a > span';
+    public static $brands = '//*[@id="pt_menu_brands"]/div/a';
+    public static $calendar = '//*[@id="pt_menu_link"]';
 
 
     public static $GRBOnCart = 'a > span > span.price';

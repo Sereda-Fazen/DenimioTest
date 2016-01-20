@@ -21,7 +21,7 @@ class HomePage
     //subscription
 
     public static $clickSignUp = 'div.actions > button.button > span > span';
-    public static $emptyField = '#advice-required-entry-newsletter';
+    public static $emptyField = '//*[@class="validation-advice"]';
 
 
     public static $fullField = '#newsletter';
@@ -79,7 +79,7 @@ class HomePage
     public function subscribeInvalidEmail ($email)
     {
         $I = $this->tester;
-        $I->fillField(self::$clickSignUp, $email);
+        $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('PLEASE ENTER A VALID EMAIL ADDRESS. FOR EXAMPLE JOHNDOE@DOMAIN.COM.',self::$invalidField);
     }
@@ -87,7 +87,7 @@ class HomePage
     public function subscribeIsNotEmail ($email)
     {
         $I = $this->tester;
-        $I->fillField(self::$clickSignUp, $email);
+        $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('There was a problem with the subscription:',self::$error);
     }
@@ -95,7 +95,7 @@ class HomePage
     public function subscribeSuccess ($email)
     {
         $I = $this->tester;
-        $I->fillField(self::$clickSignUp, $email);
+        $I->fillField(self::$fullField, $email);
         $I->click(self::$clickSignUp);
         $I->see('Thank you for your subscription.',self::$success);
     }
