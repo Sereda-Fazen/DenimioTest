@@ -128,7 +128,7 @@ class HomePage
     public static $twitter = '//em[@class="fa fa-twitter fa-stack-1x fa-inverse"]';
     public static $pinterest = '//em[@class="fa fa-pinterest fa-stack-1x fa-inverse"]';
 
-    public static $denimioTwitter = 'Denimio';
+    public static $denimioTwitter = '//img[@class="ProfileAvatar-image "]';
     public static $denimioPinterest = 'Denimio.com';
     public static $denimioInstagram = 'denimio_shop';
 
@@ -164,7 +164,7 @@ class HomePage
     public function assertCheckTwitter()
     {
         $I = $this->tester;
-        $I->waitForElement('//img[@class="ProfileAvatar-image "]');
+        $I->waitForElement(self::$denimioTwitter);
     }
     public function assertCheckPinterest()
     {
