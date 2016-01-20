@@ -7,7 +7,7 @@ class HomeSteps extends \AcceptanceTester
     public function getCurrency()
     {
         $I = $this;
-        $seeCurr = 'span > span.price';
+        $seeCurr = '//*[@class="price"]';
         $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
         for ($c = 1; $c <= $countCurrency; $c++) {
             $I->moveMouseOver('li.currency-trigger > a');
@@ -62,7 +62,7 @@ class HomeSteps extends \AcceptanceTester
                 case 8:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('HK', $seeCurr);
+                    $I->see('HK$', $seeCurr);
                     break;
 
                 case 9:
