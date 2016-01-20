@@ -79,7 +79,7 @@ class HomePageCest
         function footerLinksInformation(Step\Acceptance\HomeSteps $I){
             $I->getInformationLinksFooter();
         }
-
+/*
         function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
             $homePage->footerSocialFacebook();
             $I->getSecondOpen();
@@ -92,8 +92,8 @@ class HomePageCest
 
             $homePage->footerSocialInstagram();
             $I->getSecondOpen();
+*/
 
-        }
 
         function footerSubscribe(\Page\HomePage $homePage)
         {
