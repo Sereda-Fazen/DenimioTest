@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/04_HomePageCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/04_HomePageCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/06_MyAccountCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/06_MyAccountCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/MyAccount.php" afterPath="$PROJECT_DIR$/tests/_support/Page/MyAccount.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,8 +58,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5143312">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.46019107">
+              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -433,12 +428,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00031" summary="mainMenu3">
-      <created>1452780946699</created>
-      <option name="number" value="00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1452780946699</updated>
-    </task>
     <task id="LOCAL-00032" summary="mainMenu4">
       <created>1452782281738</created>
       <option name="number" value="00032" />
@@ -727,7 +716,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453377824083</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="footer-10">
+      <created>1453382197164</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1453382197165</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView">
@@ -776,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="registr2" />
     <MESSAGE value="registr3" />
     <MESSAGE value="home1" />
     <MESSAGE value="home2" />
@@ -801,7 +795,8 @@
     <MESSAGE value="footer-6" />
     <MESSAGE value="footer-7" />
     <MESSAGE value="footer-9" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer-9" />
+    <MESSAGE value="footer-10" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer-10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1190,8 +1185,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5143312">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.46019107">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding />
         </state>
       </provider>
