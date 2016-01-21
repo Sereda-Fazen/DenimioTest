@@ -57,9 +57,10 @@ class MainMenuCest
      */
 
 
-    function footerSubscribe(\Page\MainMenu $homePage){
+    function footerSubscribe(\Page\MainMenu $homePage  ){
         $homePage->home();
         $homePage->getRandom();
+        $homePage->getRandomAddToCart();
     }
 
 

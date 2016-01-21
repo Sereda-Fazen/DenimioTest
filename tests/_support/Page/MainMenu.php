@@ -23,6 +23,23 @@ class MainMenu
     public static $prev = '//*[@class="bx-prev"]';
     public static $next = '//*[@class="bx-next"]';
 
+    // Add to ..
+
+    public static $moveTo = '//*[@class="regular-price"]';
+
+    public static $waitCart = '//*[@class="button btn-cart"]';
+    public static $waitWishList = '//*[@class="link-wishlist"]';
+    public static $waitCompare = '//*[@class="link-compare"]';
+
+    public static $clickCart = '//*[@class="button btn-cart"]';
+    public static $clickWishList = '//*[@class="link-wishlist"]';
+    public static $clickCompare ='//*[@class="link-compare"]';
+
+    public static $formCart = '//*[@class="wrapper_box pop_compare1"]';
+
+
+
+
     /**
      * Blog
      */
@@ -79,6 +96,36 @@ class MainMenu
 
         return $this;
     }
+
+    public function getRandomAddToCart(){
+        $I = $this->tester;
+        $I->amOnPage(self::$URL);
+        $I->scrollDown(1000);
+
+        $I->moveMouseOver(self::$moveTo);
+        $I->waitForElementVisible(self::$waitCart);
+        $I->click(self::$clickCart);
+        $I->seeElement('h1');
+        $I->moveBack();
+
+        $I->waitForElementVisible(self::$moveTo);
+        $I->moveMouseOver(self::$moveTo);
+        $I->waitForElementVisible(self::$waitWishList);
+        $I->click(self::$clickWishList);
+        $I->seeElement('div.new-users > div.content > p');
+        $I->moveBack();
+
+        $I->waitForElementVisible(self::$moveTo);
+        $I->moveMouseOver(self::$moveTo);
+        $I->waitForElementVisible(self::$waitCompare);
+        $I->click(self::$clickCompare);
+        $I->waitForElementVisible(self::$formCart);
+        $I->see('Go to list Compare','//*[@id="shopping_cart"]');
+
+        return $this;
+    }
+
+
 
     public function getBlog(){
         $I = $this->tester;
