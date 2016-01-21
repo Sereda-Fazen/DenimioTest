@@ -101,6 +101,7 @@ class MainMenu
         $I = $this->tester;
         $I->amOnPage(self::$URL);
         $I->scrollDown(1000);
+        $I->wait(3);
 
         $I->moveMouseOver(self::$moveTo);
         $I->waitForElementVisible(self::$waitCart);

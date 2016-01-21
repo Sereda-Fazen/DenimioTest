@@ -6,10 +6,27 @@ class HomePage
     public static $URL = '/';
     public static $URL2 = '/customer/account/login/';
 
+    /**
+     * Cart
+     */
+
     //empty cart
 
     public static $moveToCart = 'div.top-cart-title > a';
     public static $empty = 'p.empty';
+
+    // full cart
+
+    public static $clickTops = '//*[@class="parentMenu"]/a/span';
+    public static $addToCart = '//*[@class="images-content"]';
+    public static $selectChoose = 'select.required-entry';
+    public static $selectSize = '//*[@class="input-box"]/select/option[2]';
+    public static $add = 'button.button.btn-cart > span';
+    public static $continue = '#continue_shopping';
+    public static $cartDelete = '//*[@class="product-details"]/a';
+    public static $fullCart = '//*[@class="block-cart"]';
+
+
 
     //footer links
 
@@ -53,6 +70,27 @@ class HomePage
 
         return $this;
     }
+
+    public function fullCart()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL);
+        $I->click(self::$clickTops);
+        $I->click(self::$addToCart);
+        $I->click(self::$selectChoose);
+        $I->click(self::$selectSize);
+        $I->click(self::$add);
+        $I->waitForElementVisible(self::$continue);
+        $I->click(self::$continue);
+        $I->wait(2);
+        $I->moveMouseOver(self::$fullCart);
+        $I->waitForElementVisible(self::$cartDelete);
+        $I->click(self::$cartDelete);
+        $I->acceptPopup();
+
+        return $this;
+    }
+
 
     public function footerLinksAccount()
     {

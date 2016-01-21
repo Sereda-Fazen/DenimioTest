@@ -66,6 +66,16 @@ class HomePageCest
             $homePage->emptyCart();
         }
 
+        /**
+         * Check Full Cart
+         * @param \Page\HomePage $homePage
+         */
+
+        function headerCheckFullCart( \Page\HomePage $homePage){
+            $homePage->fullCart();
+        }
+
+
 
         /**
          * Footer Links

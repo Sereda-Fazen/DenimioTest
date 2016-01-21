@@ -3,7 +3,13 @@ use \Step\Acceptance;
 
 class TestCest {
 
-    function footerSubscribe(\Page\MainMenu $homePage){
+    function randomProductsClickArrows(\Page\MainMenu $homePage  )
+    {
+        $homePage->home();
+        $homePage->getRandom();
+    }
+
+    function randomProductsMoveLinks(\Page\MainMenu $homePage  ){
 
         $homePage->getRandomAddToCart();
     }
