@@ -6,23 +6,24 @@ use Step\Acceptance;
  */
 class CheckoutCest
 {
-    /*
-        function addToCartPage(Step\Acceptance\Steps $I, \Page\Checkout $guestPage) {
-            $I->processAddToCart();
-            $I->comment('Expected result: Navigate to category of product');
-            $I->addToCart();
-            $I->comment('Expected result: Navigate to checkout');
-            $I->selectSize();
-            $I->comment('Expected result: Navigate to');
-            $I->processCheckout();
-            $I->comment('Expected result: Navigate to');
-            $I->paymentMethod();
-            $I->comment('Expected result: Navigate to');
-            $I->finishProcessCheckout();
-          //  $I->comment('Expected result: Navigate to');
-        }
-
+/*
+    function addToCartPage(Step\Acceptance\Steps $I, \Page\Checkout $guestPage)
+    {
+        $I->processAddToCart();
+        $I->comment('Expected result: Navigate to category of product');
+        $I->addToCart();
+        $I->comment('Expected result: Navigate to checkout');
+        $I->selectSize();
+        $I->comment('Expected result: Navigate to');
+        $I->processCheckout();
+        $I->comment('Expected result: Navigate to');
+        $I->paymentMethod();
+        $I->comment('Expected result: Navigate to');
+        $I->finishProcessCheckout();
+        //  $I->comment('Expected result: Navigate to');
+    }
 */
+
 
        function addToCartPage(Step\Acceptance\Steps $I)
     {
