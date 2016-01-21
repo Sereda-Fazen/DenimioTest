@@ -104,7 +104,6 @@ class MainMenu
         $I->wait(3);
 
         $I->moveMouseOver(self::$moveTo);
-        $I->waitForElementVisible(self::$waitCart);
         $I->click(self::$clickCart);
         $I->seeElement('h1');
         $I->moveBack();

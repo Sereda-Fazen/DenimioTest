@@ -3,18 +3,13 @@ use \Step\Acceptance;
 
 class TestCest {
 
-    function randomProductsClickArrows(\Page\MainMenu $homePage  )
+    function MyAccountInfo(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $myAccountPage)
     {
-        $homePage->home();
-        $homePage->getRandom();
+        $I->login();
+
+        $myAccountPage->accountInfo('', '', '', '', '', '');
+        $myAccountPage->accountInfo('alex', 'sereda', 'dev.denimio@yahoo.com', '123456', '123456', '123456');
+        $I->see('The account information has been saved.', 'li.success-msg');
     }
-
-    function randomProductsMoveLinks(\Page\MainMenu $homePage  ){
-
-        $homePage->getRandomAddToCart();
-    }
-
-
-
 
 }
