@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/05_MainMenuCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/05_MainMenuCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/MainMenu.php" afterPath="$PROJECT_DIR$/tests/_support/Page/MainMenu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -82,8 +78,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45859873">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.18789808">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -429,12 +425,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00025" summary="new test3">
-      <created>1452700740596</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1452700740596</updated>
-    </task>
     <task id="LOCAL-00026" summary="header">
       <created>1452763583009</created>
       <option name="number" value="00026" />
@@ -723,7 +713,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453364280637</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="footer-3">
+      <created>1453369081897</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1453369081897</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView">
@@ -772,7 +768,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="footer1" />
     <MESSAGE value="footer2" />
     <MESSAGE value="footer3" />
     <MESSAGE value="footer4" />
@@ -797,7 +792,8 @@
     <MESSAGE value="home16" />
     <MESSAGE value="footer-1" />
     <MESSAGE value="footer-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer-2" />
+    <MESSAGE value="footer-3" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer-3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1178,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45859873">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.18789808">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
