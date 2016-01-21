@@ -9,9 +9,7 @@ class LoginSteps extends \AcceptanceTester
             $I = $this;
             $I->amOnPage('/customer/account/login/');
             $I->fillField('#email', 'dev.denimio@yahoo.com');
-            $I->wait(2);
             $I->fillField('#pass', '123456');
-            $I->wait(2);
             $I->click('Login');
             $I->see('From your My Account Dashboard','div.welcome-msg > p:nth-of-type(2)');
         }
@@ -27,6 +25,21 @@ class LoginSteps extends \AcceptanceTester
                 $I->waitForElement('li.success-msg');
             }
         }
+
+        public function giftCardEmpty()
+        {
+            $I = $this;
+            $I->click('button.form-button.button.addredeem > span');
+            for ($c = 9; $c >= 0; $c--) {
+                $card = rand();
+                $I->fillField('#gift-voucher-code', $card);
+                $I->click('div.text-left > button:nth-of-type(1) > span > span');
+                $I->see('Gift card "' . $card . '" is invalid.You have ' . $c . ' time(s) remaining to re-enter Gift Card code.','li.error-msg');
+            }
+            $I->fillField('#gift-voucher-code', $card);
+            $I->click('div.text-left > button:nth-of-type(1) > span > span');
+        }
+
 
 
 
