@@ -36,7 +36,7 @@ class MyAccount
     public static $pass = '#password';
     public static $confirmation = '#confirmation';
     public static $submit = 'div.buttons-set > button.button';
-    public static $emptyFields = '#advice-required-entry-email';
+
     /**
      *  Address Book
      */
@@ -148,7 +148,7 @@ class MyAccount
         $I->fillField(self::$confirmation, $pass2);
         $I->scrollDown(100);
         $I->click(self::$submit);
-        $I->see('This is a required field.', self::$emptyFields);
+
     }
     public function accountAddress($fName,$lName,$phone,$street, $region, $city, $zip) {
         $I = $this->tester;
