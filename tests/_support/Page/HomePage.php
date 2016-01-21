@@ -139,6 +139,8 @@ class HomePage
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL2);
+        $I->scrollDown(200);
+        $I->waitForElementVisible(self::$facebook);
         $I->click(self::$facebook);
         $I->wait(2);
 
@@ -147,6 +149,8 @@ class HomePage
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL2);
+        $I->scrollDown(200);
+        $I->waitForElementVisible(self::$instagram);
         $I->click(self::$instagram);
         $I->wait(2);
 
@@ -155,6 +159,8 @@ class HomePage
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL2);
+        $I->scrollDown(200);
+        $I->waitForElementVisible(self::$twitter);
         $I->click(self::$twitter);
         $I->wait(2);
     }
@@ -162,6 +168,8 @@ class HomePage
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL2);
+        $I->scrollDown(200);
+        $I->waitForElementVisible(self::$pinterest);
         $I->click(self::$pinterest);
         $I->wait(2);
 
