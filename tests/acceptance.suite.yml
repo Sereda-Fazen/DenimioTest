@@ -11,7 +11,7 @@ modules:
             browser: chrome
             window_size: 1980x1780
             restart: false
-            http_proxy: derect
+            http_proxy: direct
             #clear_cookies: false
             #wait: 1
 
