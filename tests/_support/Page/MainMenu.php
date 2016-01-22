@@ -101,12 +101,13 @@ class MainMenu
         $I = $this->tester;
         $I->amOnPage(self::$URL);
         $I->scrollDown(1000);
-        $I->wait(3);
 
         $I->moveMouseOver(self::$moveTo);
+        $I->waitForElementVisible(self::$clickCart);
         $I->click(self::$clickCart);
         $I->seeElement('h1');
         $I->moveBack();
+        $I->wait(2);
 
         $I->waitForElementVisible(self::$moveTo);
         $I->moveMouseOver(self::$moveTo);
@@ -114,6 +115,7 @@ class MainMenu
         $I->click(self::$clickWishList);
         $I->seeElement('div.new-users > div.content > p');
         $I->moveBack();
+        $I->wait(2);
 
         $I->waitForElementVisible(self::$moveTo);
         $I->moveMouseOver(self::$moveTo);

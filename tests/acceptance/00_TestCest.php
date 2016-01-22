@@ -2,12 +2,16 @@
 use \Step\Acceptance;
 
 class TestCest {
-
-    function MyTickets(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+/*
+    function randomProductsClickArrows(\Page\MainMenu $homePage  )
     {
-        $I->login();
-        $MyAccountPage->accountMyTickets();
+        $homePage->home();
+        $homePage->getRandom();
+    }
+*/
+    function randomProductsMoveLinks(\Page\MainMenu $homePage  ){
 
+        $homePage->getRandomAddToCart();
     }
 
 
