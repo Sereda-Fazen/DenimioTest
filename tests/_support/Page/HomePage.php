@@ -5,7 +5,9 @@ class HomePage
 {
     public static $URL = '/';
     public static $URL2 = '/customer/account/login/';
+
     public static $invalidUrl = 'div.std';
+    public static $backHomePage = 'ul.disc > li:first-child > a';
 
     /**
      * Cart
@@ -68,7 +70,7 @@ class HomePage
         $I->amOnPage('/testWrong/');
         $I->waitForElement('h3',3);
         $I->see('WHOOPS, OUR BAD...',self::$invalidUrl);
-        $I->moveBack();
+        $I->click(self::$backHomePage);
     }
 
 
