@@ -14,6 +14,7 @@ class ForgotPassSteps extends \AcceptanceTester
         $I->getVisibleText('Denimio.com');
         $I->waitForElementNotVisible('div.name.first');
         $I->click('span.subject.bold');
+
     }
 
 
