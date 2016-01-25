@@ -12,10 +12,6 @@ class ForgotPassCest {
     function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
         $I->gMailAuth();
-    }
-    function enterNewPass2 (Step\Acceptance\ForgotPassSteps $I)
-    {
-
         $I->remoteWindow();
         $I->newPass();
 
