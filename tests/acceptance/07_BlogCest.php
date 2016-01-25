@@ -8,15 +8,14 @@ class BlogCest
 {
 
     /**
-     * Check Blog
+     * Checking Blog
      * @param \Page\Blog $blogPage
      */
-/*
+
         function checkMainMenuLinks(\Page\Blog $blogPage)
         {
             $blogPage->blog();
         }
-*/
 
 
 
