@@ -7,20 +7,24 @@ class ForgotPassCest {
 
     function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
-        $forgotPage->forgot('dev.denimio@yahoo.com');
+        $forgotPage->forgot('denimio_test@yahoo.com');
     }
-
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I) {
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
         $I->gMailAuth();
+    }
+    function enterNewPass2 (Step\Acceptance\ForgotPassSteps $I)
+    {
+
         $I->remoteWindow();
         $I->newPass();
 
     }
-
+/*
     function invalidRepeatPass (Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage) {
         $I->moveBack();
         $I->see('Your password reset link has expired.','li.error-msg');
 
     }
-
+*/
 }

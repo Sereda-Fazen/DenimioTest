@@ -8,7 +8,7 @@ class ForgotPassSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnUrl("https://mail.yahoo.com");
-        $I->fillField('//*[@id="login-username"]', 'dev.denimio@yahoo.com');
+        $I->fillField('//*[@id="login-username"]', 'denimio_test@yahoo.com');
         $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
         $I->click('//*[@id="login-signin"]');
         $I->getVisibleText('Denimio.com');
