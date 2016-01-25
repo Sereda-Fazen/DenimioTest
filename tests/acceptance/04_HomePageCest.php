@@ -24,9 +24,22 @@ class HomePageCest
          * @param \Page\HomePage $homePage
          */
 
+
         function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
             $I->getLanguage();
+        }
+
+
+        /**
+         * Check on invalid address
+         * @param Acceptance\LoginSteps $I
+         * @param \Page\HomePage $homePage
+         */
+
+        function invalidURL(Step\Acceptance\LoginSteps $I, \Page\HomePage $homePage)
+        {
+            $homePage->invalidURL();
         }
 
         /**

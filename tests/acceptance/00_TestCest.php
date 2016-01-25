@@ -2,16 +2,12 @@
 use \Step\Acceptance;
 
 class TestCest {
-/*
-    function randomProductsClickArrows(\Page\MainMenu $homePage  )
+
+
+    function invalidURL(Step\Acceptance\LoginSteps $I, \Page\HomePage $homePage)
     {
         $homePage->home();
-        $homePage->getRandom();
-    }
-*/
-    function randomProductsMoveLinks(\Page\MainMenu $homePage  ){
-
-        $homePage->getRandomAddToCart();
+        $homePage->invalidURL();
     }
 
 
