@@ -17,8 +17,8 @@ modules:
 
             # run in browserstack
 
-            #host: 'hub.browserstack.com'
-            #port: 80
+            host: 'hub.browserstack.com'
+            port: 80
             browser: chrome
             #window_size: 600x800
             resolution: 2048x1536
@@ -27,8 +27,8 @@ modules:
             #clear_cookies: false
 
             capabilities:
-             browserstack.user: 'alex3540'
-             browserstack.key: 'BBqF7izJpbQk2nWfsF8z'
+             browserstack.user: 'mahoto@denimio.com
+             browserstack.key: 'f4681C%7k9~K'
              browserstack.debug: 'true'
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
