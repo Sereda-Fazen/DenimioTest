@@ -11,7 +11,7 @@ class Blog
     public static $readMore = '//*[@class="pt_custommenu"]/div[4]';
     public static $navigation2 = '//*[@id="pt_menu_brands"]/div/a';
     public static $navigationNext = '//*[@id="pt_menu_link"]';
-    public static $navigationPrev =
+    public static $navigationPrev = '';
 
 
     public function getBlog(){
