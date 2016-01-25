@@ -9,15 +9,14 @@ class BlogCest
 
     /**
      * Check Blog
-     * @param \Page\MainMenu $homePage
+     * @param \Page\Blog $blogPage
      */
-
-        function checkMainMenuLinks(\Page\MainMenu $homePage)
+/*
+        function checkMainMenuLinks(\Page\Blog $blogPage)
         {
-            $homePage->home();
-            $homePage->getMainMenu();
+            $blogPage->blog();
         }
-
+*/
 
 
 

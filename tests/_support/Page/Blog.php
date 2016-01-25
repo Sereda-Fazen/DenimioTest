@@ -14,7 +14,13 @@ class Blog
     public static $navigationPrev = '';
 
 
-    public function getBlog(){
+    public function __construct(\AcceptanceTester $I) {
+        $this->tester = $I;
+    }
+
+
+
+    public function blog(){
         $I = $this->tester;
         $I->amOnPage(self::$URL);
         $I->scrollDown(2000);
