@@ -12,7 +12,7 @@ class BlogCest
      * @param \Page\Blog $blogPage
      */
 
-        function checkMainMenuLinks(\Page\Blog $blogPage)
+        function checkBlogPage(\Page\Blog $blogPage)
         {
             $blogPage->blog();
         }
