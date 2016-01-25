@@ -7,7 +7,7 @@ use Step\Acceptance;
 class CheckoutCest
 {
 
-    function addToCartPage(Step\Acceptance\Steps $I, \Page\Checkout $guestPage)
+    function checkOnCheckoutVisaCard(Step\Acceptance\Steps $I, \Page\Checkout $guestPage)
     {
         $I->processAddToCart();
         $I->comment('Expected result: Navigate to category of product');
