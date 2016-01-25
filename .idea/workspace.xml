@@ -28,8 +28,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62261146">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.6496815">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -341,12 +341,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00043" summary="content6">
-      <created>1453117888139</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1453117888139</updated>
-    </task>
     <task id="LOCAL-00044" summary="content7">
       <created>1453151523195</created>
       <option name="number" value="00044" />
@@ -635,7 +629,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453707342155</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="footer-22">
+      <created>1453707360967</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1453707360967</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView">
@@ -684,7 +684,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="home12" />
     <MESSAGE value="home13" />
     <MESSAGE value="home14" />
     <MESSAGE value="home15" />
@@ -709,7 +708,8 @@
     <MESSAGE value="footer-19" />
     <MESSAGE value="footer-20" />
     <MESSAGE value="footer-21" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer-21" />
+    <MESSAGE value="footer-22" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer-22" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1082,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62261146">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.6496815">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
           <folding />
         </state>
       </provider>

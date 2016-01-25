@@ -27,8 +27,8 @@ modules:
             #clear_cookies: false
 
             capabilities:
-             browserstack.user: 'mahoto@denimio.com'
-             browserstack.key: 'f4681C%7k9~K'
+             browserstack.user: 'mahotoharada1'
+             browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
              browserstack.debug: 'true'
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
