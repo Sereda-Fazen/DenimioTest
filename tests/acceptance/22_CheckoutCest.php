@@ -20,8 +20,33 @@ class CheckoutCest
         $I->paymentMethod();
         $I->comment('Expected result: Navigate to');
         $I->finishProcessCheckout();
-        //  $I->comment('Expected result: Navigate to');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
        function addToCartPage(Step\Acceptance\Steps $I)
