@@ -11,15 +11,16 @@ class ForgotPassSteps extends \AcceptanceTester
         $I->fillField('//*[@id="login-username"]', 'dev.denimio@yahoo.com');
         $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
         $I->click('//*[@id="login-signin"]');
-        $I->waitForElement('//*[@class="icon info info-real info-unread "]',5);
-        $I->see('Denimio.com', 'div.name.first');
-        $I->click('div.name.first');
+        $I->getVisibleText('Denimio.com');
+        $I->waitForElementNotVisible('div.name.first');
+        $I->click('span.subject.bold');
     }
+
 
     public function remoteWindow(){
         $I = $this;
-        $I->waitForText('RESET PASSWORD',30);
-        $I->click('td > a > span');
+        $I->waitForElement('td > p:nth-of-type(2) > a');
+        $I->click('td > p:nth-of-type(2) > a');
         $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
             $handles = $webdriver->getWindowHandles();
             $last_window = end($handles);
@@ -29,7 +30,8 @@ class ForgotPassSteps extends \AcceptanceTester
 
     public function newPass() {
         $I = $this;
-        $I->waitForText('Reset a Password', 15, 'h1');
+        $I->wait(2);
+        $I->see('Reset a Password','h1');
         $I->fillField('#password', '123456');
         $I->fillField('#confirmation', '123456');
         $I->click('Reset a Password');

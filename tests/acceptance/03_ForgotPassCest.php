@@ -5,7 +5,8 @@ use \Step\Acceptance;
  */
 class ForgotPassCest {
 
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage) {
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    {
         $forgotPage->forgot('dev.denimio@yahoo.com');
     }
 
@@ -16,7 +17,7 @@ class ForgotPassCest {
 
     }
 
-    function invalidRepeatPass (Step\Acceptance\ForgotPassSteps $I) {
+    function invalidRepeatPass (Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage) {
         $I->moveBack();
         $I->see('Your password reset link has expired.','li.error-msg');
 
