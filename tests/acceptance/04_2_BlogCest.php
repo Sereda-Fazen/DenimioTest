@@ -2,15 +2,15 @@
 use Step\Acceptance;
 
 /**
- * @group 3_mainMenu
+ * @group 2_header
  */
 class BlogCest
 {
 
-    /**
-     * Checking Blog
-     * @param \Page\Blog $blogPage
-     */
+        /**
+         * Checking Blog
+         * @param \Page\Blog $blogPage
+         */
 
         function checkBlogPage(\Page\Blog $blogPage)
         {
