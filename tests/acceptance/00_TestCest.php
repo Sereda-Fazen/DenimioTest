@@ -4,10 +4,10 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function invalidURL(Step\Acceptance\LoginSteps $I, \Page\HomePage $homePage)
+    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
-        $homePage->invalidURL();
+        $I->getSubcategoryBottoms();
     }
 
 

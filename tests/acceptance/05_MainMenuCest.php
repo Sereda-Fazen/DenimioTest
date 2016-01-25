@@ -27,7 +27,7 @@ class MainMenuCest
     function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
-        $I->getSubcategory();
+        $I->getSubcategoryTops();
     }
 
     /**
@@ -39,7 +39,7 @@ class MainMenuCest
     function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
-        $I->getSubcategory2();
+        $I->getSubcategoryBottoms();
     }
 
     /**
