@@ -4,11 +4,10 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function randomProductsClickArrows(\Page\MainMenu $homePage  )
+    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
-        $homePage->getRandom();
-     //   $homePage->getRandomAddToCart();
+        $I->getSubcategoryBottoms();
     }
 
 
