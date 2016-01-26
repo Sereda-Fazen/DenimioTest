@@ -25,11 +25,13 @@ class MainMenu
 
     // Add to ..
 
-    public static $moveTo = '//*[@class="regular-price"]';
+    public static $moveTo = 'ul.products-grid > li:first-child > div.item-inner > div.images-content > a.item-link > img';
 
     public static $waitCart = '//*[@class="button btn-cart"]';
     public static $waitWishList = '//*[@class="link-wishlist"]';
     public static $waitCompare = '//*[@class="link-compare"]';
+
+    public static $waitLinks = '//ul[@class="add-to-links"]';
 
     public static $clickCart = '//*[@class="button btn-cart"]';
     public static $clickWishList = '//*[@class="link-wishlist"]';
@@ -100,15 +102,15 @@ class MainMenu
     public function getRandomAddToCart(){
         $I = $this->tester;
         $I->amOnPage(self::$URL);
-        $I->scrollDown(1000);
-
-        $I->moveMouseOver(self::$moveTo);
-        $I->waitForElementVisible(self::$clickCart);
+        $I->scrollDown(1500);
+/*
+        $I->moveMouseOver(self::$waitLinks);
+        $I->waitForElementVisible(self::$waitLinks);
         $I->click(self::$clickCart);
         $I->seeElement('h1');
         $I->moveBack();
         $I->wait(2);
-
+*/
         $I->waitForElementVisible(self::$moveTo);
         $I->moveMouseOver(self::$moveTo);
         $I->waitForElementVisible(self::$waitWishList);
@@ -117,7 +119,7 @@ class MainMenu
         $I->moveBack();
         $I->wait(2);
 
-        $I->waitForElementVisible(self::$moveTo);
+        //$I->waitForElementVisible(self::$moveTo);
         $I->moveMouseOver(self::$moveTo);
         $I->waitForElementVisible(self::$waitCompare);
         $I->click(self::$clickCompare);

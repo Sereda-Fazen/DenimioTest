@@ -62,12 +62,12 @@ class MainMenuCest
         $homePage->home();
         $homePage->getRandom();
     }
-
+/*
     function randomProductsMoveLinks(\Page\MainMenu $homePage  ){
 
         $homePage->getRandomAddToCart();
     }
-
+*/
 
 
 
