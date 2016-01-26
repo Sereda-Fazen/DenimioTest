@@ -4,11 +4,15 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
+    function checkComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
-        $homePage->home();
-        $I->getSubcategoryBottoms();
+        $I->addToCartForCompare();
+        $I->remoteWindow();
+        $I->comparePage();
+
+
     }
+
 
 
 
