@@ -34,13 +34,13 @@ class Calendar
         $I->click(self::$rightArrow);
         $I->wait(1);
         $I->click(self::$todayActive);
-        $I->waitForElementVisible(self::$seeToday);
+        $I->see(date('j'), '.fc-state-highlight.fc-today > div > .fc-day-number');
 
         $I->click(self::$leftArrow);
         $I->wait(1);
 
         $I->click(self::$todayActive);
-        $I->waitForElementVisible(self::$seeToday);
+        $I->see(date('j'), '.fc-state-highlight.fc-today > div > .fc-day-number');
 
         $I->click(self::$week);
         $I->seeElement('//*[@class="fc-first fc-last"]');
