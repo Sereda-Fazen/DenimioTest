@@ -331,6 +331,20 @@ class HomeSteps extends \AcceptanceTester
         });
     }
 
+
+    public function getCheckRandomBrands()
+    {
+        $I = $this;
+        $I->amOnPage('/brand/');
+
+        $brands = rand(1, count($I->grabMultiple('//*[@class="products-grid row"]/div')));
+        $I->click('//*[@class="products-grid row"]/div['.$brands.']');
+        $I->seeElement('li.view > strong');
+        $I->scrollDown(150);
+        $I->seeElement('div.category-products');
+    }
+
+
     public function getCheckFeaturedBrands()
     {
         $I = $this;

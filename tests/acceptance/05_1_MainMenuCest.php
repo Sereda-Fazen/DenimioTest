@@ -52,9 +52,18 @@ class MainMenuCest
     }
 
     /**
-     * Random Products
-     * @param \Page\MainMenu $homePage
+     * Check Random Brands
+     * @param Acceptance\HomeSteps $I
      */
+
+    function checkRandomBrands(Step\Acceptance\HomeSteps $I){
+        $I->getCheckRandomBrands();
+    }
+
+    /**
+    * Check Products Arrows
+    * @param \Page\MainMenu $homePage
+    */
 
 
     function randomProductsClickArrows(\Page\MainMenu $homePage  )
