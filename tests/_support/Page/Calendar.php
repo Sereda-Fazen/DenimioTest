@@ -34,7 +34,6 @@ class Calendar
         $I->click(self::$rightArrow);
         $I->wait(1);
         $I->click(self::$todayActive);
-        $I->scrollDown(500);
         $I->waitForElementVisible(self::$seeToday);
 
         $I->click(self::$leftArrow);
@@ -46,7 +45,7 @@ class Calendar
         $I->click(self::$week);
         $I->seeElement('//*[@class="fc-first fc-last"]');
         $I->click(self::$day);
-        $I->seeElement('table.fc-agenda-days.fc-border-separate > thead > tr.fc-first.fc-last > th.fc-tue.fc-widget-header');
+        $I->seeElement('//*[@class="fc-wed fc-col0 fc-widget-header"]');
 
         $I->click(self::$chooseList);
         $I->click(self::$list);
