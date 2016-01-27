@@ -12,7 +12,7 @@ class ForgotPassSteps extends \AcceptanceTester
         $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
         $I->click('//*[@id="login-signin"]');
         $I->getVisibleText('Denimio.com');
-        //$I->waitForElementNotVisible('div.name.first');
+        $I->waitForElementVisible('div.name.first');
         $I->click('//div[@class="name first"]');
 
     }

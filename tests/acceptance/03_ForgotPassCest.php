@@ -15,8 +15,8 @@ class ForgotPassCest {
         $I->gMailAuth();
         $I->remoteWindow();
         $I->newPass();
-
     }
+
 
     function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
         $deleteMsg->deleteMsg();

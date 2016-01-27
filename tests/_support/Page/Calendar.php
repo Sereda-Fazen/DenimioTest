@@ -8,7 +8,7 @@ class Calendar
     public static $rightArrow = '//*[@class="fc-button fc-button-next fc-state-default fc-corner-right"]';
     public static $leftArrow = '//span[@class="fc-button-effect"]';
     public static $today = '//*[@class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right fc-state-disabled"]';
-    public static $seeToday = 'td.fc-tue.fc-widget-content.fc-today';
+    public static $seeToday = '//*[@class="fc-content"]';
     public static $todayActive = '//*[@class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right"]';
     public static $week = '//*[@class="fc-header-right"]/span[2]';
     public static $day = '//*[@class="fc-header-right"]/span[3]';
