@@ -4,6 +4,10 @@ use \Step\Acceptance;
 class TestCest {
 
 
+
+
+
+
     function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->addToCartForCompare();
@@ -19,27 +23,25 @@ class TestCest {
 
     }
 
-
-
-
-    function footerGetClosers(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage)
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
-
-        $homePage->homeFooterFacebook();
-        $I->getSecondOpen();
-
-        $homePage->homeFooterTwiter();
-        $I->getSecondOpen();
-        $homePage->assertCheckTwitter();
-
-        $homePage->homeFooterPinterest();
-        $I->getSecondOpen();
-        $homePage->assertCheckPinterest();
-
-        $homePage->homeFooterInstagram();
-        $I->getSecondOpen();
-        $homePage->assertCheckInstagram();
+        $forgotPage->forgot('denimio_test@yahoo.com');
     }
+
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
+    }
+
+
+    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
+        $deleteMsg->deleteMsg();
+
+    }
+
+
 
 
 
