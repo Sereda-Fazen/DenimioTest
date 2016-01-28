@@ -21,6 +21,7 @@ class CompareCest
     }
     */
 
+
     function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->addToCartForCompare();
@@ -31,10 +32,11 @@ class CompareCest
     function checkRemoveItemsFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->compareAddToCart3();
-        $I->remoteWindow();
         $I->compareDelete();
 
     }
+
+
 
 
 
