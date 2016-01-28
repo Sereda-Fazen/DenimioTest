@@ -288,7 +288,7 @@ class HomeSteps extends \AcceptanceTester
     public function getSubcategoryTops(){
             $I = $this;
 
-            $sub =  count($I->grabMultiple('//*[@id="block112"]/div[1]/div/a'));
+            $sub =  count($I->grabMultiple('//*[@id="block112"]/div/div/a'));
             for ($s = 1; $s <= $sub; $s++) {
                 $I->moveMouseOver('//*[@class="parentMenu"]');
                 $I->waitForElementVisible('//*[@class="itemMenu level1"]');
