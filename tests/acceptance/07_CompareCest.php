@@ -19,7 +19,7 @@ class CompareCest
             $I->remoteWindow();
             $I->compareClosePage();
     }
-
+    */
 
     function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
@@ -27,7 +27,7 @@ class CompareCest
         $I->remoteWindow();
         $I->compareAddToCart();
     }
-    */
+
     function checkRemoveItemsFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->compareAddToCart3();

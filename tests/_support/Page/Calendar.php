@@ -45,7 +45,7 @@ class Calendar
         $I->click(self::$week);
         $I->seeElement('//*[@class="fc-first fc-last"]');
         $I->click(self::$day);
-        $I->seeElement('//*[@class="fc-wed fc-col0 fc-widget-header"]');
+        $I->see('all-day','table.fc-agenda-allday > tbody > tr > th.fc-widget-header.fc-agenda-axis');
 
         $I->click(self::$chooseList);
         $I->click(self::$list);
