@@ -11,7 +11,7 @@ class ForgotPassSteps extends \AcceptanceTester
         $I->fillField('//*[@id="login-username"]', 'denimio_test@yahoo.com');
         $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
         $I->click('//*[@id="login-signin"]');
-        //$I->getVisibleText('Denimio.com');
+        $I->getVisibleText('Denimio');
         $I->waitForElementVisible('div.name.first');
         $I->click('div.name.first');
 

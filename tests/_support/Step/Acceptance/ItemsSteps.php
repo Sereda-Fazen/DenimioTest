@@ -49,7 +49,7 @@ class ItemsSteps extends \AcceptanceTester
 
             });
             $I->see('(2)' ,'//*[@class="block block-list block-compare"]/div/strong/span/small');
-            $I->click('//*[@class="actions"]/button/span');
+            //$I->click('//*[@class="actions"]/button/span');
 
             $I->wait(5);
             $I->click('//*[@class="actions"]/a');
