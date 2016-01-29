@@ -19,8 +19,7 @@ class CompareCest
         $I->compareAddToCart();
     }
 
-
-    function checkCompareTwoItems(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+    function checkCompareTwoItemsAndClearAll(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->addToCartForCompare();
         $I->remoteWindow();
@@ -42,6 +41,8 @@ class CompareCest
         $I->compareDelete();
 
     }
+
+
 
 
 

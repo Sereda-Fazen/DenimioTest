@@ -4,18 +4,12 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
+
+
+    function categoryRemoveManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
-        $homePage->home();
-        $I->getSubcategoryTops();
+        $I->categoryClearAllCategoryAndManufacture();
     }
-
-
-
-
-
-
-
 
 
 
