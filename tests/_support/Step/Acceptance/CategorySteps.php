@@ -5,12 +5,19 @@ class CategorySteps extends \AcceptanceTester
 {
 
 
-    public function categoryRemoveCategory()
+    public function category()
     {
         $I = $this;
         $I->amOnPage('/');
         $I->click('//div[@class="parentMenu"]//span');
         $I->seeElement('//div[@class="category-products"]');
+    }
+
+
+    public function categoryRemoveCategory()
+    {
+        $I = $this;
+        $I->category();
         $category = rand(1,count($I->grabMultiple('//dd[@class="odd"]/ol/li')));
         $I->click('#narrow-by-list > dd:nth-of-type(1) > ol > li:nth-of-type('.$category.') > a.ajaxLayer');
         $I->waitForAjax(10);
@@ -59,6 +66,20 @@ class CategorySteps extends \AcceptanceTester
         $I->dontSeeElement('//div[@class="currently"]');
     }
 
+    public function categoryCheckPriceRunner()
+    {
+        $I = $this;
+        $I->scrollDown(500);
+
+        $I->dragAndDrop('a.ui-slider-handle.ui-state-default.ui-corner-all.first_item','div.ui-slider-range.ui-widget-header.ui-corner-all');
+        $I->waitForAjax(10);
+        $I->seeElement('//*[@id="amount"]');
+
+        $I->reloadPage();
+        $I->dragAndDrop('a.ui-slider-handle.ui-state-default.ui-corner-all.last_item','div.ui-slider-range.ui-widget-header.ui-corner-all');
+        $I->waitForAjax(10);
+        $I->seeElement('//*[@id="amount"]');
+    }
 
 
 
@@ -95,4 +116,10 @@ class CategorySteps extends \AcceptanceTester
 
 
 
-}
+
+
+
+
+
+
+    }

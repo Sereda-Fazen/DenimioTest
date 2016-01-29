@@ -6,10 +6,11 @@ class TestCest {
 
 
 
-    function categoryRemoveManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
+    function checkInputPrices(\Page\Category $categoryPage)
     {
-        $I->categoryClearAllCategoryAndManufacture();
+        $categoryPage->checkInputPrices('100', '300');
     }
+
 
 
 

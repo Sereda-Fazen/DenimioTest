@@ -4,24 +4,15 @@ namespace Page;
 class Category
 {
 
-    //category
 
-    public static $URL = '/';
-    public static $tops = '//div[@class="parentMenu"]//span';
-    public static $seeCategoryPage = '//div[@class="container-inner"]';
+    public static $left = '//*[@name="first_price"]';
+    public static $right = '//*[@name="last_price"]';
+    public static $search = '//*[@name="search_price"]';
 
-    public static $tShirt = '//*[@class="fa fa-caret-right"]/a';
-    public static $seeTShirt = '//*[@class="currently"]';
-
-    public static $removeThisItem = '//a[@class="btn-remove"]';
-    public static $seeRemove = '//*[@class="read-more"]/i';
+    public static $seeSearch = '//ul[@class="products-grid row"]';
+    public static $price = '//*[@id="amount"]';
 
 
-    public static $navigation2 = 'ol > li:nth-of-type(2) > a';
-    public static $navigationNext = 'a.next.i-next';
-    public static $navigationPrev = 'a.previous.i-previous';
-
-    // manufacture
 
     public static $manufacture = '';
 
@@ -31,26 +22,18 @@ class Category
         $this->tester = $I;
     }
 
-    public function categoryRemoveOneItem()
-    {
+    public function checkInputPrices ($leftPrice,$rightPrice){
         $I = $this->tester;
 
-        $I->amOnPage(self::$URL);
+        $I->fillField(self::$left ,$leftPrice);
+        $I->fillField(self::$right,$rightPrice);
+        $I->click(self::$search);
+        $I->waitForAjax();
+        $I->seeElement(self::$price);
+        $I->seeElement(self::$seeSearch);
     }
-    /*
-        $I->click(self::$tops);
-        $I->waitForAjax(10);
-        $I->seeElement(self::$seeCategoryPage);
 
-        $I->click(self::$tShirt);
-        $I->waitForAjax(10);
-        $I->waitForElementVisible(self::$seeTShirt);
-        $I->seeElement(self::$seeTShirt);
 
-        $I->click(self::$removeThisItem);
-        $I->waitForElementNotVisible(self::$seeTShirt);
-    }
-*/
 
 
 

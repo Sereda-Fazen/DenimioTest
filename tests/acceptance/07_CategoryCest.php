@@ -28,6 +28,21 @@ class CategoryCest
         $I->categoryClearAllCategoryAndManufacture();
     }
 
+    function categoryCheckPriceRunner(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
+    {
+        $I->categoryCheckPriceRunner();
+    }
+
+    function checkInputPrices(\Page\Category $categoryPage)
+    {
+        $categoryPage->checkInputPrices('100', '300');
+    }
+
+
+
+
+
+
 
 
 
