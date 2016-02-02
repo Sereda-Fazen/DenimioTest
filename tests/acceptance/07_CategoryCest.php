@@ -64,7 +64,7 @@ class CategoryCest
         $categoryPage->checkCannotFindYourWantedItem2();
     }
 
-    function checkGridAndList(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
+    function checkGridAndList(\Page\Category $categoryPage, \Helper\Acceptance $I)
     {
         $categoryPage->checkGridAndList();
     }

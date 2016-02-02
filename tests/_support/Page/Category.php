@@ -107,11 +107,11 @@ class Category
         $I->click('//div[@class="parentMenu"]//span');
         $I->seeElement('//div[@class="category-products"]');
         $I->click(self::$list);
-        $I->waitForAjax(10);
+        $I->waitForAjax(20);
         $I->seeElement(self::$seeList);
 
                 $I->click(self::$addToCompare);
-                $I->waitForAjax(10);
+                $I->waitForAjax(20);
                 $I->waitForElementVisible(self::$seeCompare);
                 $I->see('Go to list Compare', self::$seeCompare);
                 //$I->click(self::$continue);
