@@ -6,9 +6,9 @@ class TestCest {
 
 
 
-    function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
-    {
-        $categoryPage->checkGridAndList();
+    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getCurrency();
     }
 
 

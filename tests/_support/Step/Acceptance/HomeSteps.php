@@ -68,7 +68,7 @@ class HomeSteps extends \AcceptanceTester
                 case 9:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('Rs', $seeCurr);
+                    $I->see('Rs0', $seeCurr);
                     break;
 
                 case 10:
