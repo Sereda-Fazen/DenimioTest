@@ -102,7 +102,9 @@ class Category
 
     public function checkGridAndList(){
         $I = $this->tester;
-        $I->amOnPage('/top.html');
+
+        $I->amOnPage('/');
+        $I->click('//div[@class="parentMenu"]//span');
         $I->seeElement('//div[@class="category-products"]');
         $I->click(self::$list);
         $I->waitForAjax(10);

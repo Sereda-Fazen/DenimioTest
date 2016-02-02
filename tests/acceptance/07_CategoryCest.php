@@ -47,11 +47,6 @@ class CategoryCest
         $categoryPage->checkIsNotFindPrice('232', '232');
     }
 
-    function checkCannotFindYourWantedItem(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
-    {
-        $I->remoteWindow2();
-        $categoryPage->checkCannotFindYourWantedItem2();
-    }
 
     function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
     {
@@ -60,13 +55,17 @@ class CategoryCest
 
     function sortingOfItems( \Step\Acceptance\CategorySteps $I)
     {
-        $I->category();
         $I->sortingOfItems();
+    }
+
+    function checkCannotFindYourWantedItem(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->remoteWindow2();
+        $categoryPage->checkCannotFindYourWantedItem2();
     }
 
     function checkGridAndList(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
-        $I->category();
         $categoryPage->checkGridAndList();
     }
 
