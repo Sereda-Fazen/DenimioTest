@@ -57,6 +57,15 @@ class Acceptance extends \Codeception\Module
         });
     }
 
+    public function secondWindow(){
+        $I = $this;
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+        });
+    }
+
 
 
 

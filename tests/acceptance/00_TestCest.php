@@ -6,9 +6,9 @@ class TestCest {
 
 
 
-    function checkInputPrices(\Page\Category $categoryPage)
+    function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
-        $categoryPage->checkInputPrices('100', '300');
+        $categoryPage->checkGridAndList();
     }
 
 

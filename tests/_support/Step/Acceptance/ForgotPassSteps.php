@@ -29,6 +29,19 @@ class ForgotPassSteps extends \AcceptanceTester
         });
     }
 
+    public function remoteWindow2(){
+        $I = $this;
+
+        $I->click('div.banner-left > a > img');
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+        });
+
+
+    }
+
     public function newPass() {
         $I = $this;
         $I->wait(2);

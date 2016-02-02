@@ -20,22 +20,54 @@ class CategoryCest
 
     function categoryRemoveManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
+
         $I->categoryRemoveManufacture();
     }
 
     function categoryClearAllCategoryAndManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
+
         $I->categoryClearAllCategoryAndManufacture();
     }
 
     function categoryCheckPriceRunner(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
+
         $I->categoryCheckPriceRunner();
     }
 
-    function checkInputPrices(\Page\Category $categoryPage)
+    function checkInputPrices(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
+        $I->category();
         $categoryPage->checkInputPrices('100', '300');
+    }
+
+    function checkInputInvalidPrices(\Page\Category $categoryPage, AcceptanceTester $I)
+    {
+        $categoryPage->checkIsNotFindPrice('232', '232');
+    }
+
+    function checkCannotFindYourWantedItem(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->remoteWindow2();
+        $categoryPage->checkCannotFindYourWantedItem2();
+    }
+
+    function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
+    {
+        $categoryPage->recentReviewBlock();
+    }
+
+    function sortingOfItems( \Step\Acceptance\CategorySteps $I)
+    {
+        $I->category();
+        $I->sortingOfItems();
+    }
+
+    function checkGridAndList(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
+    {
+        $I->category();
+        $categoryPage->checkGridAndList();
     }
 
 

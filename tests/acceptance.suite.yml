@@ -17,13 +17,13 @@ modules:
 
             # run in browserstack
 
-            host: 'hub.browserstack.com'
-            port: 80
+            #host: 'hub.browserstack.com'
+            #port: 80
             browser: chrome
             #window_size: 600x8002
             resolution: 1980x1780
             restart: false
-            #wait: 1
+            #wait: 13
             #clear_cookies: false
 
             capabilities:
