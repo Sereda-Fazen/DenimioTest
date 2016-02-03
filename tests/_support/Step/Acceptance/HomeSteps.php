@@ -20,102 +20,119 @@ class HomeSteps extends \AcceptanceTester
                 case 1:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('AU');
                     $I->see('AU', $seeCurr);
                     break;
 
                 case 2:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('R');
                     $I->see('R', $seeCurr);
                     break;
 
                 case 3:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('£');
                     $I->see('£', $seeCurr);
                     break;
 
                 case 4:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('CA$');
                     $I->see('CA$', $seeCurr);
                     break;
 
                 case 5:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('CN¥');
                     $I->see('CN¥', $seeCurr);
                     break;
 
-                 case 6:
+                case 6:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Dkr');
                     $I->see('Dkr', $seeCurr);
                     break;
 
                 case 7:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('€');
                     $I->see('€', $seeCurr);
                     break;
 
                 case 8:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('HK$');
                     $I->see('HK$', $seeCurr);
                     break;
 
                 case 9:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Rs0');
                     $I->see('Rs0', $seeCurr);
                     break;
 
                 case 10:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Rp');
                     $I->see('Rp', $seeCurr);
                     break;
 
                 case 11:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('¥');
                     $I->see('¥', $seeCurr);
                     break;
 
                 case 12:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('RM');
                     $I->see('RM', $seeCurr);
                     break;
 
                 case 13:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('MXN');
                     $I->see('MXN', $seeCurr);
                     break;
 
-                 case 14:
+                case 14:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('NZ');
                     $I->see('NZ', $seeCurr);
                     break;
 
-                 case 15:
+                case 15:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Nkr');
                     $I->see('Nkr', $seeCurr);
                     break;
 
-                 case 16:
+                case 16:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('₱');
                     $I->see('₱', $seeCurr);
                     break;
 
                 case 17:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('RON');
                     $I->see('RON', $seeCurr);
                     break;
 
@@ -123,51 +140,59 @@ class HomeSteps extends \AcceptanceTester
                 case 18:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('RUB', $seeCurr);
+                    $I->getVisibleText('RUB0');
+                    $I->see('RUB0', $seeCurr);
                     break;
 
 
-                  case 19:
+                case 19:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('S', $seeCurr);
+                    $I->getVisibleText('S$0');
+                    $I->see('S$0', $seeCurr);
                     break;
 
 
                 case 20:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('R', $seeCurr);
+                    $I->getVisibleText('R0');
+                    $I->see('R0', $seeCurr);
                     break;
 
 
                 case 21:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('₩', $seeCurr);
+                    $I->getVisibleText('₩0');
+                    $I->see('₩0', $seeCurr);
                     break;
 
                 case 22:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Skr');
                     $I->see('Skr', $seeCurr);
                     break;
 
                 case 23:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('Fr');
                     $I->see('Fr.', $seeCurr);
                     break;
 
                 case 24:
                     echo
                     $I->waitForElement($seeCurr);
-                    $I->see('฿', $seeCurr);
+                    $I->getVisibleText('฿0');
+                    $I->see('฿0', $seeCurr);
                     break;
 
                 case 25:
                     echo
                     $I->waitForElement($seeCurr);
+                    $I->getVisibleText('$');
                     $I->see('$', $seeCurr);
                     break;
 
@@ -286,15 +311,15 @@ class HomeSteps extends \AcceptanceTester
     }
 
     public function getSubcategoryTops(){
-            $I = $this;
+        $I = $this;
 
-            $sub =  count($I->grabMultiple('//*[@id="block112"]/div/div/a'));
-            for ($s = 1; $s <= $sub; $s++) {
-                $I->moveMouseOver('//*[@class="parentMenu"]');
-                $I->waitForElementVisible('//*[@class="itemMenu level1"]');
-                $I->click('//*[@class="itemMenu level1"]/a['.$s.']');
-                $I->seeElement('div.breadcrumbs > ul > li:nth-of-type(2) > a');
-            }
+        $sub =  count($I->grabMultiple('//*[@id="block112"]/div/div/a'));
+        for ($s = 1; $s <= $sub; $s++) {
+            $I->moveMouseOver('//*[@class="parentMenu"]');
+            $I->waitForElementVisible('//*[@class="itemMenu level1"]');
+            $I->click('//*[@class="itemMenu level1"]/a['.$s.']');
+            $I->seeElement('div.breadcrumbs > ul > li:nth-of-type(2) > a');
+        }
     }
     public function getSubcategoryBottoms()
     {
@@ -374,36 +399,36 @@ class HomeSteps extends \AcceptanceTester
         for ($c = 1; $c <= $cat; $c++) {
             $I->click('//*[@id="featured-brands"]/div[1]/div[1]/div/div/ul/li['.$c.']/a');
 
-                switch ($c) {
+            switch ($c) {
 
-                    case 1:
-                        echo
-                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
-                        $I->see('New Arrivals', 'ul > li:nth-of-type(2) > strong');
-                        $I->moveBack();
-                        break;
+                case 1:
+                    echo
+                    $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                    $I->see('New Arrivals', 'ul > li:nth-of-type(2) > strong');
+                    $I->moveBack();
+                    break;
 
-                    case 2:
-                        echo
-                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
-                        $I->see('Tops','ul > li:nth-of-type(2) > strong');
-                        $I->moveBack();
-                        break;
+                case 2:
+                    echo
+                    $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                    $I->see('Tops','ul > li:nth-of-type(2) > strong');
+                    $I->moveBack();
+                    break;
 
-                    case 3:
-                        echo
-                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
-                        $I->see('Bottoms', 'ul > li:nth-of-type(2) > strong');
-                        $I->moveBack();
-                        break;
+                case 3:
+                    echo
+                    $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                    $I->see('Bottoms', 'ul > li:nth-of-type(2) > strong');
+                    $I->moveBack();
+                    break;
 
-                    case 4:
-                        echo
-                        $I->waitForElement('ul > li:nth-of-type(2) > strong');
-                        $I->see('Accessories','ul > li:nth-of-type(2) > strong');
-                        $I->moveBack();
-                        break;
-                }
+                case 4:
+                    echo
+                    $I->waitForElement('ul > li:nth-of-type(2) > strong');
+                    $I->see('Accessories','ul > li:nth-of-type(2) > strong');
+                    $I->moveBack();
+                    break;
+            }
 
         }
 
