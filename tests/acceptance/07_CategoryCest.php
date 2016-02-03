@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group 7_category
+ * @group 07_category
  */
 class CategoryCest
 {
