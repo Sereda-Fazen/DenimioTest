@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'http://staging:prospect@dev8.denimio.com'
+            url: 'https://staging:prospect@dev8.denimio.com'
             browser: chrome
             window_size: 1980x1780
             restart: false
@@ -27,8 +27,11 @@ modules:
             #clear_cookies: false
 
             capabilities:
-             browserstack.user: 'mahotoharada1'
-             browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
+             #browserstack.user: 'mahotoharada1'
+             #browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
+             browserstack.user: 'vladshalda1'
+             browserstack.key: 'vMqut6yLFsfbhDzhB643'
+
              browserstack.debug: 'true'
              #applicationCacheEnabled: false
              unexpectedAlertBehaviour: 'accept'
