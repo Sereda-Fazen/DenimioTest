@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'http://staging:prospect@dev8.denimio.com'
+            url: 'http://staging:prospect@devdenimio.com'
             browser: chrome
             window_size: 1980x1780
             restart: false
@@ -17,8 +17,8 @@ modules:
 
             # run in browserstack
 
-            #host: 'hub.browserstack.com'
-            #port: 80
+            host: 'hub.browserstack.com'
+            port: 80
             browser: chrome
             #window_size: 600x8002
             resolution: 1980x1780
