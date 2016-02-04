@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.24363057">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -430,12 +430,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00086" summary="footer-16">
-      <created>1453468915303</created>
-      <option name="number" value="00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1453468915303</updated>
-    </task>
     <task id="LOCAL-00087" summary="footer-17">
       <created>1453472383409</created>
       <option name="number" value="00087" />
@@ -724,7 +718,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454598327374</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="fix-39">
+      <created>1454598377541</created>
+      <option name="number" value="00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1454598377541</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TodoView">
@@ -773,7 +773,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix-14" />
     <MESSAGE value="fix-15" />
     <MESSAGE value="fix-16" />
     <MESSAGE value="fix-17" />
@@ -798,7 +797,8 @@
     <MESSAGE value="fix-36" />
     <MESSAGE value="fix-37" />
     <MESSAGE value="fix-38" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix-38" />
+    <MESSAGE value="fix-39" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix-39" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1174,7 +1174,7 @@
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24363057">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding />
         </state>
       </provider>
