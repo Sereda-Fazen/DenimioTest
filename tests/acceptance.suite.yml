@@ -27,10 +27,10 @@ modules:
             #clear_cookies: false
 
             capabilities:
-             #browserstack.user: 'mahotoharada1'
-             #browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
-             browserstack.user: 'vladshalda1'
-             browserstack.key: 'vMqut6yLFsfbhDzhB643'
+             browserstack.user: 'mahotoharada1'
+             browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
+             #browserstack.user: 'vladshalda1'
+             #browserstack.key: 'vMqut6yLFsfbhDzhB643'
 
              browserstack.debug: 'true'
              #applicationCacheEnabled: false
