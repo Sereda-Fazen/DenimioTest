@@ -3,7 +3,9 @@ namespace Page;
 
 class Registration
 {
-    public static $URL = '/customer/account/login/';
+
+    public static $URL = '/';
+    public static $logIn = '//a[@class="login_click"]';
     public static $createAccount = 'div.new-users > div.buttons-set > button.button > span > span';
     public static $firsName = '#firstname';
     public static $lastName = '#lastname';
@@ -21,7 +23,8 @@ class Registration
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL);
-
+        $I->click(self::$logIn);
+        $I->waitForElement(self::$createAccount);
         $I->click(self::$createAccount);
         $I->fillField(self::$firsName, $fName);
         $I->fillField(self::$lastName, $lName);

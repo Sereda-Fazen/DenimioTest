@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'https://staging:prospect@dev8.denimio.com'
+            url: 'http://ns524995.ip-192-99-232.net:8130'
             browser: chrome
             window_size: 1980x1780
             restart: false
@@ -40,8 +40,134 @@ modules:
              os_version: 7
 
 
+env:
 
+  DEV_8:
 
+  DEV_PROD:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://www.denimio.com'
 
+  DEV_1:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev1.denimio.com'
+
+  DEV_2:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev2.denimio.com'
+
+  DEV_3:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev3.denimio.com'
+
+  DEV_4:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev4.denimio.com'
+
+  DEV_5:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev5.denimio.com'
+
+  DEV_6:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev6.denimio.com'
+
+  DEV_7:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev7.denimio.com'
+
+  DEV_9:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev9.denimio.com'
+
+  DEV_10:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev10.denimio.com'
+
+  DEV_11:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev11.denimio.com'
+
+  DEV_12:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev12.denimio.com'
+
+  DEV_13:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev13.denimio.com'
+
+  DEV_14:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev14.denimio.com'
+
+  DEV_15:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev15.denimio.com'
+
+  DEV_16:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev16.denimio.com'
+
+  DEV_17:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev17.denimio.com'
+
+  DEV_18:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev18.denimio.com'
+
+  DEV_19:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev19.denimio.com'
+
+  DEV_20:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://staging:prospect@dev20.denimio.com'
+
+  DEV_PROX:
+      modules:
+        config:
+          WebDriver:
+            url: 'http://ns524995.ip-192-99-232.net:8130'
 
 

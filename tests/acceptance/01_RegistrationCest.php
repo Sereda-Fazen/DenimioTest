@@ -4,16 +4,15 @@
  */
 class RegistrationCest
 {
-/*
-    function registerSuccess(AcceptanceTester $I, \Page\Registration $registerPage)
+
+    function registerSuccess(\Step\Acceptance\LoginSteps $I, \Page\Registration $registerPage)
     {
         $login = rand() . '@' . rand() . '.ru';
         $registerPage->register('alex', 'sereda', $login, '123456', '123456');
-        $I->see('Thank you for registering with Denimio.', 'li.success-msg');
-        $I->comment('You are registering to Cadence Watch Company.');
+        $I->checkExistUser();
         $registerPage->logout();
     }
-*/
+
     function registerWrongEmail(AcceptanceTester $I, \Page\Registration $registerPage) {
         $registerPage->register('alex', 'sereda','sereda222.com','123456','123456');
         $I->see('Please enter a valid email address. For example johndoe@domain.com.','#advice-validate-email-email_address');
