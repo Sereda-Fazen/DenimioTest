@@ -9,7 +9,7 @@ class LoginSteps extends \AcceptanceTester
         $I = $this;
         $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
         if (preg_match('/Thank you for registering with Denimio./i', $grabMsg) == 1) {
-            $I->see('Thank you for registering with The Cadence Watch Company.', '//ul[@class="messages"]');
+            $I->see('Thank you for registering with Denimio.', '//ul[@class="messages"]');
         } else {
             $I->see('There is already an account with this email address. ', '//ul[@class="messages"]');
         }
