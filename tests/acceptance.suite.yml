@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'http://ns524995.ip-192-99-232.net:8130'
+            url: 'http://staging:prospect@dev8.denimio.com'
             browser: chrome
             window_size: 1980x1780
             restart: false
@@ -17,8 +17,8 @@ modules:
 
             # run in browserstack
 
-            host: 'hub.browserstack.com'
-            port: 80
+            #host: 'hub.browserstack.com'
+            #port: 80
             browser: chrome
             #window_size: 600x8002
             resolution: 1980x1780
@@ -93,9 +93,9 @@ env:
           url: 'http://staging:prospect@dev9.denimio.com'
 
   DEV_PROX:
-      modules:
-        config:
-          WebDriver:
-            url: 'http://ns524995.ip-192-99-232.net:8130'
+    modules:
+      config:
+        WebDriver:
+          url: 'http://ns524995.ip-192-99-232.net:8131/'
 
 
