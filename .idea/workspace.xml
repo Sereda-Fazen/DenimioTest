@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/08_ProductCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/08_ProductCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Product.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,8 +28,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38535032">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.17515923">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -186,8 +182,8 @@
         <option value="$PROJECT_DIR$/tests/_support/Page/Registration.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/08_ProductCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
         <option value="$PROJECT_DIR$/tests/_support/Page/Product.php" />
+        <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       </list>
     </option>
   </component>
@@ -427,12 +423,6 @@
       <created>1450686737095</created>
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
-    </task>
-    <task id="LOCAL-00107" summary="fix-11 forgot pass">
-      <created>1453737027765</created>
-      <option name="number" value="00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1453737027765</updated>
     </task>
     <task id="LOCAL-00108" summary="fix-12 forgot pass">
       <created>1453737285720</created>
@@ -722,7 +712,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455180379102</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="fix-60">
+      <created>1455182904106</created>
+      <option name="number" value="00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1455182904106</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TodoView">
@@ -771,7 +767,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix-35" />
     <MESSAGE value="fix-36" />
     <MESSAGE value="fix-37" />
     <MESSAGE value="fix-38" />
@@ -796,7 +791,8 @@
     <MESSAGE value="fix-57" />
     <MESSAGE value="fix-58" />
     <MESSAGE value="fix-59" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix-59" />
+    <MESSAGE value="fix-60" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix-60" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1168,8 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38535032">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.17515923">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding />
         </state>
       </provider>
