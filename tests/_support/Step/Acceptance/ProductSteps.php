@@ -8,6 +8,7 @@ class ProductSteps extends \AcceptanceTester
     public function checkTops()
     {
         $I = $this;
+        $I->wait(8);
         $I->amOnPage('/');
         $I->click('#pt_custommenu > div:first-child > div.parentMenu > a > span');
         $I->seeElement('//div[@class="category-products"]');
