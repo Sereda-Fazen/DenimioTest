@@ -35,6 +35,16 @@ class ProductCest
         $I->checkPictureArrows();
     }
 
+    /**
+     * Check Main Block
+     * @param \Page\Product $productPage
+     */
+
+    function checkMainBlockReview(\Page\Product $productPage)
+    {
+        $productPage->checkMainBlockReview('name','test','test');
+    }
+
 
 
 
