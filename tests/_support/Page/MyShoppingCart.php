@@ -1,7 +1,7 @@
 <?php
 namespace Page;
 
-class Product
+class MyShoppingCart
 {
 
     //review
@@ -15,15 +15,11 @@ class Product
     public static $submit = '//*[@id="review-form"]/div/button';
     public static $seeErrorReview = 'li.error-msg';
 
-    //add to cart and to wishList
+    // links
 
-    public static $addToCompare = '//ul[@class="add-to-links"]/li[1]';
-    public static $seeCompare = '//a[@id="shopping_cart"]';
-
-    public static $addToWishList = '//ul[@class="add-to-links"]/li[2]';
-    public static $seeList = 'div.registered-users > div.content > p:nth-of-type(1)';
-
-
+    public static $decs = '';
+    public static $shipping = '';
+    public static $returns = '';
 
 
 
@@ -46,19 +42,6 @@ class Product
         $I->moveMouseOver(self::$submit);
         $I->click(self::$submit);
         $I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
-    }
-
-    public function checkShareLinks ()
-    {
-        $I = $this->tester;
-
-        $I->click(self::$addToCompare);
-        $I->seeElement(self::$seeCompare);
-        $I->reloadPage();
-
-        $I->click(self::$addToWishList);
-        $I->seeElement(self::$seeList);
-        $I->moveBack();
     }
 
 

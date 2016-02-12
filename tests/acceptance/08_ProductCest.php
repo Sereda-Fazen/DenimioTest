@@ -53,7 +53,7 @@ class ProductCest
      * @param \Step\Acceptance\ProductSteps
      */
 
-    function checkDescription(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
         $I->checkLinksForItem();
     }
@@ -63,6 +63,11 @@ class ProductCest
      * @param \Page\Product $productPage
      * @param \Step\Acceptance\ProductSteps
      */
+
+    function checkLinksForItem(\Page\Product $productPage)
+    {
+        $productPage->checkShareLinks();
+    }
 
     function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
