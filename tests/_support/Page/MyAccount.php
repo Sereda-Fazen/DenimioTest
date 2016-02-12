@@ -79,7 +79,7 @@ class MyAccount
      */
     public static $newsletter = 'div.block-content > ul > li:nth-of-type(8) > a';
     public static $buttonSave = 'div.buttons-set > button.button > span > span';
-    public static $clickCheck = 'input.monkey-list-subscriber';
+    public static $clickCheck = '#subscription';
 
     /**
      * My Out of Stock
@@ -257,6 +257,13 @@ class MyAccount
         $I->click(self::$newsletter);
         $I->click(self::$buttonSave);
     }
+    public function accountNewsletterDelete() {
+        $I = $this->tester;
+        $I->click(self::$newsletter);
+        $I->click(self::$clickCheck);
+        $I->click(self::$buttonSave);
+    }
+
 
     public function accountMyOutStock() {
         $I = $this->tester;

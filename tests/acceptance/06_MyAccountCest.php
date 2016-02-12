@@ -65,6 +65,8 @@ class MyAccountCest
     {
         $I->login();
         $MyAccountPage->accountNewsletterSave();
+        $I->see('The subscription has been saved.', 'li.success-msg');
+        $MyAccountPage->accountNewsletterDelete();
         $I->see('The subscription has been removed.', 'li.success-msg');
     }
 

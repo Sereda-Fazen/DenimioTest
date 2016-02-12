@@ -26,17 +26,19 @@ class ProductCest
      * @param Acceptance\ProductSteps $I
      */
 
-    function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkPictureAndZoom();
-    }
     function checkPictureArrows(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
         $I->checkPictureArrows();
     }
 
+    function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkPictureAndZoom();
+    }
+
+
     /**
-     * Check Main Block
+     * Check Review
      * @param \Page\Product $productPage
      */
 
@@ -44,6 +46,31 @@ class ProductCest
     {
         $productPage->checkMainBlockReview('name','test','test');
     }
+
+    /**
+     * Check Description, Shipping, Details, Returns
+     * @param \Page\Product $productPage
+     * @param \Step\Acceptance\ProductSteps
+     */
+
+    function checkDescription(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkLinksForItem();
+    }
+
+    /**
+     * Check Select Size
+     * @param \Page\Product $productPage
+     * @param \Step\Acceptance\ProductSteps
+     */
+
+    function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkSelectSize();
+    }
+
+
+
 
 
 
