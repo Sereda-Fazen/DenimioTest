@@ -10,6 +10,7 @@ class Registration
     public static $firsName = '#firstname';
     public static $lastName = '#lastname';
     public static $email = '#email_address';
+    public static $subscription = '#is_subscribed';
     public static $pass = '#password';
     public static $confirmation = '#confirmation';
     public static $submit = 'Submit';
@@ -31,6 +32,7 @@ class Registration
         $I->fillField(self::$firsName, $fName);
         $I->fillField(self::$lastName, $lName);
         $I->fillField(self::$email, $email);
+        $I->click(self::$subscription);
         $I->fillField(self::$pass, $pass1);
         $I->fillField(self::$confirmation, $pass2);
 

@@ -328,7 +328,7 @@ class HomeSteps extends \AcceptanceTester
         $sub2 = count($I->grabMultiple('//*[@id="block113"]/div/div/a'));
         for ($b = 1; $b <= $sub2; $b++) {
             $I->moveMouseOver('//*[@id="pt_menu13"]/div[1]/a/span');
-            $I->waitForElementVisible('//*[@id="block113"]/div/div/a[6]');
+            $I->waitForElementVisible('//*[@id="block113"]/div/div/a[5]');
             $I->click('//*[@id="block113"]/div/div/a[' . $b . ']');
             $I->seeElement('div.breadcrumbs > ul > li:nth-of-type(2) > a');
         }
