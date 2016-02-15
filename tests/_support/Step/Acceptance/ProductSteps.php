@@ -78,7 +78,7 @@ class ProductSteps extends \AcceptanceTester
             $I->waitForElement('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[6]');
         } else {
             $I->waitForElement('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
-            $I->click('//div[@class="more-views ma-more-img"]/ul/li[3]/a/img');
+            $I->click('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
 
         }
     }
@@ -112,14 +112,14 @@ class ProductSteps extends \AcceptanceTester
         $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
 
         $blockSize = count($I->grabMultiple('//div[@id="product-options-wrapper"]/div'));
-        $blockAll = count($I->grabMultiple('//div[@class="input-box"]/select/option'));
+        //$blockAll = count($I->grabMultiple('//div[@class="input-box"]/select/option'));
 
         if ($blockSize > 1) {
-            for ($s=1; $s<=$blockAll; $s++) {
+
                 $I->click('select.required-entry');
-                $I->waitForElementVisible('//div[@class="input-box"]/select/option['.$s.']');
-                $I->click('//div[@class="input-box"]/select/option['.$s.']');
-            }
+                $I->waitForElementVisible('//div[@class="input-box"]/select/option[2]');
+                $I->click('//div[@class="input-box"]/select/option[2');
+
             $I->click('#product-options-right > div > a');
                 $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
                     $handles = $webdriver->getWindowHandles();
@@ -141,9 +141,9 @@ class ProductSteps extends \AcceptanceTester
                         $webdriver->switchTo()->window($last_window);
                     });
                     $I->waitForElementVisible('//div[@class="page-title"]/h1');
-                    $I->see('Sizing Guide','h1');
+                    $I->see('Sizing Guide','h1');}
 
-       } else {
+        else {
 
             $I->click('//div[@class="amxnotif-block"]/button');
             $I->seeElement('div.validation-advice');

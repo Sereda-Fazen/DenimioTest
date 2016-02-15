@@ -7,9 +7,10 @@ class HomeSteps extends \AcceptanceTester
     public function getCurrency()
     {
         $I = $this;
-        $seeCurr = '//*[@class="price"]';
+        $seeCurr = '//div[@class="top-cart-title"]';
         $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
         for ($c = 1; $c <= $countCurrency; $c++) {
+            $I->wait(1);
             $I->moveMouseOver('li.currency-trigger > a');
             $I->click('//ul[@class="sub-currency"]/li[' . $c . ']/a');
             $I->grabTextFrom('//ul[@class="sub-currency"]/li[' . $c . ']/a');

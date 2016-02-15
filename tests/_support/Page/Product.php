@@ -51,7 +51,6 @@ class Product
     public function checkShareLinks ()
     {
         $I = $this->tester;
-
         $I->click(self::$addToCompare);
         $I->seeElement(self::$seeCompare);
         $I->reloadPage();

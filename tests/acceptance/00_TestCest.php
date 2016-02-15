@@ -4,17 +4,22 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function MyNewsletter(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+/*
+    function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->login();
-        $MyAccountPage->accountNewsletterSave();
-
-        $I->see('The subscription has been saved.', 'li.success-msg');
-        $MyAccountPage->accountNewsletterDelete();
-        $I->see('The subscription has been removed.', 'li.success-msg');
-        $MyAccountPage->accountNewsletterDefault();
-        $I->see('The subscription has been saved.', 'li.success-msg');
+        $I->checkTops();
+        $I->checkRandomProductJeans();
+        $I->checkLinksForItem();
     }
+*/
+
+    function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkTops();
+        $I->checkRandomProductJeans();
+        $I->checkSelectSize();
+    }
+
 
 
 
