@@ -60,7 +60,7 @@ env:
     modules:
       config:
         WebDriver:
-          url: 'https://staging:prospect@dev3.denimio.com'
+          url: 'http://staging:prospect@dev3.denimio.com'
 
   DEV_4:
     modules:
