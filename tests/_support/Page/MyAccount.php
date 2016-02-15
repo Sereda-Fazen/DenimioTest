@@ -264,6 +264,13 @@ class MyAccount
         $I->click(self::$buttonSave);
     }
 
+    public function accountNewsletterDefault() {
+        $I = $this->tester;
+        $I->click(self::$newsletter);
+        $I->click(self::$clickCheck);
+        $I->click(self::$buttonSave);
+    }
+
 
     public function accountMyOutStock() {
         $I = $this->tester;

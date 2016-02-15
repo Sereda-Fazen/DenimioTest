@@ -4,13 +4,20 @@ use \Step\Acceptance;
 class TestCest {
 
 
-
-
-    function checkAddToMyCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    function MyNewsletter(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-        $I->checkTops();
-        $I->checkAddToCartRandom();
+        $I->login();
+        $MyAccountPage->accountNewsletterSave();
+
+        $I->see('The subscription has been saved.', 'li.success-msg');
+        $MyAccountPage->accountNewsletterDelete();
+        $I->see('The subscription has been removed.', 'li.success-msg');
+        $MyAccountPage->accountNewsletterDefault();
+        $I->see('The subscription has been saved.', 'li.success-msg');
     }
+
+
+
 
 
 
