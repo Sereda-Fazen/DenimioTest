@@ -95,9 +95,10 @@ class ProductSteps extends \AcceptanceTester
 
     public function checkSelectSize(){
         $I = $this;
+        $I->amOnPage('/');
 
         $jeans = 'JEANS';
-        //$I->amOnPage('//barns-outfitters-br301019-union-special-full-zip-parka.html');
+
         //$I->amOnPage('/full-count-481015-cotton-work-shirts.html');
 
         $I->fillField('#search','jeans');
@@ -118,7 +119,7 @@ class ProductSteps extends \AcceptanceTester
 
                 $I->click('select.required-entry');
                 $I->waitForElementVisible('//div[@class="input-box"]/select/option[2]');
-                $I->click('//div[@class="input-box"]/select/option[2');
+                $I->click('//div[@class="input-box"]/select/option[2]');
 
             $I->click('#product-options-right > div > a');
                 $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
@@ -141,7 +142,8 @@ class ProductSteps extends \AcceptanceTester
                         $webdriver->switchTo()->window($last_window);
                     });
                     $I->waitForElementVisible('//div[@class="page-title"]/h1');
-                    $I->see('Sizing Guide','h1');}
+                    $I->see('Sizing Guide','h1');
+        }
 
         else {
 

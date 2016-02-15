@@ -55,6 +55,8 @@ class ProductCest
 
     function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
+        $I->checkTops();
+        $I->checkRandomProductJeans();
         $I->checkLinksForItem();
     }
 
@@ -73,10 +75,6 @@ class ProductCest
     {
         $I->checkSelectSize();
     }
-
-
-
-
 
 
 
