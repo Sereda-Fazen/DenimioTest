@@ -28,7 +28,7 @@ class Blog
         $I->click(self::$cat);
         $I->seeElement('div.post-list.row.js-masonry > div:nth-of-type(2) > h2 > a');
         $I->click(self::$archives);
-        $I->see('OCTOBER 29, 2015',self::$seeArchives);
+        $I->seeElement(self::$seeArchives);
         $I->amOnPage(self::$URL);
         $I->click(self::$title);
         $I->seeElement('div.page-titles.post-title > h1');

@@ -10,8 +10,7 @@ class TestCest {
         $I->checkTops();
         $I->checkRandomProductJeans();
         $I->checkLinksForItem();
-    }
-*/
+
 
     function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
@@ -19,8 +18,12 @@ class TestCest {
         $I->checkRandomProductJeans();
         $I->checkSelectSize();
     }
-
-
+    }
+*/
+    function checkBlogPage(\Page\Blog $blogPage)
+    {
+        $blogPage->blog();
+    }
 
 
 
