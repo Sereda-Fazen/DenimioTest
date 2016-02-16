@@ -93,13 +93,43 @@ class ProductSteps extends \AcceptanceTester
         }
     }
 
+    public function moduleSize (){
+        $I = $this;
+        $I->click('#product-options-right > div > a');
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+        });
+        $I->getVisibleText('Length (cm)');
+        $I->click('//button[@class="button convert cm"]/span');
+        $I->getVisibleText('Length (inch)');
+
+        $I->waitForElementVisible('#size-guide > h2');
+        $I->see('SIZING GUIDE:','#size-guide > h2');
+        $I->click('#sizechart-notice > a');
+        $I->waitForElementVisible('div.well > p:nth-of-type(5) > a');
+        $I->click('div.well > p:nth-of-type(5) > a');
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+        });
+        $I->waitForElementVisible('//div[@class="page-title"]/h1');
+        $I->see('Sizing Guide','h1');
+
+    }
+
     public function checkSelectSize(){
         $I = $this;
+        //$I->amOnPage('/denime-66xx-type-one-wash-50120055.html');
+       // $I->amOnPage('barns-outfitters-br301065-union-special-full-zip-parka.html');
+
         $I->amOnPage('/');
 
         $jeans = 'JEANS';
 
-        //$I->amOnPage('/full-count-481015-cotton-work-shirts.html');
+
 
         $I->fillField('#search','jeans');
         $I->click('//button[@class="button"]//span/i');
@@ -112,52 +142,55 @@ class ProductSteps extends \AcceptanceTester
         $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
         $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
 
-        $blockSize = count($I->grabMultiple('//div[@id="product-options-wrapper"]/div'));
-        //$blockAll = count($I->grabMultiple('//div[@class="input-box"]/select/option'));
+        $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
+        $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
+        $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));
 
-        if ($blockSize > 1) {
 
-                $I->click('select.required-entry');
-                $I->waitForElementVisible('//div[@class="input-box"]/select/option[2]');
-                $I->click('//div[@class="input-box"]/select/option[2]');
 
-            $I->click('#product-options-right > div > a');
-                $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
-                    $handles = $webdriver->getWindowHandles();
-                    $last_window = end($handles);
-                    $webdriver->switchTo()->window($last_window);
-                });
-                $I->getVisibleText('Length (cm)');
-                $I->click('//button[@class="button convert cm"]/span');
-                $I->getVisibleText('Length (inch)');
+        if ($union > 1) {
 
-                $I->waitForElementVisible('#size-guide > h2');
-                $I->see('SIZING GUIDE:','#size-guide > h2');
-                $I->click('#sizechart-notice > a');
-                $I->waitForElementVisible('div.well > p:nth-of-type(5) > a');
-                $I->click('div.well > p:nth-of-type(5) > a');
-                    $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
-                        $handles = $webdriver->getWindowHandles();
-                        $last_window = end($handles);
-                        $webdriver->switchTo()->window($last_window);
-                    });
-                    $I->waitForElementVisible('//div[@class="page-title"]/h1');
-                    $I->see('Sizing Guide','h1');
+            $I->click('//*[@id="product-options-left"]/dl/dd/div/select');
+            $I->waitForElementVisible('//*[@id="product-options-left"]/dl/dd/div/select/option[2]');
+            $I->click('//*[@id="product-options-left"]/dl/dd/div/select/option[2]');
+
+            $I->getVisibleText('//dd[@class="last"]/div/select/option', 'Choose an Option...');
+
+            $I->click('//dd[@class="last"]/div/select/option');
+            $I->waitForElementVisible('//dd[@class="last"]/div/select/option[2]');
+            $I->click('//dd[@class="last"]/div/select/option[2]');
+
+            $I->getVisibleText('//select[@id="hemming-req-select"]/option', 'No');
+
+            $I->click('//select[@id="hemming-req-select"]/option');
+            $I->waitForElementVisible('//select[@id="hemming-req-select"]/option[2]');
+            $I->click('//select[@id="hemming-req-select"]/option[2]');
+            $I->moduleSize();
         }
 
-        else {
+                elseif ( $union < 1){
 
-            $I->click('//div[@class="amxnotif-block"]/button');
-            $I->seeElement('div.validation-advice');
-            $I->fillField('//input[@name="guest_email"]','johndoe@domain.com');
-            $I->click('//div[@class="amxnotif-block"]/button');
-            $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
-            if (preg_match('/Thank you! You are already subscribed to this product./i', $grabMsg) == 1){
-                $I->see('Thank you! You are already subscribed to this product.', '//ul[@class="messages"]');
-            } else {
-                $I->see('Alert subscription has been saved.', '//ul[@class="messages"]');
-            }
-        }
+                    $I->click('//dd[@class="last"]/div/select/option');
+                    $I->waitForElementVisible('//dd[@class="last"]/div/select/option[2]');
+                    $I->click('//dd[@class="last"]/div/select/option[2]');
+                    $I->moduleSize();
+                }
+
+                else {
+
+                    $I->click('//div[@class="amxnotif-block"]/button');
+                    $I->seeElement('div.validation-advice');
+                    $I->fillField('//input[@name="guest_email"]','johndoe@domain.com');
+                    $I->click('//div[@class="amxnotif-block"]/button');
+                    $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
+                    if (preg_match('/Thank you! You are already subscribed to this product./i', $grabMsg) == 1){
+                        $I->see('Thank you! You are already subscribed to this product.', '//ul[@class="messages"]');
+                    } else {
+                        $I->see('Alert subscription has been saved.', '//ul[@class="messages"]');
+                    }
+                }
+
+
 
 
 
