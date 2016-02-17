@@ -6,10 +6,10 @@ class TestCest {
 
 
 
-    function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    function checkAddToMyCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-      //  $I->checkInRandomOrder();
-        $I->checkPictureAndZoom();
+        $I->checkTops();
+        $I->checkToAddMyCart();
     }
 
 

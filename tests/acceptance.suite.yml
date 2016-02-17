@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'http://staging:prospect@dev8.denimio.com'
+            url: 'https://staging:prospect@dev8.denimio.com'
             browser: chrome
             window_size: 1980x1780
             restart: false

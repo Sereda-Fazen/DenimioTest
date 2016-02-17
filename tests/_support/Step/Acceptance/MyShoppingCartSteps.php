@@ -4,28 +4,24 @@ namespace Step\Acceptance;
 class MyShoppingCartSteps extends \AcceptanceTester
 {
 
-
     public function checkTops()
     {
         $I = $this;
         $I->amOnPage('/');
         $I->click('#pt_custommenu > div:first-child > div.parentMenu > a > span');
         $I->seeElement('//div[@class="category-products"]');
-
-    }
-    public function checkAddToCartRandom()
-    {
-        $I = $this;
-        //$I->amOnPage('/barns-outfitters-br493154-loopwheel-fleece-lining-zip-parka.html');
-
         $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
         $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
         $I->wait(2);
         $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
+        $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
+    }
 
-        $I->seeElement('//ul[@class="product-tabs"]');
+    public function checkToAddMyCart(){
 
+        $I = $this;
         $seeAddToCart = count($I->grabMultiple('//div[@class="add-to-cart"]'));
+
         if($seeAddToCart == true) {
             $I->see('Add To Cart', '//div[@class="add-to-cart"]');
             $I->click('//div[@class="add-to-cart"]/button/span');
