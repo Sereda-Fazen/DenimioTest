@@ -25,7 +25,6 @@ class Registration
         $I = $this->tester;
 
         $I->amOnPage(self::$URL);
-        $I->wait(6);
         $I->click(self::$logIn);
         $I->waitForElement(self::$createAccount);
         $I->click(self::$createAccount);
