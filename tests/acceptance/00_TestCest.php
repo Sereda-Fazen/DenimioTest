@@ -6,11 +6,11 @@ class TestCest {
 
 
 
-    function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->checkSelectSize();
+      //  $I->checkInRandomOrder();
+        $I->checkPictureAndZoom();
     }
-
 
 
 

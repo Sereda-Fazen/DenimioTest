@@ -14,17 +14,27 @@ class ProductSteps extends \AcceptanceTester
 
     }
 
-    public function checkRandomProductJeans()
+    public function checkBottoms()
     {
         $I = $this;
-        //div[@class="category-products"]/ul[1]/li[3]
+        $I->amOnPage('/');
+        $I->click('#pt_custommenu > div:nth-of-type(2) > div.parentMenu > a > span');
+        $I->seeElement('//div[@class="category-products"]');
+
+    }
+
+    public function checkInRandomOrder(){
+        $I = $this;
+        $I->checkTops();
         $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
         $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
         $I->wait(2);
         $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
+        $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
 
-        $I->seeElement('//ul[@class="product-tabs"]');
     }
+
+
 
     public function checkPictureAndZoom()
     {
@@ -58,7 +68,7 @@ class ProductSteps extends \AcceptanceTester
         $I = $this;
         $test2 = count($I->grabMultiple('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li'));
         $I->wait(3);
-
+        $I->amOnPage('studiod-artisan-9776id-sweat-indigo.html');
         if ($test2 > 4) {
             //$I->click('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[' . rand(5, $test2) . ']');
             $I->waitForElement('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li');
@@ -120,32 +130,17 @@ class ProductSteps extends \AcceptanceTester
 
     }
 
-    public function checkSelectSize(){
+    public function checkSelectSizeForBottoms()
+    {
         $I = $this;
-        //$I->amOnPage('/denime-66xx-type-one-wash-50120055.html');
-       // $I->amOnPage('barns-outfitters-br301065-union-special-full-zip-parka.html');
 
-        $I->amOnPage('/');
-
-        $jeans = 'JEANS';
-
-
-
-        $I->fillField('#search','jeans');
-        $I->click('//button[@class="button"]//span/i');
-        $I->see('SEARCH RESULTS FOR', 'h1');
-        $I->see($jeans);
-
-        $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-        $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
-        $I->wait(2);
-        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
-        $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
+        $I->checkBottoms();
+        $I->checkInRandomOrder();
 
         $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
         $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
         $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));
-
+        $sub = count($I->grabMultiple('//div[@class="amxnotif-block"]/button'));
 
 
         if ($union > 1) {
@@ -166,29 +161,58 @@ class ProductSteps extends \AcceptanceTester
             $I->waitForElementVisible('//select[@id="hemming-req-select"]/option[2]');
             $I->click('//select[@id="hemming-req-select"]/option[2]');
             $I->moduleSize();
+
+        } else {
+
+            $I->click('//div[@class="amxnotif-block"]/button');
+            $I->seeElement('div.validation-advice');
+            $I->fillField('//input[@name="guest_email"]', 'johndoe@domain.com');
+            $I->click('//div[@class="amxnotif-block"]/button');
+            $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
+            if (preg_match('/Thank you! You are already subscribed to this product./i', $grabMsg) == 1) {
+                $I->see('Thank you! You are already subscribed to this product.', '//ul[@class="messages"]');
+            } else {
+                $I->see('Alert subscription has been saved.', '//ul[@class="messages"]');
+            }
+        }
+    }
+
+
+
+        public function checkSelectSizeForTops()
+        {
+            $I = $this;
+
+            $I->checkTops();
+            $I->checkInRandomOrder();
+
+            $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
+            $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
+            $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));
+            $sub = count($I->grabMultiple('//div[@class="amxnotif-block"]/button'));
+
+            if ($union < 1) {
+
+                $I->click('//dd[@class="last"]/div/select/option');
+                $I->waitForElementVisible('//dd[@class="last"]/div/select/option[2]');
+                $I->click('//dd[@class="last"]/div/select/option[2]');
+                $I->moduleSize();
+
+            } else {
+
+                $I->click('//div[@class="amxnotif-block"]/button');
+                $I->seeElement('div.validation-advice');
+                $I->fillField('//input[@name="guest_email"]', 'johndoe@domain.com');
+                $I->click('//div[@class="amxnotif-block"]/button');
+                $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
+                if (preg_match('/Thank you! You are already subscribed to this product./i', $grabMsg) == 1) {
+                    $I->see('Thank you! You are already subscribed to this product.', '//ul[@class="messages"]');
+                } else {
+                    $I->see('Alert subscription has been saved.', '//ul[@class="messages"]');
+                }
+            }
         }
 
-                elseif ( $union < 1){
-
-                    $I->click('//dd[@class="last"]/div/select/option');
-                    $I->waitForElementVisible('//dd[@class="last"]/div/select/option[2]');
-                    $I->click('//dd[@class="last"]/div/select/option[2]');
-                    $I->moduleSize();
-                }
-
-                else {
-
-                    $I->click('//div[@class="amxnotif-block"]/button');
-                    $I->seeElement('div.validation-advice');
-                    $I->fillField('//input[@name="guest_email"]','johndoe@domain.com');
-                    $I->click('//div[@class="amxnotif-block"]/button');
-                    $grabMsg = $I->grabTextFrom('//ul[@class="messages"]');
-                    if (preg_match('/Thank you! You are already subscribed to this product./i', $grabMsg) == 1){
-                        $I->see('Thank you! You are already subscribed to this product.', '//ul[@class="messages"]');
-                    } else {
-                        $I->see('Alert subscription has been saved.', '//ul[@class="messages"]');
-                    }
-                }
 
 
 
@@ -197,7 +221,9 @@ class ProductSteps extends \AcceptanceTester
 
 
 
-    }
+
+
+
 
 
 

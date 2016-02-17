@@ -8,17 +8,6 @@ use Step\Acceptance;
 class ProductCest
 {
 
-    /**
-     * Check Product Item For Example (tops)
-     * @param \Page\Product $productPage
-     * @param  \Step\Acceptance\ProductSteps $I
-     */
-
-    function checkProductItems(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkTops();
-        $I->checkRandomProductJeans();
-    }
 
     /**
      * Check Picture And Prev View And Zoom
@@ -28,11 +17,13 @@ class ProductCest
 
     function checkPictureArrows(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
+        $I->checkInRandomOrder();
         $I->checkPictureArrows();
     }
 
     function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
+        $I->checkInRandomOrder();
         $I->checkPictureAndZoom();
     }
 
@@ -55,8 +46,7 @@ class ProductCest
 
     function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->checkTops();
-        $I->checkRandomProductJeans();
+        $I->checkInRandomOrder();
         $I->checkLinksForItem();
     }
 
@@ -71,9 +61,14 @@ class ProductCest
         $productPage->checkShareLinks();
     }
 
-    function checkSelectSize(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    function checkSelectSizeForTops(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->checkSelectSize();
+        $I->checkSelectSizeForTops();
+    }
+
+    function checkSelectSizeForBottoms(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkSelectSizeForBottoms();
     }
 
 
