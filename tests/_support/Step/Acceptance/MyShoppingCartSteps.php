@@ -9,8 +9,6 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I = $this;
         $wallet = 'WALLET';
         $I->amOnPage('/');
-        $I->click('#pt_custommenu > div:nth-of-type(3) > div.parentMenu > a > span');
-        $I->seeElement('//div[@class="category-products"]');
         $I->fillField('#search', 'wallet');
         $I->click('i.fa.fa-search');
         $I->see('SEARCH RESULTS FOR', 'h1');
@@ -19,7 +17,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
     }
 
-    public function checkInRandomOrderAccessories()
+    public function checkFunctionalInRandomOrder()
     {
         $I = $this;
         $I->checkAccessories();
@@ -32,7 +30,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']');
         $I->wait(2);
 
-        if ($test ==  true) {
+        if ($test == true) {
             $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
             $I->click('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
 
@@ -52,13 +50,79 @@ class MyShoppingCartSteps extends \AcceptanceTester
             $I->click('//button[@name="update_cart_action"]');
             $I->see('3 items', 'a > span > span:first-child');
 
-       } else {
-            $I->click('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/ul/li[2]');
+        } else {
+            $I->reloadPage();
+            $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']');
+            $I->click('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
+
+            $I->waitForAjax(10);
+            $I->waitForElement('//div[@class="wrapper_box"]');
+            $I->click('//a[@id="shopping_cart"]');
+            $I->see('SHOPPING CART', 'h1');
+            $I->click('//td[@class="a-center"]/a');
+            $I->see('UPDATE CART', '//button[@class="button btn-cart"]/span');
+            $I->fillField('//div[@class="add-to-cart"]/input', '2');
+            $I->click('//button[@class="button btn-cart"]/span');
+            $I->scrollUp(300);
+            $I->wait(3);
+            $I->see('2 items', 'a > span > span:first-child');
+            $I->click('a > span > span:first-child');
+            $I->fillField('input.input-text.qty', '3');
+            $I->click('//button[@name="update_cart_action"]');
+            $I->see('3 items', 'a > span > span:first-child');
+
+
         }
+        $wallet = 'WALLET';
+        $I->click('button.button.btn-continue > span');
 
+        $I->fillField('#search', 'wallet');
+        $I->click('i.fa.fa-search');
+        $I->see('SEARCH RESULTS FOR', 'h1');
+        $I->see($wallet);
 
+        $blockAcc1 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
+        $blockAcc2 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul')));
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']');
+        $I->wait(2);
+        $I->click('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
+
+        $I->waitForAjax(10);
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//a[@id="shopping_cart"]');
+        $I->see('SHOPPING CART', 'h1');
+        $I->seeElement('//tr[@class="last even"]');
+        $I->click('//tr[@class="last even"]/td[7]/a');
+        $I->acceptPopup();
+        $I->waitForAjax(10);
+        $I->waitForElementNotVisible('//tr[@class="last even"]');
+        $I->click('#empty_cart_button > span');
+        $I->see('SHOPPING CART IS EMPTY', 'h1');
 
     }
+    public function checkCouponAndGiftCard()
+    {
+        $I = $this;
+
+        $I->scrollDown(200);
+        $I->click('button.button.validation-passed > span');
+        $I->see('This is a required field.', '#advice-required-entry-coupon_code');
+        $I->fillField('#coupon_code', 'test');
+        $I->click('button.button.validation-passed > span');
+        $I->waitForElement('li.error-msg');
+        $I->see('Coupon code "test" is not valid.', 'li.error-msg');
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

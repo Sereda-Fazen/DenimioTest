@@ -14,12 +14,18 @@ class MyShoppingCartCest
      * @param  \Step\Acceptance\MyShoppingCartSteps $I
      */
 
-    function checkAddToMyCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    function checkFunctionalForFirstItemShoppingCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->checkInRandomOrderAccessories();
+        $I->checkFunctionalInRandomOrder();
 
     }
+/*
+    function checkFunctionalForSecondItemShoppingCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkFunctionalInRandomOrder();
 
+    }
+*/
 
 
 
