@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group 8_product
+ * @group 8_shopping_cart
  */
 
 class MyShoppingCartCest
