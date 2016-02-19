@@ -11,7 +11,8 @@ modules:
             browser: chrome
             cookies:
               cookie-1:
-                  Name:'ProspectQA'
+                Name: ProspectQA
+                Value: ProspectQA
             window_size: 1980x1780
             restart: false
             #clear_cookies: false
