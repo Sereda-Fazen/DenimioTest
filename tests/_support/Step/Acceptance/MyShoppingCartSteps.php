@@ -101,6 +101,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->see('SHOPPING CART IS EMPTY', 'h1');
 
     }
+
     public function checkCouponAndGiftCard()
     {
         $I = $this;
@@ -110,11 +111,9 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
         $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
 
-
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
         $I->see('SHOPPING CART', 'h1');
-
 
         $I->scrollDown(600);
         $I->waitForElementVisible('//div[@class="buttons-set"]/button/span');
@@ -124,6 +123,19 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->click('//div[@class="buttons-set"]/button/span');
         $I->waitForElement('li.error-msg');
         $I->see('Coupon code "test" is not valid.', 'li.error-msg');
+
+        $I->click('#giftvoucher');
+        $I->waitForElementVisible('#giftvoucher_code');
+        $I->click('//div[@class="input-box"]/button/span');
+        $I->see('Please enter your code','#giftcard_notice');
+
+        $I->fillField('#giftvoucher_code','test');
+        $I->click('//div[@class="input-box"]/button/span');
+        $I->see('Gift card "test" is invalid.','li.error-msg');
+
+        $I->click('#giftvoucher');
+        $I->see('Your Gift Card information has been removed successfully.' ,'li.success-msg');
+
     }
 
 
