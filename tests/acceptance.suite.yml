@@ -9,9 +9,9 @@ modules:
         WebDriver:
             url: 'https://staging:prospect@dev8.denimio.com'
             browser: chrome
-            #cookies:
-              #cookie-1:
-               #   Name:'ProspectQA'
+            cookies:
+              cookie-1:
+                  Name:'ProspectQA'
             window_size: 1980x1780
             restart: false
             #clear_cookies: false
