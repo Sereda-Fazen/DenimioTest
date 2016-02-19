@@ -7,7 +7,7 @@ modules:
 
     config:
         WebDriver:
-            url: 'https://staging:prospect@dev8.denimio.com'
+            url: 'https://dev8.denimio.com'
             browser: chrome
             cookies:
               cookie-1:
