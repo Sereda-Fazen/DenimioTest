@@ -138,6 +138,14 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
     }
 
+    public function checkEstimateShippingAndTax(){
+        $I = $this;
+        $I->scrollDown(300);
+
+
+
+    }
+
 
 
 

@@ -16,6 +16,14 @@ class TestCest {
 
         }
 
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
+
+    }
+
+
+
 
 
 
