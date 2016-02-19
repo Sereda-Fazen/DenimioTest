@@ -105,11 +105,23 @@ class MyShoppingCartSteps extends \AcceptanceTester
     {
         $I = $this;
 
-        $I->scrollDown(200);
-        $I->click('button.button.validation-passed > span');
+        $I->checkAccessories();
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
+        $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+
+
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//a[@id="shopping_cart"]');
+        $I->see('SHOPPING CART', 'h1');
+
+
+        $I->scrollDown(600);
+        $I->waitForElementVisible('//div[@class="buttons-set"]/button/span');
+        $I->click('//div[@class="buttons-set"]/button/span');
         $I->see('This is a required field.', '#advice-required-entry-coupon_code');
         $I->fillField('#coupon_code', 'test');
-        $I->click('button.button.validation-passed > span');
+        $I->click('//div[@class="buttons-set"]/button/span');
         $I->waitForElement('li.error-msg');
         $I->see('Coupon code "test" is not valid.', 'li.error-msg');
     }
