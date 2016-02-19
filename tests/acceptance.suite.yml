@@ -23,7 +23,6 @@ modules:
             port: 80
             browser: chrome
             cookies:
-              cookie-1:
                 Name:'ProspectQA'
             #window_size: 600x8002
             resolution: 1980x1780
