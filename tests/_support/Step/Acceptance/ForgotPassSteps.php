@@ -1,6 +1,8 @@
 <?php
 namespace Step\Acceptance;
 
+use Exception;
+
 class ForgotPassSteps extends \AcceptanceTester
 {
 
@@ -45,6 +47,7 @@ class ForgotPassSteps extends \AcceptanceTester
     public function newPass() {
         $I = $this;
         $I->wait(2);
+        try { $I->click('//i[@class="mc_embed_close fa fa-times disabled-default2 disabled-start"]'); } catch (Exception $e) {}
         $I->see('Reset a Password','h1');
         $I->fillField('#password', '123456');
         $I->fillField('#confirmation', '123456');
