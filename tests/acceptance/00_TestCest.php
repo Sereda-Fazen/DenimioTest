@@ -5,9 +5,15 @@ class TestCest {
 
 
 
-    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkAddToMyCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->checkOnCheckoutVisaCard();
+        $I->checkFunctionalInRandomOrder();
+
+    }
+
+    function checkFunctionalForSecondItemShoppingCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkFunctionalInRandomOrder();
 
     }
 
