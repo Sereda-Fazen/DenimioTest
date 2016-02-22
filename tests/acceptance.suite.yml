@@ -7,12 +7,9 @@ modules:
 
     config:
         WebDriver:
-            url: 'https://dev8.denimio.com'
+            url: 'https://staging:prospect@dev8.denimio.com'
             browser: chrome
-            cookies:
-              cookie-1:
-                Name: ProspectQA
-                Value: ProspectQA
+
             window_size: 1980x1780
             restart: false
             #clear_cookies: false
