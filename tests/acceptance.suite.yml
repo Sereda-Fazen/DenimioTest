@@ -12,19 +12,14 @@ modules:
 
             window_size: 1980x1780
             restart: false
-            #clear_cookies: false
-            #wait: 1
+
 
             # --run in browserstack--
 
-            #host: 'hub.browserstack.com'
-            #port: 80
+            host: 'hub.browserstack.com'
+            port: 80
             browser: chrome
-            cookies:
-              cookie-1:
-                Name: ProspectQA
-                Value: ProspectQA
-            #window_size: 600x8002
+
             resolution: 1980x1780
             restart: false
             #wait: 13
