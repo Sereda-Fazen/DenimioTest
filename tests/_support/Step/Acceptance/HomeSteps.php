@@ -1,8 +1,17 @@
 <?php
 namespace Step\Acceptance;
 
+use Exception;
+
 class HomeSteps extends \AcceptanceTester
 {
+
+    public function getCloseSub(){
+        $I = $this;
+        $I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->wait(2);
+    }
 
     public function getCurrency()
     {
@@ -284,6 +293,7 @@ class HomeSteps extends \AcceptanceTester
     public function getHeaderLinks(){
         $I = $this;
         $links = count($I->grabMultiple('//*[@id="menu_link"]/li'));
+        $I->getCloseSub();
         for ($menu = 1; $menu <= $links; $menu++){
             $I->moveMouseOver('a.login_click > i.fa.fa-caret-down');
             $I->click('//*[@id="menu_link"]/li['.$menu.']/a');
@@ -337,8 +347,11 @@ class HomeSteps extends \AcceptanceTester
     public function getInformationLinksFooter(){
         $I = $this;
         $I->amOnPage('/customer/account/login/');
+        $I->getCloseSub();
         $info = count($I->grabMultiple('//*[@class="footer-static-content row-fluid"]/ul/li/a'));
+
         for($i = 1; $i <= $info; $i++) {
+
             $I->scrollDown(1000);
             $I->moveMouseOver('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
             $I->click('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');

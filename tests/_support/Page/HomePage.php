@@ -21,7 +21,7 @@ class HomePage
     // full cart
 
     public static $clickTops = '//*[@class="parentMenu"]/a/span';
-    public static $addToCart = '//*[@class="images-content"]';
+    public static $addToCart = 'div.category-products > ul:nth-of-type(1) > li:nth-of-type(2) > div.item-inner > div.images-content > a.item-link.product-image > img';
     public static $selectChoose = 'select.required-entry';
     public static $selectSize = '//*[@class="input-box"]/select/option[2]';
     public static $add = 'button.button.btn-cart > span';

@@ -3,24 +3,18 @@ use \Step\Acceptance;
 
 class TestCest {
 
-    /*
-        function checkAddToMyCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-        {
-           $I->checkFunctionalInRandomOrder();
 
-        }
-        */
-        function checkMyCartForSecondItem(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-        {
-            $I->checkCouponAndGiftCard();
 
-        }
-
-    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    function checkOnCheckoutVisaCard(Step\Acceptance\Steps $I, \Page\Checkout $guestPage)
     {
-        $I->checkEstimateShippingAndTax();
-
+        $I->processAddToCart();
+        $I->comment('Expected result: Navigate to category of product');
+        $I->addToCart();
+        $I->processCheckout();
+        $I->paymentMethod();
+        $I->finishProcessCheckout();
     }
+
 
 
 

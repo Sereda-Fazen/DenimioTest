@@ -7,36 +7,32 @@ class Steps extends \AcceptanceTester
         public function processAddToCart(){
             $I = $this;
             $I->amOnPage('/');
-            $I->moveMouseOver('#pt_custommenu > div:first-child > div.parentMenu > a');
-            $I->waitForElement('//*[@id="block112"]');
-            $I->waitForElementVisible('//*[@class="itemMenu level1"]/a');
-            $I->click('//*[@class="itemMenu level1"]/a');
+            $I->click('#pt_custommenu > div:first-child > div.parentMenu > a > span');
             $I->waitForElementVisible('div.category-products');
             $I->see('Sort By','div.category-products > div.toolbar');
-        }
-        public function addToCart(){
-            $I = $this;
-            $I->moveMouseOver('//*[@class="add-to-links"]');
-            $I->waitForElementVisible('//*[@class="button btn-cart"]');
-            $I->click('//*[@class="button btn-cart"]');
-            $I->see('Description','ul.product-tabs');
-        }
 
-    public function selectSize(){
-        $I = $this;
-        $I->scrollDown(200);
-        $I->click('select.required-entry');
-        $I->click('//*[@id="attribute144"]/option[2]');
-        $I->click('button.button.btn-cart > span');
-        $I->waitForElementVisible('div.wrapper_box');
-        $I->click('//*[@id="shopping_cart"]');
-        $I->see('PROCEED TO CHECKOUT','button.button.btn-proceed-checkout.btn-checkout > span');
-        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
-    }
 
-    public function processCheckout(){
+            $blockAcc1 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
+            $blockAcc2 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul')));
+            $I->wait(2);
 
-            $I = $this;
+            $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']');
+            $I->wait(2);
+
+                $I->moveMouseOver('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
+                $I->click('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button');
+
+                $I->scrollDown(200);
+                $I->waitForElementVisible('select.required-entry');
+                $I->click('select.required-entry');
+                $I->click('//*[@id="attribute144"]/option[2]');
+                $I->click('button.button.btn-cart > span');
+                $I->waitForElementVisible('div.wrapper_box');
+                $I->click('//*[@id="shopping_cart"]');
+                $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+                $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+
+
             $billing = '#billing\3A ';
             $I->waitForElementVisible('#billing\3A firstname');
             $I->fillField($billing.'firstname', 'alex');
@@ -52,10 +48,6 @@ class Steps extends \AcceptanceTester
             $I->wait(3);
 
 
-    }
-
-    public function paymentMethod(){
-            $I = $this;
             $I->scrollUp(200);
             $I->wait(3);
             $I->click('#p_method_paygent_cc');
@@ -79,10 +71,6 @@ class Steps extends \AcceptanceTester
            $I->click('#payment-tool-tip-close');
            $I->fillField('#paygent_cc_cc_cid', '123');
 
-    }
-
-    public function finishProcessCheckout(){
-            $I = $this;
             $I->scrollDown(150);
             $I->click('#edit_shipping_document_confirmation');
             $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');

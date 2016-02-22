@@ -84,11 +84,11 @@ class HomePageCest
          * Check Full Cart
          * @param \Page\HomePage $homePage
          */
-
+/*
         function headerCheckFullCart( \Page\HomePage $homePage){
             $homePage->fullCart();
         }
-
+*/
 
 
         /**
