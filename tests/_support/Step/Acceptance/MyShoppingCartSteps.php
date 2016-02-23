@@ -134,6 +134,14 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->click('//div[@class="input-box"]/button/span');
         $I->see('Gift card "test" is invalid.','li.error-msg');
 
+        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF0O');
+        $I->click('//div[@class="input-box"]/button/span');
+        $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
+
+        $I->click('li.giftvoucher-discount-code > ul > li > a > img');
+        $I->see('Gift Card "GIFT-XXXX-XXXXXX" has been removed successfully!' ,'li.success-msg');
+
+
         $I->click('#giftvoucher');
         $I->see('Your Gift Card information has been removed successfully.' ,'li.success-msg');
 
@@ -142,6 +150,18 @@ class MyShoppingCartSteps extends \AcceptanceTester
     public function checkEstimateShippingAndTax(){
         $I = $this;
         $I->scrollDown(300);
+        $country = rand(2,count($I->grabMultiple('//ul[@class="form-list"]//div/select/option')));
+        $I->click('#country');
+        $I->click('//ul[@class="form-list"]//div/select/option['.$country.']');
+
+        $I->fillField('#region','test');
+        $I->fillField('#postcode','test');
+        $I->click('//*[@id="shipping-zip-form"]/div/button');
+        $I->scrollDown(300);
+        $I->waitForElementVisible('dl.sp-methods > dd > ul > li');
+        $I->seeElement('[name="do"] > span');
+
+
 
 
 

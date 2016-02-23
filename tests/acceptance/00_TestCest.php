@@ -7,11 +7,18 @@ use \Step\Acceptance;
 class TestCest {
 
 
+/*
+    function checkAddToMyCart(\Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkFunctionalInRandomOrder();
 
-    function loginSuccess(Step\Acceptance\Steps $I, \Page\Login $loginPage) {
-        $loginPage->login('denimio_test@yahoo.com', '123456');
-        $I->see('From your My Account Dashboard you have the ability to view','div.welcome-msg');
-        $loginPage->logout();
+    }
+*/
+    function checkCouponAndGiftCardAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkCouponAndGiftCard();
+        $I->checkEstimateShippingAndTax();
+
     }
 
 

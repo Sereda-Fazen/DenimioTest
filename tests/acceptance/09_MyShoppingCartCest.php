@@ -18,12 +18,12 @@ class MyShoppingCartCest
         $I->checkFunctionalInRandomOrder();
 
     }
-/*
-    function checkFunctionalForSecondItemShoppingCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+
+    function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->checkFunctionalInRandomOrder();
+        $I->checkCouponAndGiftCard();
     }
-*/
+
 
 
 
