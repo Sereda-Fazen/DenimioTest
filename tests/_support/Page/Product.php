@@ -35,6 +35,7 @@ class Product
     public function checkMainBlockReview ($name,$summary,$review){
         $I = $this->tester;
 
+        $I->scrollDown(200);
         $rait = '//tr[@class="first last odd"]/td['.rand(1,5).']/input';
         $I->click(self::$clickReview);
         $I->seeElement(self::$seeRating);

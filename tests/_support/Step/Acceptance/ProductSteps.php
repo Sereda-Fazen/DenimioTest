@@ -33,13 +33,24 @@ class ProductSteps extends \AcceptanceTester
         $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
 
     }
+    public function checkInRandomOrderBottoms(){
+        $I = $this;
+        $I->checkBottoms();
+        $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
+        $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
+        $I->wait(2);
+        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
+        $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
+
+    }
+
 
 
 
     public function checkPictureAndZoom()
     {
         $I = $this;
-        //$I->amOnPage('//barns-outfitters-br610029-union-special-baseball-shirt.html');
+       // $I->checkInRandomOrder();
         $I->waitForElement('//*[@id="wrap"]');
         $I->moveMouseOver('//*[@id="wrap"]');
         $I->waitForElementVisible('//div[@class="cloud-zoom-big"]');
@@ -66,9 +77,9 @@ class ProductSteps extends \AcceptanceTester
     public function checkPictureArrows()
     {
         $I = $this;
+        $I->checkInRandomOrder();
         $test2 = count($I->grabMultiple('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li'));
         $I->wait(3);
-        $I->amOnPage('studiod-artisan-9776id-sweat-indigo.html');
         if ($test2 > 4) {
             //$I->click('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[' . rand(5, $test2) . ']');
             $I->waitForElement('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li');
@@ -97,6 +108,7 @@ class ProductSteps extends \AcceptanceTester
     public function checkLinksForItem()
     {
         $I = $this;
+        $I->checkInRandomOrder();
         $countLinks = count($I->grabMultiple('//*[@class="product-tabs"]/li'));
         for($c=1; $c<=$countLinks; $c++) {
             $I->click('//*[@class="product-tabs"]/li['.$c.']/a');
@@ -134,9 +146,8 @@ class ProductSteps extends \AcceptanceTester
     {
         $I = $this;
 
-        $I->checkBottoms();
-        $I->checkInRandomOrder();
-
+        //$I->checkInRandomOrderBottoms();
+        $I->amOnPage('/oni-denim-oni-546-22oz-natural-indigo-kabuki-vedge-tight-fit-straight.html');
         $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
         $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
         $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));
@@ -183,15 +194,13 @@ class ProductSteps extends \AcceptanceTester
         {
             $I = $this;
 
-            $I->checkTops();
             $I->checkInRandomOrder();
-
             $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
             $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
             $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));
             $sub = count($I->grabMultiple('//div[@class="amxnotif-block"]/button'));
 
-            if ($union < 1) {
+            if ($union > 1) {
 
                 $I->click('//dd[@class="last"]/div/select/option');
                 $I->waitForElementVisible('//dd[@class="last"]/div/select/option[2]');

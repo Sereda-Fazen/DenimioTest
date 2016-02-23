@@ -15,18 +15,14 @@ class ProductCest
      * @param Acceptance\ProductSteps $I
      */
 
-    function checkPictureArrows(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkInRandomOrder();
+    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
+
         $I->checkPictureArrows();
     }
+    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
 
-    function checkPictureAndZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkInRandomOrder();
         $I->checkPictureAndZoom();
     }
-
 
     /**
      * Check Review
@@ -46,7 +42,6 @@ class ProductCest
 
     function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->checkInRandomOrder();
         $I->checkLinksForItem();
     }
 
@@ -56,16 +51,12 @@ class ProductCest
      * @param \Step\Acceptance\ProductSteps
      */
 
-    function checkLinksForItem(\Page\Product $productPage)
-    {
-        $productPage->checkShareLinks();
-    }
-
+/*
     function checkSelectSizeForTops(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
         $I->checkSelectSizeForTops();
     }
-
+*/
     function checkSelectSizeForBottoms(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
         $I->checkSelectSizeForBottoms();

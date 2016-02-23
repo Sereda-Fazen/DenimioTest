@@ -3,22 +3,26 @@ use \Step\Acceptance;
 
 class TestCest {
 
+    /*
 
-/*
-    function checkAddToMyCart(\Step\Acceptance\MyShoppingCartSteps $I)
+        function checkSelectSizeForTops(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+        {
+            $I->checkSelectSizeForTops();
+        }
+
+    function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
-        $I->checkFunctionalInRandomOrder();
-
+        $I->addToCartForCompare();
+       // $I->remoteWindow();
+     //   $I->compareAddToCart();
     }
 */
-    function checkPictureArrows(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
-        $I->checkInRandomOrder();
-        $I->checkPictureArrows();
+        $I->compareAddToCart3();
+        $I->compareAddToWishListGuestUser();
+        $I->compareAddToCartFromMyComparison();
     }
-
-
-
 
 
 
