@@ -1,9 +1,6 @@
 <?php
 use \Step\Acceptance;
 
-/**
- * @group test
- */
 class TestCest {
 
 
@@ -14,11 +11,10 @@ class TestCest {
 
     }
 */
-    function checkCouponAndGiftCardAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    function checkPictureArrows(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-        $I->checkCouponAndGiftCard();
-        $I->checkEstimateShippingAndTax();
-
+        $I->checkInRandomOrder();
+        $I->checkPictureArrows();
     }
 
 
