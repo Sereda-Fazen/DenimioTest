@@ -46,8 +46,9 @@ class ForgotPassSteps extends \AcceptanceTester
 
     public function newPass() {
         $I = $this;
+        $I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
         $I->wait(2);
-        try { $I->click('//i[@class="mc_embed_close fa fa-times disabled-default2 disabled-start"]'); } catch (Exception $e) {}
         $I->see('Reset a Password','h1');
         $I->fillField('#password', '123456');
         $I->fillField('#confirmation', '123456');
