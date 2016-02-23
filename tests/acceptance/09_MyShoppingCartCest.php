@@ -22,7 +22,6 @@ class MyShoppingCartCest
     function checkFunctionalForSecondItemShoppingCart(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
         $I->checkFunctionalInRandomOrder();
-
     }
 */
 
