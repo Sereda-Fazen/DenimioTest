@@ -1,7 +1,7 @@
 <?php
 namespace Step\Acceptance;
 
-class MyShoppingCartSteps extends \AcceptanceTester
+class Steps extends \AcceptanceTester
 {
 
     public function checkAccessories()
