@@ -69,9 +69,13 @@ class ProductSteps extends \AcceptanceTester
         $I->getVisibleText('PREV');
         $I->click('//a[@id="prevLink"]');
         $I->waitForAjax(10);
-        $I->scrollDown(200);
+
         $I->click('//a[@id="bottomNavClose"]');
-        $I->waitForElementVisible('p.no-rating > a');
+        $I->scrollDown(1500);
+        $I->waitForElement('#customer-reviews');
+
+
+
 
     }
     public function checkPictureArrows()
@@ -147,7 +151,7 @@ class ProductSteps extends \AcceptanceTester
         $I = $this;
 
         //$I->checkInRandomOrderBottoms();
-        $I->amOnPage('/oni-denim-oni-546-22oz-natural-indigo-kabuki-vedge-tight-fit-straight.html');
+        //$I->amOnPage('/oni-denim-oni-546-22oz-natural-indigo-kabuki-vedge-tight-fit-straight.html');
         $size = count($I->grabMultiple('//dd[@class="last"]/div/select/option'));
         $type = count($I->grabMultiple('//*[@id="product-options-left"]/dl/dd/div/select/option'));
         $union = count($I->grabMultiple('//select[@id="hemming-req-select"]/option'));

@@ -6,12 +6,13 @@ class Product
 
     //review
 
-    public static $clickReview = 'p.no-rating > a';
+    public static $clickReview = '//p[@class="no-rating"]/a';
     public static $seeRating = 'fieldset';
     public static $checkRating = '//tr[@class="first last odd"]/td/input';
     public static $nickName = '#nickname_field';
     public static $summary = '#summary_field';
     public static $review = '#review_field';
+    public static $captcha = 'div.recaptcha-checkbox-checkmark';
     public static $submit = '//*[@id="review-form"]/div/button';
     public static $seeErrorReview = 'li.error-msg';
 
@@ -35,18 +36,21 @@ class Product
     public function checkMainBlockReview ($name,$summary,$review){
         $I = $this->tester;
 
-        $I->scrollDown(200);
+        $I->amOnPage('/top/the-flat-head-7013w-8oz-denim-work-shirt.html');
         $rait = '//tr[@class="first last odd"]/td['.rand(1,5).']/input';
-        $I->click(self::$clickReview);
-        $I->seeElement(self::$seeRating);
+
+        $I->waitForElementVisible($rait);
         $I->click($rait);
         $I->fillField(self::$nickName, $name);
         $I->fillField(self::$summary, $summary);
         $I->click(self::$review);
         $I->fillField(self::$review, $review);
-        $I->moveMouseOver(self::$submit);
+        $I->moveMouseOver(self::$captcha, 5, 5);
+        $I->wait(1);
+        $I->click(self::$captcha);
+        $I->waitForElement('//span[@id="recaptcha-anchor" AND @aria-checked="true"]', 10);
         $I->click(self::$submit);
-        $I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
+        //$I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
     }
 
     public function checkShareLinks ()

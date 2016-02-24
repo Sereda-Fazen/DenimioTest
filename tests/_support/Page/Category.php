@@ -60,7 +60,7 @@ class Category
         $I->fillField(self::$left ,$leftPrice);
         $I->fillField(self::$right,$rightPrice);
         $I->click(self::$search);
-        $I->waitForAjax();
+        $I->waitForAjax(40);
         $I->seeElement(self::$price);
         $I->seeElement(self::$seeSearch);
     }
@@ -107,11 +107,11 @@ class Category
         $I->click('//div[@class="parentMenu"]//span');
         $I->seeElement('//div[@class="category-products"]');
         $I->click(self::$list);
-        $I->waitForAjax(20);
+        $I->waitForAjax(40);
         $I->seeElement(self::$seeList);
 
                 $I->click(self::$addToCompare);
-                $I->waitForAjax(20);
+                $I->waitForAjax(40);
                 $I->waitForElementVisible(self::$seeCompare);
                 $I->see('Go to list Compare', self::$seeCompare);
                 //$I->click(self::$continue);

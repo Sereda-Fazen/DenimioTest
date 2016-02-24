@@ -12,8 +12,8 @@ class ItemsSteps extends \AcceptanceTester
             $I->waitForElementVisible('div.block-content > p.empty');
             $I->see('You have no items to compare.','div.block-content > p.empty');
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
-            $I->click('//ul[@class="add-to-links"]/li/a');
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li[2]');
+            $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->waitForAjax(10);
             $I->waitForElement('//a[@id="continue_shopping"]');
             $I->moveMouseOver('//a[@id="continue_shopping"]');
@@ -22,11 +22,11 @@ class ItemsSteps extends \AcceptanceTester
             $I->see('(1)' ,'//*[@class="block block-list block-compare"]/div/strong/span/small');
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[2]');
-            $I->click('//ul[@class="add-to-links"]/li/a');
-            $I->waitForAjax(10);
-            $I->click('//a[@id="shopping_cart"]');
-
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
+            $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
+            $I->waitForElementVisible('//a[@id="shopping_cart"]');
+            $I->moveMouseOver('//a[@id="shopping_cart"]');
+            $I->amOnPage('/catalog/product_compare/index/');
 
         }
 
