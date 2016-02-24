@@ -100,7 +100,7 @@ class MyAccount
 
     public static $XX012Contest = 'div.block-content > ul > li:nth-of-type(11)';
     public static $browse = '#customer-upload > div.qq-uploader > div.qq-upload-button > input';
-    public static $deleteContest = 'div.calcel-account > button.button > span';
+    public static $deleteContest = '//div[@class="calcel-account"]/button/span';
 
     /**
      * XX012Contest add
@@ -286,8 +286,10 @@ class MyAccount
         $I = $this->tester;
         $I->click(self::$XX012Contest);
         $I->waitForElement(self::$browse);
+        $I->wait(3);
         $I->click(self::$deleteContest);
         $I->acceptPopup();
+        $I->see('Your XX012 Contest account was successfully deleted', 'li.success-msg');
     }
 
     public function accountXX012ContestAdd() {

@@ -5,51 +5,18 @@ class TestCest {
 
 
 
-    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
-
-        $I->checkPictureArrows();
-    }
-    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
-
-        $I->checkPictureAndZoom();
-    }
-
-    /**
-     * Check Review
-     * @param \Page\Product $productPage
-     */
-
-    function checkMainBlockReview(\Page\Product $productPage)
+    function MyContestsXX012(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-        $productPage->checkMainBlockReview('name','test','test');
-    }
+        $I->login();
 
-    /**
-     * Check Description, Shipping, Details, Returns
-     * @param \Page\Product $productPage
-     * @param \Step\Acceptance\ProductSteps
-     */
+        $MyAccountPage->accountXX012ContestAdd();
+        $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
 
-    function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkLinksForItem();
-    }
+        $MyAccountPage->accountXX012ContestDelete();
 
-    /**
-     * Check Select Size
-     * @param \Page\Product $productPage
-     * @param \Step\Acceptance\ProductSteps
-     */
 
-    /*
-        function checkSelectSizeForTops(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-        {
-            $I->checkSelectSizeForTops();
-        }
-    */
-    function checkSelectSizeForBottoms(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
-    {
-        $I->checkSelectSizeForBottoms();
+
+
     }
 
 
