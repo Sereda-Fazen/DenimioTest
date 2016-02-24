@@ -69,7 +69,7 @@ class ProductSteps extends \AcceptanceTester
         $I->getVisibleText('PREV');
         $I->click('//a[@id="prevLink"]');
         $I->waitForAjax(10);
-
+        $I->scrollDown(300);
         $I->click('//a[@id="bottomNavClose"]');
         $I->scrollDown(1500);
         $I->waitForElement('#customer-reviews');

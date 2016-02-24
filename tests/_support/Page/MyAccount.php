@@ -109,6 +109,7 @@ class MyAccount
     public static $agree = '//*[@class="buttons-set"]/button/span';
     public static $validAgree = '#advice-validate-one-required-by-name-terms_conditions';
     public static $selectAgree = '#terms_conditions';
+    public static $see = 'li.success-msg';
 
 
 
@@ -289,7 +290,7 @@ class MyAccount
         $I->wait(3);
         $I->click(self::$deleteContest);
         $I->acceptPopup();
-        $I->see('Your XX012 Contest account was successfully deleted', 'li.success-msg');
+        $I->see('Your XX012 Contest account was successfully deleted', self::$see);
     }
 
     public function accountXX012ContestAdd() {
