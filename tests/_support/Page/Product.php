@@ -15,6 +15,7 @@ class Product
     public static $captcha = 'div.recaptcha-checkbox-checkmark';
     public static $submit = '//*[@id="review-form"]/div/button';
     public static $seeErrorReview = 'li.error-msg';
+    public static $seeError = 'div.recaptcha > div.validation-advice';
 
     //add to cart and to wishList
 
@@ -36,20 +37,20 @@ class Product
     public function checkMainBlockReview ($name,$summary,$review){
         $I = $this->tester;
 
-        $I->amOnPage('/top/the-flat-head-7013w-8oz-denim-work-shirt.html');
-        $rait = '//tr[@class="first last odd"]/td['.rand(1,5).']/input';
-
-        $I->waitForElementVisible($rait);
-        $I->click($rait);
+       // $rait = $I->click('//tr[@class="first last odd"]/td['.rand(1,5).']/input');
+        $I->amOnPage('/the-flat-head-7013w-8oz-denim-work-shirt.html');
+        $I->waitForElementVisible(self::$checkRating);
+        $I->click(self::$checkRating);
         $I->fillField(self::$nickName, $name);
         $I->fillField(self::$summary, $summary);
         $I->click(self::$review);
         $I->fillField(self::$review, $review);
-        $I->moveMouseOver(self::$captcha, 5, 5);
-        $I->wait(1);
-        $I->click(self::$captcha);
-        $I->waitForElement('//span[@id="recaptcha-anchor" AND @aria-checked="true"]', 10);
+       //$I->moveMouseOver(self::$captcha, 5, 5);
+        //$I->wait(1);
+        //$I->click(self::$captcha);
+       // $I->waitForElement('//span[@id="recaptcha-anchor" AND @aria-checked="true"]', 10);
         $I->click(self::$submit);
+        $I->see('This is a required field.',self::$seeError);
         //$I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
     }
 

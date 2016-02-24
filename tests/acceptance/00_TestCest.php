@@ -5,62 +5,52 @@ class TestCest {
 
 
 
-    function categoryRemoveCategory(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
-    {
-        $I->categoryRemoveCategory();
+    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
+
+        $I->checkPictureArrows();
+    }
+    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
+
+        $I->checkPictureAndZoom();
     }
 
-    function categoryRemoveManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
-    {
+    /**
+     * Check Review
+     * @param \Page\Product $productPage
+     */
 
-        $I->categoryRemoveManufacture();
+    function checkMainBlockReview(\Page\Product $productPage)
+    {
+        $productPage->checkMainBlockReview('name','test','test');
     }
 
-    function categoryClearAllCategoryAndManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
-    {
+    /**
+     * Check Description, Shipping, Details, Returns
+     * @param \Page\Product $productPage
+     * @param \Step\Acceptance\ProductSteps
+     */
 
-        $I->categoryClearAllCategoryAndManufacture();
+    function checkMainLinks(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkLinksForItem();
     }
 
-    function categoryCheckPriceRunner(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
+    /**
+     * Check Select Size
+     * @param \Page\Product $productPage
+     * @param \Step\Acceptance\ProductSteps
+     */
+
+    /*
+        function checkSelectSizeForTops(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+        {
+            $I->checkSelectSizeForTops();
+        }
+    */
+    function checkSelectSizeForBottoms(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
-
-        $I->categoryCheckPriceRunner();
+        $I->checkSelectSizeForBottoms();
     }
-
-    function checkInputPrices(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
-    {
-        $I->category();
-        $categoryPage->checkInputPrices('100', '300');
-    }
-
-    function checkInputInvalidPrices(\Page\Category $categoryPage, AcceptanceTester $I)
-    {
-        $categoryPage->checkIsNotFindPrice('232', '232');
-    }
-
-
-    function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
-    {
-        $categoryPage->recentReviewBlock();
-    }
-
-    function sortingOfItems( \Step\Acceptance\CategorySteps $I)
-    {
-        $I->sortingOfItems();
-    }
-
-    function checkCannotFindYourWantedItem(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
-    {
-        $I->remoteWindow2();
-        $categoryPage->checkCannotFindYourWantedItem2();
-    }
-
-    function checkGridAndList(\Page\Category $categoryPage, \Helper\Acceptance $I)
-    {
-        $categoryPage->checkGridAndList();
-    }
-
 
 
 
