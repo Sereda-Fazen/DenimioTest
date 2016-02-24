@@ -290,7 +290,6 @@ class MyAccount
         $I->wait(3);
         $I->click(self::$deleteContest);
         $I->acceptPopup();
-        $I->see('Your XX012 Contest account was successfully deleted', self::$see);
     }
 
     public function accountXX012ContestAdd() {
