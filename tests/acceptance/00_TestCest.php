@@ -3,25 +3,30 @@ use \Step\Acceptance;
 
 class TestCest {
 
-
-
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+/*
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $forgotPage->forgot('denimio_test@yahoo.com');
+        $I->checkFunctionalInRandomOrder();
+
     }
 
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->gMailAuth();
-        $I->remoteWindow();
-        $I->newPass();
+        $I->checkCouponAndGiftCard();
+    }
+
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
+    }
+  */
+    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    {
+        $I->checkOnCheckoutVisaCard();
+
     }
 
 
-    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
-        $deleteMsg->deleteMsg();
-
-    }
 
 
 

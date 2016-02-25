@@ -13,7 +13,7 @@ class MyShoppingCartCest
      * @param  \Step\Acceptance\MyShoppingCartSteps $I
      */
 
-    function checkAddToMyCart(\Step\Acceptance\MyShoppingCartSteps $I)
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
         $I->checkFunctionalInRandomOrder();
 
@@ -23,6 +23,12 @@ class MyShoppingCartCest
     {
         $I->checkCouponAndGiftCard();
     }
+
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
+    }
+
 
 
 

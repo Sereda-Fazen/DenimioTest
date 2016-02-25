@@ -51,6 +51,7 @@ class ProductSteps extends \AcceptanceTester
     {
         $I = $this;
        // $I->checkInRandomOrder();
+        //
         $I->waitForElement('//*[@id="wrap"]');
         $I->moveMouseOver('//*[@id="wrap"]');
         $I->waitForElementVisible('//div[@class="cloud-zoom-big"]');
@@ -82,6 +83,7 @@ class ProductSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->checkInRandomOrder();
+        //$I->amOnPage('/momotaro-jeans-st231blk-going-to-battle-zip-up-thermal-parka-black.html');
         $test2 = count($I->grabMultiple('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li'));
         $I->wait(3);
         if ($test2 > 4) {

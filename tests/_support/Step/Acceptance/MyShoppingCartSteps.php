@@ -149,10 +149,22 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
     public function checkEstimateShippingAndTax(){
         $I = $this;
-        $I->scrollDown(300);
         $country = rand(2,count($I->grabMultiple('//ul[@class="form-list"]//div/select/option')));
-        $I->click('#country');
+        $I->checkAccessories();
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
+        $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//a[@id="shopping_cart"]');
+        $I->see('SHOPPING CART', 'h1');
+
+        $I->scrollDown(300);
+        $I->waitForElement('//ul[@class="form-list"]/li/div/select');
+        $I->click('//ul[@class="form-list"]/li/div/select');
+        $I->waitForElementVisible('//ul[@class="form-list"]//div/select/option');
         $I->click('//ul[@class="form-list"]//div/select/option['.$country.']');
+        $I->wait(2);
 
         $I->fillField('#region','test');
         $I->fillField('#postcode','test');
@@ -160,9 +172,6 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->scrollDown(300);
         $I->waitForElementVisible('dl.sp-methods > dd > ul > li');
         $I->seeElement('[name="do"] > span');
-
-
-
 
 
     }

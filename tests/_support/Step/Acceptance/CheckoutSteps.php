@@ -13,9 +13,6 @@ class CheckoutSteps extends \AcceptanceTester
             $I->see('SEARCH RESULTS FOR', 'h1');
             $I->see($wallet);
 
-
-         //   $blockAcc1 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-           // $blockAcc2 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul')));
             $I->wait(2);
 
             $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[1]');
@@ -55,7 +52,7 @@ class CheckoutSteps extends \AcceptanceTester
             $I->fillField($billing.'region', 'Kharkov');
             $I->fillField($billing.'telephone', '80934568798');
 
-            $I->wait(5);
+            $I->waitForElementNotVisible('//div[@class="ajax-loader3"]');
 
             $I->click('#p_method_paygent_cc');
             // Cards
