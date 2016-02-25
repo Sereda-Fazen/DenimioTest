@@ -5,20 +5,23 @@ class TestCest {
 
 
 
-    function MyContestsXX012(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
-        $I->login();
-
-        $MyAccountPage->accountXX012ContestAdd();
-        $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
-
-        $MyAccountPage->accountXX012ContestDelete();
-
-
-
-
+        $forgotPage->forgot('denimio_test@yahoo.com');
     }
 
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
+    }
+
+
+    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
+        $deleteMsg->deleteMsg();
+
+    }
 
 
 
