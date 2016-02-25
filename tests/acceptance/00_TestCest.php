@@ -6,42 +6,24 @@ class TestCest {
 
 
 
-    function loginSuccess(Step\Acceptance\Steps $I, \Page\Login $loginPage) {
-        $loginPage->login('denimio_test@yahoo.com', '123456');
-        $I->see('From your My Account Dashboard you have the ability to view','div.welcome-msg');
-        $loginPage->logout();
+    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
+
+        $I->checkPictureArrows();
+    }
+    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
+
+        $I->checkPictureAndZoom();
     }
 
-    function loginEmptyFields(AcceptanceTester $I, \Page\Login $loginPage) {
-        $loginPage->login('', '');
-        $I->see( 'This is a required field.','#advice-required-entry-pass');
-        $I->comment('Expected result: This is a required field pass and email.');
-    }
+    /**
+     * Check Review
+     * @param \Page\Product $productPage
+     */
 
-    function loginEmptyPass(AcceptanceTester $I, \Page\Login $loginPage) {
-        $loginPage->login('test@test.org', '');
-        $I->see( 'This is a required field.','#advice-required-entry-pass');
-        $I->comment('Expected result: This is a required field pass.');
+    function checkMainBlockReview(\Page\Product $productPage)
+    {
+        $productPage->checkMainBlockReview('name','test','test');
     }
-
-    function loginEmptyEmail(AcceptanceTester $I, \Page\Login $loginPage) {
-        $loginPage->login('', '123456');
-        $I->see( 'This is a required field.','#advice-required-entry-email');
-        $I->comment('Expected result: This is a required field email.');
-    }
-
-    function loginInvalidEmail(AcceptanceTester $I, \Page\Login $loginPage) {
-        $loginPage->login('testemail.com', '123456');
-        $I->see('Please enter a valid email address. For example johndoe@domain.com.', '#advice-validate-email-email');
-        $I->comment('Expected result: Please enter a valid email address.');
-    }
-
-    function loginWrongEmail(AcceptanceTester $I, \Page\Login $loginPage) {
-        $loginPage->login('test@test.com', '123456');
-        $I->see('Invalid login or password.', 'li.error-msg');
-        $I->comment('Expected result: Please enter a valid email address.');
-    }
-
 
 
 
