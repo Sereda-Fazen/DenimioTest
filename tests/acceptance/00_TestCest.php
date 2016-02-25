@@ -4,21 +4,16 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
-    {
-        $I->checkFunctionalInRandomOrder();
 
+
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
     }
 
-    function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-    {
-        $I->checkCouponAndGiftCard();
-    }
 
-    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-    {
-        $I->checkEstimateShippingAndTax();
-    }
 
 
 
