@@ -6,11 +6,10 @@ class TestCest {
 
 
 
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    function checkCheckoutForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->gMailAuth();
-        $I->remoteWindow();
-        $I->newPass();
+        $I->checkCheckoutGuestWithGiftCard();
+
     }
 
 

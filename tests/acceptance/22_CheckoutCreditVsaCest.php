@@ -4,12 +4,13 @@ use Step\Acceptance;
 /**
  * @group 4_checkout
  */
-class CheckoutCest
+class CheckoutCreditVisaCest
 {
 
     function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->checkOnCheckoutVisaCard();
+        $I->checkOnCheckout();
+        $I->checkProcessTypeData();
 
     }
 
