@@ -3,7 +3,7 @@ use \Step\Acceptance;
 
 class TestCest {
 
-/*
+
     function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
         $I->checkFunctionalInRandomOrder();
@@ -19,12 +19,9 @@ class TestCest {
     {
         $I->checkEstimateShippingAndTax();
     }
-  */
-    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
-    {
-        $I->checkOnCheckoutVisaCard();
 
-    }
+
+
 
 
 

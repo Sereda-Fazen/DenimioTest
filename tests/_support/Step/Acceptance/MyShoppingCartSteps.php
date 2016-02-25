@@ -148,8 +148,9 @@ class MyShoppingCartSteps extends \AcceptanceTester
     }
 
     public function checkEstimateShippingAndTax(){
+
         $I = $this;
-        $country = rand(2,count($I->grabMultiple('//ul[@class="form-list"]//div/select/option')));
+
         $I->checkAccessories();
 
         $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
@@ -163,7 +164,8 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->waitForElement('//ul[@class="form-list"]/li/div/select');
         $I->click('//ul[@class="form-list"]/li/div/select');
         $I->waitForElementVisible('//ul[@class="form-list"]//div/select/option');
-        $I->click('//ul[@class="form-list"]//div/select/option['.$country.']');
+
+        $I->click('//ul[@class="form-list"]//div/select/option['.rand(2,count($I->grabMultiple('//ul[@class="form-list"]//div/select/option'))).']');
         $I->wait(2);
 
         $I->fillField('#region','test');
