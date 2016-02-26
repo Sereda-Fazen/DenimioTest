@@ -21,6 +21,25 @@ class CheckoutSteps extends \AcceptanceTester
 
     }
 
+    public function checkDataForGuestShippingAddress (){
+        $I = $this;
+        $shipping = '#shipping\3A ';
+        $I->waitForElementVisible('#billing\3A firstname');
+        $I->fillField($shipping.'firstname', 'alex');
+        $I->fillField($shipping.'lastname', 'sereda');
+        $I->fillField($shipping.'telephone', '80934568798');
+        $I->fillField('//*[@id="shipping-new-address-form"]/ul/li[3]//input', 'Test street 22V');
+
+        $I->click($shipping. 'country_id');
+        $I->click('//*[@id="shipping:country_id"]/option[231]');
+        $I->fillField($shipping.'region', 'Kharkov');
+        $I->scrollUp(200);
+
+
+
+    }
+
+
 
 
     public function checkOnShoppingCart()
@@ -35,11 +54,11 @@ class CheckoutSteps extends \AcceptanceTester
 
             $I->wait(2);
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[1]');
+            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
             $I->wait(2);
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[1]//div/div/div/div/button');
-            $I->click('//div[@class="category-products"]/ul[2]/li[1]//div/div/div/div/button');
+            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+            $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
 
             //------------------
             $I->waitForAjax(10);
@@ -132,8 +151,48 @@ class CheckoutSteps extends \AcceptanceTester
 
     }
 
+    function checkoutForGuestPayPal(){
+        $I = $this;
+
+        $I->checkOnShoppingCart();
+
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+
+        $I->checkDataForGuest();
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->click('#p_method_paypal_express');
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+
+        $I->waitForElementVisible('li.error-msg');
+        $I->see('PayPal gateway has rejected request.','li.error-msg');
+
+    }
 
 
+    function checkoutForGuestWithAddingDifferentAddress (){
+        $I =$this;
+        $I->checkOnShoppingCart();
+
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+
+        $I->checkDataForGuest();
+        $I->wait(1);
+
+        $I->click('#shipping\3A different_shipping');
+
+        $I->checkDataForGuestShippingAddress();
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+
+
+
+    }
 
 
 }
