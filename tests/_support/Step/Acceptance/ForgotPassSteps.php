@@ -13,7 +13,7 @@ class ForgotPassSteps extends \AcceptanceTester
 
         $pass = count($I->grabMultiple('//*[@id="login-passwd"]'));
         $I->fillField('//*[@id="login-username"]', 'denimio_test@yahoo.com');
-        if ($pass == true) {
+        if ($pass > 1) {
             $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
             $I->click('//*[@id="login-signin"]');
             $I->waitForElement('span.subject');

@@ -6,25 +6,23 @@ class TestCest {
 
 
 
-    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
-
-        $I->checkPictureArrows();
-    }
-    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
-
-        $I->checkPictureAndZoom();
-    }
-
-    /**
-     * Check Review
-     * @param \Page\Product $productPage
-     */
-
-    function checkMainBlockReview(\Page\Product $productPage)
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
-        $productPage->checkMainBlockReview('name','test','test');
+        $forgotPage->forgot('denimio_test@yahoo.com');
     }
 
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
+    }
+
+
+    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
+        $deleteMsg->deleteMsg();
+
+    }
 
 
 
