@@ -9,7 +9,7 @@ class CheckoutCreditVisaCest
 
     function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->checkOnCheckout();
+        $I->checkOnShoppingCart();
         $I->checkProcessTypeData();
 
     }
