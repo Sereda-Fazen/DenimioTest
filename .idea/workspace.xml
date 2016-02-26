@@ -108,8 +108,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63399696">
-              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.5237366">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -428,12 +428,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00172" summary="fix-10">
-      <created>1455811651616</created>
-      <option name="number" value="00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1455811651616</updated>
-    </task>
     <task id="LOCAL-00173" summary="fix-11">
       <created>1455888721797</created>
       <option name="number" value="00173" />
@@ -722,7 +716,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456474014091</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="TJ-1 test21">
+      <created>1456474085214</created>
+      <option name="number" value="00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1456474085214</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TodoView">
@@ -771,7 +771,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed-9" />
     <MESSAGE value="fixed-10" />
     <MESSAGE value="fixed-11" />
     <MESSAGE value="TJ-1" />
@@ -796,7 +795,8 @@
     <MESSAGE value="TJ-1 test18" />
     <MESSAGE value="TJ-1 test19" />
     <MESSAGE value="TJ-1 test20" />
-    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test20" />
+    <MESSAGE value="TJ-1 test21" />
+    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1169,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63399696">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.5237366">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
