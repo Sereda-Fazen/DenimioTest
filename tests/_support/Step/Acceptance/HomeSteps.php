@@ -8,8 +8,9 @@ class HomeSteps extends \AcceptanceTester
 
     public function getCloseSub(){
         $I = $this;
-        $I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
-        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+
+        try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+            $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
         $I->wait(2);
     }
 
