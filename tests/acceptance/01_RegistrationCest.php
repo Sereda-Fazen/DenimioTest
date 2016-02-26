@@ -6,7 +6,7 @@ class RegistrationCest
 {
 
     function registerSuccess(\Step\Acceptance\LoginSteps $I, \Page\Registration $registerPage) {
-        $registerPage->register('alex', 'sereda', 'dev.denimio@yahoo.com', '123456', '123456');
+        $registerPage->register('alex', 'sereda', 'denimio_test@yahoo.com', '123456', '123456');
         $I->checkExistUser();
         $registerPage->logout();
     }
