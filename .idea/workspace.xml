@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5233333">
-              <caret line="191" column="18" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="18" />
+              <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -358,12 +358,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00182" summary="fix-17">
-      <created>1455894954496</created>
-      <option name="number" value="00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1455894954496</updated>
-    </task>
     <task id="LOCAL-00183" summary="fix-18">
       <created>1455897422764</created>
       <option name="number" value="00183" />
@@ -652,7 +646,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456727557060</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="TJ-1 test32">
+      <created>1456727768111</created>
+      <option name="number" value="00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1456727768111</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TodoView">
@@ -701,7 +701,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-1 test6" />
     <MESSAGE value="TJ-1 test7" />
     <MESSAGE value="TJ-1 test8" />
     <MESSAGE value="TJ-1 test9" />
@@ -726,7 +725,8 @@
     <MESSAGE value="TJ-1 test29" />
     <MESSAGE value="TJ-1 test30" />
     <MESSAGE value="TJ-1 test31" />
-    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test31" />
+    <MESSAGE value="TJ-1 test32" />
+    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test32" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1102,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5233333">
-          <caret line="191" column="18" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="18" />
+          <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
           <folding />
         </state>
       </provider>

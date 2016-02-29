@@ -189,7 +189,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        //test 123
+        
 
 
 
