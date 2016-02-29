@@ -38,8 +38,8 @@
       <file leaf-file-name="CheckoutSteps.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5233333">
-              <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.669746">
+              <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -358,12 +358,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00191" summary="fixed-5">
-      <created>1456211366505</created>
-      <option name="number" value="00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1456211366506</updated>
-    </task>
     <task id="LOCAL-00192" summary="fixed-6">
       <created>1456212211818</created>
       <option name="number" value="00192" />
@@ -652,7 +646,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456742051992</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="TJ-1 test123 TJ-3 testRest">
+      <created>1456742197121</created>
+      <option name="number" value="00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1456742197121</updated>
+    </task>
+    <option name="localTasksCounter" value="241" />
     <servers />
   </component>
   <component name="TodoView">
@@ -674,9 +674,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28884256" sideWeight="0.5041459" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.017777778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28756756" sideWeight="0.49585405" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28756756" sideWeight="0.49585405" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35127932" sideWeight="0.50609756" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -701,7 +701,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-1 test16" />
     <MESSAGE value="TJ-1 test17" />
     <MESSAGE value="TJ-1 test18" />
     <MESSAGE value="TJ-1 test19" />
@@ -726,7 +725,8 @@
     <MESSAGE value="TJ-1 tes2" />
     <MESSAGE value="TJ-1test123" />
     <MESSAGE value="TJ-1 test123" />
-    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test123" />
+    <MESSAGE value="TJ-1 test123 TJ-3 testRest" />
+    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test123 TJ-3 testRest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5233333">
-          <caret line="191" column="12" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.669746">
+          <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
           <folding />
         </state>
       </provider>
