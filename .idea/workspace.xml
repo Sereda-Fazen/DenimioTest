@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -40,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5233333">
-              <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+              <caret line="191" column="16" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -359,12 +358,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00179" summary="fix-15">
-      <created>1455891603241</created>
-      <option name="number" value="00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1455891603241</updated>
-    </task>
     <task id="LOCAL-00180" summary="fix-16">
       <created>1455892090220</created>
       <option name="number" value="00180" />
@@ -653,7 +646,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456726682172</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="TJ-1 test29">
+      <created>1456726927369</created>
+      <option name="number" value="00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1456726927370</updated>
+    </task>
+    <option name="localTasksCounter" value="229" />
     <servers />
   </component>
   <component name="TodoView">
@@ -702,7 +701,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-1 test3" />
     <MESSAGE value="TJ-1 test4" />
     <MESSAGE value="TJ-1 test5" />
     <MESSAGE value="TJ-1 test6" />
@@ -727,7 +725,8 @@
     <MESSAGE value="TJ-1 test25" />
     <MESSAGE value="TJ-1 test26" />
     <MESSAGE value="TJ-1 test28" />
-    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test28" />
+    <MESSAGE value="TJ-1 test29" />
+    <option name="LAST_COMMIT_MESSAGE" value="TJ-1 test29" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1103,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5233333">
-          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+          <caret line="191" column="16" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
           <folding />
         </state>
       </provider>
