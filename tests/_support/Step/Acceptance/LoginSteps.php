@@ -19,7 +19,7 @@ class LoginSteps extends \AcceptanceTester
         {
             $I = $this;
             $I->amOnPage('/customer/account/login/');
-            $I->fillField('#email', 'dev.denimio@yahoo.com');
+            $I->fillField('#email', 'denimio_test@yahoo.com');
             $I->fillField('#pass', '123456');
             $I->click('Login');
             $I->see('From your My Account Dashboard','div.welcome-msg > p:nth-of-type(2)');
