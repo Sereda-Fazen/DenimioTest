@@ -19,8 +19,9 @@ class ForgotPassSteps extends \AcceptanceTester
             $I->waitForElement('span.subject');
             $I->getVisibleText('Password Reset Confirmation');
             $I->click('span.subject');
-        } else if ($pass == false) {
+        } else {
             $I->click('//*[@id="login-signin"]');
+            $I->seeElement('//div[@id="mbr-login-error"]');
             $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
             $I->click('//*[@id="login-signin"]');
             $I->waitForElement('span.subject');
