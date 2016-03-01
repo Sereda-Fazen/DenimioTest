@@ -3,7 +3,8 @@ namespace Page;
 
 class ForgotPass
 {
-    public static $URL = '/customer/account/login/';
+    public static $URL = '/';
+    public static $clickLogIn = 'a.login_click';
     public static $forgotLink = 'a.f-left';
     public static $mail = '#email_address';
     public static $subSave = 'div.buttons-set > button.button > span > span';
@@ -28,6 +29,7 @@ class ForgotPass
     public function forgot($mailPass) {
         $I = $this->tester;
         $I->amOnPage(self::$URL);
+        $I->click(self::$clickLogIn);
         $I->click(self::$forgotLink);
         $I->click(self::$mail);
         $I->fillField(self::$mail, $mailPass);
