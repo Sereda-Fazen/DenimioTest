@@ -13,13 +13,13 @@ class ForgotPassSteps extends \AcceptanceTester
 
         $pass = count($I->grabMultiple('//*[@id="login-passwd"]'));
         $I->fillField('//*[@id="login-username"]', 'denimio_test@yahoo.com');
-        if ($pass > 1) {
+        if ($pass == true) {
             $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
             $I->click('//*[@id="login-signin"]');
             $I->waitForElement('span.subject');
             $I->getVisibleText('Password Reset Confirmation');
             $I->click('span.subject');
-        } else {
+        } else if ($pass == false) {
             $I->click('//*[@id="login-signin"]');
             $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
             $I->click('//*[@id="login-signin"]');
@@ -28,7 +28,6 @@ class ForgotPassSteps extends \AcceptanceTester
 
             $I->click('span.subject');
         }
-
     }
 
 
@@ -58,8 +57,8 @@ class ForgotPassSteps extends \AcceptanceTester
 
     public function newPass() {
         $I = $this;
-        $I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
-        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+
+        try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start'); $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
         $I->wait(2);
         $I->see('Reset a Password','h1');
         $I->fillField('#password', '123456');
