@@ -5,13 +5,23 @@ class TestCest {
 
 
 
-    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
-        $I->checkOnShoppingCart();
-        $I->checkProcessTypeData();
-
+        $forgotPage->forgot('denimio_test@yahoo.com');
+    }
+    //
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
     }
 
+
+    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
+        $deleteMsg->deleteMsg();
+
+    }
 
 
 

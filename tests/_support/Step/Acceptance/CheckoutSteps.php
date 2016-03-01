@@ -185,7 +185,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#shipping\3A different_shipping');
 
         $I->checkDataForGuestShippingAddress();
-        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',50);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
