@@ -9,7 +9,7 @@ class ForgotPassCest {
     {
         $forgotPage->forgot('denimio_test@yahoo.com');
     }
-
+ //
     function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
         $I->gMailAuth();
