@@ -5,9 +5,10 @@ class TestCest {
 
 
 
-    function checkCheckoutForGuestWithAddingDifferentAddress (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->checkoutForGuestWithAddingDifferentAddress();
+        $I->checkOnShoppingCart();
+        $I->checkProcessTypeData();
 
     }
 

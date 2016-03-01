@@ -119,7 +119,7 @@ class CheckoutSteps extends \AcceptanceTester
             $I->see('Network Error, E02004','li.error-msg');
 
     }
-    function checkCheckoutGuestWithGiftCard ()
+    function checkoutWithGiftCard ()
     {
         $I = $this;
 
@@ -143,7 +143,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForText('Thank you for your purchase!',50);
+        $I->waitForText('Thank you for your purchase!',100);
 
         $I->see('YOUR ORDER HAS BEEN RECEIVED.','h1');
         $I->click('//div[@class="buttons-set"]/button/span');
@@ -172,7 +172,7 @@ class CheckoutSteps extends \AcceptanceTester
     }
 
 
-    function checkoutForGuestWithAddingDifferentAddress (){
+    function checkoutAddingDifferentAddress (){
         $I =$this;
         $I->checkOnShoppingCart();
 

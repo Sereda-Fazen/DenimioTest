@@ -30,7 +30,7 @@ class CheckoutForGuestCest
 
     function checkCheckoutForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->checkCheckoutGuestWithGiftCard();
+        $I->checkoutWithGiftCard();
 
     }
 
@@ -40,7 +40,7 @@ class CheckoutForGuestCest
      * @param \Page\Checkout $guestPage
      */
 
-    function checkCheckoutForGuestPayPal (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkoutForGuestPayPal (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkoutForGuestPayPal();
 
@@ -48,9 +48,9 @@ class CheckoutForGuestCest
 
 
 
-    function checkCheckoutForGuestWithAddingDifferentAddress (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkoutWithDifferentAddress (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->checkoutForGuestWithAddingDifferentAddress();
+        $I->checkoutAddingDifferentAddress();
 
     }
 
