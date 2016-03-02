@@ -4,6 +4,15 @@ namespace Step\Acceptance;
 class LoginSteps extends \AcceptanceTester
 {
 
+    public function getCloseSub(){
+        $I = $this;
+
+        try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+            $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->wait(2);
+    }
+
+
     public function checkExistUser()
     {
         $I = $this;
@@ -19,6 +28,7 @@ class LoginSteps extends \AcceptanceTester
         {
             $I = $this;
             $I->amOnPage('/customer/account/login/');
+            $I->getCloseSub();
             $I->fillField('#email', 'denimio_test@yahoo.com');
             $I->fillField('#pass', '123456');
             $I->click('Login');

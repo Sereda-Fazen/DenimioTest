@@ -5,21 +5,17 @@ class TestCest {
 
 
 
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    function MyRewardsPoint(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-        $forgotPage->forgot('denimio_test@yahoo.com');
-    }
-    //
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
-    {
-        $I->gMailAuth();
-        $I->remoteWindow();
-        $I->newPass();
+        $I->login();
+        $MyAccountPage->accountMyRewards();
+
     }
 
-
-    function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
-        $deleteMsg->deleteMsg();
+    function MyTickets(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+    {
+        $I->login();
+        $MyAccountPage->accountMyTickets();
 
     }
 
