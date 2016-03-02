@@ -4,7 +4,7 @@ use Step\Acceptance;
 /**
  * @group 4_checkout
  */
-class CheckoutForGuestCest
+class CheckoutCest
 {
 
     /**
