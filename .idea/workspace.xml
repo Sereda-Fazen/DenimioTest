@@ -121,8 +121,8 @@
       <file leaf-file-name="10_CheckoutCest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/10_CheckoutCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17224881">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.114832535">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -410,12 +410,6 @@
       <created>1450686737095</created>
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
-    </task>
-    <task id="LOCAL-00215" summary="TJ-1 test15">
-      <created>1456402064096</created>
-      <option name="number" value="00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1456402064096</updated>
     </task>
     <task id="LOCAL-00216" summary="TJ-1 test16">
       <created>1456414242271</created>
@@ -705,7 +699,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456915654435</updated>
     </task>
-    <option name="localTasksCounter" value="264" />
+    <task id="LOCAL-00264" summary="PF-13">
+      <created>1456915853674</created>
+      <option name="number" value="00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1456915853674</updated>
+    </task>
+    <option name="localTasksCounter" value="265" />
     <servers />
   </component>
   <component name="TodoView">
@@ -754,7 +754,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-1test123" />
     <MESSAGE value="TJ-1 test123" />
     <MESSAGE value="TJ-1 test123 TJ-3 testRest" />
     <MESSAGE value="TJ-4 test" />
@@ -779,7 +778,8 @@
     <MESSAGE value="PF-10" />
     <MESSAGE value="PF-11" />
     <MESSAGE value="PF-12" />
-    <option name="LAST_COMMIT_MESSAGE" value="PF-12" />
+    <MESSAGE value="PF-13" />
+    <option name="LAST_COMMIT_MESSAGE" value="PF-13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1158,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/10_CheckoutCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17224881">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.114832535">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding />
         </state>
       </provider>
