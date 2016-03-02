@@ -13,22 +13,17 @@ class ForgotPassSteps extends \AcceptanceTester
 
         $pass = count($I->grabMultiple('//*[@id="login-passwd"]'));
         $I->fillField('//*[@id="login-username"]', 'denimio_test@yahoo.com');
-        if ($pass == true) {
-            $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
+
             $I->click('//*[@id="login-signin"]');
-            $I->waitForElement('span.subject');
-            $I->getVisibleText('Password Reset Confirmation');
-            $I->click('span.subject');
-        } else {
-            $I->click('//*[@id="login-signin"]');
-            $I->seeElement('//div[@id="mbr-login-error"]');
+            //$I->seeElement('//div[@id="mbr-login-error"]');
+            $I->waitForElementVisible('//*[@id="login-passwd"]');
             $I->fillField('//*[@id="login-passwd"]', '!1qwerty');
             $I->click('//*[@id="login-signin"]');
             $I->waitForElement('span.subject');
             $I->getVisibleText('Password Reset Confirmation');
 
             $I->click('span.subject');
-        }
+
     }
 
 

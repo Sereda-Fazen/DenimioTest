@@ -30,7 +30,6 @@ class ForgotPass
         $I = $this->tester;
         $I->amOnPage(self::$URL);
         $I->click(self::$clickLogIn);
-        $I->scrollDown(100);
         $I->click(self::$forgotLink);
         $I->click(self::$mail);
         $I->fillField(self::$mail, $mailPass);

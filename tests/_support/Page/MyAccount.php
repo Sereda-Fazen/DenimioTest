@@ -175,7 +175,7 @@ class MyAccount
 
         $I = $this->tester;
         $I->click(self::$viewMyRewards);
-        $I->see('Your balance is 0 Point',self::$seeView);
+        $I->see('Your balance',self::$seeView);
         $I->moveBack();
 
         $I->click(self::$changePass);
