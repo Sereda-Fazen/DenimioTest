@@ -139,7 +139,7 @@ class MyAccount
     //point
 
     public static $pointTr = '#rewardpoints-navigation-rewardpoints\.navigation > li:nth-of-type(3) > a';
-    public static $seePoint = 'td > div';
+    public static $seePoint = 'div.col-main';
 
     public static $referFriends = '#rewardpoints-navigation-rewardpoints\.navigation > li:nth-of-type(4) > a';
     public static $seeRefer = 'div.rewardpointsreferfriends-content > strong';
@@ -332,7 +332,7 @@ class MyAccount
         $I->seeElement(self::$rewardsInformation);
 
         $I->click(self::$pointTr);
-        $I->see('No transaction found!',self::$seePoint);
+        $I->seeElement(self::$seePoint);
 
         $I->click(self::$referFriends);
         $I->see('Share the referring link or coupon code with your friends and earn commissions.',self::$seeRefer);

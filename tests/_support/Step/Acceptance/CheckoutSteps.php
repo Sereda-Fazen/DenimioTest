@@ -54,11 +54,11 @@ class CheckoutSteps extends \AcceptanceTester
 
             $I->wait(2);
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
+            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
             $I->wait(2);
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
-            $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
+            $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
             //------------------
             $I->waitForAjax(10);
