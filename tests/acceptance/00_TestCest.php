@@ -5,18 +5,20 @@ class TestCest {
 
 
 
-    function MyRewardsPoint(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->login();
-        $MyAccountPage->accountMyRewards();
+        $I->checkFunctionalInRandomOrder();
 
     }
 
-    function MyTickets(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+    function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->login();
-        $MyAccountPage->accountMyTickets();
+        $I->checkCouponAndGiftCard();
+    }
 
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
     }
 
 

@@ -50,7 +50,7 @@ class ProductSteps extends \AcceptanceTester
     public function checkPictureAndZoom()
     {
         $I = $this;
-       // $I->checkInRandomOrder();
+        $I->checkInRandomOrder();
         //
         $I->waitForElement('//*[@id="wrap"]');
         $I->moveMouseOver('//*[@id="wrap"]');
