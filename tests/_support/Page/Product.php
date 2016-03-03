@@ -38,7 +38,7 @@ class Product
         $I = $this->tester;
 
        // $rait = $I->click('//tr[@class="first last odd"]/td['.rand(1,5).']/input');
-        //$I->amOnPage('/the-flat-head-7013w-8oz-denim-work-shirt.html');
+       // $I->amOnPage('/the-flat-head-7013w-8oz-denim-work-shirt.html');
         $I->waitForElementVisible(self::$checkRating);
         $I->click(self::$checkRating);
         $I->fillField(self::$nickName, $name);
@@ -47,7 +47,7 @@ class Product
         $I->fillField(self::$review, $review);
        //$I->moveMouseOver(self::$captcha, 5, 5);
         //$I->wait(1);
-        //$I->click(self::$captcha);
+       // $I->click(self::$captcha);
        // $I->waitForElement('//span[@id="recaptcha-anchor" AND @aria-checked="true"]', 10);
         $I->click(self::$submit);
         $I->see('This is a required field.',self::$seeError);

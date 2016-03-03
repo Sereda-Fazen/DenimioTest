@@ -29,8 +29,9 @@ class ProductCest
      * @param \Page\Product $productPage
      */
 
-    function checkMainBlockReview(\Page\Product $productPage)
+    function checkMainBlockRating(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
     {
+        $I->checkInRandomOrder();
         $productPage->checkMainBlockReview('name','test','test');
     }
 

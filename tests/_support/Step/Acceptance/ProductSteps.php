@@ -53,10 +53,8 @@ class ProductSteps extends \AcceptanceTester
         $I->checkInRandomOrder();
         //
         $I->waitForElement('//*[@id="wrap"]');
-        $I->moveMouseOver('//*[@id="wrap"]');
-        $I->waitForElementVisible('//div[@class="cloud-zoom-big"]');
-        $I->moveMouseOver('//div[@class="cloud-zoom-big"]', 10, 50);
-        $I->click('//div[@class="cloud-zoom-big"]');
+        $I->click('//*[@id="wrap"]');
+        //$I->click('//div[@class="cloud-zoom-big"]');
         $I->waitForElementVisible('//div[@id="hoverNav"]');
         $I->seeElement('//div[@id="hoverNav"]');
 
@@ -72,8 +70,9 @@ class ProductSteps extends \AcceptanceTester
         $I->waitForAjax(10);
         $I->scrollDown(300);
         $I->waitForElementVisible('//a[@id="bottomNavClose"]');
+        $I->wait(2);
         $I->click('//a[@id="bottomNavClose"]');
-        $I->waitForElement('#customer-reviews');
+
 
 
 
@@ -89,6 +88,7 @@ class ProductSteps extends \AcceptanceTester
         if ($test2 > 4) {
             //$I->click('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[' . rand(5, $test2) . ']');
             $I->waitForElement('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li');
+            $I->scrollDown(200);
             for($s = 6; $s <= 8; $s++){
                 $I->click('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[' .$s. ']');
                 $I->wait(1);
