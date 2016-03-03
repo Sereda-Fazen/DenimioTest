@@ -27,12 +27,12 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->wait(2);
       //  $test = count($I->grabMultiple('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button'));
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
         $I->wait(2);
 
       //  if ($test == true) {
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
-            $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
+            $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
             $I->waitForAjax(10);
             $I->waitForElement('//div[@class="wrapper_box"]');
@@ -82,9 +82,9 @@ class MyShoppingCartSteps extends \AcceptanceTester
        // $blockAcc1 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
        // $blockAcc2 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul')));
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[3]');
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[1]');
         $I->wait(2);
-        $I->click('//div[@class="category-products"]/ul[1]/li[3]//div/div/div/div/button');
+        $I->click('//div[@class="category-products"]/ul[2]/li[1]//div/div/div/div/button');
 
         $I->waitForAjax(10);
         $I->waitForElement('//div[@class="wrapper_box"]');
@@ -106,8 +106,8 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
         $I->checkAccessories();
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
-        $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
@@ -150,8 +150,8 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
         $I->checkAccessories();
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]');
-        $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/div/button');
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');

@@ -112,6 +112,7 @@ class MyAccountCest
         $I->getVisibleText('The maximum number of times to enter gift card code is 10!', '.error-msg');
 
     }
+    /*
     function MyRewardsPoint(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
         $I->login();
@@ -125,6 +126,7 @@ class MyAccountCest
         $MyAccountPage->accountMyTickets();
 
     }
+    */
 
 
 

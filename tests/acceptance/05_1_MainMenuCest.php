@@ -47,9 +47,11 @@ class MainMenuCest
      * @param Acceptance\HomeSteps $I
      * @param \Page\HomePage $homePage
      */
+    /*
     function checkFeaturedBrands(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
         $I->getCheckFeaturedBrands();
     }
+    */
 
     /**
      * Check Random Brands
