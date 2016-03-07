@@ -68,10 +68,32 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[5]/td[2]');
         $I->waitForText('189 Points');
 
-
-
-
     }
+
+    function checkoutAuthWithCheckout()
+    {
+        $I = $this;
+
+        $I->checkOnShoppingCart();
+
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->waitForElement('//*[@id="onestepcheckout-login-link"]');
+    }
+
+        /*
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->click('#p_method_paypal_express');
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+
+        $I->waitForElementVisible('li.error-msg');
+        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
+        $I->see('PayPal gateway has rejected request. ','li.error-msg');
+*/
+
+
 
 
 
