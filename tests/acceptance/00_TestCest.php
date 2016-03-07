@@ -4,10 +4,12 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
-
-        $I->checkPictureAndZoom();
+    function checkOnCheckoutVisaCard(\Page\Login $loginPage, \Step\Acceptance\CheckoutUserSteps $I)
+    {
+        $loginPage->login('denimio_test@yahoo.com', '123456');
+        $I->checkOnShoppingCart();
     }
+
 
 
 

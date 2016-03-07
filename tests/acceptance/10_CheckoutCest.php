@@ -16,7 +16,6 @@ class CheckoutCest
     {
         $I->checkOnShoppingCart();
         $I->checkProcessTypeData();
-
     }
 
 
