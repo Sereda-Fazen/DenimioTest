@@ -8,6 +8,7 @@ class CheckoutUserSteps extends \AcceptanceTester
     {
         $I = $this;
         $wallet = 'WALLET';
+        $I->amOnPage('/');
         $I->fillField('#search', 'wallet');
         $I->click('i.fa.fa-search');
         $I->see('SEARCH RESULTS FOR', 'h1');
@@ -21,7 +22,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
         $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
-        $I->waitForAjax(10);
+        $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
         $I->see('SHOPPING CART', 'h1');
