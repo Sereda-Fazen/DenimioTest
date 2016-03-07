@@ -167,7 +167,8 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#onestepcheckout-button-place-order');
 
         $I->waitForElementVisible('li.error-msg');
-        $I->see('Unable to communicate with PayPal gateway','li.error-msg');
+       // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
+        $I->see('PayPal gateway has rejected request. ','li.error-msg');
 
     }
 

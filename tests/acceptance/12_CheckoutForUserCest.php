@@ -13,11 +13,7 @@ class CheckoutForUserCest
      */
 
 
-    function checkOnCheckoutVisaCard(\Step\Acceptance\CheckoutSteps $I, \Step\Acceptance\LoginSteps $I)
-    {
-        $I->login();
-        $I->checkOnShoppingCart();
-    }
+
 
 
 }
