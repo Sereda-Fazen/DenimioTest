@@ -170,7 +170,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->click('//ul[@class="form-list"]/li/div/select');
         $I->waitForElementVisible('//ul[@class="form-list"]//div/select/option');
 
-        $I->click('//ul[@class="form-list"]//div/select/option['.rand(2,count($I->grabMultiple('//ul[@class="form-list"]//div/select/option'))).']');
+        $I->click('//ul[@class="form-list"]//div/select/option[10]');
         $I->wait(2);
 
         $I->fillField('#region','test');
