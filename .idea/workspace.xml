@@ -82,8 +82,8 @@
       <file leaf-file-name="01_CTestCest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/01_CTestCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2866242">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.20063694">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -386,12 +386,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00226" summary="TJ-1 test26">
-      <created>1456483662235</created>
-      <option name="number" value="00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1456483662236</updated>
-    </task>
     <task id="LOCAL-00227" summary="TJ-1 test28">
       <created>1456726682171</created>
       <option name="number" value="00227" />
@@ -680,7 +674,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457340313308</updated>
     </task>
-    <option name="localTasksCounter" value="275" />
+    <task id="LOCAL-00275" summary="TJ-4 test2">
+      <created>1457340574780</created>
+      <option name="number" value="00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1457340574782</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers />
   </component>
   <component name="TodoView">
@@ -729,7 +729,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-4 tes44" />
     <MESSAGE value="TJ-4 test12" />
     <MESSAGE value="PF-1" />
     <MESSAGE value="PF-2" />
@@ -754,7 +753,8 @@
     <MESSAGE value="PF-21" />
     <MESSAGE value="PF-22" />
     <MESSAGE value="TJ-4 test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="TJ-4 test1" />
+    <MESSAGE value="TJ-4 test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="TJ-4 test2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1129,8 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/01_CTestCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2866242">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.20063694">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
