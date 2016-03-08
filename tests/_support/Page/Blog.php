@@ -1,6 +1,8 @@
 <?php
 namespace Page;
 
+use Exception;
+
 class Blog
 {
 
@@ -24,7 +26,7 @@ class Blog
     public function blog(){
         $I = $this->tester;
         $I->amOnPage(self::$URL);
-
+        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
         $I->click(self::$cat);
         $I->seeElement('div.post-list.row.js-masonry > div:nth-of-type(2) > h2 > a');
         $I->click(self::$archives);
