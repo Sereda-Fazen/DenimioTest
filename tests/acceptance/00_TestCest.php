@@ -5,12 +5,11 @@ class TestCest {
 
 
 
-    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+    function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
+    {
         $homePage->home();
-        $I->getCurrency();
+        $I->getSubcategoryTops();
     }
-
-
 
 
 

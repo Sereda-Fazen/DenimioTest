@@ -16,18 +16,18 @@ class ItemsSteps extends \AcceptanceTester
             $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->waitForAjax(10);
             $I->waitForElement('//a[@id="continue_shopping"]');
-            $I->moveMouseOver('//a[@id="continue_shopping"]');
-            $I->reloadPage();
+            $I->click('//a[@id="continue_shopping"]');
+            //$I->reloadPage();
 
             $I->see('(1)' ,'//*[@class="block block-list block-compare"]/div/strong/span/small');
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
-
+/*
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
             $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
             $I->waitForElementVisible('//a[@id="shopping_cart"]');
             $I->moveMouseOver('//a[@id="shopping_cart"]');
             $I->amOnPage('/catalog/product_compare/index/');
-
+*/
         }
 
         public function remoteWindow(){

@@ -79,11 +79,44 @@ class CheckoutUserSteps extends \AcceptanceTester
 
     }
 
-    function checkoutAuthWithCheckout()
+   public function checkoutAuthWithCheckout()
     {
         $I = $this;
         $I->amOnPage('/');
         $I->checkAddToCartItem();
+
+    }
+
+    public function inputPointsAndPayPal(){
+        $I = $this;
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->click('//*[@id="rewardpoints_payment_method"]');
+        $I->waitForAjax(10);
+        $I->waitForElementVisible('//*[@id="reward_sales_point"]');
+        $I->fillField('//*[@id="reward_sales_point"]','10');
+        $I->click('//*[@id="cart-rewards-form"]/dl/dt/label');
+        $I->waitForAjax(10);
+        $I->waitForElementVisible('//*[@id="p_method_paypal_express"]');
+        $I->click('//*[@id="p_method_paypal_express"]');
+        $I->see('You will be redirected to the PayPal website.','//*[@id="payment_form_paypal_express"]/li');
+        $I->scrollDown(200);
+        $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[4]/td[1]');
+        $I->getVisibleText('Use point (10 Points)');
+
+        $I->moveMouseOver('//*[@id="cc-help"]');
+        $I->waitForElementVisible('//*[@id="ccHelp"]/div');
+        $I->fillField('//*[@id="onestepcheckout_comment"]', 'test payment');
+        $I->moveMouseOver('//*[@id="shipDocHelp"]/div');
+
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+
+        $I->waitForElement('li.error-msg');
+        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
+        $I->see('PayPal gateway has rejected request. ','li.error-msg');
+
+
 
 
     }
