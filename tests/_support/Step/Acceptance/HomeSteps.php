@@ -224,6 +224,7 @@ class HomeSteps extends \AcceptanceTester
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
             $I->click('//*[@class="sub-lang"]/li['.$l.']');
             $I->grabTextFrom('//*[@class="sub-lang"]/li['.$l.']');
+            $I->reloadPage();
 
             switch ($l) {
 
