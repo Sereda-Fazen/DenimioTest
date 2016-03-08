@@ -16,6 +16,7 @@ class CheckoutForUserCest
     function checkUserWithPoints(\Page\Login $loginPage, \Step\Acceptance\CheckoutUserSteps $I)
     {
         $loginPage->login('denimio_test@yahoo.com', '123456');
+        $I->see('Hello, alex sereda!','//p[@class="hello"]/strong');
         $I->checkOnShoppingCart();
         $I->checkPoints();
     }

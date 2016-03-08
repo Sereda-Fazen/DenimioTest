@@ -12,7 +12,7 @@ class Login
     public static $email = '#email';
     public static $pass = '#pass';
     public static $submit = '[name="send"] > span > span';
-    public static $successLog = '//p[@class="hello"]/strong';
+
     public static $logout = 'li.dropit-trigger > a';
 
     public static $msg = 'div.col-main > p';
@@ -35,7 +35,7 @@ class Login
         $I->fillField(self::$email, $name);
         $I->fillField(self::$pass, $password);
         $I->click(self::$submit);
-        $I->see('Hello, alex sereda!', self::$successLog);
+
 
 
         return $this;
