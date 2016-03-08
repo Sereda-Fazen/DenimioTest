@@ -5,10 +5,10 @@ class TestCest {
 
 
 
-    function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
+    function checkMainMenuLinks(\Page\MainMenu $homePage)
     {
         $homePage->home();
-        $I->getSubcategoryTops();
+        $homePage->getMainMenu();
     }
 
 
@@ -19,4 +19,4 @@ class TestCest {
 
 
 
-}
+    }
