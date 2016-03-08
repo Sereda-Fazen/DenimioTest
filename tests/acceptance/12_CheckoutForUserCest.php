@@ -8,8 +8,8 @@ class CheckoutForUserCest
 {
 
     /**
-     * @param \Helper\Acceptance $I
-     * @param Acceptance\LoginSteps $I
+     * @param \Page\Login $loginPage
+     * @param Acceptance\CheckoutUserSteps $I
      */
 
 

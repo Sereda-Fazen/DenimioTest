@@ -5,10 +5,10 @@ class TestCest {
 
 
 
-    function checkRandomBrands(Step\Acceptance\HomeSteps $I){
-        $I->getCheckRandomBrands();
+    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getCurrency();
     }
-
 
 
 

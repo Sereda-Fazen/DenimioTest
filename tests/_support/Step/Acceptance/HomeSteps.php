@@ -24,6 +24,7 @@ class HomeSteps extends \AcceptanceTester
             $I->moveMouseOver('li.currency-trigger > a');
             $I->click('//ul[@class="sub-currency"]/li[' . $c . ']/a');
             $I->grabTextFrom('//ul[@class="sub-currency"]/li[' . $c . ']/a');
+            $I->reloadPage();
 
             switch ($c) {
 
