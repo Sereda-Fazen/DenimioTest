@@ -1,6 +1,8 @@
 <?php
 namespace Step\Acceptance;
 
+use Exception;
+
 class LoginSteps extends \AcceptanceTester
 {
 
