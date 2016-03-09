@@ -10,7 +10,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $wallet = 'WALLET';
         $I->amOnPage('/');
         $I->fillField('#search', 'wallet');
-        $I->click('i.fa.fa-search');
+        $I->click('//i[@class="fa fa-search"]');
         $I->see('SEARCH RESULTS FOR', 'h1');
         $I->see($wallet);
 
@@ -140,6 +140,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->click('//div[@class="input-box"]/button/span');
         $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
 
+        $I->waitForElementVisible('li.giftvoucher-discount-code > ul > li > a > img');
         $I->click('li.giftvoucher-discount-code > ul > li > a > img');
         $I->see('Gift Card "GIFT-XXXX-XXXXXX" has been removed successfully!' ,'li.success-msg');
 
