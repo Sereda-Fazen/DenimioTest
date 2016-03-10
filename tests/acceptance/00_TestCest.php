@@ -5,10 +5,10 @@ class TestCest {
 
 
 
-    function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
-        $I->checkoutWithGiftCard();
-
+        $homePage->home();
+        $I->getSubcategoryBottoms();
     }
 
 
