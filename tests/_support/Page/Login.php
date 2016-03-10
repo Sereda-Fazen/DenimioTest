@@ -30,9 +30,9 @@ class Login
     public function login()
     {
         $I = $this->tester;
-        $I->amOnPage(self::$URL2);
-        try { $I->waitForElement('i.mc_embed_close.fa.fa-times.disabled-start');$I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
-        $I->wait(2);
+        $I->amOnPage(self::$URL);
+        $I->click(self::$clickLogIn);
+
     }
 
 
