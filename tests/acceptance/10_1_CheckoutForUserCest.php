@@ -8,14 +8,14 @@ class CheckoutForUserCest
 {
 
     /**
-     * @param \Page\Login $loginPage
+
      * @param Acceptance\CheckoutUserSteps $I
      */
 
 
-    function checkUserWithPoints(\Page\Login $loginPage, \Step\Acceptance\CheckoutUserSteps $I)
+    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
     {
-        $loginPage->login('denimio_test@yahoo.com', '123456');
+        $I->login();
         $I->see('Hello, alex sereda!','//p[@class="hello"]/strong');
         $I->checkOnShoppingCart();
         $I->checkPoints();

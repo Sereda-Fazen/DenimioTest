@@ -161,14 +161,15 @@ class CheckoutSteps extends \AcceptanceTester
 
         $I->checkDataForGuest();
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
-        $I->click('#p_method_paypal_express');
+        $I->click('//*[@id="p_method_paypal_standard"]');
+        $I->waitForText('You will be redirected to the PayPal website when you place an order.');
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
 
-        $I->waitForElement('li.error-msg');
+        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',60);
        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('PayPal gateway has rejected request. ','li.error-msg');
+        $I->see('The link you have used to enter the PayPal system contains an incorrectly formatted item amount.','//*[@id="xptContentContainer"]/tbody/tr[3]/td/form/table[1]/tbody/tr[3]/td');
 
     }
 

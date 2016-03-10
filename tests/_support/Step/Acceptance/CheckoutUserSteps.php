@@ -1,8 +1,32 @@
 <?php
 namespace Step\Acceptance;
 
+use Exception;
+
 class CheckoutUserSteps extends \AcceptanceTester
 {
+
+
+    public function getCloseSub(){
+        $I = $this;
+
+        try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+            $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->wait(2);
+    }
+
+
+    public function login()
+    {
+        $I = $this;
+        $I->amOnPage('/customer/account/login/');
+        $I->getCloseSub();
+        $I->fillField('#email', 'denimio_test@yahoo.com');
+        $I->fillField('#pass', '123456');
+        $I->click('Login');
+        $I->see('From your My Account Dashboard','div.welcome-msg > p:nth-of-type(2)');
+    }
+
 
     public function checkAddToCartItem (){
         $I = $this;
@@ -96,9 +120,9 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->fillField('//*[@id="reward_sales_point"]','10');
         $I->click('//*[@id="cart-rewards-form"]/dl/dt/label');
         $I->waitForAjax(10);
-        $I->waitForElementVisible('//*[@id="p_method_paypal_express"]');
-        $I->click('//*[@id="p_method_paypal_express"]');
-        $I->see('You will be redirected to the PayPal website.','//*[@id="payment_form_paypal_express"]/li');
+        $I->waitForElementVisible('//*[@id="p_method_paypal_standard"]');
+        $I->click('//*[@id="p_method_paypal_standard"]');
+        $I->waitForText('You will be redirected to the PayPal website when you place an order.');
         $I->scrollDown(200);
         $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[4]/td[1]');
         $I->getVisibleText('Use point (10 Points)');
@@ -112,9 +136,9 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
 
-        $I->waitForElement('li.error-msg');
+        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',60);
         // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('PayPal gateway has rejected request. ','li.error-msg');
+        $I->see('The link you have used to enter the PayPal system contains an incorrectly formatted item amount.','//*[@id="xptContentContainer"]/tbody/tr[3]/td/form/table[1]/tbody/tr[3]/td');
 
 
 
