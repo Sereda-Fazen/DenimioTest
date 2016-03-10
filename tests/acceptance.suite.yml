@@ -98,3 +98,8 @@ env:
           url: 'http://ns524995.ip-192-99-232.net'
 
 
+  BROWSER:
+      modules:
+        config:
+          WebDriver:
+            url: 'http://browserstack.com/automate'

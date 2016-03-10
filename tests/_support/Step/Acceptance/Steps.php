@@ -147,6 +147,57 @@ class Steps extends \AcceptanceTester
 
     }
 
+    public function deleteSessionsFromBrowserStack()
+    {
+        $I = $this;
+
+        $I->amOnPage('/');
+        $I->waitForElement('li.no-btn.last-btn > a.reg-link');
+        $I->click('li.no-btn.last-btn > a.reg-link');
+        $I->waitForElement('#user_submit');
+        $I->fillField('#user_email_login', 'mahoto@denimio.com');
+        $I->fillField('#user_password', 'f4681C%7k9~K');
+        $I->click('#user_submit');
+        $I->waitForElement('li.no-btn.dd-menu.mnu-account > div.btn-group');
+        $test = count($I->grabMultiple('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li'));
+        for ($c = 2; $c <= 20; $c++) {
+            $I->click('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li[2]');
+            $I->waitForElement('div.video_error.align-center > div',160);
+            $I->waitForAjax(40);
+            $I->waitForElementVisible('a.btn.btn-delete.btn-small.smalltext',60);
+            $I->moveMouseOver('a.btn.btn-delete.btn-small.smalltext');
+            $I->click('a.btn.btn-delete.btn-small.smalltext');
+            $I->acceptPopup();
+
+        }
+        $I->click('#moreSidebarItems');
+
+        for ($c = 2; $c <= 20; $c++) {
+            $I->waitForElement('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li[2]',160);
+            $I->click('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li[2]');
+            $I->waitForElement('div.video_error.align-center > div',60);
+            $I->waitForAjax(40);
+            $I->waitForElementVisible('a.btn.btn-delete.btn-small.smalltext',60);
+            $I->moveMouseOver('a.btn.btn-delete.btn-small.smalltext');
+            $I->click('a.btn.btn-delete.btn-small.smalltext');
+            $I->acceptPopup();
+
+        }
+        $I->click('#moreSidebarItems');
+
+        for ($c = 2; $c <= 20; $c++) {
+            $I->waitForElement('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li[2]',160);
+            $I->click('//*[@id="sm-cpanel"]/div[2]/div[2]/div/div/ul/li[2]');
+            $I->waitForElement('div.video_error.align-center > div',60);
+            $I->waitForAjax(40);
+            $I->waitForElementVisible('a.btn.btn-delete.btn-small.smalltext',60);
+            $I->moveMouseOver('a.btn.btn-delete.btn-small.smalltext');
+            $I->click('a.btn.btn-delete.btn-small.smalltext');
+            $I->acceptPopup();
+
+        }
+    }
+
 
 
 

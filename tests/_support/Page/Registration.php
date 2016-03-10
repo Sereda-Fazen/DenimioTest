@@ -1,6 +1,8 @@
 <?php
 namespace Page;
 
+use Exception;
+
 class Registration
 {
 
@@ -20,16 +22,10 @@ class Registration
     {
         $this->tester = $I;
     }
-    public function register($fName,$lName,$email, $pass1, $pass2)
+    public function registerInvalid($fName,$lName,$email, $pass1, $pass2)
     {
         $I = $this->tester;
 
-        $I->amOnPage(self::$URL);
-        /*
-       $I->click(self::$logIn);
-       $I->waitForElement(self::$createAccount);
-   */
-        $I->click(self::$createAccount);
         $I->fillField(self::$firsName, $fName);
         $I->fillField(self::$lastName, $lName);
         $I->fillField(self::$email, $email);
@@ -40,6 +36,24 @@ class Registration
         $I->click(self::$submit);
         return $this;
     }
+
+    public function register(){
+        $I = $this->tester;
+
+        $I->amOnPage(self::$URL);
+        try { $I->waitForElement('i.mc_embed_close.fa.fa-times.disabled-start');$I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->wait(2);
+        $I->click(self::$createAccount);
+
+    }
+
+    public function registerCreate(){
+        $I = $this->tester;
+
+        $I->click(self::$createAccount);
+
+    }
+
     public function logout()
     {
         $I = $this->tester;

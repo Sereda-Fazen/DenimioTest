@@ -7,6 +7,7 @@ class Login
 {
 
     public static $URL = '/';
+    public static $URL2 = 'customer/account/login/';
     public static $clickLogIn = 'a.login_click';
 
     public static $email = '#email';
@@ -24,19 +25,23 @@ class Login
         $this->tester = $I;
     }
 
-    public function login($name, $password)
+
+
+    public function login()
     {
         $I = $this->tester;
-
-        $I->amOnPage(self::$URL);
-        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->amOnPage(self::$URL2);
+        try { $I->waitForElement('i.mc_embed_close.fa.fa-times.disabled-start');$I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
         $I->wait(2);
-        $I->click(self::$clickLogIn);
+    }
+
+
+    public function loginInvalid($name, $password)
+    {
+        $I = $this->tester;
         $I->fillField(self::$email, $name);
         $I->fillField(self::$pass, $password);
         $I->click(self::$submit);
-
-
 
         return $this;
     }
