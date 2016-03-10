@@ -28,7 +28,7 @@ class CheckoutForGuestCest
      */
 
 
-    function checkCheckoutForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkoutWithGiftCard();
 

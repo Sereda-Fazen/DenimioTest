@@ -7,9 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/02_LoginCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/02_LoginCest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php" />
     </list>
     <ignored path="DenimioTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63925236">
+            <state vertical-scroll-proportion="0.06728972">
               <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
@@ -84,8 +83,8 @@
       <file leaf-file-name="10_CheckoutForGuestCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6666667">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.666667">
+              <caret line="34" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,8 +93,8 @@
       <file leaf-file-name="00_TestCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/00_TestCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.666666">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state vertical-scroll-proportion="-6.814815">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -158,7 +157,6 @@
         <option value="$PROJECT_DIR$/tests/acceptance/11_CheckoutForGuestPayPalCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/22_CheckoutCreditVsaCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/ForgotPassSteps.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/MyAccount.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/03_ForgotPassCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/Product.php" />
@@ -188,6 +186,7 @@
         <option value="$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/Login.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/02_LoginCest.php" />
+        <option value="$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       </list>
@@ -435,12 +434,6 @@
       <created>1450686737095</created>
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
-    </task>
-    <task id="LOCAL-00255" summary="PF-4">
-      <created>1456847126509</created>
-      <option name="number" value="00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1456847126509</updated>
     </task>
     <task id="LOCAL-00256" summary="PF-5">
       <created>1456847555851</created>
@@ -730,7 +723,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457620717979</updated>
     </task>
-    <option name="localTasksCounter" value="304" />
+    <task id="LOCAL-00304" summary="user-25">
+      <created>1457621613120</created>
+      <option name="number" value="00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1457621613120</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TodoView">
@@ -779,7 +778,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TJ-4 6" />
     <MESSAGE value="user-1" />
     <MESSAGE value="user-2" />
     <MESSAGE value="user-3" />
@@ -804,7 +802,8 @@
     <MESSAGE value="user-22" />
     <MESSAGE value="user-23" />
     <MESSAGE value="user-24" />
-    <option name="LAST_COMMIT_MESSAGE" value="user-24" />
+    <MESSAGE value="user-25" />
+    <option name="LAST_COMMIT_MESSAGE" value="user-25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1134,14 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.814815">
@@ -1182,17 +1173,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="34" column="5" selection-start-line="30" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/00_TestCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.814815">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63925236">
+        <state vertical-scroll-proportion="0.06728972">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
