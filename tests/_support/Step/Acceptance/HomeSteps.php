@@ -380,7 +380,7 @@ class HomeSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnPage('/brand/');
-
+        $I->getCloseSub();
         $brands = rand(1, count($I->grabMultiple('//*[@class="products-grid row"]/div')));
         $I->click('//*[@class="products-grid row"]/div['.$brands.']');
         $I->seeElement('li.view > strong');
