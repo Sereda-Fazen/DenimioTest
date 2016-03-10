@@ -13,6 +13,7 @@ class LoginCest
     }
 
     function loginWrongEmail(AcceptanceTester $I, \Page\Login $loginPage) {
+        $I->reloadPage();
         $loginPage->login();
         $loginPage->loginInvalid('test@test.com', '123456');
         $I->see('Invalid login or password.', 'li.error-msg');
