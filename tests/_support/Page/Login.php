@@ -31,6 +31,9 @@ class Login
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL);
+        try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+            $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+        $I->wait(2);
         $I->click(self::$clickLogIn);
 
     }
