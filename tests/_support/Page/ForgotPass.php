@@ -29,6 +29,7 @@ class ForgotPass
     public function forgot($mailPass) {
         $I = $this->tester;
         $I->amOnPage(self::$URL);
+        
         $I->click(self::$clickLogIn);
         $I->click(self::$forgotLink);
         $I->click(self::$mail);

@@ -99,7 +99,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
 
         $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[5]/td[2]');
-        $I->waitForText('189 Points');
+        $I->waitForText('Points');
 
     }
 
