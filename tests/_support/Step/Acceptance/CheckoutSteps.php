@@ -7,7 +7,7 @@ class CheckoutSteps extends \AcceptanceTester
     public function checkDataForGuest (){
         $I = $this;
         $billing = '#billing\3A ';
-        $I->waitForElementVisible('#billing\3A firstname');
+        $I->waitForElement('#billing\3A firstname',60);
         $I->fillField($billing.'firstname', 'alex');
         $I->fillField($billing.'lastname', 'sereda');
         $I->fillField($billing.'email', 'denimio_test@yahoo.com');
@@ -143,7 +143,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForText('Thank you for your purchase!',100);
+        $I->waitForText('Thank you for your purchase!',200);
 
         $I->see('YOUR ORDER HAS BEEN RECEIVED.','h1');
         $I->click('//div[@class="buttons-set"]/button/span');

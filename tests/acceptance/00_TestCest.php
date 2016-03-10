@@ -4,11 +4,9 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
-    {
-        $I->checkOnShoppingCart();
-        $I->checkProcessTypeData();
-
+    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getCurrency();
     }
 
 
