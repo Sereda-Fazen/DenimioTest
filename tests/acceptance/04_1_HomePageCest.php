@@ -12,12 +12,12 @@ class HomePageCest
          * @param Acceptance\HomeSteps $I
          * @param \Page\HomePage $homePage
          */
-
+/*
         function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
             $I->getCurrency();
         }
-
+*/
      /**
          * Check MultiLanguage
          * @param Acceptance\HomeSteps $I
