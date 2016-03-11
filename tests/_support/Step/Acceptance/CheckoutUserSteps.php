@@ -128,7 +128,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->getVisibleText('Use point (10 Points)');
 
         $I->moveMouseOver('//*[@id="cc-help"]');
-        $I->waitForElementVisible('//*[@id="ccHelp"]/div');
+        $I->waitForElement('//*[@id="ccHelp"]/div');
         $I->fillField('//*[@id="onestepcheckout_comment"]', 'test payment');
         $I->moveMouseOver('//*[@id="shipDocHelp"]/div');
 

@@ -5,10 +5,13 @@ class TestCest {
 
 
 
-    function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
+    function checkUserWithPayPalAndPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
     {
-        $homePage->home();
-        $I->getSubcategoryBottoms();
+        $I->checkoutAuthWithCheckout();
+        $userPage->getAuthorization('denimio_test@yahoo.com', '123456');
+        $userPage->getShippingAddress();
+        $I->inputPointsAndPayPal();
+
     }
 
 
@@ -19,5 +22,4 @@ class TestCest {
 
 
 
-
-}
+    }

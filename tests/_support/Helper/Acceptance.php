@@ -66,6 +66,28 @@ class Acceptance extends \Codeception\Module
             $webdriver->switchTo()->window($last_window);
         });
     }
+    /**
+     * localStorageClear : очищает локальное хранилище браузера
+     * @param  string $key : имя ключа в хранилище, при пустом значении очищает все хранилище
+     */
+    public function localStorageClear($key = null) {
+        $wb = $this->getModule('WebDriver');
+        $wb->executeJS('window.localStorage.' . ((is_string($key) == true) ? "removeItem(\"$key\"" : 'clear(') . ');');
+    }
+
+    /**
+    * seeImage : проверяет отображение картинки методом проверки реального размера изображения
+    * @param  string $element : XPath или CSS локатор
+    * @param  string $cssValue : минимальные размер по X и Y
+    **/
+
+    public function seeImage($element, $minSizeXY = 10) {
+        $wb = $this->getModule('WebDriver');
+        $realSizeX = $wb->grabAttributeFrom($element, 'naturalWidth');
+        $realSizeY = $wb->grabAttributeFrom($element, 'naturalHeight');
+        $this->assertGreaterThanOrEqual($minSizeXY, $realSizeX);
+        $this->assertGreaterThanOrEqual($minSizeXY, $realSizeY);
+    }
 
 
 
