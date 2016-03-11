@@ -16,7 +16,6 @@ class CheckoutForUserCest
     function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
     {
         $I->login();
-        $I->see('Hello, alex sereda!','//p[@class="hello"]/strong');
         $I->checkOnShoppingCart();
         $I->checkPoints();
     }
@@ -31,6 +30,14 @@ class CheckoutForUserCest
 
 
     }
+/*
 
+    function checkOrderForMostCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage)
+    {
+        $I->login();
+        $I->checkMostCustomers();
+
+    }
+*/
 
 }

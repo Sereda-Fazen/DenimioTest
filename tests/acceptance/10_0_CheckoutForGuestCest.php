@@ -7,6 +7,9 @@ use Step\Acceptance;
 class CheckoutForGuestCest
 {
 
+
+
+
     /**
      * Check On Checkout With Use Credit Card (visa) For Guest
      * @param Acceptance\CheckoutSteps $I
@@ -33,6 +36,8 @@ class CheckoutForGuestCest
         $I->checkoutWithGiftCard();
 
     }
+
+
 
     /**
      * Check On Checkout With Use PayPal

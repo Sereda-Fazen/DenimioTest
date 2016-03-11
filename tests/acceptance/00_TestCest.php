@@ -4,21 +4,10 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    /*
-       function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
-       {
-           $I->addToCartForCompare();
-          // $I->remoteWindow();
-         //  $I->compareAddToCart();
-       }
-      */
-
-    function checkOrderForOthersCustomers (Step\Acceptance\CheckoutSteps $I, \Page\Login $loginPage)
+    function MyAccountDashboard(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $myAccountPage)
     {
-        $loginPage->login();
-        $loginPage->loginInvalid('denimio_test@yahoo.com','123456');
-        $I->checkoutWithGiftCard();
-
+        $I->login();
+        $myAccountPage->accountDashboard();
 
     }
 

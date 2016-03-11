@@ -57,6 +57,43 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
     }
 
+    public function checkAddToCartCustomers (){
+        $I = $this;
+        $wallet = 'WALLET';
+        $I->fillField('#search', 'wallet');
+        $I->click('i.fa.fa-search');
+        $I->see('SEARCH RESULTS FOR', 'h1');
+        $I->see($wallet);
+
+        $I->wait(2);
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->wait(2);
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
+        $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
+
+        $I->waitForAjax(20);
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//a[@id="shopping_cart"]');
+        $I->see('SHOPPING CART', 'h1');
+
+        $I->scrollDown(300);
+        $I->waitForElement('//div[@class="discount"]');
+
+        $I->click('#giftvoucher');
+        $I->waitForElementVisible('#giftvoucher_code');
+        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF0O');
+        $I->click('//div[@class="input-box"]/button/span');
+        $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
+
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+
+
+
+    }
+
 
 
     public function checkOnShoppingCart()
@@ -71,7 +108,6 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('//*[@id="rewardpoints_payment_method"]');
         $I->waitForAjax(10);
         $I->waitForElementVisible('//*[@id="cart-rewards-form"]/dl');
-
 
     }
 
@@ -132,6 +168,8 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->fillField('//*[@id="onestepcheckout_comment"]', 'test payment');
         $I->moveMouseOver('//*[@id="shipDocHelp"]/div');
 
+        $I->scrollDown(200);
+        $I->waitForElement('#edit_shipping_document_confirmation');
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
@@ -144,34 +182,51 @@ class CheckoutUserSteps extends \AcceptanceTester
     }
 
 
-    function checkOrderForOtherCustomers ()
+    /**
+     * Most Customers
+     */
+
+    function checkMostCustomers ()
     {
         $I = $this;
 
-        $I->checkOnShoppingCart();
+        $I->checkAddToCartCustomers();
 
-        $I->scrollDown(600);
-        $I->click('#giftvoucher');
-        $I->waitForElementVisible('#giftvoucher_code');
-        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF0O');
-        $I->click('//div[@class="input-box"]/button/span');
-        $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
 
-        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
-        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
         $I->see('No Payment Information Required','#checkout-payment-method-load > label');
 
-
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
         $I->click('#edit_shipping_document_confirmation');
-        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//button[@id="proforma-save"]/span');
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForText('Thank you for your purchase!',200);
 
         $I->see('YOUR ORDER HAS BEEN RECEIVED.','h1');
-        $I->click('//div[@class="buttons-set"]/button/span');
-        $I->waitForElement('//*[@class="nivo-imageLink"]/img');
+        $I->seeElement('//*[@id="rewardpoints-referfriends-popup"]');
+        $I->see('Share With Friends','//*[@id="rewardpoints-referfriends-popup"]/div[1]/h2');
+
+    }
+    function checkOrderInMyAccount ()
+    {
+        $I = $this;
+
+        $I->click('html/body/div[4]/div/div[4]/div/div/div/div');
+        $I->waitForElement('//dl[@class="order-date"]/dt');
+        $I->see('About This Order: Order InformationInvoices', '//dl[@class="order-date"]/dt');
+    }
+    function checkMyAccountLastOrder ()
+    {
+        $I = $this;
+        $I->scrollDown(200);
+        $I->waitForElement('//div[@class="order-items order-details"]');
+        $I->scrollUp(200);
+        $I->click('//*[@id="order-info-tabs"]/li[2]/a');
+        $I->waitForElement('//p[@class="order-date"]');
+        $I->scrollDown(200);
+        $I->seeElement('//div[@class="order-items order-details"]');
 
     }
 

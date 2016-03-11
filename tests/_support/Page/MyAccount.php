@@ -21,7 +21,8 @@ class MyAccount
     public static $editAddress = 'div.box-content > div:first-child > address > a';
     public static $editAddress2 = 'div.box-content > div:nth-of-type(2) > address > a';
 
-    public static $manageAddress = 'div.dashboard > div:nth-of-type(4) > div:nth-of-type(3) > div.box > div.box-title > a';
+    public static $manageAddress = 'div.dashboard > div:nth-of-type(5) > div:nth-of-type(3) > div.box > div.box-title > a';
+                 
 
 
     /**
