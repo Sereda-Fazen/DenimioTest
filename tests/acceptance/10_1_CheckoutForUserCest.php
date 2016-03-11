@@ -30,10 +30,6 @@ class CheckoutForUserCest
         $I->inputPointsAndPayPal();
 
 
-
-
-
-
     }
 
 

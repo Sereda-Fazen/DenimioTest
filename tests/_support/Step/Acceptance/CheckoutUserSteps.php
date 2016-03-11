@@ -136,12 +136,42 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
 
-        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',60);
+        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',160);
         // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
         $I->see('The link you have used to enter the PayPal system contains an incorrectly formatted item amount.','//*[@id="xptContentContainer"]/tbody/tr[3]/td/form/table[1]/tbody/tr[3]/td');
 
 
+    }
 
+
+    function checkOrderForOtherCustomers ()
+    {
+        $I = $this;
+
+        $I->checkOnShoppingCart();
+
+        $I->scrollDown(600);
+        $I->click('#giftvoucher');
+        $I->waitForElementVisible('#giftvoucher_code');
+        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF0O');
+        $I->click('//div[@class="input-box"]/button/span');
+        $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
+
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->see('No Payment Information Required','#checkout-payment-method-load > label');
+
+
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+        $I->waitForText('Thank you for your purchase!',200);
+
+        $I->see('YOUR ORDER HAS BEEN RECEIVED.','h1');
+        $I->click('//div[@class="buttons-set"]/button/span');
+        $I->waitForElement('//*[@class="nivo-imageLink"]/img');
 
     }
 

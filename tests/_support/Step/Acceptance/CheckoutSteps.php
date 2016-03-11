@@ -7,7 +7,7 @@ class CheckoutSteps extends \AcceptanceTester
     public function checkDataForGuest (){
         $I = $this;
         $billing = '#billing\3A ';
-        $I->waitForElement('#billing\3A firstname',60);
+        $I->waitForElement($billing.'firstname',60);
         $I->fillField($billing.'firstname', 'alex');
         $I->fillField($billing.'lastname', 'sereda');
         $I->fillField($billing.'email', 'denimio_test@yahoo.com');
@@ -150,6 +150,15 @@ class CheckoutSteps extends \AcceptanceTester
         $I->waitForElement('//*[@class="nivo-imageLink"]/img');
 
     }
+
+
+
+
+
+
+
+
+
 
     function checkoutForGuestPayPal(){
         $I = $this;

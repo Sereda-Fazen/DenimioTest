@@ -4,16 +4,23 @@ use \Step\Acceptance;
 class TestCest {
 
 
+    /*
+       function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+       {
+           $I->addToCartForCompare();
+          // $I->remoteWindow();
+         //  $I->compareAddToCart();
+       }
+      */
 
-    function checkUserWithPayPalAndPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
+    function checkOrderForOthersCustomers (Step\Acceptance\CheckoutSteps $I, \Page\Login $loginPage)
     {
-        $I->checkoutAuthWithCheckout();
-        $userPage->getAuthorization('denimio_test@yahoo.com', '123456');
-        $userPage->getShippingAddress();
-        $I->inputPointsAndPayPal();
+        $loginPage->login();
+        $loginPage->loginInvalid('denimio_test@yahoo.com','123456');
+        $I->checkoutWithGiftCard();
+
 
     }
-
 
 
 

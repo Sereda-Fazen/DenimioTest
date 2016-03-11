@@ -4,10 +4,19 @@ namespace Step\Acceptance;
 class ItemsSteps extends \AcceptanceTester
 {
 
+        public function getCloseSub(){
+            $I = $this;
+
+            try {$I->waitForElementVisible('i.mc_embed_close.fa.fa-times.disabled-start');
+                $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
+            $I->wait(2);
+        }
+
         public function addToCartForCompare()
         {
             $I = $this;
             $I->amOnPage('/');
+
             $I->click('//*[@class="parentMenu"]/a/span');
             $I->waitForElementVisible('div.block-content > p.empty');
             $I->see('You have no items to compare.','div.block-content > p.empty');
@@ -17,21 +26,18 @@ class ItemsSteps extends \AcceptanceTester
             $I->waitForAjax(10);
             $I->waitForElement('//a[@id="continue_shopping"]');
             $I->click('//a[@id="continue_shopping"]');
-            //$I->reloadPage();
 
             $I->see('(1)' ,'//*[@class="block block-list block-compare"]/div/strong/span/small');
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
-/*
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
             $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
-            $I->waitForElementVisible('//a[@id="shopping_cart"]');
-            $I->moveMouseOver('//a[@id="shopping_cart"]');
-            $I->amOnPage('/catalog/product_compare/index/');
-*/
-        }
+            $I->waitForElementVisible('//*[@id="shopping_cart"]');
+            $I->click('//*[@id="shopping_cart"]');
 
+  }
         public function remoteWindow(){
             $I = $this;
+            $I->click('//*[@id="shopping_cart"]');
             $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
                 $handles = $webdriver->getWindowHandles();
                 $last_window = end($handles);
