@@ -83,7 +83,7 @@ class CheckoutUserSteps extends \AcceptanceTester
 
         $I->click('#giftvoucher');
         $I->waitForElementVisible('#giftvoucher_code');
-        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF0O');
+        $I->fillField('#giftvoucher_code','GIFT-ADFA-12NF22');
         $I->click('//div[@class="input-box"]/button/span');
         $I->see('Gift code "GIFT-XXXX-XXXXXX" has been applied successfully.' ,'li.success-msg');
 
@@ -213,9 +213,9 @@ class CheckoutUserSteps extends \AcceptanceTester
     {
         $I = $this;
 
-        $I->click('html/body/div[4]/div/div[4]/div/div/div/div');
-        $I->waitForElement('//dl[@class="order-date"]/dt');
-        $I->see('About This Order: Order InformationInvoices', '//dl[@class="order-date"]/dt');
+        $I->click('div.col-main > p:nth-of-type(1) > a');
+        $I->waitForElement('dl.order-info');
+        $I->see('About This Order:', 'dl.order-info');
     }
     function checkMyAccountLastOrder ()
     {
@@ -227,9 +227,17 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElement('//p[@class="order-date"]');
         $I->scrollDown(200);
         $I->seeElement('//div[@class="order-items order-details"]');
-
     }
 
+    function checkRemoveGiftCard ()
+    {
+        $I = $this;
+        $I->click('div.block-content > ul > li:nth-of-type(12) > a');
+        $I->waitForElement('//*[@id="giftvoucher_grid"]/tbody');
+        $I->click('//*[@id="giftvoucher_grid"]/tbody/tr/td[6]/span/a[4]');
+        $I->acceptPopup();
+        $I->see('Gift card was successfully removed','li.success-msg');
+    }
 
 
 

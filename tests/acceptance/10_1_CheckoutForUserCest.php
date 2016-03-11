@@ -30,14 +30,23 @@ class CheckoutForUserCest
 
 
     }
-/*
 
-    function checkOrderForMostCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage)
-    {
+    function checkOrderForMostCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->login();
         $I->checkMostCustomers();
+    }
+
+    function checkOrderInMyAccount (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->checkOrderInMyAccount();
+    }
+
+    function checkMyAccountLastOrder (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->checkMyAccountLastOrder();
+    }
+
+    function checkRemoveGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->checkRemoveGiftCard();
 
     }
-*/
 
 }
