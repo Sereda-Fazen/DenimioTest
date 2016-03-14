@@ -4,11 +4,10 @@ use \Step\Acceptance;
 class TestCest {
 
 
+    function MyWishListForUser(Step\Acceptance\MyAccountSteps $I) {
+        $I->login();
+        $I->additionItemInList();
 
-
-    function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
-        $homePage->home();
-        $I->getLanguage();
     }
 
 

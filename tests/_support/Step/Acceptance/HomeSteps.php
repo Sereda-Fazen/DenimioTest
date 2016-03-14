@@ -230,9 +230,7 @@ class HomeSteps extends \AcceptanceTester
             switch ($l) {
 
 
-                case 1:
-                    echo $I->see('Arabic', $arabic);
-                    break;
+
 
                 case 2:
                     echo $I->see('登录', $seeLanguage);
@@ -282,15 +280,13 @@ class HomeSteps extends \AcceptanceTester
                     echo $I->see('เข้าสู่ระบบ', $seeLanguage);
                     break;
 
-
+                case 14:
+                    echo $I->see('Arabic', $arabic);
+                    break;
             }
-
         }
         $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
         $I->click('//*[@class="sub-lang"]/li[1]');
-
-
-
 
     }
 

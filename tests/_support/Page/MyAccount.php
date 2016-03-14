@@ -75,6 +75,8 @@ class MyAccount
 
 
 
+
+
     /**
      * Newsletter Subscriptions
      */
@@ -253,6 +255,7 @@ class MyAccount
         $I = $this->tester;
         $I->click(self::$myWishList);
     }
+
 
     public function accountNewsletterSave() {
         $I = $this->tester;
