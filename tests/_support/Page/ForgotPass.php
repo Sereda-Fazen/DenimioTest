@@ -5,7 +5,7 @@ class ForgotPass
 {
     public static $URL = '/';
     public static $clickLogIn = 'a.login_click';
-    public static $forgotLink = 'a.f-left';
+    public static $forgotLink = 'a.pull-right';
     public static $mail = '#email_address';
     public static $subSave = 'div.buttons-set > button.button > span > span';
     public static $msg = 'li.success-msg';
