@@ -6,13 +6,10 @@ class TestCest {
 
 
 
-    function MyAccountDashboard(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $myAccountPage)
-    {
-        $I->login();
-        $myAccountPage->accountDashboard();
-
+    function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getLanguage();
     }
 
 
-
-    }
+}

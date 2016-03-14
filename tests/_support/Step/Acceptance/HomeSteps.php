@@ -219,70 +219,69 @@ class HomeSteps extends \AcceptanceTester
     {
         $I = $this;
         $seeLanguage = 'a.login_click';
+        $arabic = 'a.sa';
         $countLanguage = count($I->grabMultiple('//*[@class="sub-lang"]/li'));
         for ($l = 1; $l <= $countLanguage; $l++) {
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
-            $I->click('//*[@class="sub-lang"]/li['.$l.']');
-            $I->grabTextFrom('//*[@class="sub-lang"]/li['.$l.']');
+            $I->click('//*[@class="sub-lang"]/li[' . $l . ']');
+            $I->grabTextFrom('//*[@class="sub-lang"]/li[' . $l . ']');
             $I->reloadPage();
 
             switch ($l) {
 
+
                 case 1:
-                    echo $I->see('Log In', $seeLanguage);
+                    echo $I->see('Arabic', $arabic);
                     break;
 
                 case 2:
-                    echo $I->see('Log In', $seeLanguage);
-                    break;
-
-                case 3:
-                    echo $I->see('เข้าสู่ระบบ', $seeLanguage);
-                    break;
-
-                case 4:
-                    echo $I->see('ログイン', $seeLanguage);
-                    break;
-
-                case 5:
                     echo $I->see('登录', $seeLanguage);
                     break;
 
-                case 6:
-                    echo $I->see('로그인', $seeLanguage);
-                    break;
-
-                case 7:
-                    echo $I->see('Log Masuk', $seeLanguage);
-                    break;
-
-                case 8:
-                    echo $I->see('Войти', $seeLanguage);
-                    break;
-
-                case 9:
+                case 3:
                     echo $I->see('Connexion', $seeLanguage);
                     break;
 
-                case 10:
+                case 4:
                     echo $I->see('Anmelden', $seeLanguage);
                     break;
 
-                case 11:
+                case 5:
+                    echo $I->see('Login', $seeLanguage);
+                    break;
+
+                case 6:
                     echo $I->see('Accedi', $seeLanguage);
                     break;
 
-                case 12:
+                case 7:
+                    echo $I->see('ログイン', $seeLanguage);
+                    break;
+
+                case 8:
+                    echo $I->see('로그인', $seeLanguage);
+                    break;
+
+                case 9:
+                    echo $I->see('Log Masuk', $seeLanguage);
+                    break;
+
+                case 10:
                     echo $I->see('Entrar', $seeLanguage);
                     break;
 
-                case 13:
+                case 11:
+                    echo $I->see('Войти', $seeLanguage);
+                    break;
+
+                case 12:
                     echo $I->see('Inicio De Sesión', $seeLanguage);
                     break;
 
-                case 14:
-                    echo $I->see('Log In', $seeLanguage);
+                case 13:
+                    echo $I->see('เข้าสู่ระบบ', $seeLanguage);
                     break;
+
 
             }
 
@@ -291,7 +290,10 @@ class HomeSteps extends \AcceptanceTester
         $I->click('//*[@class="sub-lang"]/li[1]');
 
 
+
+
     }
+
 
     public function getHeaderLinks(){
         $I = $this;
