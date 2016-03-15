@@ -27,7 +27,7 @@ class CompareCest
             $I->compareClosePage();
         }
 
-
+*/
         function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
         {
             $I->compareAddToCart3();
@@ -41,7 +41,7 @@ class CompareCest
             $I->compareDelete();
 
         }
-    */
+
 
 
 

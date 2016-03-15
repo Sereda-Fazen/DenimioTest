@@ -5,10 +5,11 @@
     <bookmark url="file://$PROJECT_DIR$/tests/acceptance.suite.yml" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
+    <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="user-wishList-43">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/10_1_CheckoutForUserCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/10_1_CheckoutForUserCest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/03_CompareCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/03_CompareCest.php" />
     </list>
     <ignored path="DenimioTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +44,8 @@
       <file leaf-file-name="00_TestCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/00_TestCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.777778">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state vertical-scroll-proportion="-5.3333335">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -93,18 +94,18 @@
       <file leaf-file-name="03_CompareCest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/03_CompareCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="20" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+            <state vertical-scroll-proportion="-16.777779">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="04_1_HomePageCest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php">
+      <file leaf-file-name="ItemsSteps.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
-              <caret line="137" column="2" selection-start-line="137" selection-start-column="2" selection-end-line="137" selection-end-column="2" />
+            <state vertical-scroll-proportion="-15.333333">
+              <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -174,8 +175,6 @@
         <option value="$PROJECT_DIR$/tests/acceptance/10_CheckoutForGuestCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/11_MyAccountCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Helper/Acceptance.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance/03_CompareCest.php" />
-        <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/Steps.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/ForgotPass.php" />
@@ -187,7 +186,9 @@
         <option value="$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/12_MyWishListCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/10_1_CheckoutForUserCest.php" />
+        <option value="$PROJECT_DIR$/tests/acceptance/03_CompareCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
+        <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php" />
         <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       </list>
     </option>
@@ -394,7 +395,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cadence130" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -456,12 +457,6 @@
       <created>1450686737095</created>
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
-    </task>
-    <task id="LOCAL-00274" summary="TJ-4 test1">
-      <created>1457340313286</created>
-      <option name="number" value="00274" />
-      <option name="project" value="LOCAL" />
-      <updated>1457340313308</updated>
     </task>
     <task id="LOCAL-00275" summary="TJ-4 test2">
       <created>1457340574780</created>
@@ -751,7 +746,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458047915184</updated>
     </task>
-    <option name="localTasksCounter" value="323" />
+    <task id="LOCAL-00323" summary="user-wishList-43">
+      <created>1458049334762</created>
+      <option name="number" value="00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1458049334762</updated>
+    </task>
+    <option name="localTasksCounter" value="324" />
     <servers />
   </component>
   <component name="TodoView">
@@ -800,7 +801,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="user-19" />
     <MESSAGE value="user-20" />
     <MESSAGE value="user-21" />
     <MESSAGE value="user-22" />
@@ -825,7 +825,8 @@
     <MESSAGE value="user-wishList-40" />
     <MESSAGE value="user-wishList-41" />
     <MESSAGE value="user-wishList-42" />
-    <option name="LAST_COMMIT_MESSAGE" value="user-wishList-42" />
+    <MESSAGE value="user-wishList-43" />
+    <option name="LAST_COMMIT_MESSAGE" value="user-wishList-43" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1053,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.333333">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/_support/Page/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1141,14 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/03_CompareCest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="20" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.666667">
@@ -1205,10 +1190,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/03_CompareCest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.777779">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/00_TestCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.777778">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/ItemsSteps.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.333333">
+          <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
           <folding />
         </state>
       </provider>

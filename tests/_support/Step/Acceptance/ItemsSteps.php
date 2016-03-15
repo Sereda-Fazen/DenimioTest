@@ -31,13 +31,12 @@ class ItemsSteps extends \AcceptanceTester
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
             $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
-            $I->waitForElementVisible('//*[@id="shopping_cart"]');
-            $I->click('//*[@id="shopping_cart"]');
+            $I->waitForElementVisible('//*[@id="go_list_compare"]');
+            $I->click('//*[@id="go_list_compare"]');
 
   }
         public function remoteWindow(){
             $I = $this;
-            $I->click('//*[@id="shopping_cart"]');
             $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
                 $handles = $webdriver->getWindowHandles();
                 $last_window = end($handles);
@@ -48,7 +47,7 @@ class ItemsSteps extends \AcceptanceTester
         {
             $I = $this;
             $I->see('COMPARE PRODUCTS', 'h1');
-            $I->seeElement('body > div:nth-of-type(4)');
+            $I->waitForElement('body > div:nth-of-type(4)');
             $I->click('//*[@class="buttons-set"]/button/span');
 
             $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
@@ -98,11 +97,11 @@ class ItemsSteps extends \AcceptanceTester
                 //$countItems = count($I->grabMultiple('//*[@class="products-grid row"]/li'));
                 for ($c = 1; $c <= 3; $c++) {
                     $I->moveMouseOver('//div[@class="category-products"]/ul['.$c.']/li[1]');
-                    $I->waitForElementVisible('div.category-products > ul:nth-of-type(' . $c . ') > li.item.first > div.item-inner > div.images-content > div.actions > div.actions-inner > ul.add-to-links > li:first-child > a.link-compare');
-                    $I->click('div.category-products > ul:nth-of-type(' . $c . ') > li.item.first > div.item-inner > div.images-content > div.actions > div.actions-inner > ul.add-to-links > li:first-child > a.link-compare');
-                    $I->scrollDown(100);
-                    $I->waitForElementVisible('body > div.wrapper_box > div:nth-of-type(3) > a');
-                    $I->click('body > div.wrapper_box > div:nth-of-type(3) > a');
+                    $I->waitForElementVisible('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
+                    $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
+                    $I->waitForElementVisible('//a[@id="continue_shopping"]');
+                    $I->click('//*[@id="go_list_compare"]');
+                    //div[@class="category-products"]/ul/li[2]//div/div/div/ul/li
                 }
 
         $I->wait(2);

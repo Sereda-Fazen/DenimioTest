@@ -4,30 +4,11 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkUserWithPayPalAndPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
+    function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
-        $I->checkoutAuthWithCheckout();
-        $userPage->getAuthorization('denimio_test@yahoo.com','123456');
-        $userPage->getShippingAddress();
-        $I->inputPointsAndPayPal();
-
-
+        $I->compareAddToCart3();
+        $I->compareAddToWishListGuestUser();
+        $I->compareAddToCartFromMyComparison();
     }
-
-    /**
-     * Check Auth User With Points
-     * @param Acceptance\CheckoutUserSteps $I
-     * @param \Page\HomePage $homePage
-     */
-
-
-    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I, \Page\HomePage $homePage)
-    {
-        $homePage->home();
-        $I->checkOnShoppingCart();
-        $I->checkPoints();
-    }
-
-
 
 }
