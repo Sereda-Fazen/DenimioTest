@@ -45,7 +45,6 @@ class CheckoutForUserCest
 
     function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
     {
-        $I->login();
         $I->checkOnShoppingCart();
         $I->checkPoints();
     }
