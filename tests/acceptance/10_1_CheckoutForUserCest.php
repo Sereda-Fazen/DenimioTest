@@ -8,7 +8,7 @@ class CheckoutForUserCest
 {
 
     /**
-
+     * Check Auth User With Points
      * @param Acceptance\CheckoutUserSteps $I
      */
 
@@ -20,7 +20,11 @@ class CheckoutForUserCest
         $I->checkPoints();
     }
 
-
+    /**
+     * Check Auth User With PayPal And Points
+     * @param Acceptance\CheckoutUserSteps $I
+     * @param \Page\Checkout $userPage
+     */
     function checkUserWithPayPalAndPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
     {
         $I->checkoutAuthWithCheckout();
@@ -31,22 +35,18 @@ class CheckoutForUserCest
 
     }
 
-    function checkOrderForMostCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+    /**
+     * Check Order Most Customers Using Gift Card And Check My Orders
+     * @param Acceptance\CheckoutUserSteps $I
+     * @param \Page\Login $loginPage
+     */
+
+    function checkMyOrderUsingGiftCardCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->login();
         $I->checkMostCustomers();
-    }
-
-    function checkOrderInMyAccount (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->checkOrderInMyAccount();
-    }
-
-    function checkMyAccountLastOrder (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->checkMyAccountLastOrder();
-    }
-
-    function checkRemoveGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->checkRemoveGiftCard();
-
     }
 
 }

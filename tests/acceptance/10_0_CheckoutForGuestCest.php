@@ -51,7 +51,11 @@ class CheckoutForGuestCest
 
     }
 
-
+    /**
+     * Check Payment Using Different Address
+     * @param Acceptance\CheckoutSteps $I
+     * @param \Page\Checkout $guestPage
+     */
 
     function checkoutWithDifferentAddress (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
