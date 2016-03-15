@@ -5,8 +5,8 @@ class TestCest {
 
 
     function MyWishListForUser(Step\Acceptance\MyAccountSteps $I) {
-        $I->login();
-        $I->additionItemInList();
+            $I->login();
+            $I->additionItemInList();
 
     }
 
