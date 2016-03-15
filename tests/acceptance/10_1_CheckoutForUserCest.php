@@ -23,19 +23,6 @@ class CheckoutForUserCest
 
 
     /**
-     * Check Auth User With Points
-     * @param Acceptance\CheckoutUserSteps $I
-     */
-
-
-    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
-    {
-        $I->login();
-        $I->checkOnShoppingCart();
-        $I->checkPoints();
-    }
-
-    /**
      * Check Auth User With PayPal And Points
      * @param Acceptance\CheckoutUserSteps $I
      * @param \Page\Checkout $userPage
@@ -49,6 +36,21 @@ class CheckoutForUserCest
 
 
     }
+
+    /**
+     * Check Auth User With Points
+     * @param Acceptance\CheckoutUserSteps $I
+     */
+
+
+    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
+    {
+        $I->login();
+        $I->checkOnShoppingCart();
+        $I->checkPoints();
+    }
+
+
 
 
 
