@@ -4,11 +4,11 @@ use \Step\Acceptance;
 class TestCest {
 
 
-    function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+
+    function checkRemoveItemsFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->compareAddToCart3();
-        $I->compareAddToWishListGuestUser();
-        $I->compareAddToCartFromMyComparison();
-    }
+        $I->compareDelete();
 
+    }
 }

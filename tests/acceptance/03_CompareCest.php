@@ -19,6 +19,11 @@ class CompareCest
         $I->remoteWindow();
         $I->compareAddToCart();
     }
+
+    function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+    {
+        $I->compareAddToCart3();
+    }
     /*
         function checkCompareTwoItemsAndClearAll(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
         {
@@ -28,12 +33,7 @@ class CompareCest
         }
 
 */
-        function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
-        {
-            $I->compareAddToCart3();
-            $I->compareAddToWishListGuestUser();
-            $I->compareAddToCartFromMyComparison();
-        }
+
 
         function checkRemoveItemsFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
         {

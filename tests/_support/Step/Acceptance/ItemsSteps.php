@@ -95,21 +95,32 @@ class ItemsSteps extends \AcceptanceTester
         $I->see('You have no items to compare.', 'div.block-content > p.empty');
 
                 //$countItems = count($I->grabMultiple('//*[@class="products-grid row"]/li'));
-                for ($c = 1; $c <= 3; $c++) {
-                    $I->moveMouseOver('//div[@class="category-products"]/ul['.$c.']/li[1]');
+                for ($c = 1; $c <= 2; $c++) {
+                    $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li['.$c.']');
                     $I->waitForElementVisible('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
                     $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
                     $I->waitForElementVisible('//a[@id="continue_shopping"]');
-                    $I->click('//*[@id="go_list_compare"]');
-                    //div[@class="category-products"]/ul/li[2]//div/div/div/ul/li
+                    $I->click('//a[@id="continue_shopping"]');
                 }
 
-        $I->wait(2);
-        $I->scrollDown(1000);
-        $I->waitForElementVisible('div.footer-static-content > ul > li.last > a');
-        $I->click('div.footer-static-content > ul > li.last > a');
-        $I->seeElement('//*[@id="product_comparison"]');
-        $I->click('//*[@class="buttons-set"]/button/span');
+        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[3]');
+        $I->waitForElementVisible('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
+        $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
+        $I->waitForAjax(20);
+        $I->waitForElement('//*[@id="go_list_compare"]');
+        $I->click('//*[@id="go_list_compare"]');
+
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+
+        });
+
+        $I->waitForElement('//*[@class="btn-remove"]');
+        $I->click('//*[@class="btn-remove"]');
+        $I->waitForElementNotVisible('//*[@class="btn-remove"]');
+
     }
 
         public function compareDelete()

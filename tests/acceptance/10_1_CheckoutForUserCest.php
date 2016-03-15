@@ -40,13 +40,16 @@ class CheckoutForUserCest
     /**
      * Check Auth User With Points
      * @param Acceptance\CheckoutUserSteps $I
+     * @param \Page\Login $loginPage
      */
 
 
-    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I)
+    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage)
     {
         $I->checkOnShoppingCart();
         $I->checkPoints();
+        $loginPage->logout();
+
     }
 
 
