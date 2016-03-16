@@ -25,12 +25,9 @@ class TestCest {
     }
 
 */
-    function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage)
-    {
-        $I->checkOnShoppingCart();
-        $I->checkPoints();
-        $loginPage->logout();
-
+    function headerSearchCategory(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->home();
+        $I->getSearchOnCategory();
     }
 
 
