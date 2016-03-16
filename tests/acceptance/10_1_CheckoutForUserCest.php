@@ -48,7 +48,6 @@ class CheckoutForUserCest
     {
         $I->checkOnShoppingCart();
         $I->checkPoints();
-        $loginPage->logout();
 
     }
 
