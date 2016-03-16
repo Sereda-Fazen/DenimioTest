@@ -66,6 +66,8 @@ class ItemsSteps extends \AcceptanceTester
 
         }
 
+
+
     public function compareAddToCart()
     {
         $I = $this;
@@ -120,6 +122,16 @@ class ItemsSteps extends \AcceptanceTester
         $I->waitForElement('//*[@class="btn-remove"]');
         $I->click('//*[@class="btn-remove"]');
         $I->waitForElementNotVisible('//*[@class="btn-remove"]');
+
+        $I->click('//*[@class="buttons-set"]/button/span');
+
+        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+
+        });
+        $I->seeElement('li.success-msg > ul > li > span');
 
     }
 
