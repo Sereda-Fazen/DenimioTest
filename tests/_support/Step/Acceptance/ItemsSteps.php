@@ -31,17 +31,30 @@ class ItemsSteps extends \AcceptanceTester
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
             $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
-            $I->waitForElementVisible('//*[@id="go_list_compare"]');
+            $I->waitForElement('//*[@id="go_list_compare"]');
             $I->click('//*[@id="go_list_compare"]');
 
-  }
-        public function remoteWindow(){
-            $I = $this;
             $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
                 $handles = $webdriver->getWindowHandles();
                 $last_window = end($handles);
                 $webdriver->switchTo()->window($last_window);
+
             });
+
+
+            $I->see('COMPARE PRODUCTS', 'h1');
+            $I->seeElement('body > div:nth-of-type(4)');
+            $I->click('//*[@class="button btn-cart"]/span');
+            $I->click('//*[@class="buttons-set"]/button/span');
+
+            $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
+                $handles = $webdriver->getWindowHandles();
+                $last_window = end($handles);
+                $webdriver->switchTo()->window($last_window);
+
+            });
+
+            $I->see('Please specify the product' ,'li.notice-msg');
         }
         public function compareClosePage()
         {
@@ -68,25 +81,6 @@ class ItemsSteps extends \AcceptanceTester
 
 
 
-    public function compareAddToCart()
-    {
-        $I = $this;
-        $I->see('COMPARE PRODUCTS', 'h1');
-        $I->seeElement('body > div:nth-of-type(4)');
-        $I->click('//*[@class="button btn-cart"]/span');
-        $I->click('//*[@class="buttons-set"]/button/span');
-
-        $I->executeInSelenium(function (\Facebook\WebDriver\Remote\RemoteWebDriver $webdriver) {
-            $handles = $webdriver->getWindowHandles();
-            $last_window = end($handles);
-            $webdriver->switchTo()->window($last_window);
-
-        });
-
-        $I->see('Please specify the product' ,'li.notice-msg');
-
-
-    }
 
     public function compareAddToCart3()
     {
@@ -131,6 +125,7 @@ class ItemsSteps extends \AcceptanceTester
             $webdriver->switchTo()->window($last_window);
 
         });
+        $I->waitForElement('li.success-msg > ul > li > span',30);
         $I->seeElement('li.success-msg > ul > li > span');
 
     }
