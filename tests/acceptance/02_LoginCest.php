@@ -45,11 +45,4 @@ class LoginCest
         $I->comment('Expected result: Please enter a valid email address.');
     }
 
-
-
-
-
-
-
-
 }

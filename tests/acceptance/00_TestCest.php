@@ -5,17 +5,25 @@ class TestCest
 {
 
 
-    function checkAddToWishListGuestUser(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
-    {
-        $I->compareAddToCart3();
-    }
-/*
     function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->addToCartForCompare();
-
     }
-*/
+
+    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+    {
+        $I->checkRemoveItemFromComparePage();
+    }
+
+    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+    {
+        $I->checkRemoveItemFromCategoryPage();
+    }
+
+
+
+
+
 
 
 }

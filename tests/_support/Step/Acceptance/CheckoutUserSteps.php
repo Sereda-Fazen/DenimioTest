@@ -99,7 +99,7 @@ class CheckoutUserSteps extends \AcceptanceTester
     public function checkOnShoppingCart()
     {
         $I = $this;
-
+        $I->amOnPage('/');
         $I->checkAddToCartItem();
 
         $I->waitForElement('//*[@id="billing-address-select"]');

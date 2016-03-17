@@ -43,14 +43,14 @@ class CheckoutForUserCest
      * @param \Page\Login $loginPage
      */
 
-
+/*
     function checkUserWithPoints(\Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage)
     {
         $I->checkOnShoppingCart();
         $I->checkPoints();
 
     }
-
+*/
 
 
 
