@@ -25,7 +25,7 @@ class ItemsSteps extends \AcceptanceTester
             $I->see('You have no items to compare.','div.block-content > p.empty');
 
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[2]');
-            $I->waitForElementNotVisible('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
+            $I->waitForElementVisible('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->waitForAjax(10);
             $I->waitForElement('//a[@id="continue_shopping"]');
