@@ -23,6 +23,7 @@ class CompareCest
         $I->checkRemoveItemFromComparePage();
     }
 
+
     function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
     {
         $I->checkRemoveItemFromCategoryPage();

@@ -24,17 +24,16 @@ class ItemsSteps extends \AcceptanceTester
             $I->waitForElementVisible('div.block-content > p.empty');
             $I->see('You have no items to compare.','div.block-content > p.empty');
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul/li[2]');
-            $I->waitForElementVisible('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
-            $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
+            $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/ul/li');
             $I->waitForAjax(10);
             $I->waitForElement('//a[@id="continue_shopping"]');
             $I->click('//a[@id="continue_shopping"]');
 
-            $I->see('(1)' ,'//*[@class="block block-list block-compare"]/div/strong/span/small');
+            $I->waitForText('COMPARE PRODUCTS (1)', 30);
             $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
-            $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]');
-            $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li[2]//div/div');
+            $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->waitForElement('//*[@id="go_list_compare"]');
             $I->click('//*[@id="go_list_compare"]');
 
@@ -47,7 +46,6 @@ class ItemsSteps extends \AcceptanceTester
 
 
             $I->see('COMPARE PRODUCTS', 'h1');
-            $I->seeElement('body > div:nth-of-type(4)');
             $I->click('//*[@class="button btn-cart"]/span');
             $I->click('//*[@class="buttons-set"]/button/span');
 
@@ -99,15 +97,13 @@ class ItemsSteps extends \AcceptanceTester
 
                 //$countItems = count($I->grabMultiple('//*[@class="products-grid row"]/li'));
                 for ($c = 1; $c <= 2; $c++) {
-                    $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li['.$c.']');
-                    $I->waitForElementVisible('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
+                    $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
                     $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
                     $I->waitForElementVisible('//a[@id="continue_shopping"]');
                     $I->click('//a[@id="continue_shopping"]');
                 }
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[3]');
-        $I->waitForElementVisible('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
+        $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]//div/div');
         $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
         $I->waitForAjax(20);
         $I->waitForElement('//*[@id="go_list_compare"]');
@@ -139,43 +135,6 @@ class ItemsSteps extends \AcceptanceTester
 
     }
 
-        public function compareDelete()
-    {
-        $I = $this;
-
-        $I->click('//*[@class="first last"]/td/a');
-
-        $I->executeInSelenium(function (RemoteWebDriver $webdriver) {
-            $handles = $webdriver->getWindowHandles();
-            $last_window = end($handles);
-            $webdriver->switchTo()->window($last_window);
-
-        });
-        $I->waitForElementNotVisible('//*[@class="a-right"]/a');
-        $I->dontSeeElement('//*[@class="a-right"]/a');
-        $I->click('//*[@class="buttons-set"]/button/span');
-    }
-
-    public function compareAddToWishListGuestUser()
-    {
-        $I = $this;
-
-        $I->click('//*[@class="add-to-links"]/li/a');
-        $I->see('If you have an account with us, please log in.','//*[@class="col-2 registered-users"]/div/p');
-
-    }
-    public function compareAddToCartFromMyComparison()
-    {
-        $I = $this;
-        $I->waitForElementVisible('div.footer-static-content > ul > li.last > a');
-        $I->click('div.footer-static-content > ul > li.last > a');
-
-
-        $I->click('//*[@class="button btn-cart"]/span');
-        $I->see('Please specify the product' ,'li.notice-msg');
-
-    }
-
 
     public function checkRemoveItemFromCategoryPage()
     {
@@ -188,17 +147,17 @@ class ItemsSteps extends \AcceptanceTester
         $I->see('You have no items to compare.', 'div.block-content > p.empty');
 
         for ($c = 1; $c <= 2; $c++) {
-            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[' . $c . ']');
-            $I->waitForElementVisible('//div[@class="category-products"]/ul/li[' . $c . ']//div/div/div/ul/li');
-            $I->click('//div[@class="category-products"]/ul/li[' . $c . ']//div/div/div/ul/li');
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
+            $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
             $I->waitForElementVisible('//a[@id="continue_shopping"]');
             $I->click('//a[@id="continue_shopping"]');
         }
+
         $I->waitForElement('//div[@class="block-content"]//li/a[1]');
         $I->click('//div[@class="block-content"]//li/a[1]');
         $I->acceptPopup();
         $I->waitForText('COMPARE PRODUCTS (1)', 30);
-        $I->see('(1)', '//div[@class="block block-list block-compare"]/div');
+
 /*
         $I->click('//*[@class="actions"]/a');
         $I->acceptPopup();
