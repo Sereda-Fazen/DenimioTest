@@ -4,7 +4,6 @@ use \Step\Acceptance;
 class TestCest
 {
 
-
         function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
         {
             $I->addToCartForCompare();
@@ -14,7 +13,6 @@ class TestCest
     {
         $I->checkRemoveItemFromComparePage();
     }
-
 
 
 

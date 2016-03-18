@@ -24,14 +24,7 @@ class ItemsSteps extends \AcceptanceTester
             $I->waitForElementVisible('div.block-content > p.empty');
             $I->see('You have no items to compare.','div.block-content > p.empty');
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
-            $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/ul/li');
-            $I->waitForAjax(10);
-            $I->waitForElement('//a[@id="continue_shopping"]');
-            $I->click('//a[@id="continue_shopping"]');
 
-            $I->waitForText('COMPARE PRODUCTS (1)', 30);
-            $I->see('COMPARE', '//*[@class="block block-list block-compare"]/div/div/button');
             $I->moveMouseOver('//div[@class="category-products"]/ul/li[2]//div/div');
             $I->click('//div[@class="category-products"]/ul/li[2]//div/div/div/ul/li');
             $I->waitForElement('//*[@id="go_list_compare"]');
@@ -49,17 +42,15 @@ class ItemsSteps extends \AcceptanceTester
             $I->click('//*[@class="button btn-cart"]/span');
             $I->click('//*[@class="buttons-set"]/button/span');
 
-            $I->executeInSelenium(function (RemoteWebDriver $webdriver) {
-                $I = $this;
-                $handles = $webdriver->getWindowHandles();
-                $last_window = end($handles);
-                $webdriver->switchTo()->window($last_window);
-                $I->see('Please specify the product' ,'li.notice-msg');
+            $I->switchToWindow();
 
-            });
+            $I->see('Please specify the product', 'li.notice-msg');
 
 
-        }
+            }
+
+
+
         public function compareClosePage()
         {
             $I = $this;
@@ -122,15 +113,11 @@ class ItemsSteps extends \AcceptanceTester
 
         $I->click('//*[@class="buttons-set"]/button/span');
 
-        $I->executeInSelenium(function (RemoteWebDriver $webdriver) {
-            $I = $this;
-            $handles = $webdriver->getWindowHandles();
-            $last_window = end($handles);
-            $webdriver->switchTo()->window($last_window);
+        $I->switchToWindow();
 
             $I->waitForElement('li.success-msg > ul > li > span',30);
             $I->seeElement('li.success-msg > ul > li > span');
-        });
+
 
 
     }
