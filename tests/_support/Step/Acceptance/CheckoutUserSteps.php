@@ -169,8 +169,9 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->moveMouseOver('//*[@id="shipDocHelp"]/div');
 
         $I->scrollDown(200);
-        $I->waitForElement('#edit_shipping_document_confirmation');
-        $I->click('#edit_shipping_document_confirmation');
+        $I->waitForElement('//select[@id="edit_shipping_document_confirmation"]');
+        $I->click('//select[@id="edit_shipping_document_confirmation"]');
+        $I->waitForElement('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
 
