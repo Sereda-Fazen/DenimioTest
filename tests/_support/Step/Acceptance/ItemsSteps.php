@@ -100,6 +100,7 @@ class ItemsSteps extends \AcceptanceTester
         $I->waitForElement('//*[@id="go_list_compare"]');
         $I->click('//*[@id="go_list_compare"]');
 
+
         $I->executeInSelenium(function (RemoteWebDriver $webdriver) {
             $handles = $webdriver->getWindowHandles();
             $last_window = end($handles);
