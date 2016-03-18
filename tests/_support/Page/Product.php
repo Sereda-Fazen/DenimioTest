@@ -45,11 +45,11 @@ class Product
         $I->fillField(self::$summary, $summary);
         $I->click(self::$review);
         $I->fillField(self::$review, $review);
-        $I->moveMouseOver(self::$captcha, 5, 5);
-        $I->wait(1);
-        $I->click(self::$captcha);
-        $I->click(self::$submit);
-       // $I->see('This is a required field.',self::$seeError);
+       // $I->moveMouseOver(self::$captcha, 5, 5);
+        //$I->wait(1);
+       // $I->click(self::$captcha);
+      //  $I->click(self::$submit);
+        $I->see('This is a required field.',self::$seeError);
         //$I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
     }
 
