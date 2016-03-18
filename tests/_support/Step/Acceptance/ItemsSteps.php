@@ -136,7 +136,7 @@ class ItemsSteps extends \AcceptanceTester
         for ($c = 1; $c <= 2; $c++) {
             $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
             $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
-            $I->waitForElementVisible('//a[@id="continue_shopping"]');
+            $I->waitForElement('//a[@id="continue_shopping"]');
             $I->click('//a[@id="continue_shopping"]');
         }
 
