@@ -4,23 +4,10 @@ use \Step\Acceptance;
 class TestCest
 {
 
-        function checkCompareAndAddToCart(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
-        {
-            $I->addToCartForCompare();
-        }
-
- function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
+    function checkGridAndList(\Page\Category $categoryPage, \Helper\Acceptance $I)
     {
-        $I->checkRemoveItemFromComparePage();
+        $categoryPage->checkGridAndList();
     }
-
-
-
-    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\ItemsSteps $I)
-    {
-        $I->checkRemoveItemFromCategoryPage();
-    }
-
 
 
 }

@@ -38,12 +38,10 @@ class CheckoutUserSteps extends \AcceptanceTester
 
         $I->wait(2);
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->click('//div[@class="category-products"]/ul[2]/li[2]');
         $I->wait(2);
-
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
-        $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
-
+        $I->waitForElement('//div[@class="add-to-cart"]/button/span');
+        $I->click('//div[@class="add-to-cart"]/button/span');
         $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
@@ -67,15 +65,23 @@ class CheckoutUserSteps extends \AcceptanceTester
 
         $I->wait(2);
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->click('//div[@class="category-products"]/ul[2]/li[2]');
         $I->wait(2);
+        $I->waitForElement('//div[@class="add-to-cart"]/button/span');
+        $I->click('//div[@class="add-to-cart"]/button/span');
+        $I->waitForAjax(20);
+        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->click('//a[@id="shopping_cart"]');
 
+
+/*
         $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
         $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
         $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
+*/
         $I->see('SHOPPING CART', 'h1');
 
         $I->scrollDown(300);

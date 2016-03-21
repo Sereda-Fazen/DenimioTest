@@ -47,34 +47,37 @@ class Category
     public static $seeLearnMore = '//li[@class="product"]/strong';
 
 
-    public function __construct(\AcceptanceTester $I) {
+    public function __construct(\AcceptanceTester $I)
+    {
         $this->tester = $I;
     }
 
-    public function checkInputPrices ($leftPrice,$rightPrice){
+    public function checkInputPrices($leftPrice, $rightPrice)
+    {
         $I = $this->tester;
 
         //$I->amOnPage('/');
         //$I->click('//div[@class="parentMenu"]//span');
         //$I->seeElement('//div[@class="category-products"]');
-        $I->fillField(self::$left ,$leftPrice);
-        $I->fillField(self::$right,$rightPrice);
+        $I->fillField(self::$left, $leftPrice);
+        $I->fillField(self::$right, $rightPrice);
         $I->click(self::$search);
         $I->waitForAjax(40);
         $I->seeElement(self::$price);
         $I->seeElement(self::$seeSearch);
     }
 
-    public function checkIsNotFindPrice($leftPrice,$rightPrice){
+    public function checkIsNotFindPrice($leftPrice, $rightPrice)
+    {
         $I = $this->tester;
 
 
-        $I->fillField(self::$left ,$leftPrice);
-        $I->fillField(self::$right,$rightPrice);
+        $I->fillField(self::$left, $leftPrice);
+        $I->fillField(self::$right, $rightPrice);
         $I->click(self::$search);
         $I->scrollUp(500);
         $I->waitForElementVisible(self::$noProducts);
-        $I->getVisibleText('There are no products matching the selection.',self::$noProducts);
+        $I->getVisibleText('There are no products matching the selection.', self::$noProducts);
         $I->seeElement(self::$noProducts);
     }
 
@@ -86,7 +89,8 @@ class Category
         $I->seeElement(self::$itemForm);
     }
 
-    public function recentReviewBlock(){
+    public function recentReviewBlock()
+    {
 
         $I = $this->tester;
         $I->amOnPage('/');
@@ -99,39 +103,39 @@ class Category
         $I->moveBack();
 
     }
+    /*
+        public function checkGridAndList(){
+            $I = $this->tester;
 
-    public function checkGridAndList(){
-        $I = $this->tester;
+            $I->amOnPage('/');
+            $I->click('//div[@class="parentMenu"]//span');
+            $I->seeElement('//div[@class="category-products"]');
+            $I->click(self::$list);
+            $I->waitForElement(self::$seeList);
+            $I->seeElement(self::$seeList);
 
-        $I->amOnPage('/');
-        $I->click('//div[@class="parentMenu"]//span');
-        $I->seeElement('//div[@class="category-products"]');
-        $I->click(self::$list);
-        $I->waitForAjax(40);
-        $I->seeElement(self::$seeList);
+                    $I->click(self::$addToCompare);
+                    $I->waitForAjax(40);
+                    $I->waitForElementVisible(self::$seeCompare);
+                    $I->see('Go to list Compare', self::$seeCompare);
+                    //$I->click(self::$continue);
+                    $I->reloadPage();
 
-                $I->click(self::$addToCompare);
-                $I->waitForAjax(40);
-                $I->waitForElementVisible(self::$seeCompare);
-                $I->see('Go to list Compare', self::$seeCompare);
-                //$I->click(self::$continue);
-                $I->reloadPage();
-
-                $I->click(self::$addToWishList);
-                $I->see('If you have an account with us, please log in.',self::$seeWishList);
-                $I->moveBack();
-/*
-             $I->click(self::$addToCart);
-             $I->waitAlertAndAccept();
-             $I->see('Please specify the product',self::$seeAddToCart);
-             $I->moveBack();
-*/
-
-        $I->click(self::$learnMore);
-            $I->seeElement(self::$seeLearnMore);
+                    $I->click(self::$addToWishList);
+                    $I->see('If you have an account with us, please log in.',self::$seeWishList);
+                    $I->moveBack();
+    /*
+                 $I->click(self::$addToCart);
+                 $I->waitAlertAndAccept();
+                 $I->see('Please specify the product',self::$seeAddToCart);
+                 $I->moveBack();
 
 
-    }
+            $I->click(self::$learnMore);
+                $I->seeElement(self::$seeLearnMore);
+    */
+
+
 
 
 
