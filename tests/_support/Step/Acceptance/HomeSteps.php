@@ -14,6 +14,185 @@ class HomeSteps extends \AcceptanceTester
         $I->wait(2);
     }
 
+
+
+
+
+    public function getCurrencyProd()
+    {
+        $I = $this;
+        $seeCurr = '//*[@id="product-price-17529"]/span';
+        $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
+
+        for ($c = 1; $c <= $countCurrency; $c++) {
+            $I->wait(1);
+            $I->moveMouseOver('li.currency-trigger > a');
+            $I->click('//ul[@class="sub-currency"]/li[' . $c . ']/a');
+            $I->grabTextFrom('//ul[@class="sub-currency"]/li[' . $c . ']/a');
+
+            switch ($c) {
+
+
+                case 1:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('AU', $seeCurr);
+                    break;
+
+                case 2:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('R', $seeCurr);
+                    break;
+
+                case 3:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('£', $seeCurr);
+                    break;
+
+                case 4:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('CA$', $seeCurr);
+                    break;
+
+                case 5:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('CN¥', $seeCurr);
+                    break;
+
+                case 6:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Dkr', $seeCurr);
+                    break;
+
+                case 7:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('€', $seeCurr);
+                    break;
+
+                case 8:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('HK$', $seeCurr);
+                    break;
+
+                case 9:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Rs', $seeCurr);
+                    break;
+
+                case 10:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Rp', $seeCurr);
+                    break;
+
+                case 11:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('¥', $seeCurr);
+                    break;
+
+                case 12:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('RM', $seeCurr);
+                    break;
+
+                case 13:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('MXN', $seeCurr);
+                    break;
+
+                case 14:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('NZ', $seeCurr);
+                    break;
+
+                case 15:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Nkr', $seeCurr);
+                    break;
+
+                case 16:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('₱', $seeCurr);
+                    break;
+
+                case 17:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('RON', $seeCurr);
+                    break;
+
+
+                case 18:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('RUB', $seeCurr);
+                    break;
+
+
+                case 19:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('S$', $seeCurr);
+                    break;
+
+
+                case 20:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('R', $seeCurr);
+                    break;
+
+
+                case 21:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('₩', $seeCurr);
+                    break;
+
+                case 22:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Skr', $seeCurr);
+                    break;
+
+                case 23:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('Fr.', $seeCurr);
+                    break;
+
+                case 24:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('฿', $seeCurr);
+                    break;
+
+                case 25:
+                    echo
+                    $I->waitForElement($seeCurr);
+                    $I->see('$', $seeCurr);
+                    break;
+
+
+            }
+        }
+    }
+
+
     public function getCurrency()
     {
         $I = $this;
@@ -224,7 +403,6 @@ class HomeSteps extends \AcceptanceTester
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
             $I->click('//*[@class="sub-lang"]/li[' . $l . ']');
             $I->grabTextFrom('//*[@class="sub-lang"]/li[' . $l . ']');
-            $I->reloadPage();
 
             switch ($l) {
 
@@ -451,76 +629,94 @@ class HomeSteps extends \AcceptanceTester
 
 
 
-/*
 
-    public function getLanguage()
+
+    public function getLanguageProd()
     {
         $I = $this;
         $seeLanguage = 'a.login_click';
-        $arabic = 'a.sa';
+        $seeCompare = '//*[@class="block block-list block-compare"]//div/p';
+        //$arabic = 'a.sa';
         $countLanguage = count($I->grabMultiple('//*[@class="sub-lang"]/li'));
         for ($l = 1; $l <= $countLanguage; $l++) {
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
             $I->click('//*[@class="sub-lang"]/li[' . $l . ']');
             $I->grabTextFrom('//*[@class="sub-lang"]/li[' . $l . ']');
-            $I->reloadPage();
 
             switch ($l) {
 
 
-
-
                 case 2:
-                    echo $I->see('登录', $seeLanguage);
+                    echo
+                    $I->see('登录', $seeLanguage);
+                    $I->getVisibleText('您没有可比较商品', $seeCompare);
+
                     break;
 
                 case 3:
                     echo $I->see('Connexion', $seeLanguage);
+                    $I->getVisibleText('Vous n\'avez pas d\'articles à comparer.', $seeCompare);
                     break;
 
                 case 4:
                     echo $I->see('Anmelden', $seeLanguage);
+                    $I->getVisibleText('Sie haben keine Artikel auf der Vergleichsliste.', $seeCompare);
                     break;
 
                 case 5:
                     echo $I->see('Login', $seeLanguage);
+                    $I->getVisibleText('Anda belum memilih produk untuk dibandingkan.', $seeCompare);
                     break;
 
                 case 6:
                     echo $I->see('Accedi', $seeLanguage);
+                    $I->getVisibleText('Non hai articoli da confrontare.', $seeCompare);
                     break;
 
                 case 7:
-                    echo $I->see('ログイン', $seeLanguage);
+                    echo
+                    $I->see('ログイン', $seeLanguage);
+                    $I->getVisibleText('比較する商品はありません', $seeCompare);
+
                     break;
 
                 case 8:
-                    echo $I->see('로그인', $seeLanguage);
+                    echo
+                    $I->see('로그인', $seeLanguage);
+                    $I->getVisibleText('비교 상품이 없습니다.', $seeCompare);
                     break;
 
                 case 9:
-                    echo $I->see('Log Masuk', $seeLanguage);
+                    echo
+                    $I->see('Log Masuk', $seeLanguage);
+                    $I->getVisibleText('Tiada item untuk dibanding.', $seeCompare);
                     break;
 
                 case 10:
-                    echo $I->see('Entrar', $seeLanguage);
+                    echo
+                    $I->see('Entrar', $seeLanguage);
+                    $I->getVisibleText('Você não tem itens para comparar.', $seeCompare);
                     break;
 
                 case 11:
-                    echo $I->see('Войти', $seeLanguage);
+                    echo
+                    $I->see('Войти', $seeLanguage);
+                    $I->getVisibleText('У вас нет товаров для сравнения.', $seeCompare);
                     break;
 
                 case 12:
-                    echo $I->see('Inicio De Sesión', $seeLanguage);
+                    echo
+                    $I->see('Inicio De Sesión', $seeLanguage);
+                    $I->getVisibleText('No tiene artículos para comparar.', $seeCompare);
                     break;
 
                 case 13:
-                    echo $I->see('เข้าสู่ระบบ', $seeLanguage);
+                    echo
+                    $I->see('เข้าสู่ระบบ', $seeLanguage);
+                    $I->getVisibleText('คุณไม่มีรายการสินค้าที่จะเปรียบเทียบ.', $seeCompare);
                     break;
 
-                case 14:
-                    echo $I->see('Arabic', $arabic);
-                    break;
+
             }
         }
         $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
@@ -528,6 +724,6 @@ class HomeSteps extends \AcceptanceTester
 
     }
 
-*/
+
 
 }

@@ -5,6 +5,7 @@ class HomePage
 {
     public static $URL = '/';
     public static $URL2 = '/customer/account/login/';
+    public static $URL3 = '/top.html';
 
     public static $invalidUrl = 'div.std';
     public static $backHomePage = 'ul.disc > li:first-child > a';
@@ -64,6 +65,14 @@ class HomePage
 
         return $this;
     }
+    public function homePage()
+    {
+        $I = $this->tester;
+        $I->amOnPage(self::$URL3);
+
+        return $this;
+    }
+
 
     public  function invalidURL(){
         $I = $this->tester;

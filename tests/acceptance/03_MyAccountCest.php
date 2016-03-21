@@ -6,7 +6,7 @@ use Step\Acceptance;
 class MyAccountCest
 {
 
-
+/*
     function MyAccountInfo(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $myAccountPage)
     {
         $I->login();
@@ -121,7 +121,12 @@ class MyAccountCest
         $MyAccountPage->accountMyTickets();
 
     }
-
+*/
+    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
+    {
+        $I->login();
+        $I->accountDashboardTest();
+    }
 
 
 
