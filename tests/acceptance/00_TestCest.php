@@ -4,16 +4,10 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
     {
-        $forgotPage->forgot('denimio_test@yahoo.com');
-    }
-    //
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
-    {
-        $I->gMailAuth();
-        $I->remoteWindow();
-        $I->newPass();
+        $I->login();
+        $I->accountDashboardTest();
     }
 
 

@@ -49,6 +49,8 @@ class ForgotPassSteps extends \AcceptanceTester
         });
 
 
+
+
     }
 
     public function newPass() {

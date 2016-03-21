@@ -64,13 +64,13 @@ class CategoryCest
         $I->remoteWindow2();
         $categoryPage->checkCannotFindYourWantedItem2();
     }
-
+/*
     function checkGridAndList(\Page\Category $categoryPage, \Helper\Acceptance $I)
     {
         $categoryPage->checkGridAndList();
     }
 
-
+*/
 
 
 
