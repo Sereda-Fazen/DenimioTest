@@ -92,6 +92,16 @@ env:
         WebDriver:
           url: 'http://staging:prospect@dev9.denimio.com'
 
+  DEV_PROW:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://http://149.202.195.201:8151'
+
+
+
+
+
   BROWSER:
       modules:
         config:
