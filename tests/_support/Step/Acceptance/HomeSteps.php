@@ -21,7 +21,9 @@ class HomeSteps extends \AcceptanceTester
     public function getCurrencyProd()
     {
         $I = $this;
-        $seeCurr = '//*[@id="product-price-17529"]/span';
+        //$seeCurr = '//*[@id="product-price-17529"]/span';
+        $seeCurr = '//*[@id="product-price-4791"]/span';
+
         $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
 
         for ($c = 1; $c <= $countCurrency; $c++) {
@@ -394,10 +396,12 @@ class HomeSteps extends \AcceptanceTester
 
     }
 
-    public function getLanguage()
+    public function getLanguageDev()
     {
         $I = $this;
         $seeLanguage = 'a.login_click';
+        $seeCompare = '//*[@class="block block-list block-compare"]//div/p';
+        //$arabic = 'a.sa';
         $countLanguage = count($I->grabMultiple('//*[@class="sub-lang"]/li'));
         for ($l = 1; $l <= $countLanguage; $l++) {
             $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
@@ -406,64 +410,172 @@ class HomeSteps extends \AcceptanceTester
 
             switch ($l) {
 
+
                 case 1:
                     echo $I->see('Log In', $seeLanguage);
+                    $I->getVisibleText('Anda belum memilih produk untuk dibandingkan.', $seeCompare);
                     break;
 
-
                 case 2:
-                    echo $I->see('เข้าสู่ระบบ', $seeLanguage);
+                    echo
+                    $I->see('เข้าสู่ระบบ', $seeLanguage);
+                    $I->getVisibleText('คุณไม่มีรายการสินค้าที่จะเปรียบเทียบ.', $seeCompare);
                     break;
 
                 case 3:
-                    echo $I->see('ログイン', $seeLanguage);
+                    echo
+                    $I->see('ログイン', $seeLanguage);
+                    $I->getVisibleText('比較する商品はありません', $seeCompare);
+
                     break;
 
                 case 4:
-                    echo $I->see('登录', $seeLanguage);
+                    echo
+                    $I->see('登录', $seeLanguage);
+                    $I->getVisibleText('您没有可比较商品', $seeCompare);
+
                     break;
 
                 case 5:
-                    echo $I->see('로그인', $seeLanguage);
+                    echo
+                    $I->see('로그인', $seeLanguage);
+                    $I->getVisibleText('비교 상품이 없습니다.', $seeCompare);
                     break;
 
                 case 6:
-                    echo $I->see('Log Masuk', $seeLanguage);
+                    echo
+                    $I->see('Log Masuk', $seeLanguage);
+                    $I->getVisibleText('Tiada item untuk dibanding.', $seeCompare);
                     break;
 
                 case 7:
-                    echo $I->see('Войти', $seeLanguage);
+                    echo
+                    $I->see('Войти', $seeLanguage);
+                    $I->getVisibleText('У вас нет товаров для сравнения.', $seeCompare);
                     break;
 
                 case 8:
                     echo $I->see('Connexion', $seeLanguage);
+                    $I->getVisibleText('Vous n\'avez pas d\'articles à comparer.', $seeCompare);
                     break;
 
                 case 9:
                     echo $I->see('Anmelden', $seeLanguage);
+                    $I->getVisibleText('Sie haben keine Artikel auf der Vergleichsliste.', $seeCompare);
                     break;
 
                 case 10:
                     echo $I->see('Accedi', $seeLanguage);
+                    $I->getVisibleText('Non hai articoli da confrontare.', $seeCompare);
                     break;
 
                 case 11:
-                    echo $I->see('Entrar', $seeLanguage);
+                    echo
+                    $I->see('Entrar', $seeLanguage);
+                    $I->getVisibleText('Você não tem itens para comparar.', $seeCompare);
                     break;
 
                 case 12:
-                    echo $I->see('Inicio De Sesión', $seeLanguage);
+                    echo
+                    $I->see('Inicio De Sesión', $seeLanguage);
+                    $I->getVisibleText('No tiene artículos para comparar.', $seeCompare);
                     break;
 
-                case 13:
-                    echo $I->see('Log In', $seeLanguage);
+                case 5:
+                    echo $I->see('Login', $seeLanguage);
+                   // $I->getVisibleText('Anda belum memilih produk untuk dibandingkan.', $seeCompare);
                     break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
         }
         $I->moveMouseOver('//i[@class="fa fa-caret-down"]');
         $I->click('//*[@class="sub-lang"]/li[1]');
 
     }
+
+    /**
+     * Main menu
+     */
+
+    public function getMainMenu(){
+        $I = $this;
+        $seeMenu = 'ul > li:nth-of-type(2) > strong';
+        $seeCategory = '#narrow-by-list > dd:nth-of-type(1)';
+        $seeBrands = '//div[@class="category-products brands-list"]';
+        $seeCalendar = 'h1';
+        $main = count($I->grabMultiple('//*[@id="pt_custommenu"]/div/div/a'));
+        for ($m = 1; $m <= $main; $m++){
+            $I->click('//*[@id="pt_custommenu"]/div['.$m.']/div/a');
+
+            switch ($m) {
+
+                case 1:
+                    echo
+                    $I->see('Tops', $seeMenu);
+                    $I->see('T-shirts',$seeCategory);
+                    break;
+
+                case 2:
+                    echo
+                    $I->see('Bottoms', $seeMenu);
+                    $I->see('Tapered',$seeCategory);
+                    break;
+
+                case 3:
+                    echo
+                    $I->see('Accessories', $seeMenu);
+                    break;
+
+                case 4:
+                    echo
+                    $I->see('New Arrivals', $seeMenu);
+                    break;
+
+                case 5:
+                    echo
+                    $I->see('Brands', $seeMenu);
+                    $I->seeElement($seeBrands);
+                    break;
+
+
+            }
+        }
+        $I->click('//*[@id="pt_menu_link"]/div/ul/li/a');
+        $I->see('RESTOCK SCHEDULE', $seeCalendar);
+
+    }
+
 
 
     public function getHeaderLinks(){
@@ -488,13 +600,10 @@ class HomeSteps extends \AcceptanceTester
         $I = $this;
         $I->fillField('#search','jeans');
         $cat =  count($I->grabMultiple('//*[@id = "cat"]/option'));
-        for ($c = 2; $c <= $cat; $c++) {
             $I->click('#cat');
-            $I->click('//*[@id = "cat"]/option['.$c.']');
+            $I->click('//*[@id = "cat"]/option['.rand(1,$cat).']');
             $I->click('i.fa.fa-search');
             $I->seeElement('span.value');
-        }
-
     }
 
 

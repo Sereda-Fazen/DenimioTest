@@ -4,15 +4,11 @@ use \Step\Acceptance;
 class TestCest
 {
 
-
-    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
-       $homePage->homePage();
-       $I->getCurrencyProd();
+    function checkMainBlockRating(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I)
+    {
+        $I->checkInRandomOrder();
+        $productPage->checkMainBlockReview('name','test','test');
     }
 
-    function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
-        $homePage->homePage();
-        $I->getLanguageProd();
-    }
 }
 

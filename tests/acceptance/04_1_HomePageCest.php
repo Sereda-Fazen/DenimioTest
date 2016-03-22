@@ -29,7 +29,7 @@ class HomePageCest
 
         function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
-            $I->getCurrency();
+            $I->getCurrencyProd();
         }
 
      /**
@@ -41,7 +41,7 @@ class HomePageCest
 
         function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->home();
-            $I->getLanguage();
+            $I->getLanguageDev();
         }
 
 

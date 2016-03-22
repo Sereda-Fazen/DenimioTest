@@ -16,8 +16,8 @@ modules:
 
             # --run in browserstack--
             ##
-            #host: 'hub.browserstack.com'
-            #port: 80
+            host: 'hub.browserstack.com'
+            port: 80
             browser: chrome
 
             resolution: 1980x1780
@@ -91,13 +91,6 @@ env:
       config:
         WebDriver:
           url: 'http://staging:prospect@dev9.denimio.com'
-
-  DEV_PROX:
-    modules:
-      config:
-        WebDriver:
-          url: 'http://ns524995.ip-192-99-232.net'
-
 
   BROWSER:
       modules:

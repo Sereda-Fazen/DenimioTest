@@ -10,12 +10,13 @@ class MainMenuCest
     /**
      * Check Main Menu
      * @param \Page\MainMenu $homePage
+     * @param Acceptance\HomeSteps $I
      */
 
-        function checkMainMenuLinks(\Page\MainMenu $homePage)
+        function checkMainMenuLinks(\Page\MainMenu $homePage, \Step\Acceptance\HomeSteps $I)
         {
             $homePage->home();
-            $homePage->getMainMenu();
+            $I->getMainMenu();
         }
 
     /**

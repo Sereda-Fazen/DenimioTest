@@ -4,7 +4,7 @@ namespace Step\Acceptance;
 use Exception;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 
-class ItemsSteps extends \AcceptanceTester
+class CompareSteps extends \AcceptanceTester
 {
 
         public function getCloseSub(){

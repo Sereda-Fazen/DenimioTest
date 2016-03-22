@@ -101,6 +101,7 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->click('//*[@id="country"]/option[231]');
                     $I->fillField('//*[@id="region"]', 'Kharkov');
                     $I->scrollDown(100);
+                    $I->click('');
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The address has been saved.', $successMsg);
 

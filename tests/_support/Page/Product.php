@@ -8,7 +8,7 @@ class Product
 
     public static $clickReview = '//p[@class="no-rating"]/a';
     public static $seeRating = 'fieldset';
-    public static $checkRating = '//tr[@class="first last odd"]/td/input';
+    public static $checkRating = 'tr > td:nth-of-type(1) > input.radio';
     public static $nickName = '#nickname_field';
     public static $summary = '#summary_field';
     public static $review = '#review_field';
@@ -45,12 +45,13 @@ class Product
         $I->fillField(self::$summary, $summary);
         $I->click(self::$review);
         $I->fillField(self::$review, $review);
-       // $I->moveMouseOver(self::$captcha, 5, 5);
-        //$I->wait(1);
-       // $I->click(self::$captcha);
+        //$I->moveMouseOver(self::$captcha);
+        $I->switchToIFrame('undefined');
+        $I->click(self::$captcha);
+        $I->wait(3);
         $I->click(self::$submit);
-        $I->see('This is a required field.',self::$seeError);
-        //$I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
+        //$I->see('This is a required field.',self::$seeError);
+        $I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
     }
 
     public function checkShareLinks ()
