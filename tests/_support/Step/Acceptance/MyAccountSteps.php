@@ -289,25 +289,21 @@ class MyAccountSteps extends \AcceptanceTester
     public function additionItemInList(){
         $I = $this;
         $I->checkTops();
-        $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-        $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
+        //$blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
+       // $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']//li[2]');
-        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']//li[2]');
-        $I->waitForAjax(40);
-        $I->waitForElement('//a[@id="continue_shopping"]');
-        $I->click('//a[@id="continue_shopping"]');
+        for ($w = 1; $w <= 2; $w++) {
+            $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li['.$w.']');
+            $I->waitForElement('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');
+            $I->click('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');
+            $I->waitForAjax(40);
+            $I->waitForElement('//a[@id="continue_shopping"]');
+            $I->click('//a[@id="continue_shopping"]');
+        }
 
-
-        $I->moveMouseOver('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']//li[2]');
-        $I->wait(2);
-        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']//li[2]');
-        $I->waitForAjax(40);
-
-        $I->waitForElement('//a[@id="go_wishlist"]');
-        $I->click('//a[@id="go_wishlist"]');
+        $I->moveMouseOver('//*[@class="dropit-trigger"]');
+        $I->click('//*[@class="dropit-trigger"]//li[2]');
         $I->seeElement('//div[@class="my-wishlist"]');
-
 
 
         $I->fillField('//*[@class="add-to-cart-alt"]/input', '2');
@@ -327,7 +323,7 @@ class MyAccountSteps extends \AcceptanceTester
 
         $I->click('//*[@id="wishlist-table"]/tbody/tr[1]/td[4]/a');
         $I->acceptPopup();
-        $I->waitForElementNotVisible('//*[@id="wishlist-table"]/tbody/tr[1]/td[4]/a');
+        $I->waitForElementNotVisible('//*[@id="wishlist-table"]/tbody/tr[4]/td[4]/a');
 
 
     }

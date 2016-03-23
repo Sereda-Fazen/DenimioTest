@@ -38,6 +38,7 @@ class CheckoutSteps extends \AcceptanceTester
     {
         $I = $this;
         $wallet = 'WALLET';
+        $I->amOnPage('/');
         $I->fillField('#search', 'wallet');
         $I->click('i.fa.fa-search');
         $I->see('SEARCH RESULTS FOR', 'h1');
@@ -45,7 +46,7 @@ class CheckoutSteps extends \AcceptanceTester
 
         $I->wait(2);
 
-        $I->click('//div[@class="category-products"]/ul[2]/li[2]');
+        $I->click('//div[@class="category-products"]/ul[2]/li[1]');
         $I->wait(2);
         $I->waitForElement('//div[@class="add-to-cart"]/button/span');
         $I->click('//div[@class="add-to-cart"]/button/span');
@@ -93,7 +94,8 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForElement('li.error-msg',100);
-        $I->see('Network Error, E02004','li.error-msg');
+        $I->see('Authorization process has an error. error code is 2001, error detail is "1G97', 'li.error-msg');
+        //$I->see('Network Error, E02004','li.error-msg');
     }
 
     function checkoutWithGiftCard ()
