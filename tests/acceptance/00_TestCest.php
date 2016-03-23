@@ -4,10 +4,9 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function MyWishListForUser(Step\Acceptance\MyAccountSteps $I) {
-        $I->login();
-        $I->additionItemInList();
+    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
 
+        $I->checkPictureArrows();
     }
 
 

@@ -242,38 +242,6 @@ class MyAccountSteps extends \AcceptanceTester
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Check My Orders after Check Order
      */

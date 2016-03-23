@@ -81,8 +81,8 @@ class ProductSteps extends \AcceptanceTester
     public function checkPictureArrows()
     {
         $I = $this;
-       // $I->checkInRandomOrder();
-        $I->amOnPage('/studio-d-artisan-5535-crazy-pattern-check-work-shirt.html');
+        $I->checkInRandomOrder();
+       // $I->amOnPage('/studio-d-artisan-5535-crazy-pattern-check-work-shirt.html');
         $test2 = count($I->grabMultiple('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li'));
         $I->wait(3);
         if ($test2 > 4) {
@@ -93,7 +93,7 @@ class ProductSteps extends \AcceptanceTester
                 $I->click('//div[@class="more-views ma-thumbnail-container"]/div/div/ul/li[' .$s. ']');
                 $I->wait(1);
                 $I->moveMouseOver('//*[@id="wrap"]');
-                $I->waitForElement('//*[@class="cloud-zoom-big"]');
+                //$I->waitForElement('//*[@class="cloud-zoom-big"]');
                 $I->wait(1);
             }
             $I->click('//a[@class="bx-next"]');
@@ -106,6 +106,10 @@ class ProductSteps extends \AcceptanceTester
         } else {
             $I->waitForElement('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
             $I->click('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
+            $I->click('//*[@id="wrap"]');
+            $I->waitForElementVisible('//a[@id="bottomNavClose"]');
+            $I->wait(2);
+            $I->click('//a[@id="bottomNavClose"]');
 
         }
     }
