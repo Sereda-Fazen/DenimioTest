@@ -27,7 +27,7 @@ class ForgotPassSteps extends \AcceptanceTester
     }
 
 
-    public function remoteWindow(){
+    public function remoteWindow() {
         $I = $this;
         $I->waitForElement('td > p:nth-of-type(2) > a');
         $I->click('td > p:nth-of-type(2) > a');

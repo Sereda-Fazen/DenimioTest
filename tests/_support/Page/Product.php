@@ -46,12 +46,12 @@ class Product
         $I->click(self::$review);
         $I->fillField(self::$review, $review);
         //$I->moveMouseOver(self::$captcha);
-        $I->switchToIFrame('undefined');
-        $I->click(self::$captcha);
-        $I->wait(3);
+        //$I->switchToIFrame('undefined');
+       // $I->click(self::$captcha);
+       // $I->wait(3);
         $I->click(self::$submit);
-        //$I->see('This is a required field.',self::$seeError);
-        $I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
+        $I->see('This is a required field.',self::$seeError);
+       // $I->see('There was an error with the recaptcha code, please try again.',self::$seeErrorReview);
     }
 
     public function checkShareLinks ()

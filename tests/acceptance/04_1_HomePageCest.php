@@ -41,7 +41,7 @@ class HomePageCest
 
         function headerLanguageCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
             $homePage->homePage();
-            $I->getLanguageDev();
+            $I->getLanguageProd();
         }
 
 
