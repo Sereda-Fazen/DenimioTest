@@ -174,6 +174,24 @@ class MyAccountSteps extends \AcceptanceTester
                     break;
 
                 case 11:
+
+                    echo
+
+                    $I->see('CUSTOMER PICTURES TERMS AND CONDITIONS', $h1);
+                    $I->click('#terms_conditions');
+                    $I->click('//*[@class="buttons-set"]/button/span');
+                    $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
+                    $I->seeElement('div.calcel-account > button.button > span');
+
+                    $I->click('div.calcel-account > button.button > span');
+                    $I->acceptPopup();
+                    $I->see('Your XX012 Contest account was successfully deleted', $successMsg);
+                    break;
+
+
+                case 12:
+
+
                     echo
 
                     $I->see('GIFT CARD', $h1);
@@ -181,16 +199,19 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->seeElement('div.gift-card > div:nth-of-type(2)');
                     $I->moveBack();
 
-                   // $I->click('button.form-button.button.addredeem > span');
-                   // $I->fillField('#gift-voucher-code','GIFT-ADFA-12NF0O');
-                  //  $I->click('div.text-left > button:nth-of-type(2) > span');
-                   // $I->see('The gift code usage has exceeded the number of users allowed.', $successMsg);
+                    // $I->click('button.form-button.button.addredeem > span');
+                    // $I->fillField('#gift-voucher-code','GIFT-ADFA-12NF0O');
+                    //  $I->click('div.text-left > button:nth-of-type(2) > span');
+                    // $I->see('The gift code usage has exceeded the number of users allowed.', $successMsg);
                     $I->giftCardEmpty();
                     $I->getVisibleText('The maximum number of times to enter gift card code is 10!', '.error-msg');
 
                     break;
 
-                case 12:
+
+
+                case 13:
+
                     echo
 
                     $I->see('MY REWARDS', $h1);
@@ -209,19 +230,6 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->click('//div[@class="block-content"]//li[1]');
                     break;
 
-                case 13:
-                    echo
-
-                    $I->see('CUSTOMER PICTURES TERMS AND CONDITIONS', $h1);
-                    $I->click('#terms_conditions');
-                    $I->click('//*[@class="buttons-set"]/button/span');
-                    $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
-                    $I->seeElement('div.calcel-account > button.button > span');
-
-                    $I->click('div.calcel-account > button.button > span');
-                    $I->acceptPopup();
-                    $I->see('Your XX012 Contest account was successfully deleted', $successMsg);
-                    break;
 
                 case 14:
                     echo
