@@ -48,12 +48,12 @@ class CategoryCest
         $categoryPage->checkIsNotFindPrice('232', '232');
     }
 
-
+/*
     function checkRecentReviewBlock(\Page\Category $categoryPage, \Step\Acceptance\ForgotPassSteps $I)
     {
         $categoryPage->recentReviewBlock();
     }
-
+*/
     function sortingOfItems( \Step\Acceptance\CategorySteps $I)
     {
         $I->sortingOfItems();

@@ -22,16 +22,9 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I = $this;
         $I->checkAccessories();
 
-       // $blockAcc1 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-      //  $blockAcc2 = rand(1, count($I->grabMultiple('//div[@class="category-products"]/ul')));
-        $I->wait(2);
-      //  $test = count($I->grabMultiple('//div[@class="category-products"]/ul[' . $blockAcc2 . ']/li[' . $blockAcc1 . ']//div/div/div/div/button'));
+        $I->scrollDown(200);
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div');
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
-        $I->wait(2);
-
-      //  if ($test == true) {
-            $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
             $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
             $I->waitForAjax(10);
@@ -156,10 +149,9 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
         $I->checkAccessories();
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]');
-        $I->wait(2);
+        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div');
 
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
+
         $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
         $I->waitForElement('//div[@class="wrapper_box"]');

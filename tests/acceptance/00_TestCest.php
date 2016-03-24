@@ -4,10 +4,20 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->login();
-        $I->accountDashboardTest();
+        $I->checkFunctionalInRandomOrder();
+
+    }
+    /*
+        function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+        {
+            $I->checkCouponAndGiftCard();
+        }
+*/
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
     }
 
 
