@@ -177,23 +177,6 @@ class MyAccountSteps extends \AcceptanceTester
 
                     echo
 
-                    $I->see('CUSTOMER PICTURES TERMS AND CONDITIONS', $h1);
-                    $I->click('#terms_conditions');
-                    $I->click('//*[@class="buttons-set"]/button/span');
-                    $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
-                    $I->seeElement('div.calcel-account > button.button > span');
-
-                    $I->click('div.calcel-account > button.button > span');
-                    $I->acceptPopup();
-                    $I->see('Your XX012 Contest account was successfully deleted', $successMsg);
-                    break;
-
-
-                case 12:
-
-
-                    echo
-
                     $I->see('GIFT CARD', $h1);
                     $I->click('a.left');
                     $I->seeElement('div.gift-card > div:nth-of-type(2)');
@@ -210,7 +193,7 @@ class MyAccountSteps extends \AcceptanceTester
 
 
 
-                case 13:
+                case 12:
 
                     echo
 
@@ -229,6 +212,23 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->see('Your settings has been updated successfully.',$successMsg);
                     $I->click('//div[@class="block-content"]//li[1]');
                     break;
+
+
+                case 13:
+
+                    echo
+
+                    $I->see('CUSTOMER PICTURES TERMS AND CONDITIONS', $h1);
+                    $I->click('#terms_conditions');
+                    $I->click('//*[@class="buttons-set"]/button/span');
+                    $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
+                    $I->seeElement('div.calcel-account > button.button > span');
+
+                    $I->click('div.calcel-account > button.button > span');
+                    $I->acceptPopup();
+                    $I->see('Your XX012 Contest account was successfully deleted', $successMsg);
+                    break;
+
 
 
                 case 14:

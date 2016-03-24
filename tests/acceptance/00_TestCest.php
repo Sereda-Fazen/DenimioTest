@@ -4,9 +4,10 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
-
-        $I->checkPictureArrows();
+    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
+    {
+        $I->login();
+        $I->accountDashboardTest();
     }
 
 
