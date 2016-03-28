@@ -4,22 +4,9 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
-    {
-        $I->checkFunctionalInRandomOrder();
+    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
 
+        $I->checkPictureAndZoom();
     }
-    /*
-        function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-        {
-            $I->checkCouponAndGiftCard();
-        }
-*/
-    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
-    {
-        $I->checkEstimateShippingAndTax();
-    }
-
-
 }
 

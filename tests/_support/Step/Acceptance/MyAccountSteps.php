@@ -34,7 +34,6 @@ class MyAccountSteps extends \AcceptanceTester
             $this->scrollDown(1000);
             $I->click('ol > li:nth-of-type(' . $d . ') > p > a.link-remove');
             $I->acceptPopup();
-            $I->waitForElement('li.success-msg');
         }
     }
 
@@ -105,6 +104,21 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->see('The address has been saved.', $successMsg);
 
                     $I->waitAlertWindow();
+
+                    $I->click('div.page-title.title-buttons > button.button > span');
+                    $I->waitForElement('#firstname');
+                    $I->fillField('#firstname', 'alex');
+                    $I->fillField('#lastname', 'sereda');
+                    $I->fillField('#telephone', '0936631020');
+                    $I->fillField('ul.form-list > li:nth-of-type(1) > div.input-box > input.input-text.required-entry', 'Street,22 Test');
+                    $I->fillField('#city', 'Kharkov');
+                    $I->fillField('#zip', '123456');
+                    $I->click('//*[@id="country"]/option[231]');
+                    $I->fillField('//*[@id="region"]', 'Kharkov');
+                    $I->scrollDown(100);
+                    $I->click('div.buttons-set > button.button > span > span');
+                    $I->see('The address has been saved.', $successMsg);
+
 
                     break;
 

@@ -26,26 +26,12 @@ class ProductSteps extends \AcceptanceTester
     public function checkInRandomOrder(){
         $I = $this;
         $I->checkTops();
-        $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-        $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
+       // $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
         $I->wait(2);
-        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
+        $I->click('//div[@class="category-products"]/ul['.rand(1,20).']/li['.rand(1,4).']/div/div/a/img');
         $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
 
     }
-    public function checkInRandomOrderBottoms(){
-        $I = $this;
-        $I->checkBottoms();
-        $blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
-        $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
-        $I->wait(2);
-        $I->click('//div[@class="category-products"]/ul['.$blockJeans2.']/li['.$blockJeans.']/div/div/a/img');
-        $I->seeElement('//div[@class="product-essential"]/form/div[1]/div[2]');
-
-    }
-
-
-
 
     public function checkPictureAndZoom()
     {
