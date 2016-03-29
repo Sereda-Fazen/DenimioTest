@@ -5,25 +5,20 @@ class TestCest
 {
 
 
-    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->addToCartWithOptionItem();
+        $I->checkFunctionalInRandomOrder();
+
     }
-
-    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    /*
+        function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+        {
+            $I->checkCouponAndGiftCard();
+        }
+ */
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->addToCartForCompare();
-    }
-
-    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->checkRemoveItemFromComparePage();
-    }
-
-
-    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->checkRemoveItemFromCategoryPage();
+        $I->checkEstimateShippingAndTax();
     }
 
 
