@@ -603,7 +603,8 @@ class HomeSteps extends \AcceptanceTester
             $I->click('#cat');
             $I->click('//*[@id = "cat"]/option['.rand(1,$cat).']');
             $I->click('i.fa.fa-search');
-            $I->seeElement('span.value');
+            $I->see('SEARCH RESULTS FOR \'JEANS\'','h1');
+        $I->seeElement('//div[@class="block-content"]/div//span[2]');
     }
 
 

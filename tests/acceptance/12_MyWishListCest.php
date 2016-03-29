@@ -1,6 +1,9 @@
 <?php
 use Step\Acceptance;
 
+/**
+ * @group 6_myAccount
+ */
 class MyWishListCest
 {
 

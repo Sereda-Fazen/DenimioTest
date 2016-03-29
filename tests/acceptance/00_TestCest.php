@@ -4,9 +4,29 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
 
-        $I->checkPictureAndZoom();
+    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartWithOptionItem();
     }
+
+    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartForCompare();
+    }
+
+    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->checkRemoveItemFromComparePage();
+    }
+
+
+    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->checkRemoveItemFromCategoryPage();
+    }
+
+
+
 }
 

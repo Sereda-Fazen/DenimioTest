@@ -15,6 +15,17 @@ class CompareSteps extends \AcceptanceTester
             $I->wait(2);
         }
 
+        public function addToCompareWallet(){
+            $I = $this;
+            $wallet = 'WALLET';
+            $I->amOnPage('/');
+            $I->fillField('#search', 'wallet');
+            $I->click('//i[@class="fa fa-search"]');
+            $I->see('SEARCH RESULTS FOR', 'h1');
+            $I->see($wallet);
+        }
+
+
         public function addToCartForCompare()
         {
             $I = $this;
@@ -48,6 +59,38 @@ class CompareSteps extends \AcceptanceTester
 
 
             }
+
+    public function addToCartWithOptionItem()
+    {
+        $I = $this;
+        $I->amOnPage('/');
+        $I->addToCompareWallet();
+
+        $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[1]//div/div');
+        $I->wait(2);
+        $I->click('//div[@class="category-products"]/ul[1]/li[1]//div/div/div/ul/li');
+        $I->waitForElement('//*[@id="go_list_compare"]',30);
+        $I->click('//*[@id="go_list_compare"]');
+
+        $I->executeInSelenium(function (RemoteWebDriver $webdriver) {
+            $handles = $webdriver->getWindowHandles();
+            $last_window = end($handles);
+            $webdriver->switchTo()->window($last_window);
+
+        });
+
+
+        $I->see('COMPARE PRODUCTS', 'h1');
+        $I->click('//*[@class="button btn-cart"]/span');
+        $I->click('//*[@class="buttons-set"]/button/span');
+
+        $I->switchToWindow();
+
+        $I->seeElement('li.success-msg');
+        $I->see('was added to your shopping cart.', 'li.success-msg > ul > li > span');
+
+
+    }
 
 
 
@@ -89,12 +132,14 @@ class CompareSteps extends \AcceptanceTester
                 //$countItems = count($I->grabMultiple('//*[@class="products-grid row"]/li'));
                 for ($c = 1; $c <= 2; $c++) {
                     $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
+                    $I->wait(2);
                     $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
                     $I->waitForElementVisible('//a[@id="continue_shopping"]');
                     $I->click('//a[@id="continue_shopping"]');
                 }
 
         $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]//div/div');
+        $I->wait(2);
         $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
         $I->waitForAjax(20);
         $I->waitForElement('//*[@id="go_list_compare"]');
