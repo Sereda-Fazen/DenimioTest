@@ -120,7 +120,7 @@ class CompareSteps extends \AcceptanceTester
 
 
 
-    public function checkRemoveItemFromComparePage()
+    public function removeItemFromComparePage()
     {
         $I = $this;
         $count = rand(1,count($I->grabMultiple('//*[@class="first last"]')));
@@ -169,7 +169,7 @@ class CompareSteps extends \AcceptanceTester
     }
 
 
-    public function checkRemoveItemFromCategoryPage()
+    public function removeItemFromCategory()
     {
         $I = $this;
 

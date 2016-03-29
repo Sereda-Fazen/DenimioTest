@@ -284,7 +284,7 @@ class MyAccountSteps extends \AcceptanceTester
 
         for ($w = 1; $w <= 2; $w++) {
             $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li['.$w.']');
-            $I->waitForElement('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');
+            $I->wait(2);
             $I->click('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');
             $I->waitForAjax(40);
             $I->waitForElement('//a[@id="continue_shopping"]');
