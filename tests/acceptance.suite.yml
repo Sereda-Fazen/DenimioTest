@@ -18,6 +18,7 @@ modules:
 
             host: 'hub.browserstack.com'
             port: 80
+
             browser: chrome
 
             resolution: 1980x1780

@@ -5,16 +5,22 @@ class TestCest
 {
 
 
-    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
     {
-        $I->removeItemFromComparePage();
+        $I->checkFunctionalInRandomOrder();
+
+    }
+    /*
+        function checkCouponAndGiftCard(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+        {
+            $I->checkCouponAndGiftCard();
+        }
+    */
+    function checkEstimateShippingAndTax(\Page\MyShoppingCart $shoppingPage, \Step\Acceptance\MyShoppingCartSteps $I)
+    {
+        $I->checkEstimateShippingAndTax();
     }
 
-
-    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->removeItemFromCategory();
-    }
 
 
 
