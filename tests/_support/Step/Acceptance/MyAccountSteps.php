@@ -287,7 +287,7 @@ class MyAccountSteps extends \AcceptanceTester
             $I->wait(2);
             $I->click('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');
             $I->waitForAjax(40);
-            $I->waitForElement('//a[@id="continue_shopping"]');
+            $I->waitForElement('//a[@id="continue_shopping"]',30);
             $I->click('//a[@id="continue_shopping"]');
         }
 

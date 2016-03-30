@@ -22,7 +22,7 @@ class CompareCest
     {
         $I->addToCartForCompare();
     }
-
+    /*
     function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
         $I->removeItemFromComparePage();
@@ -33,7 +33,7 @@ class CompareCest
     {
         $I->removeItemFromCategory();
     }
-
+*/
 
 
 

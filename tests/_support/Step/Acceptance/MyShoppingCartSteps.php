@@ -46,14 +46,14 @@ class MyShoppingCartSteps extends \AcceptanceTester
             $I->click('//button[@class="button btn-cart"]/span');
             $I->scrollUp(300);
             $I->wait(2);
-            $I->see('2 items', 'a > span > span:first-child');
+            $I->see('3 items', 'a > span > span:first-child');
             $I->click('a > span > span:first-child');
             $I->fillField('input.input-text.qty', '3');
             $I->click('//button[@name="update_cart_action"]');
             $I->see('4 items', 'a > span > span:first-child');
 
         $I->see('SHOPPING CART', 'h1');
-        $I->seeElement('//tr[@class="last even"]');
+        $I->seeElement('//tr[@class="last even"]',30);
         $I->click('//tr[@class="last even"]/td[7]/a');
         $I->acceptPopup();
         $I->waitForAjax(10);
@@ -149,11 +149,10 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->checkAccessories();
 
         $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div');
-
-
+        $I->wait(2);
         $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
 
-        $I->waitForElement('//div[@class="wrapper_box"]');
+        $I->waitForElement('//div[@class="wrapper_box"]',30);
         $I->click('//a[@id="shopping_cart"]');
         $I->see('SHOPPING CART', 'h1');
 

@@ -155,17 +155,13 @@ class CompareSteps extends \AcceptanceTester
 
         $I->waitForElement('//*[@class="first last"]/td['.$count.']/a');
         $I->click('//*[@class="first last"]/td['.$count.']/a');
+
         $I->waitForElementNotVisible('//*[@class="btn-remove"]');
 
         $I->click('//*[@class="buttons-set"]/button/span');
-
         $I->switchToWindow();
-
-            $I->waitForElement('li.success-msg > ul > li > span',30);
-            $I->seeElement('li.success-msg > ul > li > span');
-
-
-
+        $I->waitForElement('li.success-msg > ul > li > span', 30);
+        $I->see('has been removed from comparison list.', 'li.success-msg > ul > li > span');
     }
 
 
@@ -173,29 +169,16 @@ class CompareSteps extends \AcceptanceTester
     {
         $I = $this;
 
-        $I->amOnPage('/');
-
-        $I->click('//*[@class="parentMenu"]/a/span');
-        $I->waitForElementVisible('div.block-content > p.empty');
-        $I->see('You have no items to compare.', 'div.block-content > p.empty');
-
-        for ($c = 1; $c <= 2; $c++) {
-            $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
-            $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
-            $I->waitForElement('//a[@id="continue_shopping"]');
-            $I->click('//a[@id="continue_shopping"]');
-        }
-
+        $I->waitForText('COMPARE PRODUCTS (2)', 30);
         $I->waitForElement('//div[@class="block-content"]//li/a[1]');
         $I->click('//ol[@id="compare-items"]/li[2]//a');
         $I->acceptPopup();
         $I->waitForText('COMPARE PRODUCTS (1)', 30);
 
-/*
         $I->click('//*[@class="actions"]/a');
         $I->acceptPopup();
         $I->see('The comparison list was cleared.', 'li.success-msg');
-*/
+
     }
 
 
