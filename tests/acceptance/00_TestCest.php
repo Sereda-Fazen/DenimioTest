@@ -5,11 +5,17 @@ class TestCest
 {
 
 
-    function checkTwoItemsInShoppingCart(\Step\Acceptance\MyShoppingCartSteps $I)
+    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
-        $I->checkFunctionalInRandomOrder();
-
+        $I->removeItemFromComparePage();
     }
+
+
+    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->removeItemFromCategory();
+    }
+
 
 
 

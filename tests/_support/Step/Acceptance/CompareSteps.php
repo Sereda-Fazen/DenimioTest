@@ -135,7 +135,7 @@ class CompareSteps extends \AcceptanceTester
                     $I->moveMouseOver('//div[@class="category-products"]/ul/li['.$c.']//div/div');
                     $I->wait(2);
                     $I->click('//div[@class="category-products"]/ul/li['.$c.']//div/div/div/ul/li');
-                    $I->waitForElementVisible('//a[@id="continue_shopping"]');
+                    $I->waitForElementVisible('//a[@id="continue_shopping"]',40);
                     $I->click('//a[@id="continue_shopping"]');
                 }
 
