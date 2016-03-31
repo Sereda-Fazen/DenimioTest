@@ -21,6 +21,9 @@ class CheckoutForUserCest
         $I->checkRemoveGiftCard();
     }
 
+    /**
+     * @depends
+     */
 
     /**
      * Check Auth User With PayPal And Points
@@ -36,6 +39,10 @@ class CheckoutForUserCest
 
 
     }
+
+    /**
+     * @depends
+     */
 
     /**
      * Check Auth User With Points

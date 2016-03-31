@@ -25,6 +25,10 @@ class CheckoutForGuestCest
     }
 
     /**
+     * @depends
+     */
+
+    /**
      * Check On Checkout With Use Gift Card For Guest
      * @param Acceptance\CheckoutSteps $I
      * @param \Page\Checkout $guestPage
@@ -37,7 +41,9 @@ class CheckoutForGuestCest
 
     }
 
-
+    /**
+     * @depends
+     */
 
     /**
      * Check On Checkout With Use PayPal
@@ -52,6 +58,10 @@ class CheckoutForGuestCest
     }
 
     /**
+     * @depends
+     */
+
+    /**
      * Check Payment Using Different Address
      * @param Acceptance\CheckoutSteps $I
      * @param \Page\Checkout $guestPage
@@ -62,6 +72,10 @@ class CheckoutForGuestCest
         $I->checkoutAddingDifferentAddress();
 
     }
+    /**
+     * @depends
+     */
+
 
 
 
