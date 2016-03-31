@@ -56,6 +56,7 @@ class ProductSteps extends \AcceptanceTester
         $I->waitForAjax(10);
         $I->scrollDown(300);
         $I->waitForElement('//a[@id="bottomNavClose"]',30);
+        $I->waitForElementVisible('//a[@id="bottomNavClose"]');
         $I->click('//a[@id="bottomNavClose"]');
 
 

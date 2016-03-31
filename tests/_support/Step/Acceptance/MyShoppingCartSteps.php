@@ -60,7 +60,8 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->click('//tr[@class="last even"]/td[7]/a');
         $I->acceptPopup();
         $I->waitForAjax(40);
-        $I->waitForElementNotVisible('//tr[@class="last even"]');
+        $I->waitForElementNotVisible('//tr[@class="last even"]',30);
+        $I->dontSeeElement('//tr[@class="last even"]');
         $I->click('#empty_cart_button > span');
         $I->see('SHOPPING CART IS EMPTY', 'h1');
 
