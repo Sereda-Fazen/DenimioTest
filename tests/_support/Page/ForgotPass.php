@@ -30,7 +30,9 @@ class ForgotPass
         $I = $this->tester;
         $I->amOnPage(self::$URL);
         
+        $I->waitForElement(self::$clickLogIn,30);
         $I->click(self::$clickLogIn);
+        $I->waitForElement(self::$forgotLink);
         $I->click(self::$forgotLink);
         $I->click(self::$mail);
         $I->fillField(self::$mail, $mailPass);

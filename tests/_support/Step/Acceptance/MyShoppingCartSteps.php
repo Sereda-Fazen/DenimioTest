@@ -25,10 +25,11 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
         for ($s = 1; $s <= 2; $s++) {
             $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[' .$s.']//div/div');
-            $I->wait(2);
+            $I->waitForElement('//div[@class="category-products"]/ul[1]/li[' .$s . ']//div/div/div/div/button');
             $I->click('//div[@class="category-products"]/ul[1]/li[' .$s . ']//div/div/div/div/button');
-            $I->waitForAjax(10);
+            $I->waitForAjax(40);
             $I->waitForElement('//div[@class="wrapper_box"]',30);
+            $I->waitForElementVisible('//a[@id="continue_shopping"]');
             $I->click('//a[@id="continue_shopping"]');
         }
             $I->scrollUp(200);
@@ -58,7 +59,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
         $I->seeElement('//tr[@class="last even"]');
         $I->click('//tr[@class="last even"]/td[7]/a');
         $I->acceptPopup();
-        $I->waitForAjax(10);
+        $I->waitForAjax(40);
         $I->waitForElementNotVisible('//tr[@class="last even"]');
         $I->click('#empty_cart_button > span');
         $I->see('SHOPPING CART IS EMPTY', 'h1');
