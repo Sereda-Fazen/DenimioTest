@@ -174,12 +174,13 @@ class CompareSteps extends \AcceptanceTester
         $I->waitForElement('//div[@class="block-content"]//li/a[1]');
         $I->click('//ol[@id="compare-items"]/li[2]//a');
         $I->acceptPopup();
-        $I->waitForText('COMPARE PRODUCTS (1)', 30);
-
+        //$I->waitForText('COMPARE PRODUCTS (1)', 30);
+        $I->waitForText('You have no items to compare.',30);
+/*
         $I->click('//*[@class="actions"]/a');
         $I->acceptPopup();
         $I->see('The comparison list was cleared.', 'li.success-msg');
-
+*/
     }
 
 
