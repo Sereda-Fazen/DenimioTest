@@ -4,6 +4,7 @@
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
     </list>
     <ignored path="DenimioTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +106,8 @@
       <file leaf-file-name="CompareSteps.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7411003">
-              <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.07119741">
+              <caret line="159" column="66" selection-start-line="159" selection-start-column="66" selection-end-line="159" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -455,12 +456,6 @@
       <option name="number" value="Default" />
       <updated>1450686737095</updated>
     </task>
-    <task id="LOCAL-00335" summary="comparison-10">
-      <created>1458214468707</created>
-      <option name="number" value="00335" />
-      <option name="project" value="LOCAL" />
-      <updated>1458214468707</updated>
-    </task>
     <task id="LOCAL-00336" summary="comparison-11">
       <created>1458215090744</created>
       <option name="number" value="00336" />
@@ -749,7 +744,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459422194598</updated>
     </task>
-    <option name="localTasksCounter" value="384" />
+    <task id="LOCAL-00384" summary="update_for_prod-25">
+      <created>1459427105297</created>
+      <option name="number" value="00384" />
+      <option name="project" value="LOCAL" />
+      <updated>1459427105297</updated>
+    </task>
+    <option name="localTasksCounter" value="385" />
     <servers />
   </component>
   <component name="TodoView">
@@ -798,7 +799,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update-myAccount-6" />
     <MESSAGE value="update_for_prod-1" />
     <MESSAGE value="update_for_prod-2" />
     <MESSAGE value="update_for_prod-3" />
@@ -823,7 +823,8 @@
     <MESSAGE value="update_for_prod-22" />
     <MESSAGE value="update_for_prod-23" />
     <MESSAGE value="update_for_prod-24" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod-24" />
+    <MESSAGE value="update_for_prod-25" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod-25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1207,8 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7411003">
-          <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.07119741">
+          <caret line="159" column="66" selection-start-line="159" selection-start-column="66" selection-end-line="159" selection-end-column="66" />
           <folding />
         </state>
       </provider>

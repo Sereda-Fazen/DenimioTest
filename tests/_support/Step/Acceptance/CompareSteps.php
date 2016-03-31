@@ -157,7 +157,7 @@ class CompareSteps extends \AcceptanceTester
         $I->waitForElement('//*[@class="first last"]/td['.$count.']/a');
         $I->click('//*[@class="first last"]/td['.$count.']/a');
 
-        $I->waitForElementNotVisible('//*[@class="btn-remove"]');
+        $I->waitForElementNotVisible('//*[@class="btn-remove"]',30);
 
         $I->click('//*[@class="buttons-set"]/button/span');
         $I->switchToWindow();
