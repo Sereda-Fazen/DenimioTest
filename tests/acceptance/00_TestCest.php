@@ -5,6 +5,7 @@ class TestCest
 {
 
 
+
     function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
         $I->gMailAuth();

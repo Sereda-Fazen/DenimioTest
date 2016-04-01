@@ -13,15 +13,6 @@ class CompareCest
      * @param \Step\Acceptance\CompareSteps $I
      */
 
-    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->addToCartWithOptionItem();
-    }
-
-    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->addToCartForCompare();
-    }
 
     function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
@@ -31,6 +22,16 @@ class CompareCest
     function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
         $I->removeItemFromCategory();
+    }
+
+    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartWithOptionItem();
+    }
+
+    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartForCompare();
     }
 
 

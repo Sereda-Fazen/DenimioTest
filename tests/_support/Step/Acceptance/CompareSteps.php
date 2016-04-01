@@ -36,8 +36,8 @@ class CompareSteps extends \AcceptanceTester
             $I->see('You have no items to compare.','div.block-content > p.empty');
 
 
-            $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
-            $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/ul/li');
+            $I->moveMouseOver('//div[@class="category-products"]/ul/li[3]//div/div');
+            $I->click('//div[@class="category-products"]/ul/li[3]//div/div/div/ul/li');
             $I->waitForElement('//*[@id="go_list_compare"]',30);
             $I->waitForElementVisible('//*[@id="go_list_compare"]');
             $I->click('//*[@id="go_list_compare"]');
