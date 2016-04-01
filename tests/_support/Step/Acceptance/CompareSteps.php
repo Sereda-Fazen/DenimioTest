@@ -17,12 +17,10 @@ class CompareSteps extends \AcceptanceTester
 
         public function addToCompareWallet(){
             $I = $this;
-            $wallet = 'WALLET';
             $I->amOnPage('/');
             $I->fillField('#search', 'wallet');
             $I->click('//i[@class="fa fa-search"]');
-            $I->see('SEARCH RESULTS FOR', 'h1');
-            $I->see($wallet);
+            $I->waitForText('SEARCH RESULTS FOR \'WALLET\'');
         }
 
 
