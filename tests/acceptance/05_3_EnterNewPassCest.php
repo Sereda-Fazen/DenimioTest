@@ -12,7 +12,7 @@ class EnterNewPassCest {
         $I->remoteWindow();
         $I->newPass();
     }
-    
+
        
 
 }
