@@ -285,7 +285,7 @@ class MyAccountSteps extends \AcceptanceTester
         //$blockJeans = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul[1]/li')));
        // $blockJeans2 = rand(1,count($I->grabMultiple('//div[@class="category-products"]/ul')));
 
-        for ($w = 1; $w <= 2; $w++) {
+        for ($w = 3; $w <= 4; $w++) {
             $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li['.$w.']/div/div');
             $I->wait(2);
             $I->click('//div[@class="category-products"]/ul[1]/li['.$w.']//li[2]');

@@ -5,17 +5,11 @@ class TestCest
 {
 
 
-    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->removeItemFromComparePage();
+    function MyWishListForUser(Step\Acceptance\MyAccountSteps $I) {
+        $I->login();
+        $I->additionItemInList();
+
     }
-
-
-    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->removeItemFromCategory();
-    }
-
 
 
 
