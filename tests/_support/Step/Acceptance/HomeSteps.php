@@ -602,10 +602,11 @@ class HomeSteps extends \AcceptanceTester
         $I->fillField('#search','jeans');
         $cat =  count($I->grabMultiple('//*[@id = "cat"]/option'));
             $I->click('#cat');
+            $I->waitForElement('//*[@id = "cat"]/option['.rand(1,$cat).']');
             $I->click('//*[@id = "cat"]/option['.rand(1,$cat).']');
             $I->click('i.fa.fa-search');
-            $I->see('SEARCH RESULTS FOR \'JEANS\'','h1');
-        $I->seeElement('//div[@class="block-content"]/div//span[2]');
+            $I->waitForText('SEARCH RESULTS FOR \'JEANS\'');
+
     }
 
 
