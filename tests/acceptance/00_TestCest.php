@@ -5,9 +5,11 @@ class TestCest
 {
 
 
-    function headerSearchCategory(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
-        $homePage->home();
-        $I->getSearchOnCategory();
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    {
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
     }
 
 
