@@ -3,12 +3,9 @@ use \Step\Acceptance;
 /**
  * @group 1_account
  */
-class ForgotPassCest {
+class EnterNewPassCest {
 
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
-    {
-        $forgotPage->forgot('denimio_test@yahoo.com');
-    }
+
     function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
         $I->gMailAuth();
