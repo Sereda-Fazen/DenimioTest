@@ -12,16 +12,7 @@ class EnterNewPassCest {
         $I->remoteWindow();
         $I->newPass();
     }
-    /*
+    
        
-        function deleteOldMsg(Step\Acceptance\LoginSteps $I, Page\ForgotPass $deleteMsg){
-            $deleteMsg->deleteMsg();
 
-        }
-     function invalidRepeatPass (Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage) {
-            $I->moveBack();
-            $I->see('Your password reset link has expired.','li.error-msg');
-
-        }
-    */
 }
