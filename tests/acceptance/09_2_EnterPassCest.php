@@ -3,7 +3,7 @@ use \Step\Acceptance;
 /**
  * @group 1_password
  */
-class ForgotPassCest {
+class EnterPassCest {
 
     function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
     {
