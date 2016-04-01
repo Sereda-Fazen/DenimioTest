@@ -1,7 +1,7 @@
 <?php
 use \Step\Acceptance;
 /**
- * @group 1_account
+ * @group 1_password
  */
 class ForgotPassCest {
 
