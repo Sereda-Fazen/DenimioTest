@@ -4,16 +4,24 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
-        $forgotPage->forgot('denimio_test@yahoo.com');
+        $I->removeItemFromComparePage();
     }
 
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
-        $I->gMailAuth();
-        $I->remoteWindow();
-        $I->newPass();
+        $I->removeItemFromCategory();
+    }
+
+    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartWithOptionItem();
+    }
+
+    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->addToCartForCompare();
     }
 
 
