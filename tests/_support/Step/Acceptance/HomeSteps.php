@@ -481,41 +481,10 @@ class HomeSteps extends \AcceptanceTester
                     $I->getVisibleText('No tiene artículos para comparar.', $seeCompare);
                     break;
 
-                case 5:
+                case 13:
                     echo $I->see('Login', $seeLanguage);
                    // $I->getVisibleText('Anda belum memilih produk untuk dibandingkan.', $seeCompare);
                     break;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
         }
