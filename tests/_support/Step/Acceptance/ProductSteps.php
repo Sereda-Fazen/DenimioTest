@@ -88,8 +88,7 @@ class ProductSteps extends \AcceptanceTester
             $I->waitForElement('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
             $I->click('//div[@class="more-views ma-more-img"]/ul/li[1]/a/img');
             $I->click('//*[@id="wrap"]');
-            $I->waitForElementVisible('//a[@id="bottomNavClose"]');
-            $I->wait(2);
+            $I->waitForElementVisible('//a[@id="bottomNavClose"]',30);
             $I->click('//a[@id="bottomNavClose"]');
 
         }
