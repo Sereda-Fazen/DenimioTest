@@ -4,25 +4,9 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkAddToCompareWallet(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->addToCartWithOptionItem();
-    }
-
-    function checkAddCompareAnyItem(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->addToCartForCompare();
-    }
-
-
-    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->removeItemFromComparePage();
-    }
-
-    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
-    {
-        $I->removeItemFromCategory();
+    function headerSearchIsNotResult(Step\Acceptance\HomeSteps $I,\Page\HomePage $homePage){
+        $homePage->home();
+        $I->getWrongSearch();
     }
 
 
