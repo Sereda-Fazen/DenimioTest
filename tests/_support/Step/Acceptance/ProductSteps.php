@@ -53,9 +53,9 @@ class ProductSteps extends \AcceptanceTester
         $I->moveMouseOver('//a[@id="prevLink"]');
         $I->getVisibleText('PREV');
         $I->click('//a[@id="prevLink"]');
-        $I->waitForAjax(10);
         $I->scrollDown(300);
-        $I->waitForElementVisible('//a[@id="bottomNavClose"]',30);
+        $I->waitForElementVisible('//a[@id="bottomNavClose"]');
+        $I->wait(1);
         $I->click('//a[@id="bottomNavClose"]');
 
     }

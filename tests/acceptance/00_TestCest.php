@@ -4,9 +4,9 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkPictureZoom(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I) {
+    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
 
-        $I->checkPictureArrows();
+        $I->checkPictureAndZoom();
     }
 
 
