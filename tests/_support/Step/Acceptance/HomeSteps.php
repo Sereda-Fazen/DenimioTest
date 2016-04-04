@@ -595,8 +595,10 @@ class HomeSteps extends \AcceptanceTester
         $I->fillField('#search','wrong');
         $I->waitForElement('i.fa.fa-search',30);
         $I->click('i.fa.fa-search');
+        $I->waitForText('Your search returns no results.');
         $I->see('Your search returns no results.','p.note-msg');
     }
+
     public function getSearchOnCategory(){
         $I = $this;
         $I->fillField('#search','jeans');

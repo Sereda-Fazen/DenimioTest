@@ -55,13 +55,8 @@ class ProductSteps extends \AcceptanceTester
         $I->click('//a[@id="prevLink"]');
         $I->waitForAjax(10);
         $I->scrollDown(300);
-        $I->waitForElement('//a[@id="bottomNavClose"]',30);
-        $I->waitForElementVisible('//a[@id="bottomNavClose"]');
+        $I->waitForElementVisible('//a[@id="bottomNavClose"]',30);
         $I->click('//a[@id="bottomNavClose"]');
-
-
-
-
 
     }
     public function checkPictureArrows()
