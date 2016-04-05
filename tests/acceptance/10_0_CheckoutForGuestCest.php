@@ -25,7 +25,7 @@ class CheckoutForGuestCest
     }
 
     /**
-     * @depends checkOnShoppingCart
+     * @depends checkOnCheckoutVisaCard
      */
 
     /**
@@ -34,13 +34,13 @@ class CheckoutForGuestCest
      * @param \Page\Checkout $guestPage
      */
 
-
+/*
     function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkoutWithGiftCard();
 
     }
-
+*/
     /**
      * @depends checkoutForGuestPayPal
      */

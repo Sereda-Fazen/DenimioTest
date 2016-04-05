@@ -130,15 +130,15 @@ class CheckoutSteps extends \AcceptanceTester
         $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
         $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
         $I->checkDataForGuest();
-        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
-        $I->click('//*[@id="p_method_paypal_standard"]');
-        $I->waitForText('You will be redirected to the PayPal website when you place an order.');
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
+        $I->click('//*[@id="p_method_paypal_express"]');
+        $I->waitForText('You will be redirected to the PayPal website.');
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',60);
+        $I->waitForElement('//div[@id="billingModule"]',40);
         // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('The link you have used to enter the PayPal system contains an incorrectly formatted item amount.','//*[@id="xptContentContainer"]/tbody/tr[3]/td/form/table[1]/tbody/tr[3]/td');
+        $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
     }
 
     function checkoutAddingDifferentAddress (){

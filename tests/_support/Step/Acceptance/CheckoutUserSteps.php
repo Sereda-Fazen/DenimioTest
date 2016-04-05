@@ -162,8 +162,8 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->fillField('//*[@id="reward_sales_point"]','10');
         $I->click('//*[@id="cart-rewards-form"]/dl/dt/label');
         $I->waitForAjax(10);
-        $I->waitForElementVisible('//*[@id="p_method_paypal_standard"]');
-        $I->click('//*[@id="p_method_paypal_standard"]');
+        $I->waitForElementVisible('//*[@id="p_method_paypal_express"]');
+        $I->click('//*[@id="p_method_paypal_express"]');
         $I->waitForText('You will be redirected to the PayPal website when you place an order.');
         $I->scrollDown(200);
         $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[4]/td[1]');
@@ -180,10 +180,10 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElement('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-
-        $I->waitForElement('//*[@id="xptContentContainer"]/tbody/tr[2]/td/div',160);
+        $I->waitForElement('//div[@id="billingModule"]',40);
         // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('The link you have used to enter the PayPal system contains an incorrectly formatted item amount.','//*[@id="xptContentContainer"]/tbody/tr[3]/td/form/table[1]/tbody/tr[3]/td');
+        $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
+
 
 
     }
