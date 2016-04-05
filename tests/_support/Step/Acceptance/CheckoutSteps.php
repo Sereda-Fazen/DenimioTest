@@ -11,6 +11,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->fillField($billing.'firstname', 'alex');
         $I->fillField($billing.'lastname', 'sereda');
         $I->fillField($billing.'email', 'test_test@yahoo.com');
+        $I->waitForElement('#valid_email_address_image > img');
         $I->fillField('#billing-new-address-form > ul > li:nth-of-type(3) > div.one-field > input.required-entry.input-text', 'Test street 22V');
         $I->fillField($billing.'city', 'Kharkov');
         $I->fillField($billing.'postcode', '1rr354');
