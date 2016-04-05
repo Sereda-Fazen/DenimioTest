@@ -45,26 +45,17 @@ class CheckoutSteps extends \AcceptanceTester
         $I->see('SEARCH RESULTS FOR', 'h1');
         $I->see($wallet);
 
+        $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
         $I->wait(2);
-
-        $I->click('//div[@class="category-products"]/ul[2]/li[1]');
-        $I->wait(2);
-        $I->waitForElement('//div[@class="add-to-cart"]/button/span');
-        $I->click('//div[@class="add-to-cart"]/button/span');
+        $I->waitForElementVisible('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->waitForElementVisible('//a[@id="continue_shopping"]',40);
         $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
         $I->see('SHOPPING CART', 'h1');
     }
-    //------------------
-    /*
-        $I->waitForElementVisible('select.required-entry');
-        $I->click('select.required-entry');
-        $I->click('//*[@id="attribute144"]/option[2]');
-        $I->click('button.button.btn-cart > span');
-        $I->waitForElementVisible('div.wrapper_box');
-        $I->click('//*[@id="shopping_cart"]');
-    */
+
     public function checkProcessTypeData()
 
     {
