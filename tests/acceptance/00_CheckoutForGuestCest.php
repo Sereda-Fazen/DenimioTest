@@ -24,10 +24,7 @@ class CheckoutForGuestCest
 
     }
 
-    /**
-     * @depends checkOnCheckoutVisaCard
-     */
-
+  
     /**
      * Check On Checkout With Use Gift Card For Guest
      * @param Acceptance\CheckoutSteps $I
