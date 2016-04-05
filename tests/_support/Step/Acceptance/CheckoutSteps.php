@@ -71,7 +71,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
         $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
         $I->checkDataForGuest();
-        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',40);
         $I->click('#p_method_paygent_cc');
         // Cards
         $I->click('#paygent_cc_cc_type');

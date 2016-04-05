@@ -4,9 +4,11 @@ use \Step\Acceptance;
 class TestCest
 {
 
-    function checkPictureLikeView(\Page\Product $productPage, \Step\Acceptance\ProductSteps $I){
+    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    {
+        $I->checkOnShoppingCart();
+        $I->checkProcessTypeData();
 
-        $I->checkPictureAndZoom();
     }
 
 
