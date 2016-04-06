@@ -11,14 +11,16 @@ class CheckoutSteps extends \AcceptanceTester
         $I->fillField($billing.'firstname', 'alex');
         $I->fillField($billing.'lastname', 'sereda');
         $I->fillField($billing.'email', 'test_test@yahoo.com');
-        $I->waitForElement('#valid_email_address_image > img');
+
         $I->fillField('#billing-new-address-form > ul > li:nth-of-type(3) > div.one-field > input.required-entry.input-text', 'Test street 22V');
         $I->fillField($billing.'city', 'Kharkov');
+        $I->waitForElementVisible('#valid_email_address_image > img',60);
         $I->fillField($billing.'postcode', '1rr354');
         $I->fillField($billing.'postcode', '61007');
         $I->click('//*[@id="billing:country_id"]/option[231]');
         $I->fillField($billing.'region', 'Kharkov');
         $I->fillField($billing.'telephone', '80934568798');
+
     }
 
     public function checkDataForGuestShippingAddress (){
@@ -131,6 +133,8 @@ class CheckoutSteps extends \AcceptanceTester
         $I->waitForElement('//div[@id="billingModule"]',40);
         // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
         $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
+        $I->seeElement('#miniCart');
+
     }
 
     function checkoutAddingDifferentAddress (){
@@ -148,5 +152,17 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#onestepcheckout-button-place-order');
         /// test for example
     }
+
+    function createYouShipping() {
+        $I = $this;
+
+        $I->checkOnShoppingCart();
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->checkDataForGuest();
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
+
+    }
+
 
 }

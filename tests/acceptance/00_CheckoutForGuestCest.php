@@ -17,14 +17,14 @@ class CheckoutForGuestCest
      */
 
 
-    function checkOnCheckoutVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function paymentGuestWithVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkOnShoppingCart();
         $I->checkProcessTypeData();
 
     }
 
-  
+
     /**
      * Check On Checkout With Use Gift Card For Guest
      * @param Acceptance\CheckoutSteps $I
@@ -48,10 +48,14 @@ class CheckoutForGuestCest
      * @param \Page\Checkout $guestPage
      */
 
-    function checkoutForGuestPayPal (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function paymentGuestWithPayPal (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkoutForGuestPayPal();
 
+    }
+
+    function checkCreateYourOwnShipping (Step\Acceptance\CheckoutSteps $I){
+        $I->createYouShipping();
     }
 
 
