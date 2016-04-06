@@ -19,7 +19,7 @@ class ForgotPassSteps extends \AcceptanceTester
             $I->waitForElementVisible('//*[@id="login-passwd"]');
             $I->fillField('//*[@id="login-passwd"]', 'fJ4qEn5Y');
             $I->click('//*[@id="login-signin"]');
-            $I->waitForElement('//*[@class="list-view-items-page"]');
+            $I->waitForElement('//*[@class="list-view-items-page"]',40);
             $I->waitForText('Password Reset Confirmation');
             $I->click('//*[@class="subject bold"]');
 
