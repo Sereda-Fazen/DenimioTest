@@ -36,7 +36,7 @@ class ForgotPass
         $I->click(self::$forgotLink);
         $I->click(self::$mail);
         $I->fillField(self::$mail, $mailPass);
-        $I->scrollDown(200);
+        $I->scrollDown(400);
         $I->click(self::$subSave);
         $I->see('If there is an account associated with denimio_test@yahoo.com you will receive an email with a link to reset your password.', self::$msg);
     }
