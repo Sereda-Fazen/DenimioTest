@@ -28,12 +28,12 @@ class CompareCest
     {
         $I->removeItemFromComparePage();
     }
-*/
+
     function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
     {
         $I->removeItemFromCategory();
     }
-
+*/
 
 
 
