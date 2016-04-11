@@ -3,10 +3,8 @@ use \Step\Acceptance;
 
 class TestCest
 {
-
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
-    {
-        $forgotPage->forgot('denimio_test@yahoo.com');
+    function checkRandomBrands(Step\Acceptance\HomeSteps $I){
+        $I->getCheckRandomBrands();
     }
 
 
