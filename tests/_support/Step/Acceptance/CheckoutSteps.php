@@ -126,7 +126,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->checkDataForGuest();
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
         $I->click('//*[@id="p_method_paypal_express"]');
-        $I->waitForText('You will be redirected to the PayPal website.');
+        $I->waitForText('You will be redirected to the PayPal website.', 60);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
