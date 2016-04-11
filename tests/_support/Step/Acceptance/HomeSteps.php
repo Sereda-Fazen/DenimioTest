@@ -499,7 +499,7 @@ class HomeSteps extends \AcceptanceTester
 
     public function getMainMenu(){
         $I = $this;
-        $seeMenu = 'ul > li:nth-of-type(2) > strong';
+        $seeMenu = 'ul > li:nth-of-type(2) > a > strong';
         $seeCategory = '#narrow-by-list > dd:nth-of-type(1)';
         $seeBrands = '//div[@class="category-products brands-list"]';
         $seeCalendar = 'h1';
@@ -645,7 +645,7 @@ class HomeSteps extends \AcceptanceTester
         $I->click('//*[@id="pt_custommenu"]/div[5]/div/a');
         $I->waitForElement('//div[@class="main"]');
         $I->click('//*[@class="products-grid row"]/div['.$brands.']');
-        $I->seeElement('li.view > strong');
+        $I->seeElement('li.view > a > strong');
         $I->scrollDown(150);
         $I->seeElement('div.category-products');
     }
