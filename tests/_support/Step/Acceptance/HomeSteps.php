@@ -511,28 +511,33 @@ class HomeSteps extends \AcceptanceTester
 
                 case 1:
                     echo
+                    $I->waitForElement($seeMenu);
                     $I->see('Tops', $seeMenu);
                     $I->see('T-shirts',$seeCategory);
                     break;
 
                 case 2:
                     echo
+                    $I->waitForElement($seeMenu);
                     $I->see('Bottoms', $seeMenu);
                     $I->see('Tapered',$seeCategory);
                     break;
 
                 case 3:
                     echo
+                    $I->waitForElement($seeMenu);
                     $I->see('Accessories', $seeMenu);
                     break;
 
                 case 4:
                     echo
+                    $I->waitForElement($seeMenu);
                     $I->see('New Arrivals', $seeMenu);
                     break;
 
                 case 5:
                     echo
+                    $I->waitForElement($seeMenu);
                     $I->see('Brands', $seeMenu);
                     $I->seeElement($seeBrands);
                     break;
