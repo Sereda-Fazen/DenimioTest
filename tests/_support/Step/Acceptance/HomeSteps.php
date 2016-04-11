@@ -634,10 +634,11 @@ class HomeSteps extends \AcceptanceTester
     public function getCheckRandomBrands()
     {
         $I = $this;
+        $brands = rand(1, count($I->grabMultiple('//*[@class="products-grid row"]/div')));
         $I->amOnPage('/');
         //$I->getCloseSub();
         $I->click('//*[@id="pt_custommenu"]/div[5]/div/a');
-        $brands = rand(1, count($I->grabMultiple('//*[@class="products-grid row"]/div')));
+        $I->waitForElement('//div[@class="main"]');
         $I->click('//*[@class="products-grid row"]/div['.$brands.']');
         $I->seeElement('li.view > strong');
         $I->scrollDown(150);
