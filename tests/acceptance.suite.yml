@@ -27,6 +27,7 @@ modules:
             #clear_cookies: false
 
             capabilities:
+             browserstack.autoWait: 60
              browserstack.user: 'mahotoharada1'
              browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
              #browserstack.user: 'vladshalda1'
