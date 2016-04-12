@@ -96,7 +96,7 @@ class CategorySteps extends \AcceptanceTester
         for ($s = 1; $s <= $sort; $s++) {
             $I->click('//*[@class="sort-by hidden-xs"]/select');
             $I->click('//*[@class="sort-by hidden-xs"]/select/option[' . $s . ']');
-            $I->waitForAjax(40);
+            $I->waitForAjax(60);
             $I->seeElement('//*[@class="sort-by hidden-xs"]');
 
                 $I->click('div.category-products > div.toolbar > div.pager > div.limiter.hidden-xs > select');
