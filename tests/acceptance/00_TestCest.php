@@ -1,10 +1,20 @@
 <?php
 use \Step\Acceptance;
 
+/**
+ * @group test
+ */
 class TestCest
 {
-    function checkRandomBrands(Step\Acceptance\HomeSteps $I){
-        $I->getCheckRandomBrands();
+    /*
+    function checkRemoveItemFromComparePage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->removeItemFromComparePage();
+    }
+*/
+    function checkRemoveItemFromCategoryPage(\Page\Compare $blogPage, \Step\Acceptance\CompareSteps $I)
+    {
+        $I->removeItemFromCategory();
     }
 
 
