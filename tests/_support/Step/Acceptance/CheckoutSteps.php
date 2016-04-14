@@ -161,6 +161,8 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
         $I->checkDataForGuest();
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
 
     }
 
