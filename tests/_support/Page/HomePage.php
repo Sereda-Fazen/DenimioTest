@@ -68,7 +68,8 @@ class HomePage
     public function homePage()
     {
         $I = $this->tester;
-        $I->amOnPage(self::$URL3);
+        $I->amOnPage(self::$URL);
+        $I->click(self::$clickTops);
 
         return $this;
     }
