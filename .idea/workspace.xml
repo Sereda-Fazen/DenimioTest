@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
     </list>
     <ignored path="DenimioTest.iws" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="108" column="14" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+            <state relative-caret-position="201">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -388,14 +387,7 @@
       <workItem from="1460722644378" duration="543000" />
       <workItem from="1460724978413" duration="1523000" />
       <workItem from="1460732159200" duration="458000" />
-      <workItem from="1461045157876" duration="1052000" />
-    </task>
-    <task id="LOCAL-00387" summary="update_for_prod-28">
-      <created>1459493684287</created>
-      <option name="number" value="00387" />
-      <option name="presentableId" value="LOCAL-00387" />
-      <option name="project" value="LOCAL" />
-      <updated>1459493684288</updated>
+      <workItem from="1461045157876" duration="1084000" />
     </task>
     <task id="LOCAL-00388" summary="update_for_prod-29">
       <created>1459494992959</created>
@@ -733,11 +725,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461062005477</updated>
     </task>
-    <option name="localTasksCounter" value="436" />
+    <task id="LOCAL-00436" summary="update_for_prod-76">
+      <created>1461062403606</created>
+      <option name="number" value="00436" />
+      <option name="presentableId" value="LOCAL-00436" />
+      <option name="project" value="LOCAL" />
+      <updated>1461062403606</updated>
+    </task>
+    <option name="localTasksCounter" value="437" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18048000" />
+    <option name="totallyTimeSpent" value="18080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -785,7 +784,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update_for_prod-51" />
     <MESSAGE value="update_for_prod-52" />
     <MESSAGE value="update_for_prod-53" />
     <MESSAGE value="update_for_prod-54" />
@@ -810,7 +808,8 @@
     <MESSAGE value="update_for_prod-73" />
     <MESSAGE value="update_for_prod-74" />
     <MESSAGE value="update_for_prod-75" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod-75" />
+    <MESSAGE value="update_for_prod-76" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod-76" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1182,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="108" column="14" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+        <state relative-caret-position="201">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
