@@ -59,10 +59,13 @@ class Category
         //$I->amOnPage('/');
         //$I->click('//div[@class="parentMenu"]//span');
         //$I->seeElement('//div[@class="category-products"]');
+        $I->scrollDown(300);
+        $I->waitForElement(self::$left, $leftPrice);
         $I->fillField(self::$left, $leftPrice);
         $I->fillField(self::$right, $rightPrice);
         $I->click(self::$search);
         $I->waitForAjax(40);
+        $I->waitForElement(self::$price);
         $I->seeElement(self::$price);
         $I->seeElement(self::$seeSearch);
     }
@@ -71,7 +74,7 @@ class Category
     {
         $I = $this->tester;
 
-
+        $I->scrollDown(300);
         $I->fillField(self::$left, $leftPrice);
         $I->fillField(self::$right, $rightPrice);
         $I->click(self::$search);
