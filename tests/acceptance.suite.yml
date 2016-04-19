@@ -16,8 +16,8 @@ modules:
 
             # --run in browserstack--
 
-            host: 'hub.browserstack.com'
-            port: 80
+            #host: 'hub.browserstack.com'
+            #port: 80
 
             browser: chrome
 
@@ -99,7 +99,7 @@ env:
     modules:
       config:
         WebDriver:
-          url: 'http://149.202.195.201:4152/'
+          url: 'https://149.202.195.201:4152'
 
 
 
