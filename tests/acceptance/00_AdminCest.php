@@ -4,7 +4,7 @@ use \Step\Acceptance;
 /**
  * @group admin
  */
-class AdminGiftCardsCest
+class AdminCest
 {
 
     function createAddToGiftCards (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel) {
@@ -13,6 +13,19 @@ class AdminGiftCardsCest
         $I->checkExistGiftCard();
         $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF0O','100000','test2' );
         $I->checkExistGiftCard();
+
+    }
+
+    function createPointsForUser (\Step\Acceptance\AdminSteps $I,\Page\AdminPanel $adminPanel)
+    {
+       $I->loginAdmin();
+       $adminPanel->createPoints('alex sereda', '100');
+    
+    }
+
+    function checkIncludeForPayPal (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel)
+    {
+   
 
     }
 

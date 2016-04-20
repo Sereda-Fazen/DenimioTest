@@ -5,6 +5,10 @@ use Exception;
 
 class AdminPanel
 {
+
+    /**
+     * Gift card
+     */
     public static $moveGiftCard = '#nav > li:nth-of-type(15) > a > span';
     public static $clickManageGiftCards = '#nav > li:nth-of-type(15) > ul > li:nth-of-type(1) > a > span';
     public static $addGiftCard = '//td[@class="form-buttons"]/button[2]/span';
@@ -19,6 +23,22 @@ class AdminPanel
     public static $active = '//select[@id="status"]/option[2]';
     public static $comment = '#giftvoucher_comments';
     public static $saveCard = '//div[@class="content-header"]/p/button[3]';
+
+    /**
+     * Points
+     */
+
+    public static $moveCustomers = '#nav > li:nth-of-type(5) > a > span';
+    public static $clickManageCustomers = '#nav > li:nth-of-type(5) > ul > li:nth-of-type(1) > a > span';
+    public static $searchUser = '//div[@class="field-100"]/input';
+    public static $clickSearch = '//td[@class="filter-actions a-right"]/button[2]/span';
+    public static $clickEmail = '//*[@id="customerGrid_table"]/tbody/tr/td[4][contains(text(), "denimio_test@yahoo.com")]';
+    public static $rewardPoints = '//*[@class="tabs"]/li[3]/a';
+    public static $changeBalance = '//*[@id="rewardpoints_change_balance"]';
+    public static $saveCustomers = '//*[@class="scalable save"]/span';
+    public static $seeAddPoints = '//li[@class="success-msg"]';
+
+
 
 
     protected $tester;
@@ -49,6 +69,30 @@ class AdminPanel
         $I->fillField(self::$comment, $comment);
         $I->click(self::$saveCard);
         //$I->see('Gift Code was successfully saved', self::$success);
+    }
+
+
+    public function createPoints($email ,$points)
+    {
+        $I = $this->tester;
+        $I->moveMouseOver(self::$moveCustomers);
+        $I->waitForElementVisible(self::$clickManageCustomers);
+        $I->click(self::$clickManageCustomers);
+        $I->waitForElementVisible(self::$searchUser);
+        $I->fillField(self::$searchUser, $email);
+        $I->click(self::$clickSearch);
+        $I->waitForElement(self::$clickEmail);
+        $I->moveMouseOver(self::$clickEmail);
+        $I->click(self::$clickEmail);
+        $I->waitForElement(self::$rewardPoints);
+        $I->click(self::$rewardPoints);
+        $I->fillField(self::$changeBalance, $points);
+        $I->click(self::$saveCustomers);
+        $I->waitForElement(self::$seeAddPoints);
+        $I->see('The customer has been saved.', self::$seeAddPoints);
+
+
+
     }
 
 
