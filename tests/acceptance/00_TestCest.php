@@ -6,14 +6,12 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function createAddToGiftCards (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel) {
-        $I->loginAdmin();
-        $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF22','100000','test1' );
-        $I->checkExistGiftCard();
-        $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF0O','100000','test2' );
-        $I->checkExistGiftCard();
-      
+    function myOrderUsingGiftCardCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->login();
+        $I->checkMostCustomers();
+        $I->checkOrderInMyAccount();
+        $I->checkMyAccountLastOrder();
+        $I->checkRemoveGiftCard();
     }
-
 }
 

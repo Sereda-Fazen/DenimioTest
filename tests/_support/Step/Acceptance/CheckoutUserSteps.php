@@ -31,24 +31,21 @@ class CheckoutUserSteps extends \AcceptanceTester
     public function checkAddToCartItem (){
         $I = $this;
         $wallet = 'WALLET';
+        $I->amOnPage('/');
         $I->fillField('#search', 'wallet');
         $I->click('i.fa.fa-search');
         $I->see('SEARCH RESULTS FOR', 'h1');
         $I->see($wallet);
 
+        $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
         $I->wait(2);
-
-        $I->click('//div[@class="category-products"]/ul[2]/li[2]');
-        $I->wait(2);
-        $I->waitForElement('//div[@class="add-to-cart"]/button/span');
-        $I->click('//div[@class="add-to-cart"]/button/span');
+        $I->waitForElementVisible('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->waitForElementVisible('//a[@id="continue_shopping"]',40);
         $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
         $I->see('SHOPPING CART', 'h1');
-
-        $I->scrollDown(300);
-        $I->waitForElement('//div[@class="discount"]');
 
 
         $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
@@ -58,30 +55,20 @@ class CheckoutUserSteps extends \AcceptanceTester
     public function checkAddToCartCustomers (){
         $I = $this;
         $wallet = 'WALLET';
+        $I->amOnPage('/');
         $I->fillField('#search', 'wallet');
         $I->click('i.fa.fa-search');
         $I->see('SEARCH RESULTS FOR', 'h1');
         $I->see($wallet);
 
+        $I->moveMouseOver('//div[@class="category-products"]/ul/li[1]//div/div');
         $I->wait(2);
-
-        $I->click('//div[@class="category-products"]/ul[2]/li[2]');
-        $I->wait(2);
-        $I->waitForElement('//div[@class="add-to-cart"]/button/span');
-        $I->click('//div[@class="add-to-cart"]/button/span');
+        $I->waitForElementVisible('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->click('//div[@class="category-products"]/ul/li[1]//div/div/div/div/button');
+        $I->waitForElementVisible('//a[@id="continue_shopping"]',40);
         $I->waitForAjax(20);
         $I->waitForElement('//div[@class="wrapper_box"]');
         $I->click('//a[@id="shopping_cart"]');
-
-
-/*
-        $I->moveMouseOver('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
-        $I->click('//div[@class="category-products"]/ul[2]/li[2]//div/div/div/div/button');
-
-        $I->waitForAjax(20);
-        $I->waitForElement('//div[@class="wrapper_box"]');
-        $I->click('//a[@id="shopping_cart"]');
-*/
         $I->see('SHOPPING CART', 'h1');
 
         $I->scrollDown(300);
@@ -155,16 +142,16 @@ class CheckoutUserSteps extends \AcceptanceTester
 
     public function inputPointsAndPayPal(){
         $I = $this;
-        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
         $I->click('//*[@id="rewardpoints_payment_method"]');
-        $I->waitForAjax(10);
+        $I->waitForAjax(20);
         $I->waitForElementVisible('//*[@id="reward_sales_point"]');
         $I->fillField('//*[@id="reward_sales_point"]','10');
         $I->click('//*[@id="cart-rewards-form"]/dl/dt/label');
         $I->waitForAjax(10);
         $I->waitForElementVisible('//*[@id="p_method_paypal_express"]');
         $I->click('//*[@id="p_method_paypal_express"]');
-        $I->waitForText('You will be redirected to the PayPal website when you place an order.');
+        $I->waitForText('You will be redirected to the PayPal website.');
         $I->scrollDown(200);
         $I->waitForElement('//*[@id="checkout-review-table"]/tfoot/tr[4]/td[1]');
         $I->getVisibleText('Use point (10 Points)');
@@ -177,12 +164,14 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->scrollDown(200);
         $I->waitForElement('//select[@id="edit_shipping_document_confirmation"]');
         $I->click('//select[@id="edit_shipping_document_confirmation"]');
+
         $I->waitForElement('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForElement('//div[@id="billingModule"]',40);
-        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
+        //$I->waitForElement('//div[@id="billingModule"]',40);
+        $I->waitForElement('li.error-msg');
+        $I->see('PayPal gateway has rejected request. Timeout processing request (#10001: Internal Error).','li.error-msg');
+       // $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
 
 
 
@@ -206,8 +195,8 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',20);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
-        $I->waitForElement('//div[@class="wrapper_box"]');
-        $I->click('//button[@id="proforma-save"]/span');
+        $I->waitForElement('//*[@id="proforma-save"]');
+        $I->click('//*[@id="proforma-save"]');
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForText('Thank you for your purchase!',200);
 
@@ -239,7 +228,7 @@ class CheckoutUserSteps extends \AcceptanceTester
     function checkRemoveGiftCard ()
     {
         $I = $this;
-        $I->click('div.block-content > ul > li:nth-of-type(12) > a');
+        $I->click('div.block-content > ul > li:nth-of-type(11) > a');
         $I->waitForElement('//*[@id="giftvoucher_grid"]/tbody');
         $I->click('//*[@id="giftvoucher_grid"]/tbody/tr/td[6]/span/a[4]');
         $I->acceptPopup();

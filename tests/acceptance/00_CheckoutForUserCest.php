@@ -20,6 +20,8 @@ class CheckoutForUserCest
         $I->checkMyAccountLastOrder();
         $I->checkRemoveGiftCard();
     }
+    
+    
 
     /**
      * @depends
@@ -30,7 +32,7 @@ class CheckoutForUserCest
      * @param Acceptance\CheckoutUserSteps $I
      * @param \Page\Checkout $userPage
      */
-    function checkUserWithPayPalAndPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
+    function checkUserAddPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
     {
         $I->checkoutAuthWithCheckout();
         $userPage->getAuthorization('denimio_test@yahoo.com','123456');
