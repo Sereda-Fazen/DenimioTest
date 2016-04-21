@@ -89,8 +89,8 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForElement('li.error-msg',100);
 
-        $I->see('Authorization process has an error. error code is 2001, error detail is "1G97', 'li.error-msg');
-        //$I->see('Network Error, E02004','li.error-msg');
+        //$I->see('Authorization process has an error. error code is 2001, error detail is "1G97', 'li.error-msg');
+        $I->see('Network Error, E02004','li.error-msg');
     }
 
     function checkoutWithGiftCard ()

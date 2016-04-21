@@ -6,10 +6,11 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function includeSelectionGiftCard (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel)
+    function paymentGuestWithVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
-        $I->loginAdmin();
-        $adminPanel->includeGiftCard();
+        $I->checkOnShoppingCart();
+        $I->checkProcessTypeData();
+
     }
 }
 

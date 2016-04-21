@@ -13,7 +13,7 @@ class CheckoutForUserCest
      * @param \Page\Login $loginPage
      */
 
-    function myOrderUsingGiftCardCustomers (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
         $I->login();
         $I->checkMostCustomers();
         $I->checkOrderInMyAccount();
@@ -23,16 +23,14 @@ class CheckoutForUserCest
     
     
 
-    /**
-     * @depends
-     */
+    
 
     /**
      * Check Auth User With PayPal And Points
      * @param Acceptance\CheckoutUserSteps $I
      * @param \Page\Checkout $userPage
      */
-    function checkUserAddPoints (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
+    function paymentAddPointsUser (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
     {
         $I->checkoutAuthWithCheckout();
         $userPage->getAuthorization('denimio_test@yahoo.com','123456');

@@ -8,8 +8,6 @@ class CheckoutForGuestCest
 {
 
 
-
-
     /**
      * Check On Checkout With Use Credit Card (visa) For Guest
      * @param Acceptance\CheckoutSteps $I
@@ -30,13 +28,13 @@ class CheckoutForGuestCest
      * @param Acceptance\CheckoutSteps $I
      * @param \Page\Checkout $guestPage
      */
+    /*
+        function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+        {
+            $I->checkoutWithGiftCard();
 
-    function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
-    {
-        $I->checkoutWithGiftCard();
-
-    }
-
+        }
+    */
     /**
      * @depends checkoutForGuestPayPal
      */
@@ -47,16 +45,17 @@ class CheckoutForGuestCest
      * @param \Page\Checkout $guestPage
      */
 
-    function paymentGuestWithPayPal (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function paymentGuestWithPayPal(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
     {
         $I->checkoutForGuestPayPal();
 
     }
-
+}
+/*
     function checkCreateYourOwnShipping (Step\Acceptance\CheckoutSteps $I){
         $I->createYouShipping();
     }
-
+/*
 
 
 
