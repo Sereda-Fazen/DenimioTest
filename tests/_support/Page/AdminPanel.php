@@ -7,6 +7,22 @@ class AdminPanel
 {
 
     /**
+     * Include gift card
+     */
+
+    public static $clickSettings = '#nav > li:nth-of-type(15) > ul > li:nth-of-type(6) > a > span';
+    public static $showsGiftCard = '//div[@class="entry-edit"]';
+    public static $clickCheckoutPage = '//div[@class="entry-edit"]/div[4]';
+    public static $showsText = 'Show Gift Card box in the Payment section';
+    public static $clickSelectBox = '//select[@id="giftvoucher_interface_payment_show_gift_card"]';
+    public static $yes = '//select[@id="giftvoucher_interface_payment_show_gift_card"]/option[1][contains(text(), "Yes")]';
+    public static $saveSettings = '//td[@class="form-buttons"]/button';
+
+
+
+
+
+    /**
      * Gift card
      */
     public static $moveGiftCard = '#nav > li:nth-of-type(15) > a > span';
@@ -37,6 +53,7 @@ class AdminPanel
     public static $changeBalance = '//*[@id="rewardpoints_change_balance"]';
     public static $saveCustomers = '//*[@class="scalable save"]/span';
     public static $seeAddPoints = '//li[@class="success-msg"]';
+
 
 
 
@@ -90,10 +107,23 @@ class AdminPanel
         $I->click(self::$saveCustomers);
         $I->waitForElement(self::$seeAddPoints);
         $I->see('The customer has been saved.', self::$seeAddPoints);
-
-
-
+        
     }
 
+    public function includeGiftCard(){
+        $I = $this->tester;
+        $I->moveMouseOver(self::$moveGiftCard);
+        $I->waitForElement(self::$clickSettings);
+        $I->click(self::$clickSettings);
+        $I->waitForElement(self::$showsGiftCard);
+        $I->click(self::$clickCheckoutPage);
+        $I->waitForText(self::$showsText);
+        $I->click(self::$clickSelectBox);
+        $I->click(self::$yes);
+        $I->click(self::$saveSettings);
+        $I->waitForElement(self::$seeAddPoints);
+        $I->see('The configuration has been saved.',self::$seeAddPoints);
+
+    }
 
 }

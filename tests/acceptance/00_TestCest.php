@@ -6,11 +6,10 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function createPointsForUser (\Step\Acceptance\AdminSteps $I,\Page\AdminPanel $adminPanel)
+    function includeSelectionGiftCard (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel)
     {
         $I->loginAdmin();
-        $adminPanel->createPoints('alex sereda', '100');
-
+        $adminPanel->includeGiftCard();
     }
 }
 

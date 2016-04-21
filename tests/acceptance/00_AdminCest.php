@@ -7,6 +7,14 @@ use \Step\Acceptance;
 class AdminCest
 {
 
+    function includeSelectionGiftCard (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel)
+    {
+        $I->loginAdmin();
+        $adminPanel->includeGiftCard();
+    }
+
+
+
     function createAddToGiftCards (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel) {
         $I->loginAdmin();
         $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF22','100000','test1' );
@@ -22,13 +30,6 @@ class AdminCest
        $adminPanel->createPoints('alex sereda', '100');
     
     }
-
-    function checkIncludeForPayPal (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel)
-    {
-   
-
-    }
-
-
+    
 }
 

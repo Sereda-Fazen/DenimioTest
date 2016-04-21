@@ -128,13 +128,12 @@ class CheckoutSteps extends \AcceptanceTester
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
         $I->click('//*[@id="p_method_paypal_express"]');
         $I->waitForText('You will be redirected to the PayPal website.', 60);
+
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForElement('//div[@id="billingModule"]',40);
-        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
-        $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
-        $I->seeElement('#miniCart');
+        $I->waitForElement('//li[@class="error-msg"]');
+        $I->see('PayPal gateway has rejected request.', '//li[@class="error-msg"]');
 
     }
 
@@ -166,6 +165,26 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
 
     }
+    /*
+     *  function checkoutForGuestPayPal(){
+        $I = $this;
+        $I->checkOnShoppingCart();
+        $I->see('PROCEED TO CHECKOUT', 'button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
+        $I->checkDataForGuest();
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',60);
+        $I->click('//*[@id="p_method_paypal_express"]');
+        $I->waitForText('You will be redirected to the PayPal website.', 60);
+        $I->click('#edit_shipping_document_confirmation');
+        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
+        $I->click('#onestepcheckout-button-place-order');
+        $I->waitForElement('//div[@id="billingModule"]',60);
+        // $I->see('Unable to communicate with PayPal gateway','li.error-msg');
+        $I->see('Create a PayPal account','div.body.clearfix.zoom > div.subhead');
+        $I->seeElement('#miniCart');
+
+    }
+     */
 
 
 }
