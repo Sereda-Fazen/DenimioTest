@@ -32,6 +32,11 @@ class CheckoutForGuestCest
         function checkGiftCardForGuest (Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
         {
             $I->checkoutWithGiftCard();
+    /*
+    function checkCreateYourOwnShipping (Step\Acceptance\CheckoutSteps $I){
+        $I->createYouShipping();
+    }
+/*
 
         }
     */
@@ -50,15 +55,6 @@ class CheckoutForGuestCest
         $I->checkoutForGuestPayPal();
 
     }
-}
-/*
-    function checkCreateYourOwnShipping (Step\Acceptance\CheckoutSteps $I){
-        $I->createYouShipping();
-    }
-/*
 
-
-
-
-
+    
 }
