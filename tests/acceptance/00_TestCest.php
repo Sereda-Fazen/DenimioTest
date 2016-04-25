@@ -6,10 +6,10 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function paymentGuestWithVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function createPointsForUser (\Step\Acceptance\AdminSteps $I,\Page\AdminPanel $adminPanel)
     {
-        $I->checkOnShoppingCart();
-        $I->checkProcessTypeData();
+        $I->loginAdmin();
+        $adminPanel->createPoints('alex sereda', '100');
 
     }
 }

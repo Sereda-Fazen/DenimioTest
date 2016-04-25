@@ -98,7 +98,7 @@ class AdminPanel
         $I->waitForElementVisible(self::$searchUser);
         $I->fillField(self::$searchUser, $email);
         $I->click(self::$clickSearch);
-        $I->waitForElement(self::$clickEmail);
+        $I->waitForElement(self::$clickEmail, 40);
         $I->moveMouseOver(self::$clickEmail);
         $I->click(self::$clickEmail);
         $I->waitForElement(self::$rewardPoints);
