@@ -23,8 +23,8 @@ class CheckoutUserSteps extends \AcceptanceTester
     public function login()
     {
         $I = $this;
-        $I->amOnPage('/customer/account/login/');
-        $I->getCloseSub();
+        $I->amOnPage('/');
+        $I->click('a.login_click');
         $I->fillField('#email', 'denimio_test@yahoo.com');
         $I->fillField('#pass', '123456');
         $I->click('Login');
