@@ -150,7 +150,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 60);
         $I->click('//*[@id="rewardpoints_payment_method"]');
         $I->wait(3);
-        $I->waitForElementVisible('//*[@id="reward_sales_point"]');
+        $I->waitForElement('//*[@id="reward_sales_point"]', 60);
         $I->fillField('//*[@id="reward_sales_point"]', '10');
         $I->click('//*[@id="cart-rewards-form"]/dl/dt/label');
 
