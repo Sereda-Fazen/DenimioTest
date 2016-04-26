@@ -75,8 +75,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="428">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -467,14 +467,7 @@
       <workItem from="1461565511033" duration="1393000" />
       <workItem from="1461572481499" duration="5592000" />
       <workItem from="1461652550140" duration="1036000" />
-      <workItem from="1461656265073" duration="3255000" />
-    </task>
-    <task id="LOCAL-00404" summary="update_for_prod-44">
-      <created>1459761425368</created>
-      <option name="number" value="00404" />
-      <option name="presentableId" value="LOCAL-00404" />
-      <option name="project" value="LOCAL" />
-      <updated>1459761425368</updated>
+      <workItem from="1461656265073" duration="3867000" />
     </task>
     <task id="LOCAL-00405" summary="update_for_prod-45">
       <created>1459764454001</created>
@@ -812,11 +805,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461678122254</updated>
     </task>
-    <option name="localTasksCounter" value="453" />
+    <task id="LOCAL-00453" summary="update_for_prod_14">
+      <created>1461678147779</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1461678147779</updated>
+    </task>
+    <option name="localTasksCounter" value="454" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71470000" />
+    <option name="totallyTimeSpent" value="72082000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -864,7 +864,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update_for_prod-68" />
     <MESSAGE value="update_for_prod-69" />
     <MESSAGE value="update_for_prod-70" />
     <MESSAGE value="update_for_prod-71" />
@@ -889,7 +888,8 @@
     <MESSAGE value="update_for_prod_11" />
     <MESSAGE value="update_for_prod_12" />
     <MESSAGE value="update_for_prod_13" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_13" />
+    <MESSAGE value="update_for_prod_14" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1261,8 +1261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="428">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>
