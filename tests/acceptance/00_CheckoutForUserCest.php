@@ -34,7 +34,7 @@ class CheckoutForUserCest
     {
         $I->checkoutAuthWithCheckout();
         $userPage->getAuthorization('denimio_test@yahoo.com','123456');
-        $userPage->getShippingAddress();
+       // $userPage->getShippingAddress();
         $I->inputPointsAndPayPal();
 
 

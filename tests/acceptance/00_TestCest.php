@@ -6,10 +6,13 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function paymentGuestWithVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function paymentAddPointsUser (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
     {
-        $I->checkOnShoppingCart();
-        $I->checkProcessTypeData();
+        $I->checkoutAuthWithCheckout();
+        $userPage->getAuthorization('denimio_test@yahoo.com','123456');
+        //$userPage->getShippingAddress();
+        $I->inputPointsAndPayPal();
+
 
     }
 }
