@@ -6,11 +6,9 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function paymentGuestWithVisaCard(Step\Acceptance\CheckoutSteps $I, \Page\Checkout $guestPage)
+    function checkBlogPage(\Page\Blog $blogPage)
     {
-        $I->checkOnShoppingCart();
-        $I->checkProcessTypeData();
-
+        $blogPage->blog();
     }
 }
 

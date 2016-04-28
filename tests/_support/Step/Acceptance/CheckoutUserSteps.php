@@ -162,6 +162,10 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForText('You will spend:', 40);
         $I->see('10 Points', '//*[@id="checkout-review-table-wrapper"]//tr[5]/td[2]');
 
+        $I->click('i.fa.fa-times-circle');
+        $I->acceptPopup();
+        $I->waitForText('SHOPPING CART IS EMPTY');
+
     }
 
 
@@ -184,8 +188,9 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElement('ul.success-msg');
         $I->see('Your order’s grand total is zero now. No need to add any more Gift code.','ul.success-msg');
         $I->see('No Payment Information Required', '#checkout-payment-method-load > label');
-        $I->scrollDown(100);
+
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
+        $I->scrollDown(300);
         $I->waitForElement('#edit_shipping_document_confirmation',30);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
