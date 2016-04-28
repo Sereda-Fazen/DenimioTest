@@ -6,11 +6,11 @@ class CheckoutSteps extends \AcceptanceTester
 
     public function checkMessageError(){
         $I = $this;
-        $grabMsg = $I->grabTextFrom('//*[@class="messages"]');
+        $grabMsg = $I->grabTextFrom('//li[@class="error-msg"]');
         if (preg_match('/The user has been saved./i', $grabMsg) == 1) {
-            $I->see('Network Error, E02004', '//*[@class="messages"]');
+            $I->see('Network Error, E02004', '//li[@class="error-msg"]');
         } else {
-            $I->see('Authorization process has an error', '//*[@class="messages"]');
+            $I->see('Authorization process has an error', '//li[@class="error-msg"]');
         }
     }
 
@@ -99,11 +99,9 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForElement('li.error-msg',100);
-        $I->checkMessageError();
-        /*
-        //$I->see('Authorization process has an error. error code is 2001, error detail is "1G97', 'li.error-msg');
-        $I->see('Network Error, E02004','li.error-msg');
-        */
+        $I->see('Network Error, E02004', '//li[@class="error-msg"]');
+        //$I->checkMessageError();
+
     }
 
     function checkoutWithGiftCard ()
