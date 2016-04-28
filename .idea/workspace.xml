@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
     </list>
     <ignored path="DenimioTest.iws" />
@@ -43,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutUserSteps.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckoutUserSteps.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -103,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="288">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -190,8 +189,8 @@
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
         <option value="$PROJECT_DIR$/tests/_support/Page/Blog.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" />
+        <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       </list>
     </option>
   </component>
@@ -473,14 +472,7 @@
       <workItem from="1461736336723" duration="3578000" />
       <workItem from="1461822947912" duration="300000" />
       <workItem from="1461828350150" duration="3567000" />
-      <workItem from="1461833525863" duration="9633000" />
-    </task>
-    <task id="LOCAL-00415" summary="update_for_prod-55">
-      <created>1459925003781</created>
-      <option name="number" value="00415" />
-      <option name="presentableId" value="LOCAL-00415" />
-      <option name="project" value="LOCAL" />
-      <updated>1459925003803</updated>
+      <workItem from="1461833525863" duration="9684000" />
     </task>
     <task id="LOCAL-00416" summary="update_for_prod-56">
       <created>1459931151182</created>
@@ -818,11 +810,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461847730987</updated>
     </task>
-    <option name="localTasksCounter" value="464" />
+    <task id="LOCAL-00464" summary="update_for_prod_4">
+      <created>1461849039833</created>
+      <option name="number" value="00464" />
+      <option name="presentableId" value="LOCAL-00464" />
+      <option name="project" value="LOCAL" />
+      <updated>1461849039833</updated>
+    </task>
+    <option name="localTasksCounter" value="465" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91172000" />
+    <option name="totallyTimeSpent" value="91223000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,7 +873,6 @@
     <MESSAGE value="update_for_prod-78" />
     <MESSAGE value="update_for_prod_admin- 1" />
     <MESSAGE value="update_for_prod_1" />
-    <MESSAGE value="update_for_prod_4" />
     <MESSAGE value="update_for_prod_5" />
     <MESSAGE value="update_for_prod_6" />
     <MESSAGE value="update_for_prod_7" />
@@ -895,7 +893,8 @@
     <MESSAGE value="update_for_prod_22" />
     <MESSAGE value="update_for_prod_2" />
     <MESSAGE value="update_for_prod_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_3" />
+    <MESSAGE value="update_for_prod_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1254,14 +1253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/00_CheckoutForUserCest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1274,6 +1265,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="199" column="57" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding />
         </state>
       </provider>
