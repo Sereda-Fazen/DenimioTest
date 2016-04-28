@@ -32,7 +32,7 @@ modules:
              browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
              #browserstack.user: 'vladshalda1'
              #browserstack.key: 'vMqut6yLFsfbhDzhB643'
-             resolution:  1920x1080
+             resolution:  1980x1780
 
 
              browserstack.debug: 'true'
