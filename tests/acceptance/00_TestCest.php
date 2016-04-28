@@ -6,9 +6,12 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function checkBlogPage(\Page\Blog $blogPage)
-    {
-        $blogPage->blog();
+    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->login();
+        $I->checkMostCustomers();
+        $I->checkOrderInMyAccount();
+        $I->checkMyAccountLastOrder();
+        $I->checkRemoveGiftCard();
     }
 }
 
