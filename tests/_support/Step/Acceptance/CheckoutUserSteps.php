@@ -177,6 +177,7 @@ class CheckoutUserSteps extends \AcceptanceTester
 
 
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
+        $I->waitForElement('#checkout-payment-method-load > label',30);
         $I->see('No Payment Information Required', '#checkout-payment-method-load > label');
 
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
