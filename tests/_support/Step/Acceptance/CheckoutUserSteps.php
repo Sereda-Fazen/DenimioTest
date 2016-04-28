@@ -177,10 +177,16 @@ class CheckoutUserSteps extends \AcceptanceTester
 
 
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
-        $I->waitForElement('#checkout-payment-method-load > label',30);
-        $I->see('No Payment Information Required', '#checkout-payment-method-load > label');
+        $I->waitForElement('li > strong',30);
 
+        $I->click('i.fa.fa-plus-circle');
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
+        $I->waitForElement('ul.success-msg');
+        $I->see('Your order’s grand total is zero now. No need to add any more Gift code.','ul.success-msg');
+        $I->see('No Payment Information Required', '#checkout-payment-method-load > label');
+        $I->scrollDown(100);
+        $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
+        $I->waitForElement('#edit_shipping_document_confirmation',30);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
         $I->waitForElement('//*[@id="proforma-save"]');
