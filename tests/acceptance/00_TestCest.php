@@ -6,14 +6,12 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function paymentAddPointsUser (Step\Acceptance\CheckoutUserSteps $I, \Page\Checkout $userPage)
-    {
-        $I->checkoutAuthWithCheckout();
-        $userPage->getAuthorization('denimio_test@yahoo.com','123456');
-        //$userPage->getShippingAddress();
-        $I->inputPointsAndPayPal();
-
-
+    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->login();
+        $I->checkMostCustomers();
+        $I->checkOrderInMyAccount();
+        $I->checkMyAccountLastOrder();
+        $I->checkRemoveGiftCard();
     }
 }
 
