@@ -6,9 +6,10 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
     {
-        $forgotPage->forgot('denimio_test@yahoo.com');
+        $I->login();
+        $I->accountDashboardTest();
     }
 
 }

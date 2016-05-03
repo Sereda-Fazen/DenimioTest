@@ -62,7 +62,7 @@ class MyAccountSteps extends \AcceptanceTester
         $h1 = 'h1';
         $successMsg = 'li.success-msg';
         $account = count($I->grabMultiple('//div[@class="block-content"]//li'));
-        for ($a = 2; $a <= $account; $a++) {
+        for ($a = 1; $a <= $account; $a++) {
             $I->click('//div[@class="block-content"]//li[' . $a . ']');
 
 
@@ -248,7 +248,7 @@ class MyAccountSteps extends \AcceptanceTester
 
 
 
-                case 14:
+                case 15:
                     echo
 
                     $I->see('MY TICKETS', $h1);
@@ -315,11 +315,24 @@ class MyAccountSteps extends \AcceptanceTester
         $I->waitForElement('li.success-msg');
         $I->see('Your Wishlist has been shared.','li.success-msg');
 
-        $I->click('//*[@id="wishlist-table"]/tbody/tr[1]/td[4]/a');
-        $I->acceptPopup();
+        $I->clearItemFromList();
 
 
 
+
+
+    }
+
+
+    public function clearItemFromList ()
+    {
+        $I = $this;
+        $count = count($I->grabMultiple('//*[@id="wishlist-table"]/tbody'));
+        for ($w = $count; $w > 0; $w--) {
+            $I->click('//*[@id="wishlist-table"]/tbody/tr['.$w.']/td[4]/a');
+            $I->acceptPopup();
+            $I->getVisibleText('You have no items in your wishlist.');
+        }
     }
 
 
@@ -378,4 +391,5 @@ class MyAccountSteps extends \AcceptanceTester
 
 
 
-    }
+
+}
