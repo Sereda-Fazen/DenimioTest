@@ -11,6 +11,7 @@ class CheckoutSteps extends \AcceptanceTester
             $I->see('Network Error, E02004', '//li[@class="error-msg"]');
         } else {
             $I->see('Authorization process has an error', '//li[@class="error-msg"]');
+
         }
     }
 
@@ -99,8 +100,9 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForElement('li.error-msg',100);
-        $I->see('Network Error, E02004', '//li[@class="error-msg"]');
-        //$I->checkMessageError();
+       //$I->see('Network Error, E02004', '//li[@class="error-msg"]');
+        $I->checkMessageError();
+
 
     }
 
