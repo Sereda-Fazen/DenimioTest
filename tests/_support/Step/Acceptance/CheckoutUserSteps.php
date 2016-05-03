@@ -187,9 +187,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->scrollDown(300);
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
         $I->waitForElement('ul.success-msg');
-        $I->see('No Payment Information Required', '#checkout-payment-method-load > label');
-
-       
+        $I->getVisibleText('No Payment Information Required');
 
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');

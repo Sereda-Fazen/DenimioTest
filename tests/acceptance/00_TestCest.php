@@ -13,5 +13,6 @@ class TestCest
         $I->checkMyAccountLastOrder();
         $I->checkRemoveGiftCard();
     }
+
 }
 
