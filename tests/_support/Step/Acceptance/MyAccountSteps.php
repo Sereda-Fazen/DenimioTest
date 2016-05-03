@@ -317,7 +317,7 @@ class MyAccountSteps extends \AcceptanceTester
 
         $I->click('//*[@id="wishlist-table"]/tbody/tr[1]/td[4]/a');
         $I->acceptPopup();
-        $I->waitForElementNotVisible('//*[@id="wishlist-table"]/tbody/tr[4]/td[4]/a');
+
 
 
     }

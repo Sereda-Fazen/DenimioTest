@@ -6,12 +6,9 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
-        $I->login();
-        $I->checkMostCustomers();
-        $I->checkOrderInMyAccount();
-        $I->checkMyAccountLastOrder();
-        $I->checkRemoveGiftCard();
+    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
+    {
+        $forgotPage->forgot('denimio_test@yahoo.com');
     }
 
 }
