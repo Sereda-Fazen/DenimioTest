@@ -64,10 +64,7 @@ class MyAccountSteps extends \AcceptanceTester
         $account = count($I->grabMultiple('//div[@class="block-content"]//li'));
         for ($a = 1; $a <= $account; $a++) {
             $I->click('//div[@class="block-content"]//li[' . $a . ']');
-
-
             switch ($a) {
-
                 case 2:
                     echo
                     $I->see('EDIT ACCOUNT INFORMATION', $h1);
@@ -81,13 +78,9 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->scrollDown(100);
                     $I->click('div.buttons-set > button.button');
                     $I->see('The account information has been saved.', $successMsg );
-
                     break;
-
-
                 case 3:
                     echo
-
                     $I->see('ADDRESS BOOK', $h1);
                     $I->click('div.page-title.title-buttons > button.button > span');
                     $I->waitForElement('#firstname');
@@ -102,9 +95,7 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->scrollDown(100);
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The address has been saved.', $successMsg);
-
                     $I->waitAlertWindow();
-
                     $I->click('div.page-title.title-buttons > button.button > span');
                     $I->waitForElement('#firstname');
                     $I->fillField('#firstname', 'alex');
@@ -118,143 +109,100 @@ class MyAccountSteps extends \AcceptanceTester
                     $I->scrollDown(100);
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The address has been saved.', $successMsg);
-
-
                     break;
-
                 case 4:
                     echo
-
                     $I->see('MY ORDERS', $h1);
                     $I->getVisibleText('You have placed no orders.');
                     break;
-
                 case 5:
                     echo
-
                     $I->see('MY PRODUCT REVIEWS', $h1);
                     $I->getVisibleText('You have submitted no reviews.');
                     break;
-
                 case 6:
                     echo
-
                     $I->see('MY TAGS', $h1);
                     $I->getVisibleText('You have not tagged any products yet.');
                     break;
-
                 case 7:
                     echo
-
                     $I->see('MY WISHLIST', $h1);
                     $I->getVisibleText('You have no items in your wishlist.');
                     break;
-
                 case 8:
                     echo
-
                     $I->see('NEWSLETTER SUBSCRIPTION', $h1);
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The subscription has been saved.', $successMsg);
-
                     $I->click('//div[@class="block-content"]//li[8]');
                     $I->waitForElement('div.buttons-set > button.button > span > span');
-
                     $I->click('#subscription');
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The subscription has been removed.', $successMsg);
-
                     $I->click('//div[@class="block-content"]//li[8]');
                     $I->waitForElement('div.buttons-set > button.button > span > span');
-
                     $I->click('#subscription');
                     $I->click('div.buttons-set > button.button > span > span');
                     $I->see('The subscription has been saved.', $successMsg);
-
                     break;
-
                 case 9:
                     echo
-
                     $I->see('MY STOCK SUBSCRIPTIONS', $h1);
                     $I->getVisibleText('There are no active subscriptions.');
                     break;
-
                 case 10:
                     echo
-
                     $I->see('MY PRICE SUBSCRIPTIONS', $h1);
                     $I->getVisibleText('There are no active subscriptions.');
                     break;
-
                 case 11:
-
                     echo
-
                     $I->see('GIFT CARD', $h1);
                     $I->click('a.left');
                     $I->seeElement('div.gift-card > div:nth-of-type(2)');
                     $I->moveBack();
-
                     // $I->click('button.form-button.button.addredeem > span');
                     // $I->fillField('#gift-voucher-code','GIFT-ADFA-12NF0O');
                     //  $I->click('div.text-left > button:nth-of-type(2) > span');
                     // $I->see('The gift code usage has exceeded the number of users allowed.', $successMsg);
                     $I->giftCardEmpty();
                     $I->getVisibleText('The maximum number of times to enter gift card code is 10!', '.error-msg');
-
                     break;
-
-
-
                 case 12:
-
                     echo
-
                     $I->see('MY REWARDS', $h1);
                     $I->seeElement('div.box-account.box-info.box-rewardpoints-summary > div.box-head > h2');
-
                     $I->click('#rewardpoints-navigation-rewardpoints\.navigation > li:nth-of-type(3) > a');
                     $I->seeElement('div.col-main');
-
                     $I->click('#rewardpoints-navigation-rewardpoints\.navigation > li:nth-of-type(4) > a');
                     $I->see('REFER FRIENDS',$h1);
-
                     $I->click('#rewardpoints-navigation-rewardpoints\.navigation > li.last');
                     $I->seeElement('div.buttons-set > button.button > span');
                     $I->click('div.buttons-set > button.button > span');
                     $I->see('Your settings has been updated successfully.',$successMsg);
                     $I->click('//div[@class="block-content"]//li[1]');
                     break;
-
-
                 case 13:
-
                     echo
-
                     $I->see('CUSTOMER PICTURES TERMS AND CONDITIONS', $h1);
                     $I->click('#terms_conditions');
                     $I->click('//*[@class="buttons-set"]/button/span');
                     $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
                     $I->seeElement('div.calcel-account > button.button > span');
-
                     $I->click('div.calcel-account > button.button > span');
                     $I->acceptPopup();
                     try {
                         $I->see('Your XX012 Contest account was successfully deleted', $successMsg);
                     } catch (Exception $e) {}
-
                     break;
-
-
-
-                case 15:
+                case 14:
                     echo
-
                     $I->see('MY TICKETS', $h1);
                     $I->getVisibleText('You dont have any tickets');
                     $I->getVisibleText('Open Ticket Log In To Zendesk');
                     break;
+
 
 
             }
