@@ -7,23 +7,7 @@ use Step\Acceptance;
 class CheckoutForUserCest
 {
 
-    /**
-     * Check Order Most Customers Using Gift Card And Check My Orders
-     * @param Acceptance\CheckoutUserSteps $I
-     * @param \Page\Login $loginPage
-     */
 
-    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
-        $I->login();
-        $I->checkMostCustomers();
-        $I->checkOrderInMyAccount();
-        $I->checkMyAccountLastOrder();
-        $I->checkRemoveGiftCard();
-    }
-    
-    
-
-    
 
     /**
      * Check Auth User With PayPal And Points
@@ -34,11 +18,36 @@ class CheckoutForUserCest
     {
         $I->checkoutAuthWithCheckout();
         $userPage->getAuthorization('denimio_test@yahoo.com','123456');
-       // $userPage->getShippingAddress();
+        // $userPage->getShippingAddress();
         $I->inputPointsAndPayPal();
 
 
     }
+
+
+
+
+
+    /**
+     * Check Order Most Customers Using Gift Card And Check My Orders
+     * @param Acceptance\CheckoutUserSteps $I
+     * @param \Page\Login $loginPage
+     */
+
+
+    function paymentUserWithGiftCard (Step\Acceptance\CheckoutUserSteps $I, \Page\Login $loginPage) {
+        $I->login();
+        $I->checkMostCustomers();
+        $I->checkOrderInMyAccount();
+        $I->checkMyAccountLastOrder();
+        $I->checkRemoveGiftCard();
+    }
+
+
+
+
+
+
 
     /**
      * @depends
