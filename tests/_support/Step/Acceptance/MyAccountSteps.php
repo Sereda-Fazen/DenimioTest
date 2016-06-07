@@ -25,6 +25,12 @@ class MyAccountSteps extends \AcceptanceTester
         $I->click('Login');
         $I->see('From your My Account Dashboard','div.welcome-msg > p:nth-of-type(2)');
     }
+    public function test()
+    {
+        $I = $this;
+        $I->amOnPage('/');
+       $I->wait(10);
+    }
 
     public function waitAlertWindow ()
     {
