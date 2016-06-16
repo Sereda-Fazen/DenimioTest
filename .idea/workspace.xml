@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
     </list>
     <ignored path="DenimioTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,17 +72,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+            <state relative-caret-position="245">
+              <caret line="140" column="24" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="00_AdminCest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="00_AdminCest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/00_AdminCest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -192,8 +189,8 @@
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" />
         <option value="$PROJECT_DIR$/tests/_support/Step/Acceptance/MyAccountSteps.php" />
         <option value="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-        <option value="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" />
         <option value="$PROJECT_DIR$/tests/acceptance.suite.yml" />
+        <option value="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" />
       </list>
     </option>
   </component>
@@ -420,14 +417,7 @@
       <workItem from="1462444032640" duration="642000" />
       <workItem from="1465195405176" duration="7800000" />
       <workItem from="1465296777029" duration="7090000" />
-      <workItem from="1466062289009" duration="1212000" />
-    </task>
-    <task id="LOCAL-00427" summary="update_for_prod-67">
-      <created>1460365542828</created>
-      <option name="number" value="00427" />
-      <option name="presentableId" value="LOCAL-00427" />
-      <option name="project" value="LOCAL" />
-      <updated>1460365542828</updated>
+      <workItem from="1466062289009" duration="1249000" />
     </task>
     <task id="LOCAL-00428" summary="update_for_prod-68">
       <created>1460538494401</created>
@@ -765,11 +755,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466062716669</updated>
     </task>
-    <option name="localTasksCounter" value="476" />
+    <task id="LOCAL-00476" summary="update_for_prod_16">
+      <created>1466063506445</created>
+      <option name="number" value="00476" />
+      <option name="presentableId" value="LOCAL-00476" />
+      <option name="project" value="LOCAL" />
+      <updated>1466063506445</updated>
+    </task>
+    <option name="localTasksCounter" value="477" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123705000" />
+    <option name="totallyTimeSpent" value="123742000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,7 +818,6 @@
     <MESSAGE value="update_for_prod-78" />
     <MESSAGE value="update_for_prod_admin- 1" />
     <MESSAGE value="update_for_prod_1" />
-    <MESSAGE value="update_for_prod_16" />
     <MESSAGE value="update_for_prod_17" />
     <MESSAGE value="update_for_prod_18" />
     <MESSAGE value="update_for_prod_19" />
@@ -842,7 +838,8 @@
     <MESSAGE value="update_for_prod_13" />
     <MESSAGE value="update_for_prod_14" />
     <MESSAGE value="update_for_prod_15" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_15" />
+    <MESSAGE value="update_for_prod_16" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1239,18 +1236,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/00_AdminCest.php">
+    <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="140" column="24" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/00_AdminCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
