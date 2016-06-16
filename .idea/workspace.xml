@@ -1,78 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DenimioTest.iml" afterPath="$PROJECT_DIR$/.idea/DenimioTest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Admin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Admin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="a6a10260-30dd-4d75-8cd5-33a58a42cb03" name="Default" comment="update_for_prod_14">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeception.yml" afterPath="$PROJECT_DIR$/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_bootstrap.php" afterPath="$PROJECT_DIR$/tests/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_data/dump.sql" afterPath="$PROJECT_DIR$/tests/_data/dump.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/AcceptanceTester.php" afterPath="$PROJECT_DIR$/tests/_support/AcceptanceTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/FunctionalTester.php" afterPath="$PROJECT_DIR$/tests/_support/FunctionalTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Helper/Acceptance.php" afterPath="$PROJECT_DIR$/tests/_support/Helper/Acceptance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Helper/Functional.php" afterPath="$PROJECT_DIR$/tests/_support/Helper/Functional.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Helper/Unit.php" afterPath="$PROJECT_DIR$/tests/_support/Helper/Unit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/AdminPanel.php" afterPath="$PROJECT_DIR$/tests/_support/Page/AdminPanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Blog.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Calendar.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Calendar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Category.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Checkout.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Checkout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Compare.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Compare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/ForgotPass.php" afterPath="$PROJECT_DIR$/tests/_support/Page/ForgotPass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/HomePage.php" afterPath="$PROJECT_DIR$/tests/_support/Page/HomePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Login.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/MainMenu.php" afterPath="$PROJECT_DIR$/tests/_support/Page/MainMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/MyAccount.php" afterPath="$PROJECT_DIR$/tests/_support/Page/MyAccount.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/MyShoppingCart.php" afterPath="$PROJECT_DIR$/tests/_support/Page/MyShoppingCart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Product.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Page/Registration.php" afterPath="$PROJECT_DIR$/tests/_support/Page/Registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/AdminSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/AdminSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CategorySteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CategorySteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CheckoutUserSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/CompareSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ForgotPassSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ForgotPassSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/HomeSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/HomeSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/LoginSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/LoginSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/MyAccountSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/MyAccountSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/MyShoppingCartSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/MyShoppingCartSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ProductSteps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/ProductSteps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/Step/Acceptance/Steps.php" afterPath="$PROJECT_DIR$/tests/_support/Step/Acceptance/Steps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/UnitTester.php" afterPath="$PROJECT_DIR$/tests/_support/UnitTester.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/FunctionalTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/FunctionalTesterActions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/_support/_generated/UnitTesterActions.php" afterPath="$PROJECT_DIR$/tests/_support/_generated/UnitTesterActions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_AdminCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_CheckoutForGuestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_CheckoutForGuestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_CheckoutForUserCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_CheckoutForUserCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_CompareCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_CompareCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/00_TestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/01_CTestCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/01_CTestCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/01_ForgotPassCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/01_ForgotPassCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/02_LoginCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/02_LoginCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/02_RegistrationCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/02_RegistrationCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/04_1_HomePageCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/04_2_BlogCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/04_2_BlogCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/05_1_MainMenuCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/05_1_MainMenuCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/05_2_CalendarCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/05_2_CalendarCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/07_CategoryCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/07_CategoryCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/08_ProductCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/08_ProductCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/09_1_MyShoppingCartCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/09_1_MyShoppingCartCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/09_2_EnterPassCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/09_2_EnterPassCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/10_MyAccountCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/10_MyAccountCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/10_MyWishListCest.php" afterPath="$PROJECT_DIR$/tests/acceptance/10_MyWishListCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acceptance/_bootstrap.php" afterPath="$PROJECT_DIR$/tests/acceptance/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional.suite.yml" afterPath="$PROJECT_DIR$/tests/functional.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/_bootstrap.php" afterPath="$PROJECT_DIR$/tests/functional/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unit.suite.yml" afterPath="$PROJECT_DIR$/tests/unit.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unit/_bootstrap.php" afterPath="$PROJECT_DIR$/tests/unit/_bootstrap.php" />
     </list>
     <ignored path="DenimioTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,8 +86,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            <state relative-caret-position="317">
+              <caret line="150" column="51" selection-start-line="150" selection-start-column="51" selection-end-line="150" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -274,9 +206,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -485,14 +417,8 @@
       <workItem from="1462428928365" duration="21000" />
       <workItem from="1462444032640" duration="642000" />
       <workItem from="1465195405176" duration="7800000" />
-      <workItem from="1465296777029" duration="7024000" />
-    </task>
-    <task id="LOCAL-00425" summary="update_for_prod-65">
-      <created>1460359957995</created>
-      <option name="number" value="00425" />
-      <option name="presentableId" value="LOCAL-00425" />
-      <option name="project" value="LOCAL" />
-      <updated>1460359957995</updated>
+      <workItem from="1465296777029" duration="7090000" />
+      <workItem from="1466062289009" duration="420000" />
     </task>
     <task id="LOCAL-00426" summary="update_for_prod-66">
       <created>1460361036347</created>
@@ -830,11 +756,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462287606189</updated>
     </task>
-    <option name="localTasksCounter" value="474" />
+    <task id="LOCAL-00474" summary="update_for_prod_14">
+      <created>1465311901659</created>
+      <option name="number" value="00474" />
+      <option name="presentableId" value="LOCAL-00474" />
+      <option name="project" value="LOCAL" />
+      <updated>1465311901936</updated>
+    </task>
+    <option name="localTasksCounter" value="475" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122427000" />
+    <option name="totallyTimeSpent" value="122913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -846,16 +779,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18794914" sideWeight="0.49390244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1901603" sideWeight="0.49390244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27604726" sideWeight="0.50668997" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0068104425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30150214" sideWeight="0.49331006" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30104166" sideWeight="0.49331006" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35127932" sideWeight="0.50609756" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -886,7 +819,6 @@
     <MESSAGE value="update_for_prod-78" />
     <MESSAGE value="update_for_prod_admin- 1" />
     <MESSAGE value="update_for_prod_1" />
-    <MESSAGE value="update_for_prod_14" />
     <MESSAGE value="update_for_prod_15" />
     <MESSAGE value="update_for_prod_16" />
     <MESSAGE value="update_for_prod_17" />
@@ -907,7 +839,8 @@
     <MESSAGE value="update_for_prod_11" />
     <MESSAGE value="update_for_prod_12" />
     <MESSAGE value="update_for_prod_13" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_13" />
+    <MESSAGE value="update_for_prod_14" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_for_prod_14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1313,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        <state relative-caret-position="317">
+          <caret line="150" column="51" selection-start-line="150" selection-start-column="51" selection-end-line="150" selection-end-column="51" />
           <folding />
         </state>
       </provider>

@@ -137,7 +137,24 @@ env:
     modules:
       config:
         WebDriver:
-          url: 'https://149.202.195.201:4154'
+          url: 'https://149.202.195.201:4153/'
+          restart: false
+          browser: chrome
+          window_size: 1980x1780
+          clear_cookies: false
+
+          host: 'hub.browserstack.com'
+          port: 80
+          capabilities:
+           browserstack.autoWait: 60
+           browserstack.user: 'mahotoharada1'
+           browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
+           #browserstack.user: 'vladshalda1'
+           #browserstack.key: 'vMqut6yLFsfbhDzhB643'
+           resolution:  1920x1080
+
+
+
 
 
 
