@@ -188,9 +188,10 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]', 20);
         $I->waitForElement('ul.success-msg');
         $I->getVisibleText('No Payment Information Required');
+        $I->scrollDown(300);
 
-        $I->click('#edit_shipping_document_confirmation');
-        $I->click('//*[@id="edit_shipping_document_confirmation"]/option[2]');
+        $I->waitForElementVisible('#edit_shipping_document_confirmation');
+        $I->selectOption('#edit_shipping_document_confirmation', 'Yes - Most customer\'s choice');
         $I->waitForElement('//*[@id="proforma-save"]');
         $I->click('//*[@id="proforma-save"]');
         $I->click('#onestepcheckout-button-place-order');

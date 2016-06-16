@@ -78,23 +78,24 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('button.button.btn-proceed-checkout.btn-checkout > span');
         $I->checkDataForGuest();
         $I->waitForElementNotVisible('//div[@class="ajax-loader3"]',40);
-        $I->click('#p_method_paygent_cc');
+        $I->click('#p_method_veritrans_cc');
+
         // Cards
-        $I->click('#paygent_cc_cc_type');
-        $I->click('//*[@id="paygent_cc_cc_type"]/option[2]');
-        $I->waitForElementVisible('#paygent_cc_cc_number');
-        $I->fillField('#paygent_cc_cc_number', '4012888888881881');
+        $I->click('#veritrans_cc_cc_type');
+        $I->click('//*[@id="veritrans_cc_cc_type"]/option[2]');
+        $I->waitForElementVisible('#veritrans_cc_cc_number');
+        $I->fillField('#veritrans_cc_cc_number', '4012888888881881');
         //  month
-        $I->click('#paygent_cc_expiration');
-        $I->click('//*[@id="paygent_cc_expiration"]/option[2]');
+        $I->click('#veritrans_cc_expiration');
+        $I->click('//*[@id="veritrans_cc_expiration"]/option[2]');
         //year
-        $I->click('#paygent_cc_expiration_yr');
-        $I->click('//*[@id="paygent_cc_expiration_yr"]/option[3]');
+        $I->click('#veritrans_cc_expiration_yr');
+        $I->click('//*[@id="veritrans_cc_expiration_yr"]/option[3]');
         //what is this
         $I->click('a.cvv-what-is-this');
         $I->waitForElement('#payment-tool-tip');
         $I->click('#payment-tool-tip-close');
-        $I->fillField('#paygent_cc_cc_cid', '123');
+        $I->fillField('#veritrans_cc_cc_cid', '123');
         $I->scrollDown(150);
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
