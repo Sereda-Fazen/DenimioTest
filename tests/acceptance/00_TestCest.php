@@ -6,10 +6,11 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function MyAccountDashboard(\Step\Acceptance\MyAccountSteps $I, \Page\MyAccount $myAccountPage)
+    function createPointsForUser (\Step\Acceptance\AdminSteps $I,\Page\AdminPanel $adminPanel)
     {
-        $I->test();
-        
+        $I->loginAdmin();
+        $adminPanel->createPoints('alex sereda', '100');
+
     }
 
 }

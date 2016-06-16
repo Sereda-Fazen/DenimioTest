@@ -16,7 +16,7 @@ class AdminCest
 
 
     function createAddToGiftCards (\Step\Acceptance\AdminSteps $I, \Page\AdminPanel $adminPanel) {
-        $I->loginAdmin();
+        //$I->loginAdmin();
         $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF22','100000','test1' );
         $I->checkExistGiftCard();
         $adminPanel->createAddToGiftCard('GIFT-ADFA-12NF0O','100000','test2' );
@@ -26,7 +26,7 @@ class AdminCest
 
     function createPointsForUser (\Step\Acceptance\AdminSteps $I,\Page\AdminPanel $adminPanel)
     {
-       $I->loginAdmin();
+      // $I->loginAdmin();
        $adminPanel->createPoints('alex sereda', '100');
     
     }
