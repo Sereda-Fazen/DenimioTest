@@ -21,8 +21,7 @@ class HomeSteps extends \AcceptanceTester
     public function getCurrencyProd()
     {
         $I = $this;
-        $seeCurr = '//*[@id="product-price-17529"]/span';
-        //$seeCurr = '//*[@id="product-price-4791"]/span';
+        $seeCurr = '//span[@class="regular-price"]/span';
 
         $countCurrency = count($I->grabMultiple('//*[@class="sub-currency"]/li'));
 

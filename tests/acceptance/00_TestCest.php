@@ -6,9 +6,9 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function forgotSuccess(Step\Acceptance\ForgotPassSteps $I, \Page\ForgotPass $forgotPage)
-    {
-        $forgotPage->forgot('denimio_test@yahoo.com');
+    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
+        $homePage->homePage();
+        $I->getCurrencyProd();
     }
 
 }
