@@ -6,10 +6,10 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function headerCurrencyCheck(Step\Acceptance\HomeSteps $I, \Page\HomePage $homePage){
-        $homePage->homePage();
-        $I->getCurrencyProd();
+    function checkMainMenuLinks(\Page\MainMenu $homePage, \Step\Acceptance\HomeSteps $I)
+    {
+        $homePage->home();
+        $I->getMainMenu();
     }
-
 }
 

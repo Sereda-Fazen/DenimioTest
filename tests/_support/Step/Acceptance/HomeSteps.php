@@ -498,54 +498,65 @@ class HomeSteps extends \AcceptanceTester
 
     public function getMainMenu(){
         $I = $this;
-        $seeMenu = 'ul > li:nth-of-type(2) > a > strong';
-        $seeCategory = '#narrow-by-list > dd:nth-of-type(1)';
-        $seeBrands = '//div[@class="category-products brands-list"]';
-        $seeCalendar = 'h1';
-        $main = count($I->grabMultiple('//*[@id="pt_custommenu"]/div/div/a'));
+        $main = count($I->grabMultiple('//div[@class="pt_custommenu"]/div'));
         for ($m = 1; $m <= $main; $m++){
-            $I->click('//*[@id="pt_custommenu"]/div['.$m.']/div/a');
 
-            switch ($m) {
-
+            switch ($m){
                 case 1:
-                    echo
-                    $I->waitForElement($seeMenu);
-                    $I->see('Tops', $seeMenu);
-                    $I->see('T-shirts',$seeCategory);
+                    $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Tops"]');
+                    $I->click('//div[@class="pt_custommenu"]//span[text()="Tops"]');
+                    $I->seeLink('Tops','//div[@class="breadcrumbs"]//li[2]/a[ @href="top.html"]');
                     break;
 
                 case 2:
-                    echo
-                    $I->waitForElement($seeMenu);
-                    $I->see('Bottoms', $seeMenu);
-                    $I->see('Tapered',$seeCategory);
+                    $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Bottoms"]');
+                    $I->click('//div[@class="pt_custommenu"]//span[text()="Bottoms"]');
+                    $I->seeLink('Bottoms','//div[@class="breadcrumbs"]//li[2]/a[ @href="bottom.html"]');
                     break;
 
                 case 3:
-                    echo
-                    $I->waitForElement($seeMenu);
-                    $I->see('Accessories', $seeMenu);
+                    $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Accessories"]');
+                    $I->click('//div[@class="pt_custommenu"]//span[text()="Accessories"]');
+                    $I->seeLink('Accessories','//div[@class="breadcrumbs"]//li[2]/a[ @href="accessories.html"]');
                     break;
 
                 case 4:
-                    echo
-                    $I->waitForElement($seeMenu);
-                    $I->see('New Arrivals', $seeMenu);
+                    $I->waitForElement('//div[@class="pt_custommenu"]//a[@href="new-arrivals.html"]/span');
+                    $I->click('//div[@class="pt_custommenu"]//a[@href="new-arrivals.html"]/span');
+                    $I->seeLink('New Arrivals','//div[@class="breadcrumbs"]//li[2]/a[ @href="new-arrivals.html"]');
                     break;
 
                 case 5:
-                    echo
-                    $I->waitForElement($seeMenu);
-                    $I->see('Brands', $seeMenu);
-                    $I->seeElement($seeBrands);
+                    $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Brands"]');
+                    $I->click('//div[@class="pt_custommenu"]//span[text()="Brands"]');
+                    $I->seeLink('Brands','//div[@class="breadcrumbs"]//li[2]/a[ @href="brands.html"]');
                     break;
+
+                case 6:
+                    $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Footwear"]');
+                    $I->click('//div[@class="pt_custommenu"]//span[text()="Footwear"]');
+                    $I->seeLink('Footwear','//div[@class="breadcrumbs"]//li[2]/a[ @href="footwear.html"]');
+                    break;
+
+                case 7:
+                    $I->waitForElement('//div[@class="pt_custommenu"]//a[@href="womens-kids.html"]/span');
+                    $I->click('//div[@class="pt_custommenu"]//a[@href="womens-kids.html"]/span');
+                    $I->seeLink('Womens & Kids','//div[@class="breadcrumbs"]//li[2]/a[ @href="womens-kids.html"]');
+                    break;
+
+                case 8:
+                    try {
+                        $I->waitForElement('//div[@class="pt_custommenu"]//span[text()="Calendar"]');
+                        $I->click('//div[@class="pt_custommenu"]//span[text()="Calendar"]');
+                        $I->waitForText('RESTOCK SCHEDULE');
+                        break;
+                    } catch (Exception $e){}
 
 
             }
         }
-        $I->click('//*[@id="pt_menu_link"]/div/ul/li/a');
-        $I->see('RESTOCK SCHEDULE', $seeCalendar);
+
+
 
     }
 
@@ -557,7 +568,10 @@ class HomeSteps extends \AcceptanceTester
         $I->getCloseSub();
         for ($menu = 1; $menu <= $links; $menu++){
             $I->moveMouseOver('a.login_click > i.fa.fa-caret-down');
-            $I->click('//*[@id="menu_link"]/li['.$menu.']/a');
+            $I->waitForElement('//*[@class="dropit-trigger"]//ul/li['.$menu.']');
+            $I->click('//*[@class="dropit-trigger"]//ul/li['.$menu.']');
+            try{$I->waitForElement('//*[@class="header-static"]/a/img'); $I->click('//*[@class="header-static"]/a/img');}catch (Exception $e){}
+
 
         }
         $I->click('a.logo > img');
@@ -638,12 +652,12 @@ class HomeSteps extends \AcceptanceTester
     public function getCheckRandomBrands()
     {
         $I = $this;
-        $brands = rand(1, count($I->grabMultiple('//*[@class="products-grid row"]/div')));
         $I->amOnPage('/');
-        //$I->getCloseSub();
-        $I->click('//*[@id="pt_custommenu"]/div[5]/div/a');
+        $I->waitForElement('//div[@id="pt_custommenu"]//span[text()="Brands"]');
+        $I->click('//div[@id="pt_custommenu"]//span[text()="Brands"]');
         $I->waitForElement('//div[@class="main"]');
-        $I->click('//*[@class="products-grid row"]/div['.$brands.']');
+        $brands = rand(1,count($I->grabMultiple('//div[@class="products-grid row"]/div')));
+        $I->click('//div[@class="products-grid row"]/div['.$brands.']//a//img');
         $I->seeElement('li.view > a > strong');
         $I->scrollDown(150);
         $I->seeElement('div.category-products');

@@ -24,7 +24,7 @@ class MainMenuCest
      * @param Acceptance\HomeSteps $I
      * @param \Page\MainMenu $homePage
      */
-
+/*
     function checkTopSubcategoryTops(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
@@ -36,7 +36,7 @@ class MainMenuCest
      * @param Acceptance\HomeSteps $I
      * @param \Page\MainMenu $homePage
      */
-
+/*
     function checkTopSubcategoryBottoms(\Step\Acceptance\HomeSteps $I,\Page\MainMenu $homePage)
     {
         $homePage->home();
