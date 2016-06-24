@@ -8,7 +8,7 @@ class Blog
 
     public static $URL = '/blog/';
     public static $cat = '#wp-category-list > li:nth-of-type(2) > a';
-    public static $archives = '#wp-archive-list > li:nth-of-type(2) > a';
+    public static $archives = '//ul[@id="wp-archive-list"]/li[1]';
     public static $seeArchives = 'div.post-list.row.js-masonry > div:nth-of-type(2) > div.post-date';
     public static $title = 'div.post-list.row.js-masonry > div:nth-of-type(2) > h2 > a';
     public static $readMore = '//*[@class="read-more"]/i';
@@ -26,9 +26,9 @@ class Blog
     public function blog(){
         $I = $this->tester;
         $I->amOnPage(self::$URL);
-        try { $I->click('i.mc_embed_close.fa.fa-times.disabled-start'); } catch (Exception $e) {}
-        $I->click(self::$cat);
-        $I->seeElement('div.post-list.row.js-masonry > div:nth-of-type(2) > h2 > a');
+        
+        //$I->seeElement('div.post-list.row.js-masonry > div:nth-of-type(2) > h2 > a');
+        $I->waitForElement(self::$archives);
         $I->click(self::$archives);
         $I->seeElement(self::$seeArchives);
         $I->amOnPage(self::$URL);

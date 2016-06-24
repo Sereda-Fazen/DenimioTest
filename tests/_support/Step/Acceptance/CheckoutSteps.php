@@ -1,6 +1,8 @@
 <?php
 namespace Step\Acceptance;
 
+use Exception;
+
 class CheckoutSteps extends \AcceptanceTester
 {
 
@@ -103,6 +105,10 @@ class CheckoutSteps extends \AcceptanceTester
         $I->waitForElement('li.error-msg',100);
        //$I->see('Network Error, E02004', '//li[@class="error-msg"]');
         $I->checkMessageError();
+        try {
+            $I->waitForText('Thank you for your purchase!', 200);
+            $I->see('YOUR ORDER HAS BEEN RECEIVED.', 'h1');
+        } catch (Exception $e){}
 
 
     }

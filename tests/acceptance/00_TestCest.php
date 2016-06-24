@@ -6,10 +6,11 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function checkMainMenuLinks(\Page\MainMenu $homePage, \Step\Acceptance\HomeSteps $I)
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
-        $homePage->home();
-        $I->getMainMenu();
+        $I->gMailAuth();
+        $I->remoteWindow();
+      //  $I->newPass();
     }
 }
 

@@ -25,6 +25,7 @@ class MyShoppingCartSteps extends \AcceptanceTester
 
         for ($s = 1; $s <= 2; $s++) {
             $I->moveMouseOver('//div[@class="category-products"]/ul[1]/li[' .$s.']//div/div');
+            $I->wait(2);
             $I->waitForElement('//div[@class="category-products"]/ul[1]/li[' .$s . ']//div/div/div/div/button');
             $I->click('//div[@class="category-products"]/ul[1]/li[' .$s . ']//div/div/div/div/button');
             $I->waitForAjax(40);

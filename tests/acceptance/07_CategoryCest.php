@@ -21,7 +21,6 @@ class CategoryCest
 
     function categoryRemoveManufacture(\Page\Category $categoryPage, \Step\Acceptance\CategorySteps $I)
     {
-
         $I->categoryRemoveManufacture();
     }
 

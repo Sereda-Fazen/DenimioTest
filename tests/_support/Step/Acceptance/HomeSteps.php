@@ -631,8 +631,11 @@ class HomeSteps extends \AcceptanceTester
         for($i = 1; $i <= $info; $i++) {
 
             $I->scrollDown(1000);
-            $I->moveMouseOver('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
+            $I->waitForElement('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
             $I->click('//*[@class="footer-static-content row-fluid"]/ul/li['.$i.']/a');
+            try {
+                $I->waitForElement('//div[@class="logo"]//img');
+                $I->moveBack();} catch (Exception $e){}
         }
     }
 

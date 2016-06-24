@@ -9,7 +9,7 @@ class CategorySteps extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnPage('/');
-        $I->click('//div[@class="parentMenu"]//span');
+        $I->click('//div[@class="pt_custommenu"]//span[text()="Tops"]');
         $I->seeElement('//div[@class="category-products"]');
     }
 
