@@ -102,14 +102,14 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#edit_shipping_document_confirmation');
         $I->click('//*[@id="edit_shipping_document_confirmation"]/option[4]');
         $I->click('#onestepcheckout-button-place-order');
-        $I->waitForElement('li.error-msg',100);
+        $I->waitForElement('li.error-msg');
        //$I->see('Network Error, E02004', '//li[@class="error-msg"]');
-        $I->checkMessageError();
         try {
-            $I->waitForText('Thank you for your purchase!', 200);
-            $I->see('YOUR ORDER HAS BEEN RECEIVED.', 'h1');
-        } catch (Exception $e){}
+            $I->waitForText('The requested Payment Method is not available.!');
+        } catch (Exception $e){$I->waitForText('Authorization process has an error');}
+        $I->resetCookie('rCookie');
 
+        
 
     }
 
@@ -154,6 +154,7 @@ class CheckoutSteps extends \AcceptanceTester
         $I->click('#onestepcheckout-button-place-order');
         $I->waitForElement('//li[@class="error-msg"]');
         $I->see('PayPal gateway has rejected request.', '//li[@class="error-msg"]');
+        $I->resetCookie('rCookie');
 
     }
 

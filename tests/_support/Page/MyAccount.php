@@ -405,11 +405,8 @@ class MyAccount
         $I->click(self::$add);
         $I->fillField(self::$enterGiftCard, $giftCard);
         $I->click(self::$addToMyList);
-        try {
-            $I->see('The gift code usage has exceeded the number of users allowed.', self::$error);
-        } catch (Exception $e) {
-            $I->see('The gift code has been added to your list successfully.',self::$success );
-        }
+        $I->see('The gift code has been added to your list successfully.',self::$success );
+
     }
 
     public function removeGiftCard(){

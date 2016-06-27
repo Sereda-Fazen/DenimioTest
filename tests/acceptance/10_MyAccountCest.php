@@ -18,35 +18,38 @@ class MyAccountCest
 
     function MyAddress(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-
+        $I->login();
         $MyAccountPage->accountAddress('alex', 'sereda', '+39063636369', 'Test12', 'Kharkov', '54423', 'Kharkov');
         $I->waitAlertWindow();
         $MyAccountPage->accountNewAddress('alex', 'sereda', '+39063636369', 'Test12', 'Kharkov', '54423', 'Kharkov');
     }
 
     function MyOrders(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage) {
-
+        $I->login();
         $MyAccountPage->accountMyOrders();
     }
 
     function MyReviewsProduct(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage) {
-
+        $I->login();
         $MyAccountPage->accountProductReviews();
     }
 
     function MyTags(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage) 
     {
+        $I->login();
         $MyAccountPage->accountMyTags();
     }
 
     function MyWishList(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage) {
 
+        $I->login();
         $MyAccountPage->accountMyWishList();
  
     }
 
     function MyNewsletter(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
+        $I->login();
         $MyAccountPage->accountNewsletterSave();
         $MyAccountPage->accountNewsletterDelete();
         $MyAccountPage->accountNewsletterDefault();
@@ -54,16 +57,19 @@ class MyAccountCest
 
     function MyOutOfStock(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
+        $I->login();
         $MyAccountPage->accountMyOutStock();
     }
 
     function MyPrice(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
+        $I->login();
         $MyAccountPage->accountMyPrice();
     }
 
     function MyContestsXX012(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
+        $I->login();
         $MyAccountPage->accountXX012ContestAdd();
         $MyAccountPage->accountXX012ContestDelete();
     }
@@ -71,6 +77,7 @@ class MyAccountCest
     function MyAccountGiftCard(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
 
+        $I->login();
         $MyAccountPage->accountGiftCard();
         $MyAccountPage->accountGiftCardIsNot('GIFT-ADFA-12NF0O');
         $I->giftCardEmpty();
@@ -80,12 +87,14 @@ class MyAccountCest
 
     function MyRewardsPoint(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-     
+
+        $I->login();
         $MyAccountPage->accountMyRewards();
     }
 
     function MyTickets(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
+        $I->login();
         $MyAccountPage->accountMyTickets();
     }
 

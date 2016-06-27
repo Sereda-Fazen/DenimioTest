@@ -164,6 +164,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('i.fa.fa-times-circle');
         $I->acceptPopup();
         $I->waitForText('SHOPPING CART IS EMPTY');
+        $I->resetCookie('rCookie');
 
     }
 
@@ -231,6 +232,7 @@ class CheckoutUserSteps extends \AcceptanceTester
         $I->click('//*[@id="giftvoucher_grid"]/tbody/tr/td[6]/span/a[4]');
         $I->acceptPopup();
         $I->see('Gift card was successfully removed', 'li.success-msg');
+        $I->resetCookie('rCookie');
     }
 
 
