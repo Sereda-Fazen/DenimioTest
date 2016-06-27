@@ -95,7 +95,7 @@ env:
           config:
             WebDriver:
               url: 'https://www.denimio.com/'
-              #clear_cookies: false
+              
 
   DEV_2:
     modules:
@@ -149,8 +149,8 @@ env:
           window_size: 1980x1780
           #clear_cookies: false
 
-          host: 'hub.browserstack.com'
-          port: 80
+          #host: 'hub.browserstack.com'
+          #port: 80
           capabilities:
            browserstack.autoWait: 60
            browserstack.user: 'mahotoharada1'

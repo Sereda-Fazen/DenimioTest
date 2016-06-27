@@ -6,15 +6,11 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function MyAccountGiftCard(Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
+    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
     {
-
-        $I->login();
-        $MyAccountPage->accountGiftCard();
-        $MyAccountPage->accountGiftCardIsNot('GIFT-ADFA-12NF0O');
-        $I->giftCardEmpty();
-        $MyAccountPage->removeGiftCard();
-
+        $I->gMailAuth();
+        $I->remoteWindow();
+        $I->newPass();
     }
 }
 
