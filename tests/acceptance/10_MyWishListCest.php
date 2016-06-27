@@ -2,7 +2,7 @@
 use Step\Acceptance;
 
 /**
- * @group 6_myAccount
+ * @group 6_myWishlist
  */
 class MyWishListCest
 {

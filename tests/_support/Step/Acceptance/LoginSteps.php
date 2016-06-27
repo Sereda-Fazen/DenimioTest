@@ -45,7 +45,7 @@ class LoginSteps extends \AcceptanceTester
             $I = $this;
             $count = count($I->grabMultiple('//*[@class="col-2 addresses-additional"]/ol/li'));
             for ($d = $count; $d > 0; $d--) {
-                $this->scrollDown(1000);
+                $I->scrollDown(100);
                 $I->click('ol > li:nth-of-type(' . $d . ') > p > a.link-remove');
                 $I->acceptPopup();
                 $I->waitForElement('li.success-msg');
@@ -64,6 +64,7 @@ class LoginSteps extends \AcceptanceTester
             }
             $I->fillField('#gift-voucher-code', $card);
             $I->click('div.text-left > button:nth-of-type(1) > span > span');
+            $I->getVisibleText('The maximum number of times to enter gift card code is 10!', '.error-msg');
         }
 
 

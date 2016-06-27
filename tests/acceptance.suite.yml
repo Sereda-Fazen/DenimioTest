@@ -95,6 +95,7 @@ env:
           config:
             WebDriver:
               url: 'https://www.denimio.com/'
+              #clear_cookies: false
 
   DEV_2:
     modules:
@@ -146,7 +147,7 @@ env:
           restart: false
           browser: chrome
           window_size: 1980x1780
-          #clear_cookies: false
+          clear_cookies: false
 
           #host: 'hub.browserstack.com'
           #port: 80

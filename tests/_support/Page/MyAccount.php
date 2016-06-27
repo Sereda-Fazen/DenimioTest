@@ -24,11 +24,17 @@ class MyAccount
     public static $manageAddress = 'div.dashboard > div:nth-of-type(5) > div:nth-of-type(3) > div.box > div.box-title > a';
 
 
+    /**
+     * Account Dashboard
+     */
+
+    public static $url = '//div[@class="block-content"]//a[text()="Account Dashboard"]';
+
 
     /**
      * Account Information
      */
-    public static $URL = 'customer/account/edit';
+    public static $URL = '//div[@class="block-content"]//a[text()="Account Information"]';
     public static $firsName = '#firstname';
     public static $lastName = '#lastname';
     public static $email = '#email';
@@ -41,7 +47,8 @@ class MyAccount
     /**
      *  Address Book
      */
-    public static $URL2 = 'customer/address/new/';
+    public static $URL2 = '//div[@class="block-content"]//a[text()="Address Book"]';
+    public static $addAddress = 'div.page-title.title-buttons > button.button > span > span';
     public static $addressName = '#firstname';
     public static $addressLastName = '#lastname';
     public static $addressEmail = '#email_address';
@@ -55,23 +62,24 @@ class MyAccount
     /**
      * My Orders
      */
-    public static $URL3 = '/sales/order/history/';
+    public static $URL3 = '//div[@class="block-content"]//a[text()="My Orders"]';
+    public static $orders = '//table[@id="my-orders-table"]';
     // after orders
     /**
      *  Reviews Product
      */
-    public static $URL4 = '/customer/account/index/';
-    public static $clickReviews = 'div.block-content > ul > li:nth-of-type(5) > a';
+    public static $clickReviews = '//div[@class="block-content"]//a[text()="My Product Reviews"]';
     public static $back = 'p.back-link > a';
 
     /**
      * My Tags
      */
-    public static $myTags = 'div.block-content > ul > li:nth-of-type(6)';
+    public static $myTags = '//div[@class="block-content"]//a[text()="My Tags"]';
     /**
      * My WishList
      */
-    public static $myWishList = 'div.block-content > ul > li:nth-of-type(7)';
+    public static $myWishList = '//div[@class="block-content"]//a[text()="My Wishlist"]';
+    public static $wishList = '//*[@id="wishlist-table"]';
 
 
 
@@ -80,30 +88,30 @@ class MyAccount
     /**
      * Newsletter Subscriptions
      */
-    public static $newsletter = 'div.block-content > ul > li:nth-of-type(8) > a';
-    public static $buttonSave = 'div.buttons-set > button.button > span > span';
+    public static $newsletter = '//div[@class="block-content"]//a[text()="Newsletter Subscriptions"]';
+    public static $buttonSave = '//div[@class="my-account"]//button//span[text()="Save"]';
     public static $clickCheck = '#subscription';
 
     /**
      * My Out of Stock
      */
 
-    public static $myOutStock = 'div.block-content > ul > li:nth-of-type(9)';
+    public static $myOutStock = '//div[@class="block-content"]//a[text()="My Out of Stock Subscriptions"]';
 
 
     /**
      * My Price
      */
 
-    public static $myPrice = 'div.block-content > ul > li:nth-of-type(10)';
+    public static $myPrice = '//div[@class="block-content"]//a[text()="My Price Subscriptions"]';
 
     /**
      * XX012Contest delete
      */
 
-    public static $XX012Contest = 'div.block-content > ul > li:nth-of-type(11)';
+    public static $XX012Contest = '//div[@class="block-content"]//a[text()="XX012 Contest"]';
     public static $browse = '#customer-upload > div.qq-uploader > div.qq-upload-button > input';
-    public static $deleteContest = '//div[@class="calcel-account"]/button/span';
+    public static $deleteContest = '//*[@class="calcel-account"]//span';
 
     /**
      * XX012Contest add
@@ -122,22 +130,22 @@ class MyAccount
     /**
      * Giff Card
      */
-    public static $giffCard = 'div.block-content > ul > li:nth-of-type(12)';
+    public static $giffCard = '//div[@class="block-content"]//a[text()="Gift Card"]';
     public static $viewBlock = 'button.form-button.button.addredeem > span > span';
     public static $viewDetail = 'a.left';
     public static $noGiftCard = 'div.gift-card > div:nth-of-type(2)';
-
     // add gift card
-
     public static $add = 'button.form-button.button.addredeem > span';
     public static $enterGiftCard = '#gift-voucher-code';
     public static $addToMyList = 'div.text-left > button:nth-of-type(2) > span';
+
+    public static $remove = '//span[@class="giftvoucher-grid-detail"]//a[text()="Remove"]';
 
     /**
      * My Rewards
      */
 
-    public static $myRewards = 'div.block-content > ul > li:nth-of-type(13) > a';
+    public static $myRewards = '//div[@class="block-content"]//a[@href ="/rewardpoints/"]';
     public static $rewardsInformation = 'div.box-account.box-info.box-rewardpoints-summary > div.box-head > h2';
     //point
 
@@ -150,12 +158,13 @@ class MyAccount
     public static $settings = '#rewardpoints-navigation-rewardpoints\.navigation > li.last';
     public static $seeSettings = 'div.buttons-set > button.button > span';
     public static $success = 'li.success-msg';
+    public static $error = 'li.error-msg';
 
     /**
      * My Tickets
      */
 
-    public static $myTickets = 'div.block-content > ul > li:nth-of-type(14) > a';
+    public static $myTickets = '//div[@class="block-content"]//a[text()="My Tickets"]';
     public static $seeTickets = 'div.my-account > div:first-child > div:nth-of-type(2) > div';
 
 
@@ -169,7 +178,7 @@ class MyAccount
 
     public function back(){
         $I = $this->tester;
-        $I->click(self::$back);
+
     }
 
 
@@ -209,7 +218,7 @@ class MyAccount
 
     public function accountInfo($fName,$lName,$email,$current, $pass1, $pass2) {
         $I = $this->tester;
-        $I->amOnPage(self::$URL);
+        $I->click(self::$URL);
 
         $I->fillField(self::$firsName, $fName);
         $I->fillField(self::$lastName, $lName);
@@ -222,9 +231,25 @@ class MyAccount
         $I->click(self::$submit);
 
     }
+    public function accountInfoAdd($fName,$lName,$email,$current, $pass1, $pass2) {
+        $I = $this->tester;
+        $I->fillField(self::$firsName, $fName);
+        $I->fillField(self::$lastName, $lName);
+        $I->fillField(self::$email, $email);
+
+        $I->fillField(self::$current, $current);
+        $I->fillField(self::$pass, $pass1);
+        $I->fillField(self::$confirmation, $pass2);
+        $I->scrollDown(100);
+        $I->click(self::$submit);
+
+    }
+    
     public function accountAddress($fName,$lName,$phone,$street, $region, $city, $zip) {
         $I = $this->tester;
-        $I->amOnPage(self::$URL2);
+        $I->click(self::$URL2);
+        $I->waitForElement(self::$addAddress);
+        $I->click(self::$addAddress);
 
         $I->fillField(self::$firsName, $fName);
         $I->fillField(self::$lastName, $lName);
@@ -236,24 +261,67 @@ class MyAccount
         $I->fillField(self::$region, $region);
         $I->scrollDown(100);
         $I->click(self::$submit2);
+        $I->waitForElement(self::$success);
     }
+
+    public function accountNewAddress($fName,$lName,$phone,$street, $region, $city, $zip) {
+        $I = $this->tester;
+
+        $I->waitForElement(self::$addAddress);
+        $I->click(self::$addAddress);
+
+        $I->fillField(self::$firsName, $fName);
+        $I->fillField(self::$lastName, $lName);
+        $I->fillField(self::$phone, $phone);
+        $I->fillField(self::$street, $street);
+        $I->fillField(self::$city, $city);
+        $I->fillField(self::$zip, $zip);
+        $I->click(self::$state);
+        $I->fillField(self::$region, $region);
+        $I->scrollDown(100);
+        $I->click(self::$submit2);
+        $I->waitForElement(self::$success);
+    }
+
+
+
+
     public function accountMyOrders() {
         $I = $this->tester;
-        $I->amOnPage(self::$URL3);
+        $I->click(self::$URL3);
+        try {
+            $I->getVisibleText('You have placed no orders.');
+        } catch (Exception $e) {
+            $I->waitForElement(self::$orders);
+            $I->click(self::$back);
+        }
     }
     public function accountProductReviews() {
         $I = $this->tester;
         $I->click(self::$clickReviews);
+        try {
+            $I->getVisibleText('You have submitted no reviews.');
+            $I->click(self::$back);
+        }catch (Exception $e) {}
     }
 
     public function accountMyTags() {
         $I = $this->tester;
         $I->click(self::$myTags);
+        $I->getVisibleText('You have not tagged any products yet.');
+        $I->click(self::$back);
     }
 
     public function accountMyWishList() {
         $I = $this->tester;
         $I->click(self::$myWishList);
+        try {$I->getVisibleText('You have no items in your wishlist.');
+            $I->click(self::$back);
+        } catch (Exception $e) {
+            $I->waitForElement(self::$wishList);
+            $I->click(self::$back);
+
+        }
     }
 
 
@@ -261,12 +329,14 @@ class MyAccount
         $I = $this->tester;
         $I->click(self::$newsletter);
         $I->click(self::$buttonSave);
+        $I->see('The subscription has been saved.', self::$success);
     }
     public function accountNewsletterDelete() {
         $I = $this->tester;
         $I->click(self::$newsletter);
         $I->click(self::$clickCheck);
         $I->click(self::$buttonSave);
+        $I->see('The subscription has been removed.', self::$success);
     }
 
     public function accountNewsletterDefault() {
@@ -274,29 +344,27 @@ class MyAccount
         $I->click(self::$newsletter);
         $I->click(self::$clickCheck);
         $I->click(self::$buttonSave);
+        $I->see('The subscription has been saved.', self::$success);
     }
 
 
     public function accountMyOutStock() {
         $I = $this->tester;
         $I->click(self::$myOutStock);
+        $I->getVisibleText('There are no active subscriptions.');
+        $I->click(self::$back);
     }
 
     public function accountMyPrice() {
         $I = $this->tester;
         $I->click(self::$myPrice);
+        $I->getVisibleText('There are no active subscriptions.');
+        $I->click(self::$back);
     }
+    
 
-    public function accountXX012ContestDelete() {
-        $I = $this->tester;
-        $I->click(self::$XX012Contest);
-        $I->waitForElement(self::$browse);
-        $I->wait(3);
-        $I->click(self::$deleteContest);
-        $I->acceptPopup();
-    }
-
-    public function accountXX012ContestAdd() {
+    public function accountXX012ContestAdd()
+    {
         $I = $this->tester;
         $I->click(self::$XX012Contest);
         $I->click(self::$agree);
@@ -304,9 +372,18 @@ class MyAccount
 
         $I->click(self::$selectAgree);
         $I->click(self::$agree);
-
-
+        $I->getVisibleText('Click Browse and choose a file from your computer to upload.');
     }
+
+    public function accountXX012ContestDelete() {
+        $I = $this->tester;
+        $I->waitForElement(self::$browse);
+        $I->click(self::$deleteContest);
+        $I->acceptPopup();
+        $I->see('Your XX012 Contest account was successfully deleted', self::$success);
+    }
+
+
 
 
     public function accountGiftCard(){
@@ -328,7 +405,23 @@ class MyAccount
         $I->click(self::$add);
         $I->fillField(self::$enterGiftCard, $giftCard);
         $I->click(self::$addToMyList);
+        try {
+            $I->see('The gift code usage has exceeded the number of users allowed.', self::$error);
+        } catch (Exception $e) {
+            $I->see('The gift code has been added to your list successfully.',self::$success );
+        }
     }
+
+    public function removeGiftCard(){
+        $I = $this->tester;
+        $I->waitForElement(self::$remove);
+        $I->click(self::$remove);
+        $I->acceptPopup();
+        $I->waitForElement(self::$success);
+
+    }
+
+
 
     public function accountMyRewards() {
         $I = $this->tester;
@@ -339,19 +432,21 @@ class MyAccount
         $I->seeElement(self::$seePoint);
 
         $I->click(self::$referFriends);
-        $I->see('Share the referring link or coupon code with your friends and earn commissions.',self::$seeRefer);
+        $I->getVisibleText('Share the referring link or coupon code with your friends and earn points.');
 
         $I->click(self::$settings);
         $I->seeElement(self::$seeSettings);
         $I->click(self::$seeSettings);
         $I->see('Your settings has been updated successfully.',self::$success);
+        $I->click(self::$url);
+
 
     }
 
     public function accountMyTickets() {
         $I = $this->tester;
         $I->click(self::$myTickets);
-        $I->see('You dont have any tickets',self::$seeTickets);
+        $I->getVisibleText('You dont have any tickets');
 
 
     }

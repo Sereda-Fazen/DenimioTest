@@ -647,7 +647,6 @@ class HomeSteps extends \AcceptanceTester
             $last_window = end($handles);
             $webdriver->switchTo()->window($last_window);
 
-
         });
     }
 

@@ -6,11 +6,13 @@ use \Step\Acceptance;
  */
 class TestCest
 {
-    function enterNewPass (Step\Acceptance\ForgotPassSteps $I)
+    function MyAccountInfo(\Step\Acceptance\LoginSteps $I, \Page\MyAccount $MyAccountPage)
     {
-        $I->gMailAuth();
-        $I->remoteWindow();
-      //  $I->newPass();
+        $I->login();
+        $MyAccountPage->accountAddress('alex', 'sereda', '+39063636369', 'Test12', 'Kharkov', '54423', 'Kharkov');
+        $I->waitAlertWindow();
+        $MyAccountPage->accountNewAddress('alex', 'sereda', '+39063636369', 'Test12', 'Kharkov', '54423', 'Kharkov');
+        
     }
 }
 

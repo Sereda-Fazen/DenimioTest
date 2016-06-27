@@ -200,7 +200,6 @@ class HomePage
     {
         $I = $this->tester;
         $I->amOnPage(self::$URL2);
-        $I->scrollDown(200);
         $I->waitForElementVisible(self::$facebook);
         $I->click(self::$facebook);
         $I->wait(2);
@@ -256,7 +255,7 @@ class HomePage
     public function assertCheckInstagram()
     {
         $I = $this->tester;
-        $I->waitForText(self::$denimioInstagram, 4);
+        $I->waitForText(self::$denimioInstagram, 4);;
 
     }
 
